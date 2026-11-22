@@ -194,6 +194,10 @@ KI, KS = 0.1, 0.25
 kol = [[r2(x + (KI if x == 0 else -KI if x == L else 0)), r2(z + (KI if z == 0 else -KI))] for z in (0, DR) for x in KOLOM_X]
 kol += [[x, ZS - KS] for x in KOLOM_X]
 kol += [[r2(x + (KS if x < 0 else -KS)), r2(KS if z == 0 else ZS - KS if z == ZS else z)] for x in (-SU, L + SU) for z in (0, 3.7, 7.4, DR, ZS)]
+# mulut koridor B-G di selasar ujung barat (z lokal ±6,8-13,6): kolom tepi selasar di situ hanya ada di lantai 2 dan 3,
+# supaya di lantai 1 tidak ada tiang di tengah jalan masuk koridor (koreksi pengguna 22 Nov 2026)
+MULUT = [[r2(L + SU - KS), 7.4], [r2(L + SU - KS), DR]]
+kol = [k for k in kol if k not in MULUT]
 
 data = {
     "schema": "fsm-gedung@1",
@@ -215,7 +219,8 @@ data = {
     "tampilan": {"dinding": "#d8dad7", "dindingDalam": "#ecebe6", "kolom": "#c4c7c4", "lantai": "#e6e1d7",
                  "selasar": "#cdccc6", "atap": "#4d5352", "kusen": "#3b464d", "pintu": "#7a3f2c", "pagar": "#c6cacd"},
     "fondasi": {"dasar": -0.22, "warna": "#4a4f55", "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar (footage)."},
-    "kolom": {"ukuran": 0.4, "dasar": -0.2, "puncak": Y1 + 3 * H + SLAB, "titik": kol},
+    "kolom": {"ukuran": 0.4, "dasar": -0.2, "puncak": Y1 + 3 * H + SLAB, "titik": kol,
+              "tambahan": [{"titik": MULUT, "lantai": [2, 3], "catatan": "Kolom tepi selasar ujung barat di atas mulut koridor B-G."}]},
     "lantai": [floor(1, F1, P1), floor(2, F2, P2), floor(3, F3, P3)],
     "tangga": [
         {"id": f"T{f}", "dariLantai": f, "keLantai": f + 1, "x0": TG_X0, "x1": TG_X1, "zDepan": Z_TG, "zBelakang": Z_GD,

@@ -31,7 +31,7 @@ index.html            kerangka halaman + import map Three.js
 css/style.css         tampilan panel dan kontrol
 src/main.js           scene, kamera, tiga mode tampilan, klik pilih ruang
 src/builder.js        mengubah JSON gedung jadi objek 3D (dinding, pintu, jendela, tangga, atap)
-src/walk.js           mode jalan kaki (first-person) + tabrakan dinding dan naik tangga
+src/walk.js           mode jalan kaki (first-person): tabrakan, naik tangga, lompat, terbang, kunci kamera
 src/ui.js             panel kiri: tab Gedung, Ruang, Tampilan, Referensi
 data/kampus.json      daftar gedung, posisi/rotasinya di kawasan, dan penghubung antar gedung
 data/gedung-a.json    data lengkap Gedung A, ini sumber kebenarannya
@@ -59,7 +59,7 @@ Sumber kebenarannya tetap file JSON. **Kalau JSON sudah diedit langsung, jangan 
 |---|---|
 | Kawasan | Tampak luar lengkap dengan atap. Sudut kamera: Isometrik, Atas, Depan. |
 | Lantai | Satu lantai dipotong setinggi dada (bisa diatur di tab Tampilan) supaya isi ruang terlihat. Klik lantai ruang untuk melihat detailnya. |
-| Jalan kaki | First-person. Seret layar untuk menoleh, WASD atau panah untuk jalan, Shift lebih cepat, Esc keluar. Bisa naik tangga antar lantai. |
+| Jalan kaki | First-person. Seret layar untuk menoleh, WASD atau panah untuk jalan, Shift lari, Esc keluar. Bisa naik tangga antar lantai. **Space** lompat (pagar tetap menahan walau sedang melompat). **Space dua kali** mulai/berhenti terbang: tahan Space naik, tahan Shift turun, **W dua kali** (lalu tahan) terbang cepat; begitu kaki menyentuh lantai, tanah, atau atap, otomatis kembali berjalan. Dinding, lantai, plafon, dan atap tetap menahan saat terbang; atap bisa dipijak. **Q** kunci kamera (kursor hilang, geser mouse langsung menoleh tanpa klik); Esc pertama melepas kunci, Esc berikutnya keluar. Kalau browser menolak pointer lock (mis. di dalam iframe), Q memakai cadangan: menoleh mengikuti gerak mouse tanpa klik. Space yang ditekan saat masih melayang (bukan sesaat setelah melompat) tidak dihitung sebagai ketukan pertama, supaya tidak terbang tanpa sengaja. |
 
 Opsi **Overlay denah asli** menempelkan garis denah 2023 di lantai. Pakai ini untuk mengecek apakah model sudah sesuai blueprint.
 
@@ -200,10 +200,10 @@ Sumber: denah Gedung G LT.1 sampai LT.3 dan foto udara dari pengguna dengan temp
 
 ### Koridor B–G dan lahan terbuka depan Gedung A (22 Nov 2026)
 
-- **Koridor B–G** (penghubung `BG`, menggantikan koridor `BL` yang arahnya salah): dari bagian selatan selasar ujung barat Gedung B lurus ke pintu kaca Area Resepsionis G, tegak lurus dinding G (45 derajat terhadap B), mengikuti garis merah pengguna di foto udara. Lantai keramik rata dengan selasar B (1,15), **tanpa anak tangga** (keterangan pengguna), lantai 1 G 5 cm lebih tinggi. Gaya dari footage: kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng berkuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Ujung atap di Gedung B dipotong miring mengikuti tepi selasar (`miringB` di `atapPelana`). Lebar pelat 3,2 m, panjang sumbu ±10,4 m (perkiraan).
+- **Koridor B–G** (penghubung `BG`, menggantikan koridor `BL` yang arahnya salah): dari **pojok barat laut selasar Gedung B** (di samping ramp penghubung A–B) lurus ke pintu kaca Area Resepsionis G, mengikuti garis biru pengguna (22 Nov 2026). Koridor membentuk sudut ±17 derajat dari tegak lurus dinding G, mulutnya di selasar ujung B selebar ±6,8 m (z 23,4–30,2), panjang sumbu ±15,6 m. Lantai keramik rata dengan selasar B (1,15), **tanpa anak tangga** (keterangan pengguna), lantai 1 G 5 cm lebih tinggi. Gaya dari footage: kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng berkuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Kedua ujung atap dipotong miring mengikuti muka dinding G dan tepi selasar B (`miringA` / `miringB` di `atapPelana`). Kolom tepi selasar B yang jatuh di mulut koridor hanya ada di lantai 2 dan 3 (`kolom.tambahan` di Gedung B), jadi di lantai 1 tidak ada tiang di tengah jalan masuk. Lebar pelat 3,2 m (perkiraan).
 - **Lahan terbuka depan Gedung A** (lansekap `halaman-selatan-A`, menggantikan `bata-merah-B`). Tidak ada lagi lubang ke tanah dasar:
   - **Paving bata merah rata 1,05** dari plaza A sampai ujung barat selasar B, koridor B–G, dan Gedung G; di barat menerus sampai garis sisi utara sayap Perpustakaan (garis merah pengguna). Plaza A ikut diturunkan ke 1,05 sehingga plaza dan lahan paving satu bidang tanpa undakan (keterangan pengguna; naik-turun kecil di lapangan sengaja diabaikan). Paving 10 cm di bawah lantai koridor, seperti di footage.
-  - bedeng tanaman 1,12 di sisi tenggara koridor (kiri kalau berjalan dari B);
+  - bedeng tanaman 1,12 selebar 2 m di sisi tenggara koridor (kiri kalau berjalan dari B), sisanya sampai B dan G rumput;
   - rumput 0,88 sebagai permukaan dasar di sekitar B dan G, tepinya tembok batu kali (di sisi Gedung E sekitar 2 m dari selasar E);
   - parkir aspal 0,95 di sisi drop-off G.
   - Jalur depan A diperpanjang sampai sisi penghubung A–B (x 41,85); ujungnya jadi tembok batu kali. Tembok batu kali di depan selasar A sekarang setinggi ±1,2 m dari jalur beton.

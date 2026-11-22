@@ -216,7 +216,18 @@ async function init() {
   const walker = new Walker(camera, renderer.domElement, {
     solids: [...entries.flatMap(e => e.built.solids), ...links.flatMap(l => l.solids), ...scapes.flatMap(sc => sc.solids)],
     walkables: [...entries.flatMap(e => e.built.walkables), ...links.flatMap(l => l.walkables), ...scapes.flatMap(sc => sc.walkables), ground],
+    // penahan ke atas dan penahan saat terbang: seluruh gedung (lantai, plafon, atap) dan penghubung
+    overhead: [...entries.map(e => e.built.root), ...links.map(l => l.root)],
+    roofs: [...entries.map(e => e.built.roof), ...links.map(l => l.roof)].filter(Boolean),    // bisa dipijak setelah terbang
   });
+  // status terbang / kunci kamera untuk HUD
+  walker.onState = st => {
+    const chip = $('#walkstate');
+    const parts = [st.flying ? (st.fast ? 'Terbang cepat' : 'Terbang') : null, st.locked ? 'Kamera terkunci (Q untuk lepas)' : null].filter(Boolean);
+    chip.textContent = parts.join(' · ');
+    chip.hidden = !parts.length;
+    document.body.classList.toggle('cam-locked', st.locked);
+  };
 
   // ---------- ukuran layar & geser pusat pandang menjauhi panel ----------
   function resize() {
@@ -471,7 +482,7 @@ async function init() {
   });
   addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    if (state.mode === 'jalan') app.exitWalk();
+    if (state.mode === 'jalan') { if (!walker.releaseLook()) app.exitWalk(); }   // Esc pertama melepas kunci kamera dulu
     else if (state.mode === 'lantai') app.setFloor(null);
   });
 

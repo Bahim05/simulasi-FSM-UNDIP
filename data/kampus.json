@@ -1254,20 +1254,20 @@
    ],
    "poligon": [
     [
-     30.72,
-     39.379
+     30.669,
+     39.328
     ],
     [
      39.2,
-     30.898
+     23.4
     ],
     [
      39.2,
-     35.424
+     30.178
     ],
     [
-     32.983,
-     41.641
+     33.033,
+     41.692
     ]
    ],
    "lantai": [
@@ -1277,38 +1277,38 @@
      "tebal": 1.4,
      "poligon": [
       [
-       30.72,
-       39.379
+       30.669,
+       39.328
       ],
       [
        39.2,
-       30.898
+       23.4
       ],
       [
        39.2,
-       35.424
+       30.178
       ],
       [
-       32.983,
-       41.641
+       33.033,
+       41.692
       ]
      ],
      "area": [
       [
-       30.72,
-       39.379
+       30.669,
+       39.328
       ],
       [
        39.2,
-       30.898
+       23.4
       ],
       [
        39.2,
-       35.424
+       30.178
       ],
       [
-       32.983,
-       41.641
+       33.033,
+       41.692
       ]
      ],
      "kolomDasar": 1.05,
@@ -1317,40 +1317,52 @@
    ],
    "kolom": [
     [
-     31.427,
-     38.884
+     32.108,
+     36.96
     ],
     [
-     33.124,
-     37.187
+     33.241,
+     34.845
     ],
     [
-     34.821,
-     35.489
+     34.374,
+     32.729
     ],
     [
-     36.518,
-     33.792
+     35.507,
+     30.613
     ],
     [
-     38.215,
-     32.095
+     36.64,
+     28.498
     ],
     [
-     33.478,
-     40.934
+     37.773,
+     26.382
     ],
     [
-     35.175,
-     39.237
+     38.906,
+     24.266
     ],
     [
-     36.872,
-     37.54
+     33.531,
+     40.445
     ],
     [
-     38.569,
-     35.843
+     34.664,
+     38.33
+    ],
+    [
+     35.797,
+     36.214
+    ],
+    [
+     36.93,
+     34.098
+    ],
+    [
+     38.063,
+     31.983
     ]
    ],
    "ukuranKolom": 0.25,
@@ -1368,7 +1380,7 @@
      ],
      "b": [
       39.2,
-      33.161
+      26.789
      ],
      "lebar": 4.6,
      "tepiBawah": 3.85,
@@ -1379,12 +1391,13 @@
      "kudaKuda": 2.4,
      "kudaMulai": 0.85,
      "lebarKolom": 2.9,
-     "miringB": -1
+     "miringA": -0.302,
+     "miringB": -1.867
     }
    ],
    "atap": null,
    "sumber": "footage-2026",
-   "catatan": "Footage 'Penghubung gedung A dan B dilihat dari lt 1 gedung B' (ujung video: koridor lurus menuju Gedung G) dan garis merah pengguna di foto udara: dari ujung barat selasar Gedung B (bagian selatan, dekat pojok belakang B) koridor lurus ke pintu kaca Area Resepsionis Gedung G, tegak lurus dinding G (45 derajat terhadap B). Lantai keramik rata dengan selasar B, tanpa anak tangga (keterangan pengguna). Kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng dengan kuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Ujung atap di Gedung B dipotong miring mengikuti tepi selasar. Lebar dan panjang perkiraan."
+   "catatan": "Footage 'Penghubung gedung A dan B dilihat dari lt 1 gedung B' (ujung video: koridor lurus menuju Gedung G) dan garis merah biru pengguna (22 Nov 2026): dari pojok barat laut selasar Gedung B (di samping ramp penghubung A-B) koridor lurus ke pintu kaca Area Resepsionis Gedung G, sekitar 17 derajat dari tegak lurus dinding G. Lantai keramik rata dengan selasar B, tanpa anak tangga (keterangan pengguna). Kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng dengan kuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Kedua ujung atap dipotong miring (muka dinding G dan tepi selasar B). Lebar perkiraan."
   }
  ],
  "lansekap": [
@@ -1548,12 +1561,8 @@
        23.4
       ],
       [
-       39.2,
-       30.898
-      ],
-      [
-       30.72,
-       39.379
+       30.669,
+       39.328
       ],
       [
        24.285,
@@ -1592,19 +1601,19 @@
      "poligon": [
       [
        39.2,
-       35.424
+       30.178
       ],
       [
-       32.983,
-       41.641
+       33.033,
+       41.692
       ],
       [
-       34.397,
-       43.055
+       34.511,
+       43.169
       ],
       [
        39.2,
-       38.252
+       34.414
       ]
      ],
      "atas": 1.12,
