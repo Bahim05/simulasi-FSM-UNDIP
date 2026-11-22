@@ -1,6 +1,6 @@
 # Jelajah 3D FSM UNDIP
 
-Model 3D kawasan FSM yang bisa diputar dan dimasuki, dibuat dengan Three.js. Saat ini sudah ada **Gedung A**, **Gedung B**, **Gedung E**, dan **Gedung G**, ditampilkan bersama di kawasan dan tersambung lewat penghubung (A–E dan A–B; koridor B–G sedang dibetulkan). Pilih gedung dari daftar *Gedung & fasilitas* (atau klik gedungnya) untuk membuka datanya di panel. Gedung lain menyusul satu per satu.
+Model 3D kawasan FSM yang bisa diputar dan dimasuki, dibuat dengan Three.js. Saat ini sudah ada **Gedung A**, **Gedung B**, **Gedung E**, dan **Gedung G**, ditampilkan bersama di kawasan dan tersambung lewat penghubung (A–E, A–B, dan koridor B–G). Pilih gedung dari daftar *Gedung & fasilitas* (atau klik gedungnya) untuk membuka datanya di panel. Gedung lain menyusul satu per satu.
 
 ## Cara menjalankan
 
@@ -45,7 +45,7 @@ alat/                 skrip Python penyusun awal data gedung (lihat di bawah), t
 
 ## Lansekap: jalur dan bidang
 
-Lansekap di `kampus.json` bisa berupa `jalur` (beberapa `penampang` sejajar sebuah garis, seperti undakan dan plaza depan A; `belakang` mengatur bahan muka tepi terluar jalur terakhir) atau `bidang` (poligon datar bebas dengan `atas`, `bahan`, `muka`), dipakai untuk lahan paving bata merah dan bedeng tanaman di samping koridor B yang miring. Bahan yang tersedia: `paving-merah`, `bata-merah`, `beton`, `granit`, `selokan`, `batu-kali`, `batu-hitam`, `tanah`, `aspal`.
+Lansekap di `kampus.json` bisa berupa `jalur` (beberapa `penampang` sejajar sebuah garis, seperti undakan dan plaza depan A; `belakang` mengatur bahan muka tepi terluar jalur terakhir) atau `bidang` (poligon datar bebas dengan `atas`, `bahan`, `muka`), dipakai untuk lahan terbuka di depan Gedung A (paving bata merah, undakan, bedeng, rumput, parkir). Bidang boleh bertumpuk asal tingginya beda: yang lebih tinggi menutup yang lebih rendah (bidang dasar rumput sengaja dibuat paling rendah dan diletakkan paling akhir supaya nama tempat di mode jalan kaki mengambil bidang yang lebih spesifik). Bahan yang tersedia: `paving-merah`, `bata-merah`, `beton`, `granit`, `selokan`, `batu-kali`, `batu-hitam`, `tanah`, `rumput`, `aspal`.
 
 ## Alat penyusun data (`alat/`)
 
@@ -182,8 +182,7 @@ Sumber: denah 2023 lembar B, folder footage Gedung B (lobi, lorong toilet, tangg
   - Lt 2 dan lt 3: jembatan bertembok putih dengan bangku besi di sisi barat. Di ujung A masing-masing turun 7 anak tangga ke selasar A (lantai B 1,2 m lebih tinggi). Jembatan lt 2 beratap pelat jembatan lt 3; jembatan lt 3 beratap seng berangka besi merah bata.
   - Tembok pembatas dan tritisan lt 2 dan lt 3 di Gedung A dan B dibuka/dipotong di titik sambungan.
   - Panjang, lebar, tinggi anak tangga, dan bangku di lt 3 masih perkiraan.
-- Plaza depan A sekarang berhenti di x 38,8 supaya tidak menabrak penghubung.
-- **Koridor ke lahan bata merah** (penghubung `BL`, footage "Penghubung gedung A dan B dilihat dari lt 1 gedung B"): dari ujung barat selasar B, di samping tangga dan ramp penghubung A–B, koridor beratap lurus ke arah barat daya. Lantainya keramik abu satu anak tangga di bawah selasar B. Kolom putih ramping beralas batu kali hitam setinggi ±80 cm, atap pelana dengan kuda-kuda putih di tiap pasang kolom, gording kayu gelap, dan plafon putih. Di kanan (utara) lahan paving bata merah yang sedikit lebih rendah dari koridor dan berundak naik ke plaza depan A (plaza dipersempit jadi 3,25 m). Di kiri bedeng tanaman berbingkai beton. Arah (20° dari barat) dan panjangnya (±19,5 m) perkiraan dari foto udara. Ujungnya menuju bangunan beratap genteng merah (kantin) yang belum dibuat.
+- Koridor dari ujung barat B sekarang menuju Gedung G (penghubung `BG`), lihat bagian Gedung G.
 
 ## Gedung G (November 2026)
 
@@ -197,7 +196,18 @@ Sumber: denah Gedung G LT.1 sampai LT.3 dan foto udara dari pengguna dengan temp
 - **Lantai 2**: G201–G208, Women Area, Unit Bisnis, Dapur, toilet, R. Departemen Biologi (petak tenggara + sayap). Nomor G207 tidak terbaca di denah.
 - **Lantai 3**: G305, G307 (denah menulis G305 untuk dua ruang), Meeting Room, G304, G306, gudang, toilet.
 - Dua tangga U: tangga utara di samping lobi (letak dari denah, bordes menempel dinding luar) dan tangga selatan di sebelah R. Dosen.
-- Pintu kaca di tengah dinding Area Resepsionis menghadap B (ujung koridor B–G), dan pintu utama kaca dari lobi ke teras.
+- Pintu kaca di dinding Area Resepsionis menghadap B (x 22,6, ujung koridor B–G), dan pintu utama kaca dari lobi ke teras.
+
+### Koridor B–G dan lahan terbuka depan Gedung A (22 Nov 2026)
+
+- **Koridor B–G** (penghubung `BG`, menggantikan koridor `BL` yang arahnya salah): dari bagian selatan selasar ujung barat Gedung B lurus ke pintu kaca Area Resepsionis G, tegak lurus dinding G (45 derajat terhadap B), mengikuti garis merah pengguna di foto udara. Lantai keramik rata dengan selasar B (1,15), **tanpa anak tangga** (keterangan pengguna), lantai 1 G 5 cm lebih tinggi. Gaya dari footage: kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng berkuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Ujung atap di Gedung B dipotong miring mengikuti tepi selasar (`miringB` di `atapPelana`). Lebar pelat 3,2 m, panjang sumbu ±10,4 m (perkiraan).
+- **Lahan terbuka depan Gedung A** (lansekap `halaman-selatan-A`, menggantikan `bata-merah-B`). Tidak ada lagi lubang ke tanah dasar:
+  - **Paving bata merah rata 1,05** dari plaza A sampai ujung barat selasar B, koridor B–G, dan Gedung G; di barat menerus sampai garis sisi utara sayap Perpustakaan (garis merah pengguna). Plaza A ikut diturunkan ke 1,05 sehingga plaza dan lahan paving satu bidang tanpa undakan (keterangan pengguna; naik-turun kecil di lapangan sengaja diabaikan). Paving 10 cm di bawah lantai koridor, seperti di footage.
+  - bedeng tanaman 1,12 di sisi tenggara koridor (kiri kalau berjalan dari B);
+  - rumput 0,88 sebagai permukaan dasar di sekitar B dan G, tepinya tembok batu kali (di sisi Gedung E sekitar 2 m dari selasar E);
+  - parkir aspal 0,95 di sisi drop-off G.
+  - Jalur depan A diperpanjang sampai sisi penghubung A–B (x 41,85); ujungnya jadi tembok batu kali. Tembok batu kali di depan selasar A sekarang setinggi ±1,2 m dari jalur beton.
+  - Pohon, kios, dan bangku belum dibuat. Batas parkir dan batas rumput perkiraan.
 
 ## Menambah gedung berikutnya
 

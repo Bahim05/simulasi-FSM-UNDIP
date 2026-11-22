@@ -1138,11 +1138,15 @@ function buildGable(ap, P) {
   const drop = ap.puncak - ap.tepiBawah;
   const list = ap.bahan === 'seng' ? P.seng : P.genteng;
   const m0 = ap.mulai ?? 0;
+  // ujung miring: miringA / miringB = geseran ujung sepanjang sumbu (meter) per meter ke arah +n (kiri sumbu a->b).
+  // Dipakai kalau atap berhenti di tepi yang tidak tegak lurus sumbu, mis. tepi selasar gedung yang dipotong 45 derajat.
+  const kA = ap.miringA ?? 0, kB = ap.miringB ?? 0;
+  const endA = (p, off) => p.addScaledVector(u, kA * off), endB = (p, off) => p.addScaledVector(u, kB * off);
   for (const sd of [1, -1]) {
     if (ap.sisiSaja && sd !== ap.sisiSaja) continue;
-    const e0 = a.clone().addScaledVector(n, sd * hw).setY(ap.tepiBawah), e1 = b.clone().addScaledVector(n, sd * hw).setY(ap.tepiBawah);
+    const e0 = endA(a.clone().addScaledVector(n, sd * hw).setY(ap.tepiBawah), sd * hw), e1 = endB(b.clone().addScaledVector(n, sd * hw).setY(ap.tepiBawah), sd * hw);
     // tepi atas bidang: di garis bubungan, atau bergeser `mulai` (misalnya atap sayap yang menempel di sisi jembatan)
-    const ta = a.clone().addScaledVector(n, sd * m0), tb = b.clone().addScaledVector(n, sd * m0);
+    const ta = endA(a.clone().addScaledVector(n, sd * m0), sd * m0), tb = endB(b.clone().addScaledVector(n, sd * m0), sd * m0);
     const pos = [ta, tb, e1, ta, e1, e0].flatMap(p => [p.x, p.y, p.z]);
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
@@ -1179,7 +1183,9 @@ function buildGable(ap, P) {
     // kuda-kuda putih di tiap pasang kolom: balok tarik antar kolom, kaki kuda-kuda ke bubungan, tiang tengah, dua batang miring
     const len = a.distanceTo(b), hc = (ap.lebarKolom ?? ap.lebar - 1) / 2;
     const yAt = off => ap.puncak - drop * (Math.abs(off) / hw) - 0.16;     // tinggi bawah bidang atap pada jarak `off` dari bubungan
-    for (let t = ap.kudaMulai ?? 0; t <= len + 1e-6; t += ap.kudaKuda) {
+    const tMin = Math.abs(kA) * hw, tMax = len - Math.abs(kB) * hw;      // kuda-kuda tidak boleh keluar dari ujung miring
+    for (let t = ap.kudaMulai ?? 0; t <= tMax + 1e-6; t += ap.kudaKuda) {
+      if (t < tMin - 1e-6) continue;
       const c = a.clone().addScaledVector(u, t);
       const at = (off, y) => new V3(c.x + n.x * off, y, c.z + n.z * off);
       const yt = yAt(hc) - 0.12;
@@ -1372,6 +1378,7 @@ function lansekapTexture(key) {
       break;
     }
     case 'bata-merah': size = 1.5; g.fillStyle = '#a9584b'; g.fillRect(0, 0, N, N); blotch(['#8e463b', '#bf6c5c'], 60, 10, 40, 0.18); break;
+    case 'rumput': size = 2; g.fillStyle = '#6d8a4a'; g.fillRect(0, 0, N, N); blotch(['#5d7a3e', '#7f9a57', '#55703a', '#86a05e', '#7a6a4a'], 260, 3, 22, 0.3); break;
     case 'aspal': size = 2; g.fillStyle = '#56585a'; g.fillRect(0, 0, N, N); blotch(['#4a4c4e', '#626466', '#3f4143'], 220, 2, 10, 0.25); break;
     case 'beton': size = 2; g.fillStyle = '#bdb8ae'; g.fillRect(0, 0, N, N); blotch(['#a7a297', '#cbc7be', '#9d988c'], 90, 8, 60, 0.16); break;
     case 'granit': {

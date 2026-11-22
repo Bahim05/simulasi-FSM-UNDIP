@@ -1246,146 +1246,111 @@
    "catatan": "Letak dari foto udara dan koreksi lapangan: di pojok timur selasar Gedung A, tiba di depan lobi Gedung B. Lantai 1: jalan beratap dari selasar A (naik satu anak tangga) ke selasar B; di ujung B naik lewat ramp (barat) dan tangga (timur) karena lantai B ±1,2 m lebih tinggi; atap sayap genteng berkasau kayu, kolom putih beralas batu hitam. Lantai 2 dan 3: jembatan bertembok putih dengan bangku besi di sisi barat; di ujung A masing-masing turun 7 anak tangga ke selasar A. Jembatan lt 2 beratap pelat jembatan lt 3; jembatan lt 3 beratap seng berangka besi merah bata (perkiraan: bangku di lt 2 dan lt 3 disamakan). Panjang, lebar, dan tinggi anak tangga perkiraan dari foto."
   },
   {
-   "id": "BL",
-   "nama": "Koridor Gedung B ke lahan bata merah",
+   "id": "BG",
+   "nama": "Koridor Gedung B ke Gedung G",
    "antara": [
-    "B"
+    "B",
+    "G"
    ],
    "poligon": [
     [
-     39.2,
-     23.404
-    ],
-    [
-     20.363,
-     30.26
-    ],
-    [
-     21.389,
-     33.079
+     30.72,
+     39.379
     ],
     [
      39.2,
-     26.596
+     30.898
+    ],
+    [
+     39.2,
+     35.424
+    ],
+    [
+     32.983,
+     41.641
     ]
    ],
    "lantai": [
     {
      "no": 1,
-     "elevasi": 1.0,
-     "tebal": 1.3,
+     "elevasi": 1.15,
+     "tebal": 1.4,
      "poligon": [
       [
-       39.2,
-       23.404
-      ],
-      [
-       20.363,
-       30.26
-      ],
-      [
-       21.389,
-       33.079
+       30.72,
+       39.379
       ],
       [
        39.2,
-       26.596
+       30.898
+      ],
+      [
+       39.2,
+       35.424
+      ],
+      [
+       32.983,
+       41.641
       ]
      ],
-     "kolomDasar": 0.9,
-     "kolomPuncak": 3.78,
      "area": [
       [
-       39.2,
-       23.404
-      ],
-      [
-       20.363,
-       30.26
-      ],
-      [
-       21.389,
-       33.079
+       30.72,
+       39.379
       ],
       [
        39.2,
-       26.596
+       30.898
+      ],
+      [
+       39.2,
+       35.424
+      ],
+      [
+       32.983,
+       41.641
       ]
-     ]
+     ],
+     "kolomDasar": 1.05,
+     "kolomPuncak": 3.93
     }
    ],
    "kolom": [
     [
-     38.446,
-     23.806
+     31.427,
+     38.884
     ],
     [
-     39.39,
-     26.399
+     33.124,
+     37.187
     ],
     [
-     36.191,
-     24.627
+     34.821,
+     35.489
     ],
     [
-     37.135,
-     27.22
+     36.518,
+     33.792
     ],
     [
-     33.936,
-     25.448
+     38.215,
+     32.095
     ],
     [
-     34.88,
-     28.041
+     33.478,
+     40.934
     ],
     [
-     31.68,
-     26.268
+     35.175,
+     39.237
     ],
     [
-     32.624,
-     28.862
+     36.872,
+     37.54
     ],
     [
-     29.425,
-     27.089
-    ],
-    [
-     30.369,
-     29.683
-    ],
-    [
-     27.17,
-     27.91
-    ],
-    [
-     28.114,
-     30.504
-    ],
-    [
-     24.915,
-     28.731
-    ],
-    [
-     25.859,
-     31.324
-    ],
-    [
-     22.659,
-     29.552
-    ],
-    [
-     23.603,
-     32.145
-    ],
-    [
-     20.404,
-     30.373
-    ],
-    [
-     21.348,
-     32.966
+     38.569,
+     35.843
     ]
    ],
    "ukuranKolom": 0.25,
@@ -1398,27 +1363,28 @@
     {
      "lantai": 1,
      "a": [
-      39.717,
-      24.812
+      31.851,
+      40.51
      ],
      "b": [
-      20.5,
-      31.806
+      39.2,
+      33.161
      ],
-     "lebar": 4.4,
-     "tepiBawah": 3.7,
-     "puncak": 4.9,
+     "lebar": 4.6,
+     "tepiBawah": 3.85,
+     "puncak": 5.05,
      "bahan": "genteng",
      "plafonMiring": true,
      "gording": 3,
      "kudaKuda": 2.4,
      "kudaMulai": 0.85,
-     "lebarKolom": 2.76
+     "lebarKolom": 2.9,
+     "miringB": -1
     }
    ],
    "atap": null,
    "sumber": "footage-2026",
-   "catatan": "Footage 'Penghubung gedung A dan B dilihat dari lt 1 gedung B': dari ujung barat selasar B (samping tangga dan ramp penghubung A-B) koridor beratap lurus ke arah barat daya, lantai keramik abu satu anak tangga di bawah selasar B. Kolom putih ramping beralas batu kali hitam setinggi ±80 cm, atap pelana dengan kuda-kuda putih di tiap pasang kolom, gording kayu gelap, plafon putih. Kanan (utara): lahan paving bata merah yang lebih rendah, berundak naik ke plaza depan A. Kiri: bedeng tanaman berbingkai beton. Arah (20 derajat dari barat) dan panjang (±19,5 m) perkiraan dari foto udara; ujungnya menuju bangunan beratap genteng merah (kantin, belum dibuat)."
+   "catatan": "Footage 'Penghubung gedung A dan B dilihat dari lt 1 gedung B' (ujung video: koridor lurus menuju Gedung G) dan garis merah pengguna di foto udara: dari ujung barat selasar Gedung B (bagian selatan, dekat pojok belakang B) koridor lurus ke pintu kaca Area Resepsionis Gedung G, tegak lurus dinding G (45 derajat terhadap B). Lantai keramik rata dengan selasar B, tanpa anak tangga (keterangan pengguna). Kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng dengan kuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Ujung atap di Gedung B dipotong miring mengikuti tepi selasar. Lebar dan panjang perkiraan."
   }
  ],
  "lansekap": [
@@ -1431,7 +1397,7 @@
      14.0
     ],
     "b": [
-     38.8,
+     41.85,
      14.0
     ]
    },
@@ -1478,14 +1444,14 @@
     {
      "nama": "Jalur paving",
      "lebar": 1.6,
-     "atas": 1.27,
+     "atas": 1.05,
      "bahan": "paving-merah",
      "muka": "batu-kali"
     },
     {
      "nama": "Plaza",
      "lebar": 3.25,
-     "atas": 1.47,
+     "atas": 1.05,
      "bahan": "paving-merah",
      "muka": "bata-merah",
      "ujung": "batu-kali",
@@ -1555,69 +1521,167 @@
     }
    ],
    "sumber": "footage-2026",
-   "catatan": "Dari footage selasar lt 1 Gedung A, tampak depan Gedung A, dan penghubung A-E lt 1: dari selasar turun satu anak tangga granit hitam ke jalur beton, selokan, tiga undakan beton berpot, tembok batu kali, jalur paving merah, lalu plaza paving merah. Tinggi atas tembok sedada sampai seleher dari jalur beton (keterangan lapangan). Plaza berdiri sendiri; kedalaman 3,25 m (tepi selatannya undakan turun ke lahan paving bata merah di samping koridor Gedung B, footage); ujung timurnya berhenti sebelum penghubung A-B (x 38,8). Tangga turun di tengah dan di ujung barat ke arah penghubung A-E. Pohon sengaja tidak dibuat."
+   "catatan": "Dari footage selasar lt 1 Gedung A, tampak depan Gedung A, dan penghubung A-E lt 1: dari selasar turun satu anak tangga granit hitam ke jalur beton, selokan, tiga undakan beton berpot, tembok batu kali, jalur paving merah, lalu plaza paving merah. Tinggi atas tembok sedada sampai seleher dari jalur beton (keterangan lapangan). Plaza berdiri sendiri; kedalaman 3,25 m (tepi selatannya undakan turun ke lahan paving bata merah di samping koridor Gedung B, footage); ujung timurnya sampai sisi penghubung A-B (x 41,85), ujungnya tembok batu kali. Tangga turun di tengah dan di ujung barat ke arah penghubung A-E. Pohon sengaja tidak dibuat."
   },
   {
-   "id": "bata-merah-B",
-   "nama": "Lahan bata merah",
+   "id": "halaman-selatan-A",
+   "nama": "Lahan terbuka depan Gedung A dan sekitar Gedung B, G",
+   "dasar": -0.8,
    "bidang": [
     {
      "nama": "Paving bata merah",
      "poligon": [
       [
-       20.0,
+       -4.3,
        23.0
       ],
       [
-       39.2,
+       41.9,
        23.0
       ],
       [
+       41.9,
+       23.4
+      ],
+      [
        39.2,
-       23.404
+       23.4
       ],
       [
-       20.363,
-       30.26
+       39.2,
+       30.898
       ],
       [
-       20.0,
-       30.26
+       30.72,
+       39.379
+      ],
+      [
+       24.285,
+       32.944
+      ],
+      [
+       20.043,
+       37.187
+      ],
+      [
+       11.557,
+       28.701
+      ],
+      [
+       7.3,
+       32.99
+      ],
+      [
+       -9.49,
+       32.99
+      ],
+      [
+       -4.3,
+       24.0
       ]
      ],
-     "atas": 0.95,
+     "atas": 1.05,
+     "dasar": 0.88,
      "bahan": "paving-merah",
      "muka": "beton",
-     "sumber": "footage-2026"
+     "sumber": "footage-2026",
+     "catatan": "Rata dengan plaza A (tanpa undakan), dari plaza sampai ujung barat selasar B, koridor B-G, dan Gedung G; di barat sampai sisi utara sayap Perpustakaan. Sedikit lebih rendah dari lantai koridor."
     },
     {
      "nama": "Bedeng tanaman",
      "poligon": [
       [
        39.2,
-       26.596
+       35.424
       ],
       [
-       21.389,
-       33.079
+       32.983,
+       41.641
       ],
       [
-       21.868,
-       34.395
+       34.397,
+       43.055
       ],
       [
        39.2,
-       28.086
+       38.252
       ]
      ],
-     "atas": 1.05,
+     "atas": 1.12,
+     "dasar": 0.88,
      "bahan": "tanah",
      "muka": "beton",
-     "sumber": "footage-2026"
+     "sumber": "footage-2026",
+     "catatan": "Di sisi tenggara koridor B-G (kiri kalau berjalan dari B), berbingkai beton."
+    },
+    {
+     "nama": "Parkir dan jalur drop-off",
+     "poligon": [
+      [
+       -2.443,
+       40.015
+      ],
+      [
+       30.084,
+       72.542
+      ],
+      [
+       20.043,
+       82.583
+      ],
+      [
+       -12.484,
+       50.056
+      ]
+     ],
+     "atas": 0.95,
+     "dasar": 0.88,
+     "bahan": "aspal",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "catatan": "Lapangan parkir di sisi drop-off Gedung G (foto udara). Batasnya perkiraan."
+    },
+    {
+     "nama": "Halaman (rumput)",
+     "poligon": [
+      [
+       -4.3,
+       24.0
+      ],
+      [
+       84.8,
+       24.0
+      ],
+      [
+       84.8,
+       46.0
+      ],
+      [
+       48.0,
+       46.0
+      ],
+      [
+       48.0,
+       84.0
+      ],
+      [
+       -16.0,
+       84.0
+      ],
+      [
+       -20.466,
+       52.0
+      ]
+     ],
+     "atas": 0.88,
+     "bahan": "rumput",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "catatan": "Permukaan dasar di selatan plaza A, di sekitar Gedung B dan G, supaya tidak ada lubang. Tepinya tembok batu kali."
     }
    ],
    "sumber": "footage-2026",
-   "catatan": "Lahan paving bata merah di utara koridor Gedung B (sedikit di bawah lantai koridor, plaza depan A lebih tinggi), dan bedeng tanaman berbingkai beton di selatannya. Bentuk dan tinggi perkiraan dari footage."
+   "catatan": "Dari footage koridor B (lahan paving bata merah berundak naik ke plaza A, bedeng di sisi lain koridor) dan foto udara. Tinggi: plaza A dan seluruh paving bata merah 1,05 (rata, naik-turun kecil di lapangan diabaikan), koridor dan selasar B 1,15, lantai 1 G 1,2, bedeng 1,12, rumput 0,88. Pohon, kios, dan bangku belum dibuat."
   }
  ]
 }

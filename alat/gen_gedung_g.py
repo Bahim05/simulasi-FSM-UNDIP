@@ -261,7 +261,7 @@ def lantai1():
     ]
     cols = columns(O12)
     ext_doors = {
-        (12, 0, 30, 0): [door(9, 1.8, f"{p}-RSP", ganda=True, kaca=True)],      # ke koridor Gedung B
+        (12, 0, 30, 0): [door(10.6, 1.8, f"{p}-RSP", ganda=True, kaca=True)],   # ke koridor Gedung B (x 22,6: sumbu koridor, tempelan foto)
         (30, 21, 12, 21): [door(9, 2.0, f"{p}-LOB", ganda=True, kaca=True)],    # pintu utama ke teras / drop-off
     }
     k_sel = tuple(pt(B1) + pt(add(B1, dE, LW)))
@@ -273,8 +273,7 @@ def lantai1():
         "denah": {"gambar": "assets/denah/G1.jpg", "batas": DB, "keterangan": "Denah Gedung G lantai 1, diluruskan ke skala 30 px per meter."},
         "ruang": rooms, "dinding": walls,
         "selasar": {"poligon": rect(17.6, 21, 24.4, 23.8),
-                    "tambahan": [{"poligon": [pt(q) for q in sel_pd3], "nama": "Selasar sayap R. PD3"},
-                                 {"poligon": rect(15.6, 23.8, 26.4, 30.6), "elevasi": 0.95, "nama": "Drop-off"}]},
+                    "tambahan": [{"poligon": [pt(q) for q in sel_pd3], "nama": "Selasar sayap R. PD3"}]},
         "pagar": rails,
     }, cols
 

@@ -1419,7 +1419,7 @@
      "bukaan": [
       {
        "jenis": "pintu-ganda",
-       "t": 9.0,
+       "t": 10.6,
        "lebar": 1.8,
        "tinggi": 2.4,
        "boven": 0.5,
@@ -1438,15 +1438,8 @@
       },
       {
        "jenis": "jendela",
-       "t": 7.125,
-       "lebar": 0.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 10.875,
-       "lebar": 0.95,
+       "t": 7.925,
+       "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
       },
@@ -1957,28 +1950,6 @@
        ]
       ],
       "nama": "Selasar sayap R. PD3"
-     },
-     {
-      "poligon": [
-       [
-        15.6,
-        23.8
-       ],
-       [
-        26.4,
-        23.8
-       ],
-       [
-        26.4,
-        30.6
-       ],
-       [
-        15.6,
-        30.6
-       ]
-      ],
-      "elevasi": 0.95,
-      "nama": "Drop-off"
      }
     ]
    },
