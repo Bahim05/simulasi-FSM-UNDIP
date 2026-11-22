@@ -1,0 +1,1378 @@
+{
+ "schema": "fsm-kampus@1",
+ "nama": "FSM UNDIP",
+ "keterangan": "Daftar gedung, posisinya di kawasan, dan penghubung antar gedung. Koordinat kawasan memakai sistem Gedung A (x ke timur, z ke selatan, meter). posisi = titik (0,0) gedung itu di kawasan; rotasi = derajat diputar berlawanan arah jarum jam dilihat dari atas.",
+ "gedung": [
+  {
+   "id": "A",
+   "nama": "Gedung A",
+   "status": "dibuat",
+   "file": "data/gedung-a.json",
+   "posisi": [
+    0,
+    0
+   ],
+   "rotasi": 0
+  },
+  {
+   "id": "B",
+   "nama": "Gedung B",
+   "status": "dibuat",
+   "file": "data/gedung-b.json",
+   "posisi": [
+    82.0,
+    37.0
+   ],
+   "rotasi": 180,
+   "catatan": "Posisi dari foto udara (22 Nov 2026): sejajar A, ujung barat atap B kira-kira 7 m di barat ujung timur atap A, tepi utara selasar B ±9,4 m di selatan tepi selasar A. Digeser sedikit supaya penghubung di pojok timur A tiba di antara dua kolom selasar B (depan lobi). Perkiraan."
+  },
+  {
+   "id": "C",
+   "nama": "Gedung C",
+   "status": "belum"
+  },
+  {
+   "id": "D",
+   "nama": "Gedung D",
+   "status": "belum"
+  },
+  {
+   "id": "E",
+   "nama": "Gedung E",
+   "status": "dibuat",
+   "file": "data/gedung-e.json",
+   "posisi": [
+    -17.8,
+    16.43
+   ],
+   "rotasi": 90
+  },
+  {
+   "id": "F",
+   "nama": "Gedung F",
+   "status": "belum"
+  },
+  {
+   "id": "G",
+   "nama": "Gedung G",
+   "status": "belum"
+  },
+  {
+   "id": "H",
+   "nama": "Gedung H",
+   "status": "belum"
+  },
+  {
+   "id": "I",
+   "nama": "Gedung I",
+   "status": "belum"
+  },
+  {
+   "id": "J",
+   "nama": "Gedung J",
+   "status": "belum"
+  },
+  {
+   "id": "K",
+   "nama": "Gedung K",
+   "status": "belum"
+  },
+  {
+   "id": "L",
+   "nama": "Gedung L",
+   "status": "belum"
+  },
+  {
+   "id": "M",
+   "nama": "Masjid",
+   "status": "belum"
+  }
+ ],
+ "penghubung": [
+  {
+   "id": "AE",
+   "nama": "Penghubung Gedung A dan E",
+   "antara": [
+    "A",
+    "E"
+   ],
+   "poligon": [
+    [
+     -4.5,
+     11
+    ],
+    [
+     0,
+     11
+    ],
+    [
+     0,
+     14
+    ],
+    [
+     -4.5,
+     14
+    ]
+   ],
+   "lantai": [
+    {
+     "no": 1,
+     "elevasi": -0.05
+    },
+    {
+     "no": 2,
+     "elevasi": 3.95
+    },
+    {
+     "no": 3,
+     "elevasi": 8.11,
+     "poligon": [
+      [
+       -4.5,
+       11
+      ],
+      [
+       0.04,
+       11
+      ],
+      [
+       0.04,
+       14
+      ],
+      [
+       -4.5,
+       14
+      ]
+     ]
+    }
+   ],
+   "kolom": [
+    [
+     -2.25,
+     11.25
+    ],
+    [
+     -2.25,
+     13.75
+    ]
+   ],
+   "pagar": [
+    {
+     "a": [
+      -4.3,
+      11.1
+     ],
+     "b": [
+      0,
+      11.1
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "lantai": [
+      2,
+      3
+     ]
+    },
+    {
+     "a": [
+      -4.3,
+      13.9
+     ],
+     "b": [
+      0,
+      13.9
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "lantai": [
+      2,
+      3
+     ]
+    }
+   ],
+   "tritisan": [
+    {
+     "a": [
+      0,
+      11
+     ],
+     "b": [
+      -4.5,
+      11
+     ],
+     "sisi": 1,
+     "elevasi": 3.95,
+     "lantai": 2,
+     "lebar": 1.2,
+     "turun": 0.55,
+     "jarak": 0.15
+    },
+    {
+     "a": [
+      0,
+      11
+     ],
+     "b": [
+      -4.5,
+      11
+     ],
+     "sisi": 1,
+     "elevasi": 8.11,
+     "lantai": 3,
+     "lebar": 1.2,
+     "turun": 0.55,
+     "jarak": 0.15
+    },
+    {
+     "a": [
+      -4.5,
+      14
+     ],
+     "b": [
+      0,
+      14
+     ],
+     "sisi": 1,
+     "elevasi": 3.95,
+     "lantai": 2,
+     "lebar": 1.2,
+     "turun": 0.55,
+     "jarak": 0.15
+    },
+    {
+     "a": [
+      -4.5,
+      14
+     ],
+     "b": [
+      0,
+      14
+     ],
+     "sisi": 1,
+     "elevasi": 8.11,
+     "lantai": 3,
+     "lebar": 1.2,
+     "turun": 0.55,
+     "jarak": 0.15
+    }
+   ],
+   "atap": null,
+   "sumber": "footage-2026",
+   "catatan": "Menyambung selasar Gedung A ke selasar Gedung E dan tiba di depan pintu R. BEM / Kantor Dosen / HMIF. Panjang ±4,5 m, lebar 3 m. Footage penghubung lt 2 dan lt 3: di lt 2 lantai penghubung rata dengan selasar A lalu naik 1 anak tangga ke E; di lt 3 dari selasar A naik 1 anak tangga ke penghubung lalu naik 2 anak tangga ke E (tinggi anak tangga ±16 cm). Lantai 3 beratap seng berangka besi gelap; di tengah tembok pembatas ada pilaster pendek.",
+   "anakTangga": [
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       -4.5,
+       11
+      ],
+      [
+       -4.2,
+       11
+      ],
+      [
+       -4.2,
+       14
+      ],
+      [
+       -4.5,
+       14
+      ]
+     ],
+     "elevasi": 8.27
+    }
+   ],
+   "tiang": [
+    {
+     "lantai": 3,
+     "titik": [
+      [
+       -0.25,
+       11.15
+      ],
+      [
+       -0.25,
+       13.85
+      ],
+      [
+       -2.25,
+       11.15
+      ],
+      [
+       -2.25,
+       13.85
+      ],
+      [
+       -4.25,
+       11.15
+      ],
+      [
+       -4.25,
+       13.85
+      ]
+     ],
+     "tinggi": 2.6
+    }
+   ],
+   "atapPelana": [
+    {
+     "lantai": 3,
+     "a": [
+      0.0,
+      12.5
+     ],
+     "b": [
+      -4.5,
+      12.5
+     ],
+     "lebar": 3.7,
+     "tepiBawah": 10.56,
+     "puncak": 11.21,
+     "bahan": "seng"
+    }
+   ],
+   "warnaBaja": "#3d4246"
+  },
+  {
+   "id": "AB",
+   "nama": "Penghubung Gedung A dan B",
+   "antara": [
+    "A",
+    "B"
+   ],
+   "poligon": [
+    [
+     41.9,
+     14.0
+    ],
+    [
+     45.1,
+     14.0
+    ],
+    [
+     45.1,
+     23.4
+    ],
+    [
+     41.9,
+     23.4
+    ]
+   ],
+   "lantai": [
+    {
+     "no": 1,
+     "elevasi": 0.25,
+     "tebal": 0.5,
+     "poligon": [
+      [
+       42.3,
+       14.3
+      ],
+      [
+       44.7,
+       14.3
+      ],
+      [
+       44.7,
+       22.8
+      ],
+      [
+       42.3,
+       22.8
+      ]
+     ],
+     "area": [
+      [
+       42.3,
+       14.0
+      ],
+      [
+       44.7,
+       14.0
+      ],
+      [
+       44.7,
+       23.4
+      ],
+      [
+       42.3,
+       23.4
+      ]
+     ]
+    },
+    {
+     "no": 2,
+     "elevasi": 5.15,
+     "tebal": 0.35,
+     "poligon": [
+      [
+       42.3,
+       15.8
+      ],
+      [
+       44.7,
+       15.8
+      ],
+      [
+       44.7,
+       23.4
+      ],
+      [
+       42.3,
+       23.4
+      ]
+     ],
+     "area": [
+      [
+       42.3,
+       14.0
+      ],
+      [
+       44.7,
+       14.0
+      ],
+      [
+       44.7,
+       23.4
+      ],
+      [
+       42.3,
+       23.4
+      ]
+     ]
+    },
+    {
+     "no": 3,
+     "elevasi": 9.15,
+     "tebal": 0.35,
+     "poligon": [
+      [
+       42.3,
+       15.8
+      ],
+      [
+       44.7,
+       15.8
+      ],
+      [
+       44.7,
+       23.4
+      ],
+      [
+       42.3,
+       23.4
+      ]
+     ],
+     "area": [
+      [
+       42.3,
+       14.0
+      ],
+      [
+       44.7,
+       14.0
+      ],
+      [
+       44.7,
+       23.4
+      ],
+      [
+       42.3,
+       23.4
+      ]
+     ],
+     "kolom": []
+    }
+   ],
+   "kolom": [
+    [
+     42.1,
+     16.3
+    ],
+    [
+     44.9,
+     16.3
+    ],
+    [
+     42.1,
+     19.85
+    ],
+    [
+     44.9,
+     19.85
+    ]
+   ],
+   "ukuranKolom": 0.4,
+   "alasKolom": {
+    "tinggi": 0.45,
+    "bahan": "granit"
+   },
+   "anakTangga": [
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       42.3,
+       14.0
+      ],
+      [
+       44.7,
+       14.0
+      ],
+      [
+       44.7,
+       14.3
+      ],
+      [
+       42.3,
+       14.3
+      ]
+     ],
+     "elevasi": 0.1,
+     "tebal": 0.35
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       43.6,
+       21.6
+      ],
+      [
+       44.7,
+       21.6
+      ],
+      [
+       44.7,
+       21.9
+      ],
+      [
+       43.6,
+       21.9
+      ]
+     ],
+     "elevasi": 0.43
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       43.6,
+       21.9
+      ],
+      [
+       44.7,
+       21.9
+      ],
+      [
+       44.7,
+       22.2
+      ],
+      [
+       43.6,
+       22.2
+      ]
+     ],
+     "elevasi": 0.61
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       43.6,
+       22.2
+      ],
+      [
+       44.7,
+       22.2
+      ],
+      [
+       44.7,
+       22.5
+      ],
+      [
+       43.6,
+       22.5
+      ]
+     ],
+     "elevasi": 0.79
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       43.6,
+       22.5
+      ],
+      [
+       44.7,
+       22.5
+      ],
+      [
+       44.7,
+       22.8
+      ],
+      [
+       43.6,
+       22.8
+      ]
+     ],
+     "elevasi": 0.97
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       42.3,
+       22.8
+      ],
+      [
+       44.7,
+       22.8
+      ],
+      [
+       44.7,
+       23.4
+      ],
+      [
+       42.3,
+       23.4
+      ]
+     ],
+     "elevasi": 1.15,
+     "tebal": 1.4
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       42.3,
+       15.5
+      ],
+      [
+       44.7,
+       15.5
+      ],
+      [
+       44.7,
+       15.8
+      ],
+      [
+       42.3,
+       15.8
+      ]
+     ],
+     "elevasi": 4.979,
+     "tebal": 1.179
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       42.3,
+       15.2
+      ],
+      [
+       44.7,
+       15.2
+      ],
+      [
+       44.7,
+       15.5
+      ],
+      [
+       42.3,
+       15.5
+      ]
+     ],
+     "elevasi": 4.807,
+     "tebal": 1.007
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       42.3,
+       14.9
+      ],
+      [
+       44.7,
+       14.9
+      ],
+      [
+       44.7,
+       15.2
+      ],
+      [
+       42.3,
+       15.2
+      ]
+     ],
+     "elevasi": 4.636,
+     "tebal": 0.836
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       42.3,
+       14.6
+      ],
+      [
+       44.7,
+       14.6
+      ],
+      [
+       44.7,
+       14.9
+      ],
+      [
+       42.3,
+       14.9
+      ]
+     ],
+     "elevasi": 4.464,
+     "tebal": 0.664
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       42.3,
+       14.3
+      ],
+      [
+       44.7,
+       14.3
+      ],
+      [
+       44.7,
+       14.6
+      ],
+      [
+       42.3,
+       14.6
+      ]
+     ],
+     "elevasi": 4.293,
+     "tebal": 0.493
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       42.3,
+       14.0
+      ],
+      [
+       44.7,
+       14.0
+      ],
+      [
+       44.7,
+       14.3
+      ],
+      [
+       42.3,
+       14.3
+      ]
+     ],
+     "elevasi": 4.121,
+     "tebal": 0.321
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       42.3,
+       15.5
+      ],
+      [
+       44.7,
+       15.5
+      ],
+      [
+       44.7,
+       15.8
+      ],
+      [
+       42.3,
+       15.8
+      ]
+     ],
+     "elevasi": 8.979,
+     "tebal": 1.179
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       42.3,
+       15.2
+      ],
+      [
+       44.7,
+       15.2
+      ],
+      [
+       44.7,
+       15.5
+      ],
+      [
+       42.3,
+       15.5
+      ]
+     ],
+     "elevasi": 8.807,
+     "tebal": 1.007
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       42.3,
+       14.9
+      ],
+      [
+       44.7,
+       14.9
+      ],
+      [
+       44.7,
+       15.2
+      ],
+      [
+       42.3,
+       15.2
+      ]
+     ],
+     "elevasi": 8.636,
+     "tebal": 0.836
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       42.3,
+       14.6
+      ],
+      [
+       44.7,
+       14.6
+      ],
+      [
+       44.7,
+       14.9
+      ],
+      [
+       42.3,
+       14.9
+      ]
+     ],
+     "elevasi": 8.464,
+     "tebal": 0.664
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       42.3,
+       14.3
+      ],
+      [
+       44.7,
+       14.3
+      ],
+      [
+       44.7,
+       14.6
+      ],
+      [
+       42.3,
+       14.6
+      ]
+     ],
+     "elevasi": 8.293,
+     "tebal": 0.493
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       42.3,
+       14.0
+      ],
+      [
+       44.7,
+       14.0
+      ],
+      [
+       44.7,
+       14.3
+      ],
+      [
+       42.3,
+       14.3
+      ]
+     ],
+     "elevasi": 8.121,
+     "tebal": 0.321
+    }
+   ],
+   "landai": [
+    {
+     "lantai": 1,
+     "a": [
+      42.875,
+      17.8
+     ],
+     "b": [
+      42.875,
+      22.8
+     ],
+     "lebar": 1.15,
+     "dari": 0.25,
+     "ke": 1.15
+    }
+   ],
+   "pagar": [
+    {
+     "a": [
+      42.37,
+      17.85,
+      0.25
+     ],
+     "b": [
+      42.37,
+      22.75,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      43.52,
+      17.85,
+      0.25
+     ],
+     "b": [
+      43.52,
+      22.75,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      44.63,
+      21.5,
+      0.25
+     ],
+     "b": [
+      44.63,
+      22.75,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      42.4,
+      15.8
+     ],
+     "b": [
+      42.4,
+      23.35
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      42.4,
+      15.8,
+      5.15
+     ],
+     "b": [
+      42.4,
+      14.05,
+      3.95
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 1.0,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      44.6,
+      15.8
+     ],
+     "b": [
+      44.6,
+      23.35
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      44.6,
+      15.8,
+      5.15
+     ],
+     "b": [
+      44.6,
+      14.05,
+      3.95
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 1.0,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      42.4,
+      15.8
+     ],
+     "b": [
+      42.4,
+      23.35
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      42.4,
+      15.8,
+      9.15
+     ],
+     "b": [
+      42.4,
+      14.05,
+      7.95
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 1.0,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      44.6,
+      15.8
+     ],
+     "b": [
+      44.6,
+      23.35
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      44.6,
+      15.8,
+      9.15
+     ],
+     "b": [
+      44.6,
+      14.05,
+      7.95
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 1.0,
+     "lantai": [
+      3
+     ]
+    }
+   ],
+   "tiang": [
+    {
+     "lantai": 3,
+     "titik": [
+      [
+       42.4,
+       15.9
+      ],
+      [
+       44.6,
+       15.9
+      ],
+      [
+       42.4,
+       18.4
+      ],
+      [
+       44.6,
+       18.4
+      ],
+      [
+       42.4,
+       20.9
+      ],
+      [
+       44.6,
+       20.9
+      ],
+      [
+       42.4,
+       23.3
+      ],
+      [
+       44.6,
+       23.3
+      ]
+     ],
+     "tinggi": 2.5
+    }
+   ],
+   "atapPelana": [
+    {
+     "lantai": 3,
+     "a": [
+      43.5,
+      15.5
+     ],
+     "b": [
+      43.5,
+      23.35
+     ],
+     "lebar": 3.4,
+     "tepiBawah": 11.45,
+     "puncak": 12.1,
+     "bahan": "seng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      43.5,
+      16.0
+     ],
+     "b": [
+      43.5,
+      22.0
+     ],
+     "lebar": 4.2,
+     "mulai": 1.2,
+     "sisiSaja": 1,
+     "tepiBawah": 3.2,
+     "puncak": 4.75,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      43.5,
+      16.0
+     ],
+     "b": [
+      43.5,
+      22.0
+     ],
+     "lebar": 4.2,
+     "mulai": 1.2,
+     "sisiSaja": -1,
+     "tepiBawah": 3.2,
+     "puncak": 4.75,
+     "bahan": "genteng"
+    }
+   ],
+   "bangku": [
+    {
+     "lantai": 2,
+     "a": [
+      42.75,
+      17.0
+     ],
+     "b": [
+      42.75,
+      22.7
+     ],
+     "hadap": -1
+    },
+    {
+     "lantai": 3,
+     "a": [
+      42.75,
+      17.0
+     ],
+     "b": [
+      42.75,
+      22.7
+     ],
+     "hadap": -1
+    }
+   ],
+   "atap": null,
+   "sumber": "footage-2026",
+   "catatan": "Letak dari foto udara dan koreksi lapangan: di pojok timur selasar Gedung A, tiba di depan lobi Gedung B. Lantai 1: jalan beratap dari selasar A (naik satu anak tangga) ke selasar B; di ujung B naik lewat ramp (barat) dan tangga (timur) karena lantai B ±1,2 m lebih tinggi; atap sayap genteng berkasau kayu, kolom putih beralas batu hitam. Lantai 2 dan 3: jembatan bertembok putih dengan bangku besi di sisi barat; di ujung A masing-masing turun 7 anak tangga ke selasar A. Jembatan lt 2 beratap pelat jembatan lt 3; jembatan lt 3 beratap seng berangka besi merah bata (perkiraan: bangku di lt 2 dan lt 3 disamakan). Panjang, lebar, dan tinggi anak tangga perkiraan dari foto."
+  }
+ ],
+ "lansekap": [
+  {
+   "id": "depan-A",
+   "nama": "Depan Gedung A",
+   "jalur": {
+    "a": [
+     -4.3,
+     14.0
+    ],
+    "b": [
+     38.8,
+     14.0
+    ]
+   },
+   "sisi": 1,
+   "dasar": -0.8,
+   "penampang": [
+    {
+     "nama": "Tangga granit",
+     "lebar": 0.3,
+     "atas": -0.05,
+     "bahan": "granit"
+    },
+    {
+     "nama": "Jalur beton",
+     "lebar": 1.6,
+     "atas": -0.19,
+     "bahan": "beton"
+    },
+    {
+     "nama": "Selokan",
+     "lebar": 0.45,
+     "atas": -0.49,
+     "bahan": "selokan",
+     "muka": "beton"
+    },
+    {
+     "nama": "Undakan",
+     "lebar": 0.6,
+     "atas": 0.07,
+     "bahan": "beton"
+    },
+    {
+     "nama": "Undakan",
+     "lebar": 0.6,
+     "atas": 0.33,
+     "bahan": "beton"
+    },
+    {
+     "nama": "Undakan",
+     "lebar": 0.6,
+     "atas": 0.59,
+     "bahan": "beton"
+    },
+    {
+     "nama": "Jalur paving",
+     "lebar": 1.6,
+     "atas": 1.27,
+     "bahan": "paving-merah",
+     "muka": "batu-kali"
+    },
+    {
+     "nama": "Plaza",
+     "lebar": 10.0,
+     "atas": 1.47,
+     "bahan": "paving-merah",
+     "muka": "bata-merah",
+     "ujung": "batu-kali"
+    }
+   ],
+   "tangga": [
+    {
+     "nama": "Tangga tengah",
+     "t": 26.75,
+     "lebar": 2.4,
+     "dari": 1,
+     "ke": 6,
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Tangga ke penghubung",
+     "t": 2.7,
+     "lebar": 2.0,
+     "dari": 1,
+     "ke": 6,
+     "pegangan": true,
+     "sumber": "footage-2026"
+    }
+   ],
+   "pot": [
+    {
+     "jalur": 3,
+     "jarak": 3.6,
+     "mulai": 1.2
+    },
+    {
+     "jalur": 4,
+     "jarak": 3.6,
+     "mulai": 2.6
+    },
+    {
+     "jalur": 5,
+     "jarak": 3.6,
+     "mulai": 0.6
+    }
+   ],
+   "perabot": [
+    {
+     "jenis": "ayunan",
+     "t": 18.3,
+     "v": 2.4,
+     "panjang": 2.4
+    },
+    {
+     "jenis": "bangku",
+     "t": 21.6,
+     "v": 1.0,
+     "arah": 180
+    },
+    {
+     "jenis": "bangku",
+     "t": 24.1,
+     "v": 1.0,
+     "arah": 180
+    },
+    {
+     "jenis": "bangku",
+     "t": 13.2,
+     "v": 1.0,
+     "arah": 180
+    }
+   ],
+   "sumber": "footage-2026",
+   "catatan": "Dari footage selasar lt 1 Gedung A, tampak depan Gedung A, dan penghubung A-E lt 1: dari selasar turun satu anak tangga granit hitam ke jalur beton, selokan, tiga undakan beton berpot, tembok batu kali, jalur paving merah, lalu plaza paving merah. Tinggi atas tembok sedada sampai seleher dari jalur beton (keterangan lapangan). Plaza berdiri sendiri; kedalaman 10 m perkiraan; ujung timurnya berhenti sebelum penghubung A-B (x 38,8). Tangga turun di tengah dan di ujung barat ke arah penghubung A-E. Pohon sengaja tidak dibuat."
+  }
+ ]
+}

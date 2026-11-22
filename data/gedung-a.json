@@ -1,0 +1,2734 @@
+{
+ "schema": "fsm-gedung@1",
+ "id": "A",
+ "nama": "Gedung A",
+ "kategori": "Blok akademik",
+ "deskripsi": "Gedung kelas memanjang tiga lantai di sisi utara kawasan, Selasarnya tersambung ke Gedung E lewat penghubung di ujung barat. Semua ruang menghadap selasar; di tengah ada tangga, lorong servis, gudang, dan toilet pria/wanita.",
+ "sumberData": {
+  "denah-2023": "Denah Gedung FSM Undip (2023), skala 1:150, lembar A LT.1 sampai LT.3.",
+  "koreksi-lapangan": "Keterangan lapangan November 2026: sekat dan penomoran ulang lantai 3, ventilasi atas di sisi selasar.",
+  "footage-2026": "Footage video lapangan 21 November 2026 (10 klip Gedung A): susunan tangga, lorong servis, toilet, gudang di tiap lantai, pembatas selasar, atap tritisan."
+ },
+ "koordinat": "Meter. x sepanjang gedung dari ujung A101 (sisi Gedung E, barat) ke timur; z dari dinding belakang (utara) ke tepi selasar (selatan); y ke atas, 0 = lantai 1.",
+ "ukuran": {
+  "panjang": 44.9,
+  "kedalamanRuang": 11.0,
+  "lebarSelasar": 3.0,
+  "tinggiLantai": 4.0,
+  "tebalPelat": 0.15
+ },
+ "tampilan": {
+  "dinding": "#d3d6d3",
+  "dindingDalam": "#ecebe6",
+  "kolom": "#c4c7c4",
+  "lantai": "#e6e1d7",
+  "selasar": "#c9c9c3",
+  "atap": "#4d5352",
+  "kusen": "#3b464d",
+  "pintu": "#8a5a3a",
+  "pagar": "#c6cacd"
+ },
+ "kolom": {
+  "ukuran": 0.4,
+  "dasar": -0.2,
+  "puncak": 12.15,
+  "titik": [
+   [
+    0.1,
+    0.1
+   ],
+   [
+    7.0,
+    0.1
+   ],
+   [
+    12.45,
+    0.1
+   ],
+   [
+    17.85,
+    0.1
+   ],
+   [
+    23.3,
+    0.1
+   ],
+   [
+    28.3,
+    0.1
+   ],
+   [
+    33.55,
+    0.1
+   ],
+   [
+    39.0,
+    0.1
+   ],
+   [
+    44.8,
+    0.1
+   ],
+   [
+    0.1,
+    10.9
+   ],
+   [
+    7.0,
+    10.9
+   ],
+   [
+    12.45,
+    10.9
+   ],
+   [
+    17.85,
+    10.9
+   ],
+   [
+    23.3,
+    10.9
+   ],
+   [
+    28.3,
+    10.9
+   ],
+   [
+    33.55,
+    10.9
+   ],
+   [
+    39.0,
+    10.9
+   ],
+   [
+    44.8,
+    10.9
+   ],
+   [
+    0,
+    13.75
+   ],
+   [
+    7.0,
+    13.75
+   ],
+   [
+    12.45,
+    13.75
+   ],
+   [
+    17.85,
+    13.75
+   ],
+   [
+    23.3,
+    13.75
+   ],
+   [
+    28.3,
+    13.75
+   ],
+   [
+    33.55,
+    13.75
+   ],
+   [
+    39.0,
+    13.75
+   ],
+   [
+    44.8,
+    13.75
+   ]
+  ]
+ },
+ "lantai": [
+  {
+   "no": 1,
+   "elevasi": 0.0,
+   "elevasiSelasar": -0.05,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/A1.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     46.4,
+     15.5
+    ],
+    "keterangan": "Denah 2023 lantai 1, diluruskan ke skala 40 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "A101",
+     "nama": "Ruang Kelas A101",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       0,
+       0
+      ],
+      [
+       7.0,
+       0
+      ],
+      [
+       7.0,
+       11.0
+      ],
+      [
+       0,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A102",
+     "nama": "Ruang Kelas A102",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       7.0,
+       0
+      ],
+      [
+       15.0,
+       0
+      ],
+      [
+       15.0,
+       11.0
+      ],
+      [
+       7.0,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A103",
+     "nama": "Ruang Kelas A103",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       15.0,
+       0
+      ],
+      [
+       23.3,
+       0
+      ],
+      [
+       23.3,
+       11.0
+      ],
+      [
+       15.0,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A104",
+     "nama": "Ruang Kelas A104",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       28.3,
+       0
+      ],
+      [
+       36.6,
+       0
+      ],
+      [
+       36.6,
+       11.0
+      ],
+      [
+       28.3,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A105",
+     "nama": "Ruang Kelas A105",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       36.6,
+       0
+      ],
+      [
+       44.9,
+       0
+      ],
+      [
+       44.9,
+       11.0
+      ],
+      [
+       36.6,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A1-KM1",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       23.3,
+       0
+      ],
+      [
+       27.1,
+       0
+      ],
+      [
+       27.1,
+       4.6
+      ],
+      [
+       23.3,
+       4.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Pria",
+     "catatan": "Pintu kiri di ujung lorong servis (papan 'Toilet Pria / Men'). Batas ruang di dalam belum terlihat di footage, jadi diasumsikan menerus ke belakang gudang."
+    },
+    {
+     "kode": "A1-KM2",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       27.1,
+       0
+      ],
+      [
+       28.3,
+       0
+      ],
+      [
+       28.3,
+       4.6
+      ],
+      [
+       27.1,
+       4.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Wanita",
+     "catatan": "Pintu kanan di ujung lorong servis (papan 'Toilet Wanita / Women'), bersebelahan dengan Toilet Pria."
+    },
+    {
+     "kode": "A1-LR",
+     "nama": "Lorong servis",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       25.95,
+       4.6
+      ],
+      [
+       28.3,
+       4.6
+      ],
+      [
+       28.3,
+       11.0
+      ],
+      [
+       25.95,
+       11.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Lorong lurus dari selasar ke pintu toilet, di sebelah timur tangga. Panel listrik di dinding timur."
+    },
+    {
+     "kode": "A1-GD",
+     "nama": "Gudang",
+     "fungsi": "gudang",
+     "sumber": "footage-2026",
+     "poligon": [
+      [
+       23.3,
+       4.6
+      ],
+      [
+       25.95,
+       4.6
+      ],
+      [
+       25.95,
+       10.4
+      ],
+      [
+       24.64,
+       10.4
+      ],
+      [
+       24.64,
+       7.92
+      ],
+      [
+       23.3,
+       7.92
+      ]
+     ],
+     "catatan": "Berpartisi aluminium-kaca menghadap lorong, pintunya di dekat ujung lorong. Menerus ke bawah bordes dan lajur tangga kedua."
+    },
+    {
+     "kode": "A1-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       23.3,
+       7.92
+      ],
+      [
+       24.64,
+       7.92
+      ],
+      [
+       24.64,
+       11.0
+      ],
+      [
+       23.3,
+       11.0
+      ]
+     ],
+     "sumber": "footage-2026"
+    }
+   ],
+   "dinding": [
+    {
+     "id": "A1-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      44.9,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 3.5,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.725,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 13.8,
+       "lebar": 1.3,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 16.35,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.575,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.925,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 35.15,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 37.725,
+       "lebar": 1.15,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 41.95,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 24.6,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 26.2,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 27.7,
+       "lebar": 0.7,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-depan-1",
+     "luar": true,
+     "a": [
+      0,
+      11.0
+     ],
+     "b": [
+      23.3,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 6.25,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A101",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 2.925,
+       "lebar": 4.45,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A101",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 11.65,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A102",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 9.125,
+       "lebar": 2.85,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A102",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.8,
+       "lebar": 1.3,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A102",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 22.45,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A103",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 16.35,
+       "lebar": 1.6,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A103",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 19.95,
+       "lebar": 2.8,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A103",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-depan-2",
+     "luar": true,
+     "a": [
+      28.3,
+      11.0
+     ],
+     "b": [
+      44.9,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 4.45,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A104",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 2.025,
+       "lebar": 2.65,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A104",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 6.85,
+       "lebar": 1.8,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A104",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 15.8,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A105",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 9.425,
+       "lebar": 1.15,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A105",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.05,
+       "lebar": 3.3,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A105",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-ujung-barat",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023",
+     "catatan": "Ujung yang menghadap Gedung E."
+    },
+    {
+     "id": "A1-ujung-timur",
+     "luar": true,
+     "a": [
+      44.9,
+      0
+     ],
+     "b": [
+      44.9,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-sekat-7",
+     "a": [
+      7.0,
+      0
+     ],
+     "b": [
+      7.0,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-sekat-15",
+     "a": [
+      15.0,
+      0
+     ],
+     "b": [
+      15.0,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-sekat-36.6",
+     "a": [
+      36.6,
+      0
+     ],
+     "b": [
+      36.6,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-servis-barat",
+     "a": [
+      23.3,
+      0
+     ],
+     "b": [
+      23.3,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-servis-timur",
+     "a": [
+      28.3,
+      0
+     ],
+     "b": [
+      28.3,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A1-toilet-depan",
+     "a": [
+      23.3,
+      4.6
+     ],
+     "b": [
+      28.3,
+      4.6
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 3.08,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "A1-KM1",
+       "sumber": "footage-2026",
+       "sudutBuka": 8,
+       "papanNama": true,
+       "papanTeks": "Toilet Pria"
+      },
+      {
+       "jenis": "pintu",
+       "t": 4.57,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "A1-KM2",
+       "sumber": "footage-2026",
+       "sudutBuka": 70,
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita"
+      }
+     ]
+    },
+    {
+     "id": "A1-toilet-sekat",
+     "a": [
+      27.1,
+      0
+     ],
+     "b": [
+      27.1,
+      4.6
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "A1-lorong-barat",
+     "a": [
+      25.95,
+      4.6
+     ],
+     "b": [
+      25.95,
+      10.4
+     ],
+     "tebal": 0.1,
+     "sumber": "footage-2026",
+     "catatan": "Partisi aluminium-kaca gudang (footage).",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.6,
+       "lebar": 0.85,
+       "tinggi": 2.75,
+       "boven": 0.55,
+       "bovenGelap": true,
+       "ruang": "A1-GD",
+       "sumber": "footage-2026",
+       "sudutBuka": 5,
+       "papanNama": true,
+       "papanTeks": "Gudang"
+      },
+      {
+       "jenis": "jendela",
+       "t": 2.0,
+       "lebar": 1.0,
+       "ambang": 0.9,
+       "tinggi": 1.3
+      },
+      {
+       "jenis": "jendela",
+       "t": 3.3,
+       "lebar": 1.0,
+       "ambang": 0.9,
+       "tinggi": 1.3
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.6,
+       "lebar": 1.0,
+       "ambang": 0.9,
+       "tinggi": 1.3
+      }
+     ]
+    },
+    {
+     "id": "A1-gudang-selatan",
+     "a": [
+      24.64,
+      10.4
+     ],
+     "b": [
+      25.95,
+      10.4
+     ],
+     "tebal": 0.1,
+     "tinggi": 3.26,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "A1-bawah-tangga",
+     "a": [
+      24.64,
+      7.92
+     ],
+     "b": [
+      24.64,
+      10.4
+     ],
+     "tebal": 0.1,
+     "tinggi": 1.78,
+     "tinggiAkhir": 3.26,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Penutup di bawah lajur tangga kedua, mengikuti kemiringan tangga."
+    },
+    {
+     "id": "A1-bordes-belakang",
+     "a": [
+      23.3,
+      6.4
+     ],
+     "b": [
+      25.95,
+      6.4
+     ],
+     "tebal": 0.15,
+     "dasar": 1.82,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding di belakang bordes (di atas gudang lantai 1)."
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      11.0
+     ],
+     [
+      44.9,
+      11.0
+     ],
+     [
+      44.9,
+      14.0
+     ],
+     [
+      0,
+      14.0
+     ]
+    ]
+   },
+   "pagar": []
+  },
+  {
+   "no": 2,
+   "elevasi": 4.0,
+   "elevasiSelasar": 3.95,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/A2.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     46.4,
+     15.5
+    ],
+    "keterangan": "Denah 2023 lantai 2, diluruskan ke skala 40 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "A201",
+     "nama": "Ruang Kelas A201",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       0,
+       0
+      ],
+      [
+       7.0,
+       0
+      ],
+      [
+       7.0,
+       11.0
+      ],
+      [
+       0,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A202",
+     "nama": "Ruang Kelas A202",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       7.0,
+       0
+      ],
+      [
+       15.0,
+       0
+      ],
+      [
+       15.0,
+       11.0
+      ],
+      [
+       7.0,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A203",
+     "nama": "Ruang Kelas A203",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       15.0,
+       0
+      ],
+      [
+       23.3,
+       0
+      ],
+      [
+       23.3,
+       11.0
+      ],
+      [
+       15.0,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A204",
+     "nama": "Ruang Kelas A204",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       28.3,
+       0
+      ],
+      [
+       36.6,
+       0
+      ],
+      [
+       36.6,
+       11.0
+      ],
+      [
+       28.3,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A205",
+     "nama": "Ruang Kelas A205",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       36.6,
+       0
+      ],
+      [
+       44.9,
+       0
+      ],
+      [
+       44.9,
+       11.0
+      ],
+      [
+       36.6,
+       11.0
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "A2-KM1",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       23.3,
+       0
+      ],
+      [
+       27.1,
+       0
+      ],
+      [
+       27.1,
+       4.6
+      ],
+      [
+       23.3,
+       4.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Pria",
+     "catatan": "Pintu kiri di ujung lorong servis (papan 'Toilet Pria / Men'). Batas ruang di dalam belum terlihat di footage, jadi diasumsikan menerus ke belakang gudang."
+    },
+    {
+     "kode": "A2-KM2",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       27.1,
+       0
+      ],
+      [
+       28.3,
+       0
+      ],
+      [
+       28.3,
+       4.6
+      ],
+      [
+       27.1,
+       4.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Wanita",
+     "catatan": "Pintu kanan di ujung lorong servis (papan 'Toilet Wanita / Women'), bersebelahan dengan Toilet Pria."
+    },
+    {
+     "kode": "A2-LR",
+     "nama": "Lorong servis",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       25.95,
+       4.6
+      ],
+      [
+       28.3,
+       4.6
+      ],
+      [
+       28.3,
+       11.0
+      ],
+      [
+       25.95,
+       11.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Lorong lurus dari selasar ke pintu toilet, di sebelah timur tangga. Panel listrik di dinding timur."
+    },
+    {
+     "kode": "A2-GD",
+     "nama": "Gudang",
+     "fungsi": "gudang",
+     "poligon": [
+      [
+       23.3,
+       4.6
+      ],
+      [
+       25.95,
+       4.6
+      ],
+      [
+       25.95,
+       6.4
+      ],
+      [
+       23.3,
+       6.4
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Pintu krem bertuliskan 'GUDANG / Stockroom', menghadap lorong tepat sebelum pintu Toilet Pria."
+    },
+    {
+     "kode": "A2-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       23.3,
+       6.4
+      ],
+      [
+       25.95,
+       6.4
+      ],
+      [
+       25.95,
+       11.0
+      ],
+      [
+       23.3,
+       11.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "void": true
+    }
+   ],
+   "dinding": [
+    {
+     "id": "A2-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      44.9,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 3.5,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.725,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 13.8,
+       "lebar": 1.3,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 16.35,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.575,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.925,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 35.15,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 37.725,
+       "lebar": 1.15,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 41.95,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 24.6,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 26.2,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 27.7,
+       "lebar": 0.7,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-depan-1",
+     "luar": true,
+     "a": [
+      0,
+      11.0
+     ],
+     "b": [
+      23.3,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 6.25,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A201",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 2.925,
+       "lebar": 4.45,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A201",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 11.65,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A202",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 9.125,
+       "lebar": 2.85,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A202",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.8,
+       "lebar": 1.3,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A202",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 22.45,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A203",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 16.35,
+       "lebar": 1.6,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A203",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 19.95,
+       "lebar": 2.8,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A203",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-depan-2",
+     "luar": true,
+     "a": [
+      28.3,
+      11.0
+     ],
+     "b": [
+      44.9,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 4.45,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A204",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 2.025,
+       "lebar": 2.65,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A204",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 6.85,
+       "lebar": 1.8,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A204",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 15.8,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A205",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 9.425,
+       "lebar": 1.15,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A205",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.05,
+       "lebar": 3.3,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A205",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-ujung-barat",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023",
+     "catatan": "Ujung yang menghadap Gedung E."
+    },
+    {
+     "id": "A2-ujung-timur",
+     "luar": true,
+     "a": [
+      44.9,
+      0
+     ],
+     "b": [
+      44.9,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-sekat-7",
+     "a": [
+      7.0,
+      0
+     ],
+     "b": [
+      7.0,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-sekat-15",
+     "a": [
+      15.0,
+      0
+     ],
+     "b": [
+      15.0,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-sekat-36.6",
+     "a": [
+      36.6,
+      0
+     ],
+     "b": [
+      36.6,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-servis-barat",
+     "a": [
+      23.3,
+      0
+     ],
+     "b": [
+      23.3,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-servis-timur",
+     "a": [
+      28.3,
+      0
+     ],
+     "b": [
+      28.3,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A2-toilet-depan",
+     "a": [
+      23.3,
+      4.6
+     ],
+     "b": [
+      28.3,
+      4.6
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 3.08,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "A2-KM1",
+       "sumber": "footage-2026",
+       "sudutBuka": 8,
+       "papanNama": true,
+       "papanTeks": "Toilet Pria"
+      },
+      {
+       "jenis": "pintu",
+       "t": 4.57,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "A2-KM2",
+       "sumber": "footage-2026",
+       "sudutBuka": 70,
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita"
+      }
+     ]
+    },
+    {
+     "id": "A2-toilet-sekat",
+     "a": [
+      27.1,
+      0
+     ],
+     "b": [
+      27.1,
+      4.6
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "A2-gudang-selatan",
+     "a": [
+      23.3,
+      6.4
+     ],
+     "b": [
+      25.95,
+      6.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding di belakang bordes, sekaligus dinding selatan gudang."
+    },
+    {
+     "id": "A2-gudang-timur",
+     "a": [
+      25.95,
+      4.6
+     ],
+     "b": [
+      25.95,
+      6.4
+     ],
+     "tebal": 0.1,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.6,
+       "lebar": 0.85,
+       "tinggi": 2.75,
+       "boven": 0.55,
+       "bovenGelap": true,
+       "ruang": "A2-GD",
+       "sumber": "footage-2026",
+       "sudutBuka": 5,
+       "papanNama": true,
+       "papanTeks": "Gudang"
+      }
+     ],
+     "sumber": "footage-2026"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      11.0
+     ],
+     [
+      44.9,
+      11.0
+     ],
+     [
+      44.9,
+      14.0
+     ],
+     [
+      0,
+      14.0
+     ]
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.0,
+      13.9,
+      -0.05
+     ],
+     "b": [
+      42.2,
+      13.9,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok polos ±90 cm dengan pegangan stainless bertiang di atasnya."
+    },
+    {
+     "a": [
+      44.8,
+      11.15,
+      -0.05
+     ],
+     "b": [
+      44.8,
+      13.9,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok polos ±90 cm dengan pegangan stainless bertiang di atasnya."
+    },
+    {
+     "a": [
+      25.95,
+      6.48,
+      0
+     ],
+     "b": [
+      25.95,
+      10.95,
+      0
+     ],
+     "jenis": "besi",
+     "sumber": "footage-2026",
+     "catatan": "Railing antara lorong servis dan lubang tangga."
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "elevasi": 8.0,
+   "elevasiSelasar": 7.95,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/A3.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     46.4,
+     15.5
+    ],
+    "keterangan": "Denah 2023 lantai 3, diluruskan ke skala 40 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "A301",
+     "nama": "Ruang Kelas A301",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       0,
+       0
+      ],
+      [
+       5.0,
+       0
+      ],
+      [
+       5.0,
+       11.0
+      ],
+      [
+       0,
+       11.0
+      ]
+     ],
+     "sumber": "koreksi-lapangan",
+     "catatan": "Hasil sekat ruang A301 lama (10 m) yang dibagi dua. Lebar diasumsikan sama rata."
+    },
+    {
+     "kode": "A302",
+     "nama": "Ruang Kelas A302",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       5.0,
+       0
+      ],
+      [
+       10.0,
+       0
+      ],
+      [
+       10.0,
+       11.0
+      ],
+      [
+       5.0,
+       11.0
+      ]
+     ],
+     "sumber": "koreksi-lapangan",
+     "catatan": "Hasil sekat ruang A301 lama (10 m) yang dibagi dua. Lebar diasumsikan sama rata."
+    },
+    {
+     "kode": "A303",
+     "nama": "Ruang Kelas A303",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       10.0,
+       0
+      ],
+      [
+       16.65,
+       0
+      ],
+      [
+       16.65,
+       11.0
+      ],
+      [
+       10.0,
+       11.0
+      ]
+     ],
+     "sumber": "koreksi-lapangan",
+     "catatan": "Hasil sekat ruang A302 lama (13,3 m) yang dibagi dua. Lebar diasumsikan sama rata."
+    },
+    {
+     "kode": "A304",
+     "nama": "Ruang Kelas A304",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       16.65,
+       0
+      ],
+      [
+       23.3,
+       0
+      ],
+      [
+       23.3,
+       11.0
+      ],
+      [
+       16.65,
+       11.0
+      ]
+     ],
+     "sumber": "koreksi-lapangan",
+     "catatan": "Hasil sekat ruang A302 lama (13,3 m) yang dibagi dua. Lebar diasumsikan sama rata."
+    },
+    {
+     "kode": "A305",
+     "nama": "Ruang Kelas A305",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       28.3,
+       0
+      ],
+      [
+       36.6,
+       0
+      ],
+      [
+       36.6,
+       11.0
+      ],
+      [
+       28.3,
+       11.0
+      ]
+     ],
+     "sumber": "koreksi-lapangan",
+     "catatan": "Di denah 2023 bernomor A303."
+    },
+    {
+     "kode": "A306",
+     "nama": "Ruang Kelas A306",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       36.6,
+       0
+      ],
+      [
+       44.9,
+       0
+      ],
+      [
+       44.9,
+       11.0
+      ],
+      [
+       36.6,
+       11.0
+      ]
+     ],
+     "sumber": "koreksi-lapangan",
+     "catatan": "Di denah 2023 bernomor A304."
+    },
+    {
+     "kode": "A3-KM1",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       23.3,
+       0
+      ],
+      [
+       27.1,
+       0
+      ],
+      [
+       27.1,
+       4.6
+      ],
+      [
+       23.3,
+       4.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Pria",
+     "catatan": "Pintu kiri di ujung lorong servis (papan 'Toilet Pria / Men'). Batas ruang di dalam belum terlihat di footage, jadi diasumsikan menerus ke belakang gudang."
+    },
+    {
+     "kode": "A3-KM2",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       27.1,
+       0
+      ],
+      [
+       28.3,
+       0
+      ],
+      [
+       28.3,
+       4.6
+      ],
+      [
+       27.1,
+       4.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Wanita",
+     "catatan": "Pintu kanan di ujung lorong servis (papan 'Toilet Wanita / Women'), bersebelahan dengan Toilet Pria."
+    },
+    {
+     "kode": "A3-LR",
+     "nama": "Lorong servis",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       25.95,
+       4.6
+      ],
+      [
+       28.3,
+       4.6
+      ],
+      [
+       28.3,
+       11.0
+      ],
+      [
+       25.95,
+       11.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Lorong lurus dari selasar ke pintu toilet, di sebelah timur tangga. Panel listrik di dinding timur."
+    },
+    {
+     "kode": "A3-GD",
+     "nama": "Gudang",
+     "fungsi": "gudang",
+     "poligon": [
+      [
+       23.3,
+       4.6
+      ],
+      [
+       25.95,
+       4.6
+      ],
+      [
+       25.95,
+       6.4
+      ],
+      [
+       23.3,
+       6.4
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Pintu krem bertuliskan 'GUDANG / Stockroom', menghadap lorong tepat sebelum pintu Toilet Pria."
+    },
+    {
+     "kode": "A3-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       23.3,
+       6.4
+      ],
+      [
+       25.95,
+       6.4
+      ],
+      [
+       25.95,
+       11.0
+      ],
+      [
+       23.3,
+       11.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "void": true
+    }
+   ],
+   "dinding": [
+    {
+     "id": "A3-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      44.9,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.575,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.925,
+       "lebar": 0.75,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.575,
+       "lebar": 1.75,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.15,
+       "lebar": 1.2,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.575,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.925,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 35.15,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 37.725,
+       "lebar": 1.15,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 41.95,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 24.6,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 26.2,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela-tinggi",
+       "t": 27.7,
+       "lebar": 0.7,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A3-depan-1",
+     "luar": true,
+     "a": [
+      0,
+      11.0
+     ],
+     "b": [
+      23.3,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 3.9,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A301",
+       "sumber": "koreksi-lapangan",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 1.75,
+       "lebar": 2.1,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A301",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 6.25,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A302",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 8.575,
+       "lebar": 1.75,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A302",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 11.65,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A303",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 14.625,
+       "lebar": 2.95,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A303",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 22.45,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A304",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 19.95,
+       "lebar": 2.8,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A304",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A3-depan-2",
+     "luar": true,
+     "a": [
+      28.3,
+      11.0
+     ],
+     "b": [
+      44.9,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 4.45,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A305",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 2.025,
+       "lebar": 2.65,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A305",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 6.85,
+       "lebar": 1.8,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A305",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 15.8,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "A306",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 9.425,
+       "lebar": 1.15,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A306",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.05,
+       "lebar": 3.3,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "A306",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A3-ujung-barat",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023",
+     "catatan": "Ujung yang menghadap Gedung E."
+    },
+    {
+     "id": "A3-ujung-timur",
+     "luar": true,
+     "a": [
+      44.9,
+      0
+     ],
+     "b": [
+      44.9,
+      11.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A3-sekat-5",
+     "a": [
+      5.0,
+      0
+     ],
+     "b": [
+      5.0,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "koreksi-lapangan"
+    },
+    {
+     "id": "A3-sekat-10",
+     "a": [
+      10.0,
+      0
+     ],
+     "b": [
+      10.0,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "koreksi-lapangan"
+    },
+    {
+     "id": "A3-sekat-16.65",
+     "a": [
+      16.65,
+      0
+     ],
+     "b": [
+      16.65,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "koreksi-lapangan"
+    },
+    {
+     "id": "A3-sekat-36.6",
+     "a": [
+      36.6,
+      0
+     ],
+     "b": [
+      36.6,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "koreksi-lapangan"
+    },
+    {
+     "id": "A3-servis-barat",
+     "a": [
+      23.3,
+      0
+     ],
+     "b": [
+      23.3,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A3-servis-timur",
+     "a": [
+      28.3,
+      0
+     ],
+     "b": [
+      28.3,
+      11.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "A3-toilet-depan",
+     "a": [
+      23.3,
+      4.6
+     ],
+     "b": [
+      28.3,
+      4.6
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 3.08,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "A3-KM1",
+       "sumber": "footage-2026",
+       "sudutBuka": 8,
+       "papanNama": true,
+       "papanTeks": "Toilet Pria"
+      },
+      {
+       "jenis": "pintu",
+       "t": 4.57,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "A3-KM2",
+       "sumber": "footage-2026",
+       "sudutBuka": 70,
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita"
+      }
+     ]
+    },
+    {
+     "id": "A3-toilet-sekat",
+     "a": [
+      27.1,
+      0
+     ],
+     "b": [
+      27.1,
+      4.6
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "A3-gudang-selatan",
+     "a": [
+      23.3,
+      6.4
+     ],
+     "b": [
+      25.95,
+      6.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding di belakang bordes, sekaligus dinding selatan gudang."
+    },
+    {
+     "id": "A3-gudang-timur",
+     "a": [
+      25.95,
+      4.6
+     ],
+     "b": [
+      25.95,
+      6.4
+     ],
+     "tebal": 0.1,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.6,
+       "lebar": 0.85,
+       "tinggi": 2.75,
+       "boven": 0.55,
+       "bovenGelap": true,
+       "ruang": "A3-GD",
+       "sumber": "footage-2026",
+       "sudutBuka": 5,
+       "papanNama": true,
+       "papanTeks": "Gudang"
+      }
+     ],
+     "sumber": "footage-2026"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      11.0
+     ],
+     [
+      44.9,
+      11.0
+     ],
+     [
+      44.9,
+      14.0
+     ],
+     [
+      0,
+      14.0
+     ]
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.0,
+      13.9,
+      -0.05
+     ],
+     "b": [
+      42.2,
+      13.9,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok polos ±90 cm dengan pegangan stainless bertiang di atasnya."
+    },
+    {
+     "a": [
+      44.8,
+      11.15,
+      -0.05
+     ],
+     "b": [
+      44.8,
+      13.9,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok polos ±90 cm dengan pegangan stainless bertiang di atasnya."
+    },
+    {
+     "a": [
+      25.95,
+      6.48,
+      0
+     ],
+     "b": [
+      25.95,
+      10.95,
+      0
+     ],
+     "jenis": "besi",
+     "sumber": "footage-2026",
+     "catatan": "Railing antara lorong servis dan lubang tangga."
+    },
+    {
+     "a": [
+      23.4,
+      10.95,
+      0
+     ],
+     "b": [
+      24.62,
+      10.95,
+      0
+     ],
+     "jenis": "besi",
+     "sumber": "footage-2026",
+     "catatan": "Tepi lubang tangga di sisi selasar (lantai teratas)."
+    }
+   ]
+  }
+ ],
+ "tangga": [
+  {
+   "id": "T1",
+   "dariLantai": 1,
+   "keLantai": 2,
+   "x0": 23.38,
+   "x1": 25.9,
+   "zDepan": 11.0,
+   "zBelakang": 6.4,
+   "jumlahAnakTangga": 24,
+   "lebarInjakan": 0.28,
+   "bentuk": "U dengan bordes",
+   "pembatas": "pagar-besi",
+   "dindingBelakang": true,
+   "sisiLuar": "dinding",
+   "catatan": "Dua lajur ±1,2 m. Naik dari selasar ke belakang, bordes menempel dinding gudang, lalu berbalik. Railing stainless di antara lajur, pegangan dinding di sisi barat.",
+   "sumber": "footage-2026"
+  },
+  {
+   "id": "T2",
+   "dariLantai": 2,
+   "keLantai": 3,
+   "x0": 23.38,
+   "x1": 25.9,
+   "zDepan": 11.0,
+   "zBelakang": 6.4,
+   "jumlahAnakTangga": 24,
+   "lebarInjakan": 0.28,
+   "bentuk": "U dengan bordes",
+   "pembatas": "pagar-besi",
+   "dindingBelakang": true,
+   "sisiLuar": "pagar",
+   "catatan": "Dua lajur ±1,2 m. Naik dari selasar ke belakang, bordes menempel dinding gudang, lalu berbalik. Railing stainless di antara lajur, pegangan dinding di sisi barat.",
+   "sumber": "footage-2026"
+  }
+ ],
+ "tritisan": [
+  {
+   "a": [
+    0,
+    14.0
+   ],
+   "b": [
+    42.1,
+    14.0
+   ],
+   "sisi": 1,
+   "elevasi": 4.0,
+   "lantai": 2,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Atap genteng miring di depan selasar (tampak depan). Berhenti sebelum tangga jembatan ke Gedung B di pojok timur."
+  },
+  {
+   "a": [
+    0,
+    14.0
+   ],
+   "b": [
+    42.1,
+    14.0
+   ],
+   "sisi": 1,
+   "elevasi": 8.0,
+   "lantai": 3,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Atap genteng miring di depan selasar (tampak depan). Berhenti sebelum tangga jembatan ke Gedung B di pojok timur."
+  }
+ ],
+ "atap": [
+  {
+   "jenis": "perisai",
+   "asal": [
+    0,
+    0
+   ],
+   "sudut": 0,
+   "tepiBawah": 12.15,
+   "tonjolan": 0.9,
+   "kemiringan": 30,
+   "batas": [
+    0,
+    0,
+    44.9,
+    14.0
+   ],
+   "sumber": "koreksi-lapangan"
+  }
+ ],
+ "mulaiJalan": {
+  "posisi": [
+   2.5,
+   12.5
+  ],
+  "arah": -90
+ }
+}

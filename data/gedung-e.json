@@ -1,0 +1,4092 @@
+{
+ "schema": "fsm-gedung@1",
+ "id": "E",
+ "nama": "Gedung E",
+ "kategori": "Blok akademik dan kantor",
+ "deskripsi": "Gedung tiga lantai dengan dua sayap: sayap lurus berisi E101 dan ruang di atasnya, sayap miring 30 derajat di barat. Di tengah ada R. Senat, R. BEM, lorong toilet, dan tangga; tangga kedua ada di luar ujung utara. Selasarnya tersambung ke selasar Gedung A lewat penghubung yang tiba di hall depan pintu R. BEM / HMIF.",
+ "sumberData": {
+  "denah-2023": "Denah Gedung FSM Undip (2023), skala 1:150, lembar E LT.1 sampai LT.3.",
+  "koreksi-lapangan": "Keterangan lapangan November 2026: tangga tengah di kiri E101, ventilasi atas di sisi selasar.",
+  "footage-2026": "Footage video lapangan 21 November 2026 (7 klip + 3 foto Gedung E): blok toilet dan gudang, tangga bertembok, tangga samping, pembatas bercelah, urutan ruang lt 3, papan nama, beda tinggi lt 2 dan lt 3, bentuk blok HMIF/BEM di pertemuan sayap, plakat dan papan.",
+  "foto-udara-2026": "Foto udara dari pengguna (22 Nov 2026): atap dua sayap menyatu."
+ },
+ "koordinat": "Meter. (0,0) = sudut belakang-kiri sayap lurus (titik pertemuan dua sayap); x ke timur, z dari dinding belakang (utara) ke selasar (selatan); y ke atas. Sayap miring diputar 30 derajat. Di kawasan, sayap lurus E membujur utara-selatan (lihat posisi dan rotasi di kampus.json), jadi 'timur' di sini berarti utara di peta.",
+ "mulaiJalan": {
+  "posisi": [
+   3.9,
+   12.6
+  ],
+  "arah": 0
+ },
+ "tampilan": {
+  "dinding": "#d3d6d3",
+  "dindingDalam": "#ecebe6",
+  "kolom": "#c4c7c4",
+  "lantai": "#e6e1d7",
+  "selasar": "#c9c9c3",
+  "atap": "#4d5352",
+  "kusen": "#3b464d",
+  "pintu": "#8a5a3a",
+  "pagar": "#c6cacd"
+ },
+ "kolom": {
+  "ukuran": 0.4,
+  "dasar": -0.2,
+  "puncak": 12.63,
+  "titik": [
+   [
+    -12.434,
+    -7.063
+   ],
+   [
+    -17.584,
+    1.857
+   ],
+   [
+    -8.667,
+    -4.888
+   ],
+   [
+    -13.817,
+    4.032
+   ],
+   [
+    -6.026,
+    -3.363
+   ],
+   [
+    -11.176,
+    5.557
+   ],
+   [
+    -3.427,
+    -1.863
+   ],
+   [
+    -8.577,
+    7.057
+   ],
+   [
+    -0.829,
+    -0.363
+   ],
+   [
+    -5.979,
+    8.557
+   ],
+   [
+    -15.142,
+    6.327
+   ],
+   [
+    -12.501,
+    7.852
+   ],
+   [
+    -9.902,
+    9.352
+   ],
+   [
+    -7.304,
+    10.852
+   ],
+   [
+    -4.793,
+    12.302
+   ],
+   [
+    -18.693,
+    4.277
+   ],
+   [
+    -13.798,
+    -4.502
+   ],
+   [
+    -15.573,
+    -1.428
+   ],
+   [
+    -2.51,
+    9.625
+   ],
+   [
+    1.316,
+    10.829
+   ],
+   [
+    2.6,
+    8.45
+   ],
+   [
+    -3.497,
+    13.05
+   ],
+   [
+    0,
+    0.1
+   ],
+   [
+    2.4,
+    0.1
+   ],
+   [
+    5.4,
+    0.1
+   ],
+   [
+    8.4,
+    0.1
+   ],
+   [
+    11.35,
+    0.1
+   ],
+   [
+    14.3,
+    0.1
+   ],
+   [
+    17.25,
+    0.1
+   ],
+   [
+    20.2,
+    0.1
+   ],
+   [
+    23.15,
+    0.1
+   ],
+   [
+    26.1,
+    0.1
+   ],
+   [
+    29.05,
+    0.1
+   ],
+   [
+    31.9,
+    0.1
+   ],
+   [
+    8.4,
+    10.4
+   ],
+   [
+    11.35,
+    10.4
+   ],
+   [
+    14.3,
+    10.4
+   ],
+   [
+    17.25,
+    10.4
+   ],
+   [
+    20.2,
+    10.4
+   ],
+   [
+    23.15,
+    10.4
+   ],
+   [
+    26.1,
+    10.4
+   ],
+   [
+    29.05,
+    10.4
+   ],
+   [
+    31.9,
+    10.4
+   ],
+   [
+    -0.55,
+    13.05
+   ],
+   [
+    2.43,
+    13.05
+   ],
+   [
+    5.43,
+    13.05
+   ],
+   [
+    8.4,
+    13.05
+   ],
+   [
+    11.35,
+    13.05
+   ],
+   [
+    14.3,
+    13.05
+   ],
+   [
+    17.25,
+    13.05
+   ],
+   [
+    20.2,
+    13.05
+   ],
+   [
+    23.15,
+    13.05
+   ],
+   [
+    26.1,
+    13.05
+   ],
+   [
+    29.05,
+    13.05
+   ],
+   [
+    32.0,
+    13.05
+   ],
+   [
+    8.4,
+    3.0
+   ],
+   [
+    8.4,
+    6.6
+   ],
+   [
+    31.9,
+    3.0
+   ],
+   [
+    31.9,
+    6.6
+   ],
+   [
+    5.75,
+    8.0
+   ],
+   [
+    34.65,
+    10.85
+   ],
+   [
+    34.65,
+    13.05
+   ],
+   [
+    34.65,
+    6.83
+   ]
+  ]
+ },
+ "lantai": [
+  {
+   "no": 1,
+   "elevasi": 0.0,
+   "elevasiSelasar": -0.05,
+   "tinggiPlafon": 4.01,
+   "perabot": [
+    {
+     "jenis": "kotak",
+     "posisi": [
+      2.303,
+      9.664
+     ],
+     "ukuran": [
+      0.5,
+      0.42,
+      1.25
+     ],
+     "arah": 60,
+     "warna": "#d23a2c",
+     "sumber": "footage-2026",
+     "catatan": "Kotak merah berdiri di samping pintu R. BEM."
+    }
+   ],
+   "denah": {
+    "gambar": "assets/denah/E1.jpg",
+    "batas": [
+     -26.0,
+     -13.0,
+     35.5,
+     16.0
+    ],
+    "keterangan": "Denah 2023 lantai 1, diluruskan ke skala 40 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "E103",
+     "nama": "E103",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       -12.384,
+       -7.15
+      ],
+      [
+       -6.582,
+       -3.8
+      ],
+      [
+       -11.832,
+       5.293
+      ],
+      [
+       -17.634,
+       1.943
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "E102",
+     "nama": "E102",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       -6.582,
+       -3.8
+      ],
+      [
+       -0.779,
+       -0.45
+      ],
+      [
+       -6.029,
+       8.643
+      ],
+      [
+       -11.832,
+       5.293
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "E1-SENAT",
+     "nama": "R. Senat",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       -0.779,
+       -0.45
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       5.33
+      ],
+      [
+       -2.54,
+       9.72
+      ],
+      [
+       -6.029,
+       8.643
+      ]
+     ],
+     "sumber": "denah-2023",
+     "label": "Senat"
+    },
+    {
+     "kode": "E1-BEM",
+     "nama": "R. BEM",
+     "fungsi": "organisasi",
+     "poligon": [
+      [
+       0,
+       5.33
+      ],
+      [
+       3.55,
+       5.33
+      ],
+      [
+       3.55,
+       8.45
+      ],
+      [
+       2.6,
+       8.45
+      ],
+      [
+       1.2,
+       10.875
+      ],
+      [
+       -2.54,
+       9.72
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "BEM",
+     "catatan": "Bentuk mengikuti footage 2026: pintu di dinding yang menghadap penghubung, ujung timur berhenti di mulut lorong toilet."
+    },
+    {
+     "kode": "E1-KM1",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       0,
+       0
+      ],
+      [
+       3.55,
+       0
+      ],
+      [
+       3.55,
+       5.33
+      ],
+      [
+       0,
+       5.33
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Wanita",
+     "catatan": "Pintu di dinding kiri lorong, berhadapan dengan toilet pria. Pria/wanita ditebak dari papan pintu kanan (gambar pria) di lt 2."
+    },
+    {
+     "kode": "E1-KM2",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       5.75,
+       0
+      ],
+      [
+       8.4,
+       0
+      ],
+      [
+       8.4,
+       3.58
+      ],
+      [
+       5.75,
+       3.58
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Pria",
+     "catatan": "Pintu di dinding kanan lorong dekat ujung, berhadapan dengan toilet wanita (papan 'Toilet' bergambar pria)."
+    },
+    {
+     "kode": "E1-LKM",
+     "nama": "Lorong toilet",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       3.55,
+       1.6
+      ],
+      [
+       5.75,
+       1.6
+      ],
+      [
+       5.75,
+       8.0
+      ],
+      [
+       3.55,
+       8.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Lorong",
+     "catatan": "Lorong lurus dari selasar ke utara, dinding kiri berjendela tinggi (R. BEM / Kantor Dosen)."
+    },
+    {
+     "kode": "E1-KMD",
+     "nama": "Kamar Mandi Disabilitas",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       3.55,
+       0
+      ],
+      [
+       5.75,
+       0
+      ],
+      [
+       5.75,
+       1.6
+      ],
+      [
+       3.55,
+       1.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "KM Difabel",
+     "catatan": "Di ujung lorong, pintu menghadap selasar."
+    },
+    {
+     "kode": "E1-GD",
+     "nama": "Gudang",
+     "fungsi": "gudang",
+     "poligon": [
+      [
+       5.75,
+       3.58
+      ],
+      [
+       8.4,
+       3.58
+      ],
+      [
+       8.4,
+       4.92
+      ],
+      [
+       7.07,
+       4.92
+      ],
+      [
+       7.07,
+       6.5
+      ],
+      [
+       5.75,
+       6.5
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Di bawah tangga. Pintu (papan 'Gudang / Stockroom') menghadap selasar, di samping anak tangga pertama."
+    },
+    {
+     "kode": "E1-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       7.07,
+       4.92
+      ],
+      [
+       8.4,
+       4.92
+      ],
+      [
+       8.4,
+       8.0
+      ],
+      [
+       5.75,
+       8.0
+      ],
+      [
+       5.75,
+       6.5
+      ],
+      [
+       7.07,
+       6.5
+      ]
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "kode": "E101",
+     "nama": "E101",
+     "fungsi": "kelas",
+     "poligon": [
+      [
+       8.4,
+       0
+      ],
+      [
+       32.0,
+       0
+      ],
+      [
+       32.0,
+       10.5
+      ],
+      [
+       8.4,
+       10.5
+      ]
+     ],
+     "sumber": "denah-2023"
+    }
+   ],
+   "dinding": [
+    {
+     "id": "E1-miring-depan",
+     "luar": true,
+     "a": [
+      -17.634,
+      1.943
+     ],
+     "b": [
+      -6.029,
+      8.643
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 2.5,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E103",
+       "papanNama": true,
+       "papanTeks": "E103",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 12.1,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E102",
+       "papanNama": true,
+       "papanTeks": "E102",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 1.05,
+       "lebar": 0.7,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E103",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 5.6,
+       "lebar": 1.1,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E103",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 8.9,
+       "lebar": 1.6,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E102",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-miring-belakang",
+     "luar": true,
+     "a": [
+      -12.384,
+      -7.15
+     ],
+     "b": [
+      0,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.175,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.6,
+       "lebar": 1.1,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.9,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.9,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-miring-ujung",
+     "luar": true,
+     "a": [
+      -12.384,
+      -7.15
+     ],
+     "b": [
+      -17.634,
+      1.943
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-sekat-E102-E103",
+     "a": [
+      -6.582,
+      -3.8
+     ],
+     "b": [
+      -11.832,
+      5.293
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-sekat-senat",
+     "a": [
+      -0.779,
+      -0.45
+     ],
+     "b": [
+      -6.029,
+      8.643
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-bem-kiri",
+     "a": [
+      0,
+      5.33
+     ],
+     "b": [
+      -2.54,
+      9.72
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-sudut-depan",
+     "luar": true,
+     "a": [
+      -6.029,
+      8.643
+     ],
+     "b": [
+      1.2,
+      10.875
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.6,
+       "lebar": 0.95,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E1-SENAT",
+       "papanNama": true,
+       "papanTeks": "R. Senat",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 6.116,
+       "lebar": 1.0,
+       "ambang": 1.0,
+       "tinggi": 1.15,
+       "ruang": "E1-BEM",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 4.709,
+       "lebar": 1.014,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E1-BEM",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding depan ruang sudut. Di footage ujungnya berhenti di sudut pintu HMIF, jadi garisnya berbelok sedikit dari garis depan sayap miring di denah 2023."
+    },
+    {
+     "id": "E1-hmif-depan",
+     "luar": true,
+     "a": [
+      1.2,
+      10.875
+     ],
+     "b": [
+      2.6,
+      8.45
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.72,
+       "lebar": 0.95,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E1-BEM",
+       "papanNama": true,
+       "papanTeks": "R. BEM",
+       "sudutBuka": 3,
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding tegak lurus sayap miring. Pintu di dekat sudut C, pilaster abu-abu di ujung P."
+    },
+    {
+     "id": "E1-hmif-poster",
+     "luar": true,
+     "a": [
+      2.6,
+      8.45
+     ],
+     "b": [
+      3.55,
+      8.45
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "tempelan": [
+      {
+       "jenis": "papan-dart",
+       "t": 0.55,
+       "ambang": 1.45,
+       "lebar": 0.45,
+       "tinggi": 0.45,
+       "ruang": "E1-BEM",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "E1-bem-timur",
+     "a": [
+      3.55,
+      5.33
+     ],
+     "b": [
+      3.55,
+      8.45
+     ],
+     "tebal": 0.2,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "ventilasi",
+       "t": 1.32,
+       "lebar": 1.8,
+       "ambang": 2.1,
+       "tinggi": 0.8,
+       "tertutup": true,
+       "ruang": "E1-BEM",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "rambu",
+       "t": 2.72,
+       "ambang": 1.75,
+       "lebar": 0.2,
+       "tinggi": 0.06,
+       "warna": "#202020",
+       "ruang": "E1-BEM",
+       "sumber": "footage-2026"
+      }
+     ]
+    },
+    {
+     "id": "E1-km-barat",
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      5.33
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-km-selatan",
+     "a": [
+      0,
+      5.33
+     ],
+     "b": [
+      3.55,
+      5.33
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-lorong-barat",
+     "a": [
+      3.55,
+      0
+     ],
+     "b": [
+      3.55,
+      5.33
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.3,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E1-KM1",
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita",
+       "sumber": "footage-2026",
+       "sudutBuka": 10
+      }
+     ]
+    },
+    {
+     "id": "E1-lorong-ujung",
+     "a": [
+      3.55,
+      1.6
+     ],
+     "b": [
+      5.75,
+      1.6
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.45,
+       "lebar": 0.9,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E1-KMD",
+       "papanNama": true,
+       "papanTeks": "KM Disabilitas",
+       "sumber": "footage-2026",
+       "sudutBuka": 5
+      }
+     ]
+    },
+    {
+     "id": "E1-lorong-timur",
+     "a": [
+      5.75,
+      0
+     ],
+     "b": [
+      5.75,
+      8.0
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.15,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E1-KM2",
+       "papanNama": true,
+       "papanTeks": "Toilet Pria",
+       "sumber": "footage-2026",
+       "sudutBuka": 70
+      }
+     ],
+     "catatan": "Dinding antara lorong toilet dan tangga."
+    },
+    {
+     "id": "E1-toilet2-selatan",
+     "a": [
+      5.75,
+      3.58
+     ],
+     "b": [
+      8.4,
+      3.58
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding belakang bordes tangga."
+    },
+    {
+     "id": "E1-gudang-selatan",
+     "a": [
+      5.75,
+      6.5
+     ],
+     "b": [
+      7.07,
+      6.5
+     ],
+     "tebal": 0.15,
+     "tinggi": 2.75,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.62,
+       "lebar": 0.8,
+       "tinggi": 2.1,
+       "ruang": "E1-GD",
+       "papanNama": true,
+       "papanTeks": "Gudang",
+       "sumber": "footage-2026",
+       "sudutBuka": 4
+      }
+     ]
+    },
+    {
+     "id": "E1-gudang-timur",
+     "a": [
+      7.07,
+      4.92
+     ],
+     "b": [
+      7.07,
+      6.5
+     ],
+     "tebal": 0.15,
+     "tinggi": 2.0,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "E1-lurus-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      32.0,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela-tinggi",
+       "t": 2.3,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.875,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 12.825,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.775,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 18.725,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.675,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.625,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 27.575,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.525,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-lurus-depan",
+     "luar": true,
+     "a": [
+      8.4,
+      10.5
+     ],
+     "b": [
+      32.0,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.5,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E101",
+       "papanNama": true,
+       "papanTeks": "E101",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 22.2,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E101",
+       "papanNama": true,
+       "papanTeks": "E101",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 4.425,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E101",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 7.375,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E101",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 10.325,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E101",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.275,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E101",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 16.225,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E101",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 19.175,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E101",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "tempelan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-e101-barat",
+     "a": [
+      8.4,
+      0
+     ],
+     "b": [
+      8.4,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E1-lurus-timur",
+     "luar": true,
+     "a": [
+      32.0,
+      0
+     ],
+     "b": [
+      32.0,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      -17.634,
+      1.943
+     ],
+     [
+      -6.029,
+      8.643
+     ],
+     [
+      1.2,
+      10.875
+     ],
+     [
+      2.6,
+      8.45
+     ],
+     [
+      3.55,
+      8.45
+     ],
+     [
+      3.55,
+      8.0
+     ],
+     [
+      8.4,
+      8.0
+     ],
+     [
+      8.4,
+      10.5
+     ],
+     [
+      32.0,
+      10.5
+     ],
+     [
+      32.0,
+      10.85
+     ],
+     [
+      34.9,
+      10.85
+     ],
+     [
+      34.9,
+      13.3
+     ],
+     [
+      -3.564,
+      13.3
+     ],
+     [
+      -19.034,
+      4.368
+     ]
+    ]
+   },
+   "pagar": []
+  },
+  {
+   "no": 2,
+   "elevasi": 4.16,
+   "elevasiSelasar": 4.11,
+   "tinggiPlafon": 4.17,
+   "perabot": [],
+   "denah": {
+    "gambar": "assets/denah/E2.jpg",
+    "batas": [
+     -26.0,
+     -13.0,
+     35.5,
+     16.0
+    ],
+    "keterangan": "Denah 2023 lantai 2, diluruskan ke skala 40 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "E2-LABKOMC",
+     "nama": "Lab Komputer C",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       -12.384,
+       -7.15
+      ],
+      [
+       -0.779,
+       -0.45
+      ],
+      [
+       -6.029,
+       8.643
+      ],
+      [
+       -17.634,
+       1.943
+      ]
+     ],
+     "sumber": "denah-2023",
+     "label": "Lab Kom C"
+    },
+    {
+     "kode": "E2-KD1",
+     "nama": "Kantor Dosen",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       -0.779,
+       -0.45
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       5.33
+      ],
+      [
+       -2.54,
+       9.72
+      ],
+      [
+       -6.029,
+       8.643
+      ]
+     ],
+     "sumber": "denah-2023",
+     "label": "Kantor Dosen"
+    },
+    {
+     "kode": "E2-KD2",
+     "nama": "Kantor Dosen",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       0,
+       5.33
+      ],
+      [
+       3.55,
+       5.33
+      ],
+      [
+       3.55,
+       8.45
+      ],
+      [
+       2.6,
+       8.45
+      ],
+      [
+       1.2,
+       10.875
+      ],
+      [
+       -2.54,
+       9.72
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Kantor Dosen",
+     "catatan": "Bentuk mengikuti footage 2026: pintu di dinding yang menghadap penghubung, ujung timur berhenti di mulut lorong toilet."
+    },
+    {
+     "kode": "E2-KM1",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       0,
+       0
+      ],
+      [
+       3.55,
+       0
+      ],
+      [
+       3.55,
+       5.33
+      ],
+      [
+       0,
+       5.33
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Wanita",
+     "catatan": "Pintu di dinding kiri lorong, berhadapan dengan toilet pria. Pria/wanita ditebak dari papan pintu kanan (gambar pria) di lt 2."
+    },
+    {
+     "kode": "E2-KM2",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       5.75,
+       0
+      ],
+      [
+       8.4,
+       0
+      ],
+      [
+       8.4,
+       3.58
+      ],
+      [
+       5.75,
+       3.58
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Pria",
+     "catatan": "Pintu di dinding kanan lorong dekat ujung, berhadapan dengan toilet wanita (papan 'Toilet' bergambar pria)."
+    },
+    {
+     "kode": "E2-LKM",
+     "nama": "Lorong toilet",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       3.55,
+       1.6
+      ],
+      [
+       5.75,
+       1.6
+      ],
+      [
+       5.75,
+       8.0
+      ],
+      [
+       3.55,
+       8.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Lorong",
+     "catatan": "Lorong lurus dari selasar ke utara, dinding kiri berjendela tinggi (R. BEM / Kantor Dosen)."
+    },
+    {
+     "kode": "E2-GD",
+     "nama": "Gudang",
+     "fungsi": "gudang",
+     "poligon": [
+      [
+       3.55,
+       0
+      ],
+      [
+       5.75,
+       0
+      ],
+      [
+       5.75,
+       1.6
+      ],
+      [
+       3.55,
+       1.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Di ujung lorong toilet, pintu menghadap selasar (papan 'Gudang / Stockroom')."
+    },
+    {
+     "kode": "E2-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       5.75,
+       3.58
+      ],
+      [
+       8.4,
+       3.58
+      ],
+      [
+       8.4,
+       8.0
+      ],
+      [
+       5.75,
+       8.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "void": true
+    },
+    {
+     "kode": "E2-KAVI",
+     "nama": "R. KAVI",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       8.4,
+       0
+      ],
+      [
+       18.1,
+       0
+      ],
+      [
+       18.1,
+       10.5
+      ],
+      [
+       8.4,
+       10.5
+      ]
+     ],
+     "sumber": "denah-2023",
+     "label": "KAVI",
+     "catatan": "Pintu utara diberi papan 'Ruang Dosen KG' dan 'Ruang Dosen RPL' (footage). Pembagian di dalam belum terlihat."
+    },
+    {
+     "kode": "E2-LABKOM",
+     "nama": "Lab Komputer",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       18.1,
+       0
+      ],
+      [
+       32.0,
+       0
+      ],
+      [
+       32.0,
+       10.5
+      ],
+      [
+       18.1,
+       10.5
+      ]
+     ],
+     "sumber": "denah-2023",
+     "label": "Lab Kom",
+     "catatan": "Pintu selatan berpapan 'Laboratorium Komputer D / Computer Lab D' (footage)."
+    }
+   ],
+   "dinding": [
+    {
+     "id": "E2-miring-depan",
+     "luar": true,
+     "a": [
+      -17.634,
+      1.943
+     ],
+     "b": [
+      -6.029,
+      8.643
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 2.5,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-LABKOMC",
+       "papanNama": true,
+       "papanTeks": "Lab Komputasi B",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 12.1,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-LABKOMC",
+       "papanNama": true,
+       "papanTeks": "Lab Komputasi C",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 1.05,
+       "lebar": 0.7,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E2-LABKOMC",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 5.875,
+       "lebar": 1.65,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E2-LABKOMC",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 8.9,
+       "lebar": 1.6,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E2-LABKOMC",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-miring-belakang",
+     "luar": true,
+     "a": [
+      -12.384,
+      -7.15
+     ],
+     "b": [
+      0,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.175,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.875,
+       "lebar": 1.65,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.9,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.9,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-miring-ujung",
+     "luar": true,
+     "a": [
+      -12.384,
+      -7.15
+     ],
+     "b": [
+      -17.634,
+      1.943
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-sekat-senat",
+     "a": [
+      -0.779,
+      -0.45
+     ],
+     "b": [
+      -6.029,
+      8.643
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-bem-kiri",
+     "a": [
+      0,
+      5.33
+     ],
+     "b": [
+      -2.54,
+      9.72
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-sudut-depan",
+     "luar": true,
+     "a": [
+      -6.029,
+      8.643
+     ],
+     "b": [
+      1.2,
+      10.875
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.6,
+       "lebar": 0.95,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-KD1",
+       "papanNama": true,
+       "papanTeks": "Kantor Dosen",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 6.116,
+       "lebar": 1.0,
+       "ambang": 1.0,
+       "tinggi": 1.15,
+       "ruang": "E2-KD2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 4.709,
+       "lebar": 1.014,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E2-KD2",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding depan ruang sudut. Di footage ujungnya berhenti di sudut pintu HMIF, jadi garisnya berbelok sedikit dari garis depan sayap miring di denah 2023."
+    },
+    {
+     "id": "E2-hmif-depan",
+     "luar": true,
+     "a": [
+      1.2,
+      10.875
+     ],
+     "b": [
+      2.6,
+      8.45
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.72,
+       "lebar": 0.95,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-KD2",
+       "papanNama": true,
+       "papanTeks": "Kantor Dosen",
+       "sudutBuka": 3,
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "poster",
+       "t": 1.9,
+       "ambang": 1.1,
+       "lebar": 0.55,
+       "tinggi": 0.75,
+       "warna": "#1d2a44",
+       "ruang": "E2-KD2",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Dinding tegak lurus sayap miring. Pintu di dekat sudut C, pilaster abu-abu di ujung P."
+    },
+    {
+     "id": "E2-hmif-poster",
+     "luar": true,
+     "a": [
+      2.6,
+      8.45
+     ],
+     "b": [
+      3.55,
+      8.45
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "tempelan": [
+      {
+       "jenis": "poster",
+       "t": 0.56,
+       "ambang": 1.0,
+       "lebar": 0.62,
+       "tinggi": 0.92,
+       "ruang": "E2-KD2",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "E2-bem-timur",
+     "a": [
+      3.55,
+      5.33
+     ],
+     "b": [
+      3.55,
+      8.45
+     ],
+     "tebal": 0.2,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "ventilasi",
+       "t": 1.32,
+       "lebar": 1.8,
+       "ambang": 2.1,
+       "tinggi": 0.8,
+       "tertutup": true,
+       "ruang": "E2-KD2",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "rambu",
+       "t": 2.72,
+       "ambang": 1.75,
+       "lebar": 0.2,
+       "tinggi": 0.06,
+       "warna": "#202020",
+       "ruang": "E2-KD2",
+       "sumber": "footage-2026"
+      }
+     ]
+    },
+    {
+     "id": "E2-km-barat",
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      5.33
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-km-selatan",
+     "a": [
+      0,
+      5.33
+     ],
+     "b": [
+      3.55,
+      5.33
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-lorong-barat",
+     "a": [
+      3.55,
+      0
+     ],
+     "b": [
+      3.55,
+      5.33
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.3,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E2-KM1",
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita",
+       "sumber": "footage-2026",
+       "sudutBuka": 10
+      }
+     ]
+    },
+    {
+     "id": "E2-lorong-ujung",
+     "a": [
+      3.55,
+      1.6
+     ],
+     "b": [
+      5.75,
+      1.6
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.45,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E2-GD",
+       "papanNama": true,
+       "papanTeks": "Gudang",
+       "sumber": "footage-2026",
+       "sudutBuka": 5
+      }
+     ]
+    },
+    {
+     "id": "E2-lorong-timur",
+     "a": [
+      5.75,
+      0
+     ],
+     "b": [
+      5.75,
+      8.0
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.15,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E2-KM2",
+       "papanNama": true,
+       "papanTeks": "Toilet Pria",
+       "sumber": "footage-2026",
+       "sudutBuka": 70
+      }
+     ],
+     "catatan": "Dinding antara lorong toilet dan tangga."
+    },
+    {
+     "id": "E2-toilet2-selatan",
+     "a": [
+      5.75,
+      3.58
+     ],
+     "b": [
+      8.4,
+      3.58
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding belakang bordes tangga."
+    },
+    {
+     "id": "E2-lurus-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      32.0,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela-tinggi",
+       "t": 2.3,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.875,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 12.825,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.775,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 19.075,
+       "lebar": 0.85,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.675,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.625,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 27.575,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.525,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-lurus-depan",
+     "luar": true,
+     "a": [
+      8.4,
+      10.5
+     ],
+     "b": [
+      32.0,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.5,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-KAVI",
+       "papanNama": true,
+       "papanTeks": "R. KAVI",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu",
+       "t": 8.8,
+       "lebar": 0.95,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-KAVI",
+       "papanNama": true,
+       "papanTeks": "Ruang Dosen KG & RPL",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 4.425,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E2-KAVI",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 7.15,
+       "lebar": 1.1,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E2-KAVI",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 11.6,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-LABKOM",
+       "papanNama": true,
+       "papanTeks": "Lab Komputer D",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 22.2,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E2-LABKOM",
+       "papanNama": true,
+       "papanTeks": "Lab Komputer",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 13.375,
+       "lebar": 1.35,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E2-LABKOM",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 16.225,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E2-LABKOM",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 19.175,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E2-LABKOM",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "tempelan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-e101-barat",
+     "a": [
+      8.4,
+      0
+     ],
+     "b": [
+      8.4,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-lurus-timur",
+     "luar": true,
+     "a": [
+      32.0,
+      0
+     ],
+     "b": [
+      32.0,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E2-sekat-18.1",
+     "a": [
+      18.1,
+      0
+     ],
+     "b": [
+      18.1,
+      10.5
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      -17.634,
+      1.943
+     ],
+     [
+      -6.029,
+      8.643
+     ],
+     [
+      1.2,
+      10.875
+     ],
+     [
+      2.6,
+      8.45
+     ],
+     [
+      3.55,
+      8.45
+     ],
+     [
+      3.55,
+      8.0
+     ],
+     [
+      8.4,
+      8.0
+     ],
+     [
+      8.4,
+      10.5
+     ],
+     [
+      32.0,
+      10.5
+     ],
+     [
+      32.0,
+      10.85
+     ],
+     [
+      34.9,
+      10.85
+     ],
+     [
+      34.9,
+      13.3
+     ],
+     [
+      -3.564,
+      13.3
+     ],
+     [
+      -19.034,
+      4.368
+     ]
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      -17.623,
+      2.123,
+      -0.05
+     ],
+     "b": [
+      -18.898,
+      4.332,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      -18.898,
+      4.332,
+      -0.05
+     ],
+     "b": [
+      -3.537,
+      13.2,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      -3.537,
+      13.2,
+      -0.05
+     ],
+     "b": [
+      2.23,
+      13.200000000000001,
+      -0.05
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.05,
+     "sumber": "footage-2026",
+     "catatan": "Balkon di pertemuan dua sayap, tembok penuh."
+    },
+    {
+     "a": [
+      5.63,
+      13.200000000000001,
+      -0.05
+     ],
+     "b": [
+      34.8,
+      13.200000000000001,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      34.8,
+      10.95,
+      -0.05
+     ],
+     "b": [
+      34.8,
+      13.200000000000001,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "elevasi": 8.48,
+   "elevasiSelasar": 8.43,
+   "tinggiPlafon": 3.85,
+   "perabot": [
+    {
+     "jenis": "tempat-sampah",
+     "posisi": [
+      2.235,
+      9.683
+     ],
+     "warna": "#2c3136",
+     "sumber": "footage-2026"
+    },
+    {
+     "jenis": "tempat-sampah",
+     "posisi": [
+      2.5,
+      9.224
+     ],
+     "warna": "#d9a21b",
+     "sumber": "footage-2026"
+    }
+   ],
+   "denah": {
+    "gambar": "assets/denah/E3.jpg",
+    "batas": [
+     -26.0,
+     -13.0,
+     35.5,
+     16.0
+    ],
+    "keterangan": "Denah 2023 lantai 3, diluruskan ke skala 40 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "E3-COWORK",
+     "nama": "Coworking Space",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       -12.384,
+       -7.15
+      ],
+      [
+       -0.779,
+       -0.45
+      ],
+      [
+       -6.029,
+       8.643
+      ],
+      [
+       -17.634,
+       1.943
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Coworking",
+     "catatan": "Denah 2023: R. Siscer. Pintu ganda berpapan 'Coworking Space' (footage)."
+    },
+    {
+     "kode": "E3-SIDANG",
+     "nama": "Ruang Sidang",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       -0.779,
+       -0.45
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       5.33
+      ],
+      [
+       -2.54,
+       9.72
+      ],
+      [
+       -6.029,
+       8.643
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Sidang",
+     "catatan": "Denah 2023: R. Skripsi. Papan 'Ruang Sidang' di pintu dan di dinding (footage)."
+    },
+    {
+     "kode": "E3-HMIF",
+     "nama": "R. HMIF",
+     "fungsi": "organisasi",
+     "poligon": [
+      [
+       0,
+       5.33
+      ],
+      [
+       3.55,
+       5.33
+      ],
+      [
+       3.55,
+       8.45
+      ],
+      [
+       2.6,
+       8.45
+      ],
+      [
+       1.2,
+       10.875
+      ],
+      [
+       -2.54,
+       9.72
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "HMIF",
+     "catatan": "Bentuk mengikuti footage 2026: pintu di dinding yang menghadap penghubung, ujung timur berhenti di mulut lorong toilet."
+    },
+    {
+     "kode": "E3-KM1",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       0,
+       0
+      ],
+      [
+       3.55,
+       0
+      ],
+      [
+       3.55,
+       5.33
+      ],
+      [
+       0,
+       5.33
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Wanita",
+     "catatan": "Pintu di dinding kiri lorong, berhadapan dengan toilet pria. Pria/wanita ditebak dari papan pintu kanan (gambar pria) di lt 2."
+    },
+    {
+     "kode": "E3-KM2",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       5.75,
+       0
+      ],
+      [
+       8.4,
+       0
+      ],
+      [
+       8.4,
+       3.58
+      ],
+      [
+       5.75,
+       3.58
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Toilet Pria",
+     "catatan": "Pintu di dinding kanan lorong dekat ujung, berhadapan dengan toilet wanita (papan 'Toilet' bergambar pria)."
+    },
+    {
+     "kode": "E3-LKM",
+     "nama": "Lorong toilet",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       3.55,
+       1.6
+      ],
+      [
+       5.75,
+       1.6
+      ],
+      [
+       5.75,
+       8.0
+      ],
+      [
+       3.55,
+       8.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Lorong",
+     "catatan": "Lorong lurus dari selasar ke utara, dinding kiri berjendela tinggi (R. BEM / Kantor Dosen)."
+    },
+    {
+     "kode": "E3-GD",
+     "nama": "Gudang",
+     "fungsi": "gudang",
+     "poligon": [
+      [
+       3.55,
+       0
+      ],
+      [
+       5.75,
+       0
+      ],
+      [
+       5.75,
+       1.6
+      ],
+      [
+       3.55,
+       1.6
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Di ujung lorong toilet, pintu menghadap selasar (papan 'Gudang / Stockroom')."
+    },
+    {
+     "kode": "E3-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       5.75,
+       3.58
+      ],
+      [
+       8.4,
+       3.58
+      ],
+      [
+       8.4,
+       8.0
+      ],
+      [
+       5.75,
+       8.0
+      ]
+     ],
+     "sumber": "footage-2026",
+     "void": true
+    },
+    {
+     "kode": "E3-STI",
+     "nama": "Ruang STI",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       8.4,
+       0
+      ],
+      [
+       13.63,
+       0
+      ],
+      [
+       13.63,
+       10.5
+      ],
+      [
+       8.4,
+       10.5
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "STI",
+     "catatan": "Urutan ruang lt 3 di footage terbalik dari denah 2023: Ruang STI paling dekat tangga."
+    },
+    {
+     "kode": "E3-RAPAT",
+     "nama": "Ruang Rapat",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       13.63,
+       0
+      ],
+      [
+       18.75,
+       0
+      ],
+      [
+       18.75,
+       10.5
+      ],
+      [
+       13.63,
+       10.5
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Rapat"
+    },
+    {
+     "kode": "E3-DEPT",
+     "nama": "Departemen Informatika",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       18.75,
+       0
+      ],
+      [
+       22.63,
+       0
+      ],
+      [
+       22.63,
+       10.5
+      ],
+      [
+       18.75,
+       10.5
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "Departemen",
+     "catatan": "Pintu ganda merah marun berlis putih berkaca sempit di dalam portal hitam bertulisan 'DEPARTEMEN INFORMATIKA'; dinding sekelilingnya berlapis kisi kayu (footage)."
+    },
+    {
+     "kode": "E3-RPL",
+     "nama": "Ruang RPL",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       22.63,
+       0
+      ],
+      [
+       32.0,
+       0
+      ],
+      [
+       32.0,
+       10.5
+      ],
+      [
+       22.63,
+       10.5
+      ]
+     ],
+     "sumber": "footage-2026",
+     "label": "RPL"
+    }
+   ],
+   "dinding": [
+    {
+     "id": "E3-miring-depan",
+     "luar": true,
+     "a": [
+      -17.634,
+      1.943
+     ],
+     "b": [
+      -6.029,
+      8.643
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 2.5,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-COWORK",
+       "papanNama": true,
+       "papanTeks": "Coworking Space",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 12.1,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-COWORK",
+       "papanNama": true,
+       "papanTeks": "Coworking Space",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 1.05,
+       "lebar": 0.7,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E3-COWORK",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 5.875,
+       "lebar": 1.65,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E3-COWORK",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 8.9,
+       "lebar": 1.6,
+       "ambang": 2.6,
+       "tinggi": 0.5,
+       "ruang": "E3-COWORK",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-miring-belakang",
+     "luar": true,
+     "a": [
+      -12.384,
+      -7.15
+     ],
+     "b": [
+      0,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.175,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.875,
+       "lebar": 1.65,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.9,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.9,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-miring-ujung",
+     "luar": true,
+     "a": [
+      -12.384,
+      -7.15
+     ],
+     "b": [
+      -17.634,
+      1.943
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-sekat-senat",
+     "a": [
+      -0.779,
+      -0.45
+     ],
+     "b": [
+      -6.029,
+      8.643
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-bem-kiri",
+     "a": [
+      0,
+      5.33
+     ],
+     "b": [
+      -2.54,
+      9.72
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-sudut-depan",
+     "luar": true,
+     "a": [
+      -6.029,
+      8.643
+     ],
+     "b": [
+      1.2,
+      10.875
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.516,
+       "lebar": 0.95,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-SIDANG",
+       "papanNama": true,
+       "papanTeks": "Ruang Sidang",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu",
+       "t": 0.85,
+       "lebar": 0.95,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-SIDANG",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "rambu",
+       "t": 1.516,
+       "ambang": 1.65,
+       "lebar": 0.5,
+       "tinggi": 0.34,
+       "teks": "RUANG|SIDANG",
+       "ruang": "E3-SIDANG",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "papan-tulis",
+       "t": 4.166,
+       "ambang": 0.85,
+       "lebar": 1.55,
+       "tinggi": 1.35,
+       "ruang": "E3-HMIF",
+       "tebal": 0.03,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "panel-kayu",
+       "t": 5.166,
+       "ambang": 0.0,
+       "lebar": 0.42,
+       "tinggi": 3.35,
+       "ruang": "E3-HMIF",
+       "tebal": 0.04,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "plakat",
+       "t": 6.146,
+       "ambang": 0.03,
+       "lebar": 1.54,
+       "tinggi": 3.32,
+       "ruang": "E3-HMIF",
+       "tebal": 0.07,
+       "teks": "DEPARTEMEN INFORMATIKA|FAKULTAS SAINS DAN MATEMATIKA|UNIVERSITAS DIPONEGORO",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "panel-kayu",
+       "warna": "#6a2a1f",
+       "t": 6.936,
+       "ambang": 0.25,
+       "lebar": 0.05,
+       "tinggi": 2.7,
+       "ruang": "E3-HMIF",
+       "tebal": 0.08,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "panel-kayu",
+       "t": 7.236,
+       "ambang": 0.0,
+       "lebar": 0.55,
+       "tinggi": 3.35,
+       "ruang": "E3-HMIF",
+       "tebal": 0.05,
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Dinding depan ruang sudut. Di footage ujungnya berhenti di sudut pintu HMIF, jadi garisnya berbelok sedikit dari garis depan sayap miring di denah 2023."
+    },
+    {
+     "id": "E3-hmif-depan",
+     "luar": true,
+     "a": [
+      1.2,
+      10.875
+     ],
+     "b": [
+      2.6,
+      8.45
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.72,
+       "lebar": 0.95,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-HMIF",
+       "papanNama": false,
+       "papanTeks": "R. HMIF",
+       "sudutBuka": 3,
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "logo",
+       "t": 0.72,
+       "ambang": 2.92,
+       "lebar": 0.6,
+       "tinggi": 0.62,
+       "teks": "hmif",
+       "ruang": "E3-HMIF",
+       "tebal": 0.04,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "papan-pengumuman",
+       "t": 1.78,
+       "ambang": 0.95,
+       "lebar": 1.05,
+       "tinggi": 1.3,
+       "ruang": "E3-HMIF",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Dinding tegak lurus sayap miring. Pintu di dekat sudut C, pilaster abu-abu di ujung P."
+    },
+    {
+     "id": "E3-hmif-poster",
+     "luar": true,
+     "a": [
+      2.6,
+      8.45
+     ],
+     "b": [
+      3.55,
+      8.45
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "tempelan": [
+      {
+       "jenis": "poster",
+       "t": 0.56,
+       "ambang": 1.0,
+       "lebar": 0.62,
+       "tinggi": 0.92,
+       "ruang": "E3-HMIF",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "E3-bem-timur",
+     "a": [
+      3.55,
+      5.33
+     ],
+     "b": [
+      3.55,
+      8.45
+     ],
+     "tebal": 0.2,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "ventilasi",
+       "t": 1.32,
+       "lebar": 1.8,
+       "ambang": 2.1,
+       "tinggi": 0.8,
+       "tertutup": true,
+       "ruang": "E3-HMIF",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "rambu",
+       "t": 2.72,
+       "ambang": 1.75,
+       "lebar": 0.2,
+       "tinggi": 0.06,
+       "warna": "#202020",
+       "ruang": "E3-HMIF",
+       "sumber": "footage-2026"
+      }
+     ]
+    },
+    {
+     "id": "E3-km-barat",
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      5.33
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-km-selatan",
+     "a": [
+      0,
+      5.33
+     ],
+     "b": [
+      3.55,
+      5.33
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-lorong-barat",
+     "a": [
+      3.55,
+      0
+     ],
+     "b": [
+      3.55,
+      5.33
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.3,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E3-KM1",
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita",
+       "sumber": "footage-2026",
+       "sudutBuka": 10
+      }
+     ]
+    },
+    {
+     "id": "E3-lorong-ujung",
+     "a": [
+      3.55,
+      1.6
+     ],
+     "b": [
+      5.75,
+      1.6
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.45,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E3-GD",
+       "papanNama": true,
+       "papanTeks": "Gudang",
+       "sumber": "footage-2026",
+       "sudutBuka": 5
+      }
+     ]
+    },
+    {
+     "id": "E3-lorong-timur",
+     "a": [
+      5.75,
+      0
+     ],
+     "b": [
+      5.75,
+      8.0
+     ],
+     "tebal": 0.15,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 2.15,
+       "lebar": 0.8,
+       "tinggi": 2.75,
+       "boven": 0.6,
+       "ruang": "E3-KM2",
+       "papanNama": true,
+       "papanTeks": "Toilet Pria",
+       "sumber": "footage-2026",
+       "sudutBuka": 70
+      }
+     ],
+     "catatan": "Dinding antara lorong toilet dan tangga."
+    },
+    {
+     "id": "E3-toilet2-selatan",
+     "a": [
+      5.75,
+      3.58
+     ],
+     "b": [
+      8.4,
+      3.58
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "catatan": "Dinding belakang bordes tangga."
+    },
+    {
+     "id": "E3-lurus-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      32.0,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela-tinggi",
+       "t": 2.3,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.875,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 12.565,
+       "lebar": 1.03,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.775,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.49,
+       "lebar": 1.18,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.625,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 27.575,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.525,
+       "lebar": 1.55,
+       "ambang": 1.0,
+       "tinggi": 1.6
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-lurus-depan",
+     "luar": true,
+     "a": [
+      8.4,
+      10.5
+     ],
+     "b": [
+      32.0,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.5,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-STI",
+       "papanNama": true,
+       "papanTeks": "Ruang STI",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 4.165,
+       "lebar": 1.03,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E3-STI",
+       "sumber": "koreksi-lapangan"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 7.35,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-RAPAT",
+       "papanNama": true,
+       "papanTeks": "Ruang Rapat",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 13.3,
+       "lebar": 1.6,
+       "tinggi": 2.5,
+       "boven": 0,
+       "bovenGelap": true,
+       "ruang": "E3-DEPT",
+       "papanNama": false,
+       "papanTeks": null,
+       "sumber": "footage-2026",
+       "sudutBuka": 2,
+       "warnaDaun": "#7a2c22",
+       "lisKaca": true,
+       "pegangan": true
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 22.2,
+       "lebar": 1.1,
+       "tinggi": 3.0,
+       "boven": 0.6,
+       "bovenGelap": true,
+       "ruang": "E3-RPL",
+       "papanNama": true,
+       "papanTeks": "Ruang RPL",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 19.175,
+       "lebar": 1.55,
+       "ambang": 2.5,
+       "tinggi": 0.6,
+       "ruang": "E3-RPL",
+       "sumber": "koreksi-lapangan"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "panel-kisi",
+       "ruang": "E3-DEPT",
+       "tebal": 0.05,
+       "sumber": "footage-2026",
+       "t": 12.11,
+       "lebar": 0.42,
+       "ambang": 0.0,
+       "tinggi": 3.75
+      },
+      {
+       "jenis": "panel-kisi",
+       "ruang": "E3-DEPT",
+       "tebal": 0.05,
+       "sumber": "footage-2026",
+       "t": 15.875,
+       "lebar": 1.45,
+       "ambang": 0.0,
+       "tinggi": 3.75
+      },
+      {
+       "jenis": "panel-kisi",
+       "ruang": "E3-DEPT",
+       "tebal": 0.05,
+       "sumber": "footage-2026",
+       "t": 14.25,
+       "lebar": 4.7,
+       "ambang": 3.35,
+       "tinggi": 0.4
+      },
+      {
+       "jenis": "tulisan",
+       "warna": "#1b1c1f",
+       "ruang": "E3-DEPT",
+       "tebal": 0.2,
+       "sumber": "footage-2026",
+       "t": 12.41,
+       "lebar": 0.18,
+       "ambang": 0.0,
+       "tinggi": 2.55
+      },
+      {
+       "jenis": "tulisan",
+       "warna": "#1b1c1f",
+       "ruang": "E3-DEPT",
+       "tebal": 0.2,
+       "sumber": "footage-2026",
+       "t": 14.625,
+       "lebar": 1.05,
+       "ambang": 0.0,
+       "tinggi": 2.55
+      },
+      {
+       "jenis": "tulisan",
+       "warna": "#1b1c1f",
+       "ruang": "E3-DEPT",
+       "tebal": 0.2,
+       "sumber": "footage-2026",
+       "t": 13.735,
+       "lebar": 2.83,
+       "ambang": 2.55,
+       "tinggi": 0.8,
+       "teks": "DEPARTEMEN INFORMATIKA",
+       "rata": "kiri",
+       "besarHuruf": 0.3
+      },
+      {
+       "jenis": "lambang",
+       "t": 12.65,
+       "lebar": 0.17,
+       "tinggi": 0.17,
+       "ambang": 3.14,
+       "ruang": "E3-DEPT",
+       "tebal": 0.22,
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-e101-barat",
+     "a": [
+      8.4,
+      0
+     ],
+     "b": [
+      8.4,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-lurus-timur",
+     "luar": true,
+     "a": [
+      32.0,
+      0
+     ],
+     "b": [
+      32.0,
+      10.5
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-sekat-13.63",
+     "a": [
+      13.63,
+      0
+     ],
+     "b": [
+      13.63,
+      10.5
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-sekat-18.75",
+     "a": [
+      18.75,
+      0
+     ],
+     "b": [
+      18.75,
+      10.5
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "E3-sekat-22.63",
+     "a": [
+      22.63,
+      0
+     ],
+     "b": [
+      22.63,
+      10.5
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      -17.634,
+      1.943
+     ],
+     [
+      -6.029,
+      8.643
+     ],
+     [
+      1.2,
+      10.875
+     ],
+     [
+      2.6,
+      8.45
+     ],
+     [
+      3.55,
+      8.45
+     ],
+     [
+      3.55,
+      8.0
+     ],
+     [
+      8.4,
+      8.0
+     ],
+     [
+      8.4,
+      10.5
+     ],
+     [
+      32.0,
+      10.5
+     ],
+     [
+      32.0,
+      10.85
+     ],
+     [
+      34.9,
+      10.85
+     ],
+     [
+      34.9,
+      13.3
+     ],
+     [
+      -3.564,
+      13.3
+     ],
+     [
+      -19.034,
+      4.368
+     ]
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      -17.623,
+      2.123,
+      -0.05
+     ],
+     "b": [
+      -18.898,
+      4.332,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      -18.898,
+      4.332,
+      -0.05
+     ],
+     "b": [
+      -3.537,
+      13.2,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      -3.537,
+      13.2,
+      -0.05
+     ],
+     "b": [
+      2.23,
+      13.200000000000001,
+      -0.05
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.05,
+     "sumber": "footage-2026",
+     "catatan": "Balkon di pertemuan dua sayap, tembok penuh bertuliskan INFORMATIKA.",
+     "tulisan": {
+      "teks": "INFORMATIKA",
+      "t": 2.6,
+      "tinggi": 0.4
+     }
+    },
+    {
+     "a": [
+      5.63,
+      13.200000000000001,
+      -0.05
+     ],
+     "b": [
+      34.8,
+      13.200000000000001,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      34.8,
+      10.95,
+      -0.05
+     ],
+     "b": [
+      34.8,
+      13.200000000000001,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Tembok pembatas selasar dengan celah-celah vertikal dan pipa di atasnya."
+    },
+    {
+     "a": [
+      7.15,
+      8.0,
+      0
+     ],
+     "b": [
+      8.32,
+      8.0,
+      0
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "sumber": "footage-2026",
+     "catatan": "Tembok setengah badan di tepi lubang tangga."
+    },
+    {
+     "a": [
+      32.08,
+      10.85,
+      -0.05
+     ],
+     "b": [
+      33.38,
+      10.85,
+      -0.05
+     ],
+     "jenis": "tembok-polos",
+     "tinggi": 1.0,
+     "sumber": "footage-2026"
+    }
+   ]
+  }
+ ],
+ "tangga": [
+  {
+   "id": "T1",
+   "dariLantai": 1,
+   "keLantai": 2,
+   "x0": 8.32,
+   "x1": 5.83,
+   "zDepan": 8.0,
+   "zBelakang": 3.65,
+   "jumlahAnakTangga": 24,
+   "lebarInjakan": 0.28,
+   "celah": 0.15,
+   "bentuk": "U dengan bordes",
+   "pembatas": "tembok",
+   "dindingSisiX0": false,
+   "sisiLuar": "polos",
+   "tiangAwal": true,
+   "gaya": "krem",
+   "sumber": "footage-2026",
+   "catatan": "Lajur pertama menempel dinding E101, naik ke utara; bordes menempel dinding toilet pria; lajur kedua kembali ke selasar. Di antara lajur ada tembok setengah badan berpipa pegangan."
+  },
+  {
+   "id": "T2",
+   "dariLantai": 2,
+   "keLantai": 3,
+   "x0": 8.32,
+   "x1": 5.83,
+   "zDepan": 8.0,
+   "zBelakang": 3.65,
+   "jumlahAnakTangga": 24,
+   "lebarInjakan": 0.28,
+   "celah": 0.15,
+   "bentuk": "U dengan bordes",
+   "pembatas": "tembok",
+   "dindingSisiX0": false,
+   "sisiLuar": "polos",
+   "tiangAwal": false,
+   "gaya": "krem",
+   "sumber": "footage-2026",
+   "catatan": "Lajur pertama menempel dinding E101, naik ke utara; bordes menempel dinding toilet pria; lajur kedua kembali ke selasar. Di antara lajur ada tembok setengah badan berpipa pegangan."
+  },
+  {
+   "id": "S1",
+   "dariLantai": 1,
+   "keLantai": 2,
+   "x0": 32.08,
+   "x1": 34.82,
+   "zDepan": 10.85,
+   "zBelakang": 6.83,
+   "jumlahAnakTangga": 24,
+   "lebarInjakan": 0.28,
+   "celah": 0.15,
+   "bentuk": "U dengan bordes (luar gedung)",
+   "pembatas": "tembok",
+   "dindingSisiX0": false,
+   "sisiLuar": "tembok",
+   "belakang": "tembok",
+   "gaya": "krem",
+   "sumber": "footage-2026",
+   "catatan": "Tangga samping di ujung utara, di luar gedung dekat parkiran motor. Tembok pembatas dengan pipa pegangan abu-abu."
+  },
+  {
+   "id": "S2",
+   "dariLantai": 2,
+   "keLantai": 3,
+   "x0": 32.08,
+   "x1": 34.82,
+   "zDepan": 10.85,
+   "zBelakang": 6.83,
+   "jumlahAnakTangga": 24,
+   "lebarInjakan": 0.28,
+   "celah": 0.15,
+   "bentuk": "U dengan bordes (luar gedung)",
+   "pembatas": "tembok",
+   "dindingSisiX0": false,
+   "sisiLuar": "tembok",
+   "belakang": "tembok",
+   "gaya": "krem",
+   "sumber": "footage-2026",
+   "catatan": "Tangga samping di ujung utara, di luar gedung dekat parkiran motor. Tembok pembatas dengan pipa pegangan abu-abu."
+  }
+ ],
+ "tritisan": [
+  {
+   "a": [
+    -19.034,
+    4.368
+   ],
+   "b": [
+    -3.564,
+    13.3
+   ],
+   "sisi": 1,
+   "elevasi": 4.16,
+   "lantai": 2,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sudutB": 30,
+   "sumber": "footage-2026",
+   "catatan": "Menyambung miring dengan tritisan sayap lurus di sudut balkon (tanpa celah)."
+  },
+  {
+   "a": [
+    -3.564,
+    13.3
+   ],
+   "b": [
+    2.43,
+    13.3
+   ],
+   "sisi": 1,
+   "elevasi": 4.16,
+   "lantai": 2,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sudutA": 30,
+   "sumber": "footage-2026"
+  },
+  {
+   "a": [
+    5.43,
+    13.3
+   ],
+   "b": [
+    34.9,
+    13.3
+   ],
+   "sisi": 1,
+   "elevasi": 4.16,
+   "lantai": 2,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Atap genteng miring di depan selasar (foto tampak gedung E)."
+  },
+  {
+   "a": [
+    -19.034,
+    4.368
+   ],
+   "b": [
+    -3.564,
+    13.3
+   ],
+   "sisi": 1,
+   "elevasi": 8.48,
+   "lantai": 3,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sudutB": 30,
+   "sumber": "footage-2026",
+   "catatan": "Menyambung miring dengan tritisan sayap lurus di sudut balkon (tanpa celah)."
+  },
+  {
+   "a": [
+    -3.564,
+    13.3
+   ],
+   "b": [
+    2.43,
+    13.3
+   ],
+   "sisi": 1,
+   "elevasi": 8.48,
+   "lantai": 3,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sudutA": 30,
+   "sumber": "footage-2026"
+  },
+  {
+   "a": [
+    5.43,
+    13.3
+   ],
+   "b": [
+    34.9,
+    13.3
+   ],
+   "sisi": 1,
+   "elevasi": 8.48,
+   "lantai": 3,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Atap genteng miring di depan selasar (foto tampak gedung E)."
+  }
+ ],
+ "atap": [
+  {
+   "jenis": "perisai",
+   "asal": [
+    0,
+    0
+   ],
+   "sudut": 0,
+   "batas": [
+    -12.0,
+    0,
+    34.9,
+    13.3
+   ],
+   "batasPlafon": [
+    -3.6,
+    0,
+    34.9,
+    13.3
+   ],
+   "tepiBawah": 12.63,
+   "tonjolan": 0.9,
+   "kemiringan": 30,
+   "potong": [
+    {
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      -3.564,
+      13.3
+     ],
+     "simpan": [
+      10,
+      5
+     ],
+     "jurai": true
+    }
+   ],
+   "sumber": "foto-udara-2026",
+   "catatan": "Sayap lurus"
+  },
+  {
+   "jenis": "perisai",
+   "asal": [
+    -12.384,
+    -7.15
+   ],
+   "sudut": 30,
+   "batas": [
+    0,
+    0,
+    26.0,
+    13.3
+   ],
+   "batasPlafon": [
+    0,
+    0,
+    15.3,
+    13.3
+   ],
+   "tepiBawah": 12.63,
+   "tonjolan": 0.9,
+   "kemiringan": 30,
+   "potong": [
+    {
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      -3.564,
+      13.3
+     ],
+     "simpan": [
+      -10.554,
+      -0.32
+     ]
+    }
+   ],
+   "sumber": "foto-udara-2026",
+   "catatan": "Sayap miring"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FSM UNDIP · Jelajah Kampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="viewport"></div>
+<div id="loading" role="status">Menyiapkan kampus…</div>
+
+<!-- Panel kiri, ditutup jadi tombol pil -->
+<button id="pill" class="pill" hidden aria-label="Buka panel">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg>
+  <span><b>FSM UNDIP</b><small id="pillCrumb">Jelajah kampus</small></span>
+</button>
+<aside id="panel" class="panel" aria-label="Panel jelajah">
+  <header class="ph">
+    <div><b>FSM UNDIP</b><small id="crumb">Jelajah kampus</small></div>
+    <button id="collapse" class="iconbtn" aria-label="Tutup panel">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="gedung" class="on">Gedung</button>
+    <button role="tab" data-tab="ruang">Ruang</button>
+    <button role="tab" data-tab="tampilan">Tampilan</button>
+    <button role="tab" data-tab="referensi">Referensi</button>
+  </nav>
+  <div class="pbody">
+    <section data-pane="gedung"></section>
+    <section data-pane="ruang" hidden></section>
+    <section data-pane="tampilan" hidden></section>
+    <section data-pane="referensi" hidden></section>
+  </div>
+  <footer class="pf"><span id="status">Memuat…</span><button id="toKawasan" class="link">Kawasan</button></footer>
+</aside>
+
+<!-- Kontrol kanan bawah -->
+<div class="dock" id="dock">
+  <div class="seg vert" id="floorDock" aria-label="Pilih lantai"></div>
+  <div class="seg" id="viewDock" aria-label="Sudut kamera">
+    <button data-view="iso" class="on">Isometrik</button>
+    <button data-view="atas">Atas</button>
+    <button data-view="depan">Depan</button>
+  </div>
+</div>
+<div class="compass" id="compass" aria-hidden="true"><div class="needle"><span>U</span></div></div>
+<div class="modechip" id="modechip">Kawasan</div>
+
+<!-- HUD jalan kaki -->
+<div id="walkhud" hidden>
+  <div class="cross"></div>
+  <div class="where" id="where">Lantai 1</div>
+  <div class="help">Seret layar untuk menoleh · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> atau panah untuk jalan · <kbd>Shift</kbd> lebih cepat · <kbd>Esc</kbd> keluar</div>
+  <button class="exit" id="walkExit">Keluar dari jalan kaki</button>
+  <div class="pad" id="pad">
+    <button data-k="arrowup" aria-label="Maju">▲</button>
+    <button data-k="arrowleft" aria-label="Belok kiri">◀</button>
+    <button data-k="arrowdown" aria-label="Mundur">▼</button>
+    <button data-k="arrowright" aria-label="Belok kanan">▶</button>
+  </div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

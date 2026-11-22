@@ -1,0 +1,9 @@
+# sistem operasi / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.swp
+# alat bantu
+node_modules/
+__pycache__/
