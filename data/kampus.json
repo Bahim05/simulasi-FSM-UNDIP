@@ -50,7 +50,14 @@
   {
    "id": "F",
    "nama": "Gedung F",
-   "status": "belum"
+   "status": "dibuat",
+   "file": "data/gedung-f.json",
+   "posisi": [
+    93.8,
+    -5.7
+   ],
+   "rotasi": -30,
+   "catatan": "Letak dari foto udara pengguna (22 Nov 2026), diukur terhadap atap Gedung B: titik (0,0) gedung = sudut luar belokan atap di foto, dinding belakang sayap barat sekitar 5,7 m di utara garis dinding belakang A. Diputar -30 derajat: sayap R. Dosen sejajar A dan B di barat (ujungnya kira-kira 23 m di timur ujung timur A), sayap R. Seminar belok ke tenggara, selasar menghadap halaman ke Gedung B. Perkiraan."
   },
   {
    "id": "G",

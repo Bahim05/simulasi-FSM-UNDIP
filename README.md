@@ -1,6 +1,6 @@
 # Jelajah 3D FSM UNDIP
 
-Model 3D kawasan FSM yang bisa diputar dan dimasuki, dibuat dengan Three.js. Saat ini sudah ada **Gedung A**, **Gedung B**, **Gedung E**, dan **Gedung G**, ditampilkan bersama di kawasan dan tersambung lewat penghubung (A–E, A–B, dan koridor B–G). Pilih gedung dari daftar *Gedung & fasilitas* (atau klik gedungnya) untuk membuka datanya di panel. Gedung lain menyusul satu per satu.
+Model 3D kawasan FSM yang bisa diputar dan dimasuki, dibuat dengan Three.js. Saat ini sudah ada **Gedung A**, **Gedung B**, **Gedung E**, **Gedung F**, dan **Gedung G**, ditampilkan bersama di kawasan dan tersambung lewat penghubung (A–E, A–B, dan koridor B–G). Pilih gedung dari daftar *Gedung & fasilitas* (atau klik gedungnya) untuk membuka datanya di panel. Gedung lain menyusul satu per satu.
 
 ## Cara menjalankan
 
@@ -37,8 +37,9 @@ data/kampus.json      daftar gedung, posisi/rotasinya di kawasan, dan penghubung
 data/gedung-a.json    data lengkap Gedung A, ini sumber kebenarannya
 data/gedung-e.json    data lengkap Gedung E
 data/gedung-b.json    data lengkap Gedung B
+data/gedung-f.json    data lengkap Gedung F
 data/gedung-g.json    data lengkap Gedung G
-assets/denah/         foto denah (A1-A3, B1-B3, E1-E3, G1-G3) yang sudah diluruskan ke skala, untuk overlay
+assets/denah/         foto denah (A1-A3, B1-B3, E1-E3, F1-F3, G1-G3) yang sudah diluruskan ke skala, untuk overlay
 alat/                 skrip Python penyusun awal data gedung (lihat di bawah), tidak dipakai saat situs berjalan
 .nojekyll             supaya GitHub Pages menyajikan file apa adanya (tanpa Jekyll)
 ```
@@ -49,7 +50,7 @@ Lansekap di `kampus.json` bisa berupa `jalur` (beberapa `penampang` sejajar sebu
 
 ## Alat penyusun data (`alat/`)
 
-`alat/gen_gedung_a.py`, `gen_gedung_b.py`, `gen_gedung_e.py`, dan `gen_gedung_g.py` adalah skrip yang dulu dipakai untuk menyusun `data/gedung-*.json` dari denah dan footage. Isinya juga mencatat alasan tiap ukuran (komentar dan `sumber`). Menjalankannya (`python alat/gen_gedung_b.py`) menulis ulang file JSON gedung itu.
+`alat/gen_gedung_a.py`, `gen_gedung_b.py`, `gen_gedung_e.py`, `gen_gedung_f.py`, dan `gen_gedung_g.py` adalah skrip yang dulu dipakai untuk menyusun `data/gedung-*.json` dari denah dan footage. Isinya juga mencatat alasan tiap ukuran (komentar dan `sumber`). Menjalankannya (`python alat/gen_gedung_b.py`) menulis ulang file JSON gedung itu.
 
 Sumber kebenarannya tetap file JSON. **Kalau JSON sudah diedit langsung, jangan jalankan skrip gedung itu lagi**, karena editan di JSON akan tertimpa. Pilih satu cara untuk tiap gedung: edit JSON-nya, atau edit skripnya lalu jalankan ulang.
 
@@ -208,6 +209,17 @@ Sumber: denah Gedung G LT.1 sampai LT.3 dan foto udara dari pengguna dengan temp
   - parkir aspal 0,95 di sisi drop-off G.
   - Jalur depan A diperpanjang sampai sisi penghubung A–B (x 41,85); ujungnya jadi tembok batu kali. Tembok batu kali di depan selasar A sekarang setinggi ±1,2 m dari jalur beton.
   - Pohon, kios, dan bangku belum dibuat. Batas parkir dan batas rumput perkiraan.
+
+## Gedung F (November 2026)
+
+Sumber: denah Gedung F LT.1 sampai LT.3 dan foto udara dari pengguna (22 Nov 2026). **Belum ada footage**, jadi jendela, pintu kecil, tangga, dan tinggi lantai 1 masih perkiraan.
+
+- **Orientasi: denah dipakai apa adanya lalu diputar 30 derajat** (`rotasi` -30). Sayap R. Dosen (yang miring di denah) jadi sejajar Gedung A dan B di barat, dengan tangga luar di ujung baratnya (sesuai ingatan pengguna), dan sayap R. Seminar / Lab (yang lurus di denah) belok 30 derajat ke tenggara, sesuai arah belokan di foto udara. Versi pertama mencerminkan denah (sayap lurus di barat); ditinggalkan karena letak tangganya jadi terbalik. Catatan: di foto udara sayap barat terlihat lebih panjang dari 25,6 m; panjang sayap sementara tetap mengikuti denah.
+- **Letak**: di timur Gedung A dan utara Gedung B (`posisi` [93,8, -5,7] = sudut luar belokan atap di foto). Ujung barat sekitar 23 m di timur ujung A, selasar menghadap halaman ke Gedung B. Diukur dari foto terhadap atap Gedung B (perkiraan).
+- **Bentuk**: sayap R. Seminar 30,28 x 10 m dan sayap R. Dosen 30 derajat terhadapnya (dinding belakang 25,6 m, dinding depan 28,8 m, dalam 10 m), selasar 2,8 m di sisi dalam sudut. Pertemuan dua sayap: KM/WC, tangga U yang naik dari selasar, dan gudang di belakang tangga (gudang perkiraan). Tangga luar 2,8 m di ujung barat (ujung sayap R. Dosen). Koordinat data gedung = koordinat denah.
+- **Ruang**: sayap barat satu ruang dosen tiap lantai (R. Dosen 1–3; lt 3 ada R. Himpunan Mahasiswa Statistika di pojok ujung barat). Sayap tenggara: lt 1 R. Kerja / R. Hukum S2 Matematika dan R. Seminar / R. Sidang; lt 2 R. Terapan & Analisis dan Lab Komputasi; lt 3 R. Teknisi Lab Komputasi dan R. Baca.
+- **Atap genteng kemerahan** (foto udara) hanya menutup ruang: dua atap perisai dipotong di garis bagi sudut pertemuan seperti Gedung E. Selasar lantai 3 diberi atap sandar (`tritisan` lebar 3,7 m), kolom tepi selasar lantai 3 berhenti di bawahnya.
+- **Tinggi lantai 1 F dianggap sama dengan Gedung A (0,00)** karena sebaris dengan A. Belum dicek; gampang diubah di `ELEV` alat penyusun F.
 
 ## Menambah gedung berikutnya
 
