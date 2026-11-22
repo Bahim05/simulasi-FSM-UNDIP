@@ -1,6 +1,6 @@
 # Jelajah 3D FSM UNDIP
 
-Model 3D kawasan FSM yang bisa diputar dan dimasuki, dibuat dengan Three.js. Saat ini sudah ada **Gedung A**, **Gedung B**, dan **Gedung E**, ditampilkan bersama di kawasan dan tersambung lewat penghubung (A–E dan A–B). Pilih gedung dari daftar *Gedung & fasilitas* (atau klik gedungnya) untuk membuka datanya di panel. Gedung lain menyusul satu per satu.
+Model 3D kawasan FSM yang bisa diputar dan dimasuki, dibuat dengan Three.js. Saat ini sudah ada **Gedung A**, **Gedung B**, **Gedung E**, dan **Gedung G**, ditampilkan bersama di kawasan dan tersambung lewat penghubung (A–E dan A–B; koridor B–G sedang dibetulkan). Pilih gedung dari daftar *Gedung & fasilitas* (atau klik gedungnya) untuk membuka datanya di panel. Gedung lain menyusul satu per satu.
 
 ## Cara menjalankan
 
@@ -37,14 +37,19 @@ data/kampus.json      daftar gedung, posisi/rotasinya di kawasan, dan penghubung
 data/gedung-a.json    data lengkap Gedung A, ini sumber kebenarannya
 data/gedung-e.json    data lengkap Gedung E
 data/gedung-b.json    data lengkap Gedung B
-assets/denah/         foto denah 2023 (A1-A3, B1-B3, E1-E3) yang sudah diluruskan ke skala, untuk overlay
+data/gedung-g.json    data lengkap Gedung G
+assets/denah/         foto denah (A1-A3, B1-B3, E1-E3, G1-G3) yang sudah diluruskan ke skala, untuk overlay
 alat/                 skrip Python penyusun awal data gedung (lihat di bawah), tidak dipakai saat situs berjalan
 .nojekyll             supaya GitHub Pages menyajikan file apa adanya (tanpa Jekyll)
 ```
 
+## Lansekap: jalur dan bidang
+
+Lansekap di `kampus.json` bisa berupa `jalur` (beberapa `penampang` sejajar sebuah garis, seperti undakan dan plaza depan A; `belakang` mengatur bahan muka tepi terluar jalur terakhir) atau `bidang` (poligon datar bebas dengan `atas`, `bahan`, `muka`), dipakai untuk lahan paving bata merah dan bedeng tanaman di samping koridor B yang miring. Bahan yang tersedia: `paving-merah`, `bata-merah`, `beton`, `granit`, `selokan`, `batu-kali`, `batu-hitam`, `tanah`, `aspal`.
+
 ## Alat penyusun data (`alat/`)
 
-`alat/gen_gedung_a.py`, `gen_gedung_b.py`, dan `gen_gedung_e.py` adalah skrip yang dulu dipakai untuk menyusun `data/gedung-*.json` dari denah dan footage. Isinya juga mencatat alasan tiap ukuran (komentar dan `sumber`). Menjalankannya (`python alat/gen_gedung_b.py`) menulis ulang file JSON gedung itu.
+`alat/gen_gedung_a.py`, `gen_gedung_b.py`, `gen_gedung_e.py`, dan `gen_gedung_g.py` adalah skrip yang dulu dipakai untuk menyusun `data/gedung-*.json` dari denah dan footage. Isinya juga mencatat alasan tiap ukuran (komentar dan `sumber`). Menjalankannya (`python alat/gen_gedung_b.py`) menulis ulang file JSON gedung itu.
 
 Sumber kebenarannya tetap file JSON. **Kalau JSON sudah diedit langsung, jangan jalankan skrip gedung itu lagi**, karena editan di JSON akan tertimpa. Pilih satu cara untuk tiap gedung: edit JSON-nya, atau edit skripnya lalu jalankan ulang.
 
@@ -82,6 +87,10 @@ Bagian penting per lantai:
 Di tingkat gedung ada `kolom`, `tangga`, `tritisan`, `atap`, `fondasi` (alas gelap di bawah lantai 1 untuk gedung yang lantainya lebih tinggi dari tanah, seperti Gedung B), dan `mulaiJalan` (titik awal mode jalan kaki). `atap` berupa daftar; tiap atap punya `asal` dan `sudut` sehingga sayap yang miring (seperti di Gedung E) bisa punya atap sendiri. Tangga boleh "terbalik" (`x0` lebih besar dari `x1`): lajur pertama selalu di sisi `x0`.
 
 - Atap perisai bisa dipotong miring (`potong`: garis `a`–`b` dalam koordinat gedung, `simpan` = titik di sisi yang dipertahankan, `jurai: true` menggambar garis jurai di potongan). Dipakai untuk menyatukan atap dua sayap Gedung E: tiap atap diperpanjang (`batas`) lalu dipotong di garis bagi sudut, sementara plafon tetap memakai `batasPlafon`.
+- Atap juga bisa dilubangi: `buang` = daftar poligon cembung (koordinat gedung) yang dikeluarkan dari atap. Dipakai di sayap Gedung G yang atapnya masuk ke dinding petak ujung lantai 3. `plafonPoligon` = daftar poligon plafon (koordinat gedung) pengganti kotak `batasPlafon`, untuk plafon yang tidak persegi atau atap yang bertumpuk.
+- `kolom.tambahan`: kelompok kolom yang hanya ada di lantai tertentu (`lantai`: [dari, sampai]) dengan `dasar`/`puncak` sendiri. Dipakai untuk gedung yang jumlah lantainya tidak sama di semua bagian (sayap dua lantai, kolom kanopi).
+- `selasar.tambahan`: pelat selasar lain di lantai yang sama, boleh dengan `elevasi` sendiri (selasar sayap, area drop-off).
+- Tangga bisa diputar: `putar` (derajat, kelipatan 90) memutar tangga yang disusun di bingkai bawaan (lajur sejajar sumbu z, bordes di z kecil) terhadap titik (0,0) gedung. Dengan `putar: 180` bordesnya ada di z besar.
 - Tritisan bisa disambung di sudut: `sudutA` / `sudutB` (derajat belok ke potongan sebelah) membuat ujungnya miring sampai garis bagi sudut, jadi dua potongan bertemu tanpa celah.
 - **Posisi kolom (footage)**: muka luar kolom rata dengan muka luar dinding (kolom hanya menonjol ke dalam ruang), dan kolom di tepi selasar berdiri 0,25 m di dalam tepi selasar sehingga ada di belakang muka tembok pembatas. Berlaku di Gedung A, B, dan E.
 
@@ -92,7 +101,7 @@ Setiap gedung punya sistem koordinat sendiri (dijelaskan di field `koordinat` ti
 - `anakTangga[]`: pelat anak tangga (`poligon`, `elevasi`, `tebal`); `tebal` dipakai untuk tangga yang turun di bawah elevasi lantainya.
 - `landai[]`: ramp dari `a` (tinggi `dari`) ke `b` (tinggi `ke`) selebar `lebar`.
 - `pagar[]`: titik boleh [x, z, y] untuk pagar miring; `jenis` `tembok-miring` untuk tembok pembatas yang ikut miring di sisi tangga.
-- `warnaBaja` (warna rangka baja kanopi), `tiang[]` (tiang baja kanopi), `atapPelana[]` (atap pelana genteng atau seng; `sisiSaja` 1/-1 untuk satu sisi, `mulai` untuk atap sayap yang menempel di sisi jembatan), `bangku[]` (bangku besi berderet), `alasKolom`.
+- `warnaBaja` (warna rangka baja kanopi), `tiang[]` (tiang baja kanopi), `alasKolom.lebar` (alas lebih lebar dari kolom), `atapPelana[]` (tambahan: `kudaKuda` jarak kuda-kuda putih, `kudaMulai`, `lebarKolom`, `gording` jumlah gording kayu per bidang, `plafonMiring` papan plafon putih di bawah atap) (atap pelana genteng atau seng; `sisiSaja` 1/-1 untuk satu sisi, `mulai` untuk atap sayap yang menempel di sisi jembatan), `bangku[]` (bangku besi berderet), `alasKolom`.
 
 `kampus.json` juga bisa berisi `lansekap[]`: bentuk tanah di luar gedung (undakan, selokan, tembok, plaza), juga dalam koordinat kawasan.
 - `jalur.a` dan `jalur.b`: garis acuan (biasanya tepi selasar). `sisi` 1 atau -1 menentukan arah keluar dari garis itu.
@@ -174,6 +183,21 @@ Sumber: denah 2023 lembar B, folder footage Gedung B (lobi, lorong toilet, tangg
   - Tembok pembatas dan tritisan lt 2 dan lt 3 di Gedung A dan B dibuka/dipotong di titik sambungan.
   - Panjang, lebar, tinggi anak tangga, dan bangku di lt 3 masih perkiraan.
 - Plaza depan A sekarang berhenti di x 38,8 supaya tidak menabrak penghubung.
+- **Koridor ke lahan bata merah** (penghubung `BL`, footage "Penghubung gedung A dan B dilihat dari lt 1 gedung B"): dari ujung barat selasar B, di samping tangga dan ramp penghubung A–B, koridor beratap lurus ke arah barat daya. Lantainya keramik abu satu anak tangga di bawah selasar B. Kolom putih ramping beralas batu kali hitam setinggi ±80 cm, atap pelana dengan kuda-kuda putih di tiap pasang kolom, gording kayu gelap, dan plafon putih. Di kanan (utara) lahan paving bata merah yang sedikit lebih rendah dari koridor dan berundak naik ke plaza depan A (plaza dipersempit jadi 3,25 m). Di kiri bedeng tanaman berbingkai beton. Arah (20° dari barat) dan panjangnya (±19,5 m) perkiraan dari foto udara. Ujungnya menuju bangunan beratap genteng merah (kantin) yang belum dibuat.
+
+## Gedung G (November 2026)
+
+Sumber: denah Gedung G LT.1 sampai LT.3 dan foto udara dari pengguna dengan tempelan denah (22 Nov 2026). **Belum ada footage**, jadi tampak luar (jendela, pintu kecil, tangga) masih perkiraan.
+
+- **Letak**: di barat daya Gedung B, diputar -45 derajat (`posisi` [15,8, 24,6]). Arah dan letaknya dari tempelan denah di foto udara, diikat ke Gedung B: blok tengah membentuk sudut 45 derajat dengan B, pintu tengah Area Resepsionis kira-kira 12 m di barat daya ujung barat B. Dengan sudut ini sayap Perpustakaan lurus ke barat dan sayap R. PD3 lurus ke selatan, sama seperti di foto. Ukuran denah ternyata cocok dengan tempelan (selisih ±3%), jadi ukuran denah dipakai apa adanya.
+- **Bentuk**: badan 42 m dengan blok tengah 18 x 21 m yang menonjol ke dua sisi (Area Resepsionis menghadap B, lobi dan drop-off menghadap parkiran), dua sayap 12 x 8,5 m yang miring 45 derajat di kedua ujung. Sayap hanya dua lantai; lantai 3 hanya badan (petak ujung 12 x 12 m) dan blok tengah.
+- **Tinggi**: lantai 1 G rata dengan koridor dari Gedung B (tanpa anak tangga), jadi sama dengan lantai 1 B (+1,2 m dari lantai 1 A). Lantai 2 dan 3 di +4,00 dan +8,00 dari lantai 1 G (denah).
+- **Atap genteng cokelat tua** (foto udara): atap perisai badan dan atap perisai blok tengah yang bersilang, sehingga puncaknya di tengah seperti di foto. Atap sayap lebih rendah dan masuk ke dinding petak ujung lantai 3.
+- **Lantai 1**: Perpustakaan (petak ujung barat laut + sayap), Area Resepsionis, Pojok Statistik, lobi dua kali tinggi lantai (void di lantai 2 dan 3), toilet, gudang, R. Dosen, R. Pembantu Dekan 3. Separuh sayap R. PD3 berupa selasar terbuka berkolom (denah: SELASAR -0,05). Teras dan **drop-off beratap kanopi** (keterangan pengguna) di depan lobi.
+- **Lantai 2**: G201–G208, Women Area, Unit Bisnis, Dapur, toilet, R. Departemen Biologi (petak tenggara + sayap). Nomor G207 tidak terbaca di denah.
+- **Lantai 3**: G305, G307 (denah menulis G305 untuk dua ruang), Meeting Room, G304, G306, gudang, toilet.
+- Dua tangga U: tangga utara di samping lobi (letak dari denah, bordes menempel dinding luar) dan tangga selatan di sebelah R. Dosen.
+- Pintu kaca di tengah dinding Area Resepsionis menghadap B (ujung koridor B–G), dan pintu utama kaca dari lobi ke teras.
 
 ## Menambah gedung berikutnya
 

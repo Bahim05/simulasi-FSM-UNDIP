@@ -94,7 +94,7 @@ async function init() {
     scene.add(e.group);
     e.group.updateMatrixWorld(true);
     const pts = [];
-    for (const f of e.data.lantai) for (const poly of [...f.ruang.map(r => r.poligon), f.selasar?.poligon || []]) pts.push(...poly);
+    for (const f of e.data.lantai) for (const poly of [...f.ruang.map(r => r.poligon), f.selasar?.poligon || [], ...(f.selasar?.tambahan || []).map(s => s.poligon)]) pts.push(...poly);
     e.box = boxOf(pts);                                                     // batas di koordinat gedung
     e.wbox = boxOf(pts.map(([x, z]) => { const v = e.group.localToWorld(new V3(x, 0, z)); return [v.x, v.z]; }));   // di kawasan
     for (const [kode, info] of e.built.rooms) rooms.set(kode, { entry: e, info });
@@ -137,7 +137,7 @@ async function init() {
   // bidang datar berlubang: lubang = tapak lansekap, supaya selokan dan undakan tidak tertutup tanah/paving
   const holedGeo = (x0, z0, x1, z1, y) => {
     const sh = new THREE.Shape([[x0, -z0], [x1, -z0], [x1, -z1], [x0, -z1]].map(([x, y]) => new THREE.Vector2(x, y)));
-    for (const sc of scapes) sh.holes.push(new THREE.Path(sc.footprint.map(([x, z]) => new THREE.Vector2(x, -z))));
+    for (const sc of scapes) if (sc.footprint) sh.holes.push(new THREE.Path(sc.footprint.map(([x, z]) => new THREE.Vector2(x, -z))));
     const g = new THREE.ShapeGeometry(sh);
     g.rotateX(-Math.PI / 2);
     g.translate(0, y, 0);
@@ -338,7 +338,7 @@ async function init() {
       if (q.y - f.elevasi > 1.0 && f.ruang.some(x => x.fungsi === 'tangga' && pointInPoly(q.x, q.z, x.poligon) || r?.fungsi === 'gudang'))
         return { entry: e, floor: f.no, room: { fungsi: 'tangga', nama: 'Tangga', kode: '' } };
       if (r) return { entry: e, floor: f.no, room: r };
-      if (f.selasar && pointInPoly(q.x, q.z, f.selasar.poligon)) return { entry: e, floor: f.no, selasar: true };
+      if (f.selasar && [f.selasar.poligon, ...(f.selasar.tambahan || []).map(s => s.poligon)].some(p => pointInPoly(q.x, q.z, p))) return { entry: e, floor: f.no, selasar: true };
     }
     return null;
   }

@@ -431,6 +431,8 @@ export function buildGedung(data) {
     if (f.selasar) {
       const ys = f.elevasiSelasar;
       P.selasar.push(slabGeo(f.selasar.poligon, ys, f.no === 1 ? 0.3 : 0.15));
+      // selasar tambahan: pelat lain di lantai yang sama (mis. selasar sayap, area drop-off), elevasi sendiri bila ada
+      for (const s of f.selasar.tambahan || []) P.selasar.push(slabGeo(s.poligon, s.elevasi ?? ys, f.no === 1 ? 0.3 : 0.15));
     }
     // --- alas (fondasi) untuk gedung yang lantai 1-nya lebih tinggi dari tanah ---
     if (f.no === 1 && data.fondasi) {
@@ -438,6 +440,10 @@ export function buildGedung(data) {
       for (const poly of [...f.ruang.map(r => r.poligon), f.selasar?.poligon].filter(Boolean)) {
         const top = (poly === f.selasar?.poligon ? f.elevasiSelasar - 0.3 : Y - 0.35) + 0.01;
         if (top - d0 > 0.05) P.plinth.push(slabGeo(poly, top, top - d0));
+      }
+      for (const s of f.selasar?.tambahan || []) {
+        const top = (s.elevasi ?? f.elevasiSelasar) - 0.3 + 0.01;
+        if (top - d0 > 0.05) P.plinth.push(slabGeo(s.poligon, top, top - d0));
       }
     }
 
@@ -447,6 +453,16 @@ export function buildGedung(data) {
     const cy0 = f.no === 1 ? k.dasar : Y;
     const cy1 = ne ?? k.puncak;
     for (const [x, z] of k.titik) P.col.push(boxXZ(x - k.ukuran / 2, z - k.ukuran / 2, x + k.ukuran / 2, z + k.ukuran / 2, cy0, cy1));
+    // kolom tambahan: { titik, lantai: [dari, sampai], dasar?, puncak?, ukuran? }. Dipakai untuk gedung yang jumlah lantainya
+    // tidak sama di semua bagian (sayap dua lantai, kanopi drop-off) dan untuk kolom yang posisinya beda per lantai.
+    for (const kt of k.tambahan || []) {
+      const [l0, l1] = kt.lantai || [1, 1];
+      if (f.no < l0 || f.no > l1) continue;
+      const u = (kt.ukuran ?? k.ukuran) / 2;
+      const y0 = f.no === 1 ? (kt.dasar ?? k.dasar) : Y;
+      const y1 = f.no === l1 && kt.puncak != null ? kt.puncak : (ne ?? k.puncak);
+      for (const [x, z] of kt.titik) P.col.push(boxXZ(x - u, z - u, x + u, z + u, y0, y1));
+    }
 
     // --- pagar dari data (dy relatif terhadap lantai) ---
     for (const p of f.pagar || []) {
@@ -462,7 +478,15 @@ export function buildGedung(data) {
     // --- tangga yang berangkat dari lantai ini ---
     for (const t of data.tangga.filter(t => t.dariLantai === f.no)) {
       const Y2 = levels[data.lantai.findIndex(x => x.no === t.keLantai)];
+      // putar: tangga disusun di bingkai bawaan (lajur sejajar sumbu z) lalu diputar terhadap (0,0) gedung.
+      // putar 90: (x, z) bingkai -> (z, -x) gedung, jadi tangga yang lajurnya sejajar sumbu x bisa dibuat.
+      const mark = {};
+      for (const [key, v] of Object.entries(P)) if (Array.isArray(v)) mark[key] = v.length;
       buildStair(t, Y, Y2, P);
+      if (t.putar) {
+        const m = new THREE.Matrix4().makeRotationY(THREE.MathUtils.degToRad(t.putar));
+        for (const [key, n] of Object.entries(mark)) for (let i = n; i < P[key].length; i++) if (P[key][i]?.isBufferGeometry) P[key][i].applyMatrix4(m);
+      }
     }
 
     // --- rakit mesh ---
@@ -524,11 +548,21 @@ export function buildGedung(data) {
       return g;
     };
     const [bx0, bz0, bx1, bz1] = a.batasPlafon || a.batas;     // plafon tetap di badan gedung walau atapnya diperpanjang untuk dipotong
-    const cg = place(new THREE.Group());
-    const ceil = new THREE.Mesh(boxXZ(bx0 - 0.2, bz0 - 0.2, bx1 + 0.2, bz1 + 0.2, a.tepiBawah - 0.15, a.tepiBawah), mat.ceiling);
-    ceil.castShadow = ceil.receiveShadow = true;
-    cg.add(ceil);
-    top.add(cg);
+    if (a.plafonPoligon) {
+      // plafon berbentuk bebas (koordinat gedung, tidak ikut asal/sudut atap): untuk atap yang plafonnya tidak persegi
+      // atau yang bertumpuk dengan atap lain (supaya dua plafon tidak berimpit di tempat yang sama).
+      for (const poly of a.plafonPoligon) {
+        const m = new THREE.Mesh(slabGeo(poly, a.tepiBawah, 0.15), mat.ceiling);
+        m.castShadow = m.receiveShadow = true;
+        top.add(m);
+      }
+    } else {
+      const cg = place(new THREE.Group());
+      const ceil = new THREE.Mesh(boxXZ(bx0 - 0.2, bz0 - 0.2, bx1 + 0.2, bz1 + 0.2, a.tepiBawah - 0.15, a.tepiBawah), mat.ceiling);
+      ceil.castShadow = ceil.receiveShadow = true;
+      cg.add(ceil);
+      top.add(cg);
+    }
     if (a.jenis === 'datar') {
       const flat = new THREE.Mesh(boxXZ(bx0 - 0.25, bz0 - 0.25, bx1 + 0.25, bz1 + 0.25, a.tepiBawah, a.tepiBawah + 0.25), mat.ridge);
       flat.castShadow = flat.receiveShadow = true;
@@ -988,6 +1022,32 @@ function buildRoof(a, mat) {
     if (nx * (S[0] - A[0]) + nz * (S[1] - A[1]) < 0) { nx = -nx; nz = -nz; }
     return { ax: A[0], az: A[1], nx, nz };
   });
+  // buang: poligon cembung (koordinat gedung) yang dikeluarkan dari atap, mis. bagian sayap yang masuk ke badan lantai 3.
+  // Tiap tepi poligon jadi bidang potong dengan normal ke dalam poligon; bagian di luar poligon dipecah per tepi.
+  const holes = (a.buang || []).map(poly => {
+    const L = poly.map(toL);
+    const cx = L.reduce((s, p) => s + p[0], 0) / L.length, cz = L.reduce((s, p) => s + p[1], 0) / L.length;
+    return L.map((p, i) => {
+      const q = L[(i + 1) % L.length];
+      let nx = -(q[1] - p[1]), nz = q[0] - p[0];
+      if (nx * (cx - p[0]) + nz * (cz - p[1]) < 0) { nx = -nx; nz = -nz; }
+      return { ax: p[0], az: p[1], nx, nz };
+    });
+  });
+  const flip = c => ({ ax: c.ax, az: c.az, nx: -c.nx, nz: -c.nz });
+  const outsideTris = (pos, uv) => {
+    for (const E of holes) {
+      const np = [], nu = [];
+      E.forEach((c, i) => { const [p, u] = clipTriangles(pos, uv, [...E.slice(0, i), flip(c)]); np.push(...p); nu.push(...u); });
+      pos = np; uv = nu;
+    }
+    return [pos, uv];
+  };
+  const outsideSeg = (p, q) => {
+    let parts = [[p, q]];
+    for (const E of holes) parts = parts.flatMap(([a0, b0]) => E.map((c, i) => clipSegment(a0, b0, [...E.slice(0, i), flip(c)])).filter(Boolean));
+    return parts;
+  };
   const o = a.tonjolan;
   const X0 = a.batas[0] - o, Z0 = a.batas[1] - o, X1 = a.batas[2] + o, Z1 = a.batas[3] + o;
   const y = a.tepiBawah + 0.05;
@@ -1010,7 +1070,8 @@ function buildRoof(a, mat) {
   // sisi barat dan timur (segitiga)
   tri(e[3], e[0], r1, [e[3][2] * sc, 0, e[0][2] * sc, 0, r1[2] * sc, vy(r1)]);
   tri(e[1], e[2], r2, [e[1][2] * sc, 0, e[2][2] * sc, 0, r2[2] * sc, vy(r2)]);
-  const [cp, cu] = cuts.length ? clipTriangles(pos, uv, cuts) : [pos, uv];
+  const [cp0, cu0] = cuts.length ? clipTriangles(pos, uv, cuts) : [pos, uv];
+  const [cp, cu] = holes.length ? outsideTris(cp0, cu0) : [cp0, cu0];
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(cp, 3));
   geo.setAttribute('uv', new THREE.Float32BufferAttribute(cu, 2));
@@ -1022,7 +1083,11 @@ function buildRoof(a, mat) {
   // bubungan dan jurai (garis gelap di pertemuan bidang), ikut terpotong
   const R = [];
   const v = p => new V3(...p);
-  const seg = (p, q, w, h) => { const c = clipSegment(p, q, cuts); if (c && Math.hypot(c[1][0] - c[0][0], c[1][2] - c[0][2], c[1][1] - c[0][1]) > 0.05) R.push(beam(v(c[0]), v(c[1]), w, h)); };
+  const seg = (p, q, w, h) => {
+    const c = clipSegment(p, q, cuts);
+    if (!c) return;
+    for (const [s0, s1] of outsideSeg(c[0], c[1])) if (Math.hypot(s1[0] - s0[0], s1[2] - s0[2], s1[1] - s0[1]) > 0.05) R.push(beam(v(s0), v(s1), w, h));
+  };
   seg(r1, r2, 0.25, 0.18);
   for (const [p, q] of [[e[0], r1], [e[3], r1], [e[1], r2], [e[2], r2]]) seg(p, q, 0.2, 0.14);
   // jurai lembah/jurai luar di garis potong (pertemuan dua atap): garis dari tepi bawah ke bubungan
@@ -1040,7 +1105,8 @@ function buildRoof(a, mat) {
   const F = [];
   for (const [p, q] of [[e[0], e[1]], [e[1], e[2]], [e[2], e[3]], [e[3], e[0]]]) {
     const c = clipSegment(p, q, cuts);
-    if (c && Math.hypot(c[1][0] - c[0][0], c[1][2] - c[0][2]) > 0.05) F.push(wallBox(c[0][0], c[0][2], c[1][0], c[1][2], y - 0.28, y + 0.02, 0.06));
+    if (!c) continue;
+    for (const [s0, s1] of outsideSeg(c[0], c[1])) if (Math.hypot(s1[0] - s0[0], s1[2] - s0[2]) > 0.05) F.push(wallBox(s0[0], s0[2], s1[0], s1[2], y - 0.28, y + 0.02, 0.06));
   }
   if (F.length) g.add(merged(F, mat.fascia, { cast: false }));
   return g;
@@ -1084,11 +1150,45 @@ function buildGable(ap, P) {
     g.setAttribute('uv', new THREE.Float32BufferAttribute([0, slope, a.distanceTo(b), slope, a.distanceTo(b), 0, 0, slope, a.distanceTo(b), 0, 0, 0].map(v => v / 2), 2));
     g.computeVertexNormals();
     list.push(g.toNonIndexed ? g : g);
-    // usuk / gording di bawah bidang atap
-    const nr = Math.max(2, Math.round(a.distanceTo(b) / (ap.bahan === 'seng' ? 2.2 : 0.6)));
-    for (let k = 0; k <= nr; k++) {
-      const t = k / nr, top = new V3().lerpVectors(ta, tb, t), bot = new V3().lerpVectors(e0, e1, t);
-      (ap.bahan === 'seng' ? P.baja : P.kayu).push(beam(top.clone().setY(top.y - 0.06), bot.clone().setY(bot.y - 0.06), 0.06, 0.1));
+    if (ap.plafonMiring) {
+      // papan plafon putih tepat di bawah bidang atap (dilihat dari bawah: putih di antara gording)
+      const d = -0.07, q = [ta, tb, e1, e0].map(p => p.clone().setY(p.y + d));
+      const gp = new THREE.BufferGeometry();
+      gp.setAttribute('position', new THREE.Float32BufferAttribute([q[0], q[1], q[2], q[3]].flatMap(p => [p.x, p.y, p.z]), 3));
+      gp.setAttribute('uv', new THREE.Float32BufferAttribute([0, 1, 1, 1, 1, 0, 0, 0], 2));   // ikut digabung dengan balok yang punya uv
+      gp.setIndex([0, 1, 2, 0, 2, 3]);
+      gp.computeVertexNormals();
+      P.plafon.push(gp);
+    }
+    if (ap.gording) {
+      // gording kayu gelap memanjang (sejajar bubungan), beberapa baris per bidang atap
+      for (let k = 0; k <= ap.gording; k++) {
+        const f = k / ap.gording, p0 = new V3().lerpVectors(ta, e0, f), p1 = new V3().lerpVectors(tb, e1, f);
+        P.kayu.push(beam(p0.setY(p0.y - 0.12), p1.setY(p1.y - 0.12), 0.08, 0.12));
+      }
+    } else {
+      // usuk melintang di bawah bidang atap
+      const nr = Math.max(2, Math.round(a.distanceTo(b) / (ap.bahan === 'seng' ? 2.2 : 0.6)));
+      for (let k = 0; k <= nr; k++) {
+        const t = k / nr, top = new V3().lerpVectors(ta, tb, t), bot = new V3().lerpVectors(e0, e1, t);
+        (ap.bahan === 'seng' ? P.baja : P.kayu).push(beam(top.clone().setY(top.y - 0.06), bot.clone().setY(bot.y - 0.06), 0.06, 0.1));
+      }
+    }
+  }
+  if (ap.kudaKuda) {
+    // kuda-kuda putih di tiap pasang kolom: balok tarik antar kolom, kaki kuda-kuda ke bubungan, tiang tengah, dua batang miring
+    const len = a.distanceTo(b), hc = (ap.lebarKolom ?? ap.lebar - 1) / 2;
+    const yAt = off => ap.puncak - drop * (Math.abs(off) / hw) - 0.16;     // tinggi bawah bidang atap pada jarak `off` dari bubungan
+    for (let t = ap.kudaMulai ?? 0; t <= len + 1e-6; t += ap.kudaKuda) {
+      const c = a.clone().addScaledVector(u, t);
+      const at = (off, y) => new V3(c.x + n.x * off, y, c.z + n.z * off);
+      const yt = yAt(hc) - 0.12;
+      P.plafon.push(beam(at(-hc, yt), at(hc, yt), 0.12, 0.16));
+      for (const sd of [1, -1]) {
+        P.plafon.push(beam(at(sd * hw, ap.tepiBawah - 0.16), at(0, ap.puncak - 0.16), 0.12, 0.16));
+        P.plafon.push(beam(at(sd * hc * 0.5, yt), at(sd * hw * 0.42, yAt(hw * 0.42)), 0.09, 0.1));
+      }
+      P.plafon.push(beam(at(0, yt), at(0, ap.puncak - 0.16), 0.12, 0.12));
     }
   }
   if (!m0) (ap.bahan === 'seng' ? P.baja : P.plafon).push(beam(a.clone().setY(a.y - 0.08), b.clone().setY(b.y - 0.08), ap.bahan === 'seng' ? 0.1 : 0.5, 0.14));
@@ -1164,7 +1264,8 @@ export function buildPenghubung(spec, T) {
     for (const [x, z] of lf.kolom || spec.kolom || []) {
       P.col.push(boxXZ(x - ks, z - ks, x + ks, z + ks, y0, y1));
       // alas kolom dari batu alam hitam (penghubung A-B lt 1, footage)
-      if (spec.alasKolom && lf.no === 1) P.alas.push(boxXZ(x - ks - 0.05, z - ks - 0.05, x + ks + 0.05, z + ks + 0.05, y0, lf.elevasi + spec.alasKolom.tinggi));
+      const ka = spec.alasKolom?.lebar ? spec.alasKolom.lebar / 2 : ks + 0.05;
+      if (spec.alasKolom && lf.no === 1) P.alas.push(boxXZ(x - ka, z - ka, x + ka, z + ka, y0, lf.elevasi + spec.alasKolom.tinggi));
     }
     // tiang baja kanopi (ramping) di atas lantai ini
     for (const tg of (spec.tiang || []).filter(t => t.lantai === lf.no))
@@ -1263,7 +1364,15 @@ function lansekapTexture(key) {
       blotch(['#4a2420', '#b98a78', '#6d5a52'], 80, 8, 30, 0.14);      // aus dan kusam
       break;
     }
+    case 'tanah': size = 1.5; g.fillStyle = '#6e5440'; g.fillRect(0, 0, N, N); blotch(['#5a4433', '#82664f', '#4f6a3a', '#5d7a42'], 160, 4, 26, 0.35); break;
+    case 'batu-hitam': {                                  // batu kali bulat hitam (alas kolom koridor)
+      size = 0.5; g.fillStyle = '#3a3b3d'; g.fillRect(0, 0, N, N);
+      for (let i = 0; i < 160; i++) { const x = rnd() * N, y = rnd() * N, rx = 14 + rnd() * 18, ry = 10 + rnd() * 14, col = ['#1f2022', '#2b2c2f', '#46474a', '#18191b'][i % 4];
+        wrap(() => { g.fillStyle = col; g.beginPath(); g.ellipse(x, y, rx, ry, rnd() * Math.PI, 0, Math.PI * 2); g.fill(); g.fillStyle = 'rgba(255,255,255,0.08)'; g.beginPath(); g.ellipse(x - rx * 0.3, y - ry * 0.3, rx * 0.35, ry * 0.3, 0, 0, Math.PI * 2); g.fill(); }); }
+      break;
+    }
     case 'bata-merah': size = 1.5; g.fillStyle = '#a9584b'; g.fillRect(0, 0, N, N); blotch(['#8e463b', '#bf6c5c'], 60, 10, 40, 0.18); break;
+    case 'aspal': size = 2; g.fillStyle = '#56585a'; g.fillRect(0, 0, N, N); blotch(['#4a4c4e', '#626466', '#3f4143'], 220, 2, 10, 0.25); break;
     case 'beton': size = 2; g.fillStyle = '#bdb8ae'; g.fillRect(0, 0, N, N); blotch(['#a7a297', '#cbc7be', '#9d988c'], 90, 8, 60, 0.16); break;
     case 'granit': {
       size = 0.6; g.fillStyle = '#2d2e31'; g.fillRect(0, 0, N, N);
@@ -1306,7 +1415,8 @@ export function buildLansekap(spec) {
   const root = new THREE.Group();
   root.name = 'lansekap-' + spec.id;
   const out = { root, spec, solids: [], walkables: [], footprint: null, strips: [] };
-  const [ax, az] = spec.jalur.a, [bx, bz] = spec.jalur.b;
+  const jalur = spec.jalur || { a: [0, 0], b: [1, 0] };               // lansekap boleh hanya berisi `bidang`
+  const [ax, az] = jalur.a, [bx, bz] = jalur.b;
   const L = Math.hypot(bx - ax, bz - az);
   const ux = (bx - ax) / L, uz = (bz - az) / L;
   const s = spec.sisi ?? 1, ox = -uz * s, oz = ux * s;          // arah keluar (menjauhi gedung)
@@ -1328,7 +1438,7 @@ export function buildLansekap(spec) {
 
   // posisi tiap jalur dalam arah keluar
   let v = 0;
-  const strips = spec.penampang.map(p => { const st = { ...p, v0: v, v1: v + p.lebar }; v += p.lebar; return st; });
+  const strips = (spec.penampang || []).map(p => { const st = { ...p, v0: v, v1: v + p.lebar }; v += p.lebar; return st; });
   out.strips = strips;
   const tangga = spec.tangga || [];
   const cuts = i => tangga.filter(tg => i > tg.dari && i < tg.ke).map(tg => [tg.t - tg.lebar / 2, tg.t + tg.lebar / 2]).sort((p, q) => p[0] - q[0]);
@@ -1336,10 +1446,39 @@ export function buildLansekap(spec) {
     let cur = 0;
     const kf = st.muka || st.bahan, ke = st.ujung || kf;
     for (const [c0, c1] of [...cuts(i), [L, L]]) {
-      prism(cur, Math.min(c0, L), st.v0, st.v1, st.atas, st.bahan, kf, i === strips.length - 1 ? ke : kf, ke);
+      prism(cur, Math.min(c0, L), st.v0, st.v1, st.atas, st.bahan, kf, i === strips.length - 1 ? (st.belakang || ke) : kf, ke);   // belakang: muka tepi terluar jalur terakhir
       cur = Math.max(cur, c1);
     }
   });
+
+  // bidang: permukaan datar berbentuk poligon bebas (koordinat kawasan), sisi tegak sampai dasar.
+  // Dipakai untuk lahan paving dan bedeng tanaman yang tidak sejajar jalur (mis. di samping koridor miring).
+  const bidang = spec.bidang || [];
+  for (const bd of bidang) {
+    const pts = bd.poligon, top = bd.atas, kTop = bd.bahan, kSide = bd.muka || 'beton', bot = bd.dasar ?? base;
+    const tri = THREE.ShapeUtils.triangulateShape(pts.map(([x, z]) => new THREE.Vector2(x, z)), []);
+    const pos = [], uv = [];
+    for (const t3 of tri) {
+      let [i0, i1, i2] = t3;
+      const [p0, p1, p2] = [pts[i0], pts[i1], pts[i2]];
+      // urutan titik dibuat menghadap ke atas
+      if ((p1[0] - p0[0]) * (p2[1] - p0[1]) - (p1[1] - p0[1]) * (p2[0] - p0[0]) > 0) [i1, i2] = [i2, i1];
+      for (const k of [i0, i1, i2]) { pos.push(pts[k][0], top, pts[k][1]); uv.push(pts[k][0], -pts[k][1]); }
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+    g.setIndex([...Array(pos.length / 3).keys()]);       // berindeks seperti quadFace supaya bisa digabung
+    g.computeVertexNormals();
+    put(kTop, g);
+    // sisi: hint = arah keluar dari titik tengah poligon
+    const cx = pts.reduce((s2, p) => s2 + p[0], 0) / pts.length, cz = pts.reduce((s2, p) => s2 + p[1], 0) / pts.length;
+    pts.forEach((p, k) => {
+      const q = pts[(k + 1) % pts.length];
+      const hint = new V3((p[0] + q[0]) / 2 - cx, 0, (p[1] + q[1]) / 2 - cz);
+      put(kSide, quadFace([new V3(p[0], bot, p[1]), new V3(q[0], bot, q[1]), new V3(q[0], top, q[1]), new V3(p[0], top, p[1])], hint));
+    });
+  }
 
   // tangga: anak tangga beton dari permukaan jalur `dari` ke jalur `ke`
   const P = { rail: [] };
@@ -1414,9 +1553,12 @@ export function buildLansekap(spec) {
     if (m) root.add(m);
   }
 
-  out.footprint = [[W(0, 0, 0).x, W(0, 0, 0).z], [W(L, 0, 0).x, W(L, 0, 0).z], [W(L, v, 0).x, W(L, v, 0).z], [W(0, v, 0).x, W(0, v, 0).z]];
+  // tapak jalur (untuk melubangi bidang tanah); bidang tidak perlu dilubangi karena permukaannya di atas tanah
+  out.footprint = strips.length ? [[W(0, 0, 0).x, W(0, 0, 0).z], [W(L, 0, 0).x, W(L, 0, 0).z], [W(L, v, 0).x, W(L, v, 0).z], [W(0, v, 0).x, W(0, v, 0).z]] : null;
   // jalur tempat sebuah titik kawasan berada (untuk label "di mana saya")
   out.where = (x, z) => {
+    const bd = bidang.find(q => pointInPoly(x, z, q.poligon));
+    if (bd) return bd.nama;
     const dx = x - ax, dz = z - az, t = dx * ux + dz * uz, vv = dx * ox + dz * oz;
     if (t < 0 || t > L || vv < 0 || vv > v) return null;
     const tg = tangga.find(q => Math.abs(t - q.t) <= q.lebar / 2 && vv > strips[q.dari].v1 && vv < strips[q.ke].v0);
