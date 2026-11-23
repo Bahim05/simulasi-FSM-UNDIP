@@ -52,7 +52,7 @@ Lansekap di `kampus.json` bisa berupa `jalur` (beberapa `penampang` sejajar sebu
 
 `alat/gen_gedung_a.py`, `gen_gedung_b.py`, `gen_gedung_e.py`, `gen_gedung_f.py`, dan `gen_gedung_g.py` adalah skrip yang dulu dipakai untuk menyusun `data/gedung-*.json` dari denah dan footage. Isinya juga mencatat alasan tiap ukuran (komentar dan `sumber`). Menjalankannya (`python alat/gen_gedung_b.py`) menulis ulang file JSON gedung itu.
 
-Sumber kebenarannya tetap file JSON. **Kalau JSON sudah diedit langsung, jangan jalankan skrip gedung itu lagi**, karena editan di JSON akan tertimpa. Pilih satu cara untuk tiap gedung: edit JSON-nya, atau edit skripnya lalu jalankan ulang.
+Per 23 Nov 2026 kelima skrip menghasilkan JSON yang persis sama dengan yang ada di `data/`, jadi revisi gedung dilakukan dengan mengedit skripnya lalu menjalankannya ulang. Sumber kebenarannya tetap file JSON. **Kalau JSON sudah diedit langsung, jangan jalankan skrip gedung itu lagi**, karena editan di JSON akan tertimpa. Pilih satu cara untuk tiap gedung: edit JSON-nya, atau edit skripnya lalu jalankan ulang.
 
 ## Mode tampilan
 

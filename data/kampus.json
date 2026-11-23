@@ -29,7 +29,14 @@
   {
    "id": "C",
    "nama": "Gedung C",
-   "status": "belum"
+   "status": "dibuat",
+   "file": "data/gedung-c.json",
+   "posisi": [
+    140.6,
+    37.9
+   ],
+   "rotasi": 180,
+   "catatan": "Letak dari foto udara berlabel (23 Nov 2026), diukur terhadap atap Gedung B: C sejajar B, ujung barat atap C sekitar 11 m di timur ujung timur atap B, garis bubungan C sekitar 0,5 m di selatan garis bubungan B. Diputar 180 derajat seperti B (selasar menghadap utara ke halaman F, lorong tembus di tengah menyambung ke arah Gedung D). Perkiraan dari foto, gampang digeser."
   },
   {
    "id": "D",
@@ -89,7 +96,14 @@
   {
    "id": "K",
    "nama": "Gedung K",
-   "status": "belum"
+   "status": "dibuat",
+   "file": "data/gedung-k.json",
+   "posisi": [
+    125.2,
+    -7.1
+   ],
+   "rotasi": 0,
+   "catatan": "Letak dari foto udara berlabel (23 Nov 2026): transformasi affine dari atap A, B, dan C ke foto, lalu pojok atap K dibaca balik. Titik (0,0) gedung = kolom barat laut sayap utara, sekitar 6 m di timur ujung sayap tenggara F. Denah dipakai seperti tergambar (tanpa diputar), sudut dalam L menghadap barat daya seperti di foto. Perkiraan, gampang digeser."
   },
   {
    "id": "L",

@@ -1076,7 +1076,9 @@ function buildRoof(a, mat) {
   geo.setAttribute('position', new THREE.Float32BufferAttribute(cp, 3));
   geo.setAttribute('uv', new THREE.Float32BufferAttribute(cu, 2));
   geo.computeVertexNormals();
-  const roof = new THREE.Mesh(geo, mat.roof);
+  // a.warna: warna genteng khusus untuk atap ini (mis. atap lobi yang lebih gelap dari atap sayap)
+  const roofMat = a.warna ? new THREE.MeshStandardMaterial({ color: '#ffffff', map: roofTexture(a.warna), roughness: 0.85, side: THREE.DoubleSide }) : mat.roof;
+  const roof = new THREE.Mesh(geo, roofMat);
   roof.castShadow = roof.receiveShadow = true;
   g.add(roof);
 
