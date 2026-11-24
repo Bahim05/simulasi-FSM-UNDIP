@@ -245,7 +245,7 @@ def lantai(no):
     walls += exterior(no, OUT, rooms, walls, COLS, ext_doors, extra=extra)
     rails = []
     if no > 1:
-        dy, tb = -0.05, {"jenis": "tembok-handrail", "tinggi": 0.9, "sumber": D}
+        dy, tb = -0.05, {"jenis": "tembok-celah", "tinggi": 0.9, "sumber": "foto-2026", "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."}
         e = DR + SW - 0.1
         rails += [{"a": [LS - 0.1, DR + 0.1, dy], "b": [LS - 0.1, e, dy], **tb},
                   {"a": [LS - 0.1, e, dy], "b": [X_TG1, e, dy], **tb},
@@ -270,9 +270,31 @@ DB = [-27.0, -3.0, 32.0, 28.0]
 FLOORS = [lantai(no) for no in (1, 2, 3)]
 C_REAL = [pt(q) for q in [J0, (LS, 0), (LS, DR), (2.68, DR), E1, E0]]   # plafon lt 3 di bawah atap sayap lurus (denah)
 
-def trit(a, b, sisi, no):
-    return {"a": pt(a), "b": pt(b), "sisi": sisi, "elevasi": ELEV[3] + H, "lantai": no, "lebar": 3.7, "turun": 0.8, "jarak": 0.1,
-            "sumber": UD, "catatan": "Atap sandar di atas selasar lantai 3 (atap utama hanya menutup ruang, foto udara)."}
+def trit(a, b, sisi, no, lebar=3.7, sudutA=None, sudutB=None, catatan=None):
+    """Atap tingkat bawah di ketinggian plafon lt 3 (di bawah atap utama, menutup selasar lt 3 dan tangga ujung barat)."""
+    t = {"a": pt(a), "b": pt(b), "sisi": sisi, "elevasi": ELEV[3] + H, "lantai": no, "lebar": lebar, "turun": 0.8 * lebar / 3.7, "jarak": 0.1,
+         "sumber": "foto-2026", "catatan": catatan or "Atap tingkat bawah di atas selasar lt 3 (foto 23 Nov 2026)."}
+    if sudutA: t["sudutA"] = sudutA
+    if sudutB: t["sudutB"] = sudutB
+    return t
+
+def sudut_belok(p, q, r):
+    """Besar belokan (derajat) di q untuk jalur p -> q -> r."""
+    u1 = (q[0] - p[0], q[1] - p[1]); u2 = (r[0] - q[0], r[1] - q[1])
+    cosv = (u1[0] * u2[0] + u1[1] * u2[1]) / (math.hypot(*u1) * math.hypot(*u2))
+    return math.degrees(math.acos(max(-1, min(1, cosv))))
+
+def trit_lantai(no):
+    """Tritisan genteng di tepi luar selasar setinggi lantai `no` (di bawah tembok pembatas), seperti di foto: menerus dari
+    dinding ujung barat (sebelah bordes tangga luar) sampai ujung tenggara, tidak membungkus ujung barat karena ada tangga."""
+    e = DR + SW
+    P = [WP(AB, e), WP(A_FJ, e), (X_TG1, e), (LS + 0.2, e)]
+    s1, s2 = sudut_belok(*P[0:3]), sudut_belok(*P[1:4])          # belok ke dalam (sudut dalam) lalu ke luar
+    base = {"sisi": 1, "elevasi": ELEV[no], "lantai": no, "lebar": 1.6, "turun": 0.65, "jarak": 0.02, "sumber": "foto-2026",
+            "catatan": f"Tritisan di bawah tembok pembatas selasar lt {no} (foto 23 Nov 2026)."}
+    return [{**base, "a": pt(P[0]), "b": pt(P[1]), "sudutB": r2(-s1)},
+            {**base, "a": pt(P[1]), "b": pt(P[2]), "sudutA": r2(-s1), "sudutB": r2(s2)},
+            {**base, "a": pt(P[2]), "b": pt(P[3]), "sudutA": r2(s2)}]
 
 data = {
     "schema": "fsm-gedung@1",
@@ -287,6 +309,7 @@ data = {
         D: "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai apa adanya, gedung diputar -30 derajat.",
         UD: "Foto udara pengguna (22 Nov 2026): letak di utara B dan timur A, atap genteng kemerahan, sayap yang serong menuju tenggara.",
         "ingatan-pengguna": "Pengguna (22 Nov 2026): tangga luar ada di ujung kiri (barat) sayap ruang dosen.",
+        "foto-2026": "Foto pengguna 23 Nov 2026 (dari arah Gedung B): ujung barat dengan tangga luar terbuka bertembok pembatas, atap utama bergevel berkisi, atap tingkat bawah membungkus ujung barat, tritisan genteng di tepi selasar tiap lantai, tembok pembatas putih bercelah, kolom abu kebiruan.",
         PR: "Perkiraan tanpa footage: tinggi lantai 1, jendela, letak pintu kecil, gudang di belakang tangga, susunan tangga.",
     },
     "koordinat": "Meter, sama dengan denah: (0,0) = sudut luar pertemuan dinding belakang dua sayap, x sepanjang sayap lurus denah (R. Seminar), "
@@ -294,8 +317,8 @@ data = {
                  "dan sayap R. Seminar ke tenggara. y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A).",
     "ukuran": {"panjangSayapLurus": LS, "dindingBelakangSayapMiring": AB, "dindingDepanSayapMiring": AF, "kedalamanRuang": DR, "lebarSelasar": SW,
                "sudutSayap": 30, "tinggiLantai": H, "tebalPelat": SLAB},
-    "tampilan": {"dinding": "#dcdcd6", "dindingDalam": "#ecebe6", "kolom": "#c8c9c4", "lantai": "#e6e1d7",
-                 "selasar": "#cdccc6", "atap": "#7b4c3d", "kusen": "#3b464d", "pintu": "#7a3f2c", "pagar": "#c6cacd"},
+    "tampilan": {"dinding": "#e6e5df", "dindingDalam": "#ecebe6", "kolom": "#a9b3c0", "lantai": "#e6e1d7",
+                 "selasar": "#cdccc6", "atap": "#84473a", "kusen": "#3b464d", "pintu": "#7a3f2c", "pagar": "#b9c1cb"},
     # kolom tepi selasar di lantai 3 berhenti di bawah atap sandar (atap utama tidak menutup selasar)
     "kolom": {"ukuran": 0.4, "dasar": -0.2, "puncak": TOP - 0.15, "titik": COLS,
               "tambahan": [{"titik": COLS_SEL, "lantai": [1, 2]},
@@ -308,18 +331,28 @@ data = {
         for f in (1, 2)] + [
         # bingkai sayap R. Dosen: sumbu x lokal = arah dari ujung sayap ke pertemuan (titik WP(a, b) = (-a, b)), lalu diputar +30 derajat
         {"id": f"TL{f}", "dariLantai": f, "keLantai": f + 1, "x0": -TE["x0"], "x1": -TE["x1"], "zDepan": TE["zDepan"], "zBelakang": TE["zBelakang"],
-         "putar": 30, "jumlahAnakTangga": 24, "lebarInjakan": 0.28, "bentuk": "U dengan bordes", "belakang": "tembok", "sisiLuar": "tembok",
+         "putar": 30, "jumlahAnakTangga": 24, "lebarInjakan": 0.28, "bentuk": "U dengan bordes", "belakang": "tembok", "sisiLuar": "tembok", "pembatas": "tembok", "gaya": "krem",
          "sumber": D, "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar 30 derajat."}
         for f in (1, 2)],
-    "tritisan": [trit((9.2, DR), (LS + 0.2, DR), 1, 3), trit(FJ, WP(AB + 2.8, DR), -1, 3)],
+    # atap tingkat bawah: selasar kedua sayap (lebar 3,7), ujung barat di atas tangga luar (3,7), sisi belakang dan ujung tenggara
+    # lebih sempit (1,5; tidak terlihat di foto, perkiraan). Tritisan lantai 2 dan 3 di tepi luar selasar.
+    "tritisan": [trit((9.2, DR), (LS + 0.2, DR), 1, 3),
+                 trit(FJ, E1, -1, 3, sudutB=90),
+                 trit(E1, E0, -1, 3, sudutA=90, catatan="Atap tingkat bawah membungkus ujung barat, menaungi tangga luar (foto 23 Nov 2026)."),
+                 trit(E0, J0, -1, 3, lebar=1.5, sudutB=30, catatan="Atap tingkat bawah sisi belakang (perkiraan)."),
+                 trit(J0, (LS, 0), -1, 3, lebar=1.5, sudutA=30, sudutB=90, catatan="Atap tingkat bawah sisi belakang (perkiraan)."),
+                 trit((LS, 0), (LS, DR), -1, 3, lebar=1.5, sudutA=90, catatan="Atap tingkat bawah ujung tenggara (perkiraan).")]
+                + trit_lantai(2) + trit_lantai(3),
     # Atap utama: dua atap perisai (sayap lurus dan sayap miring denah) dipotong di garis bagi sudut pertemuan, seperti Gedung E.
     "atap": [
         {"jenis": "perisai", "asal": [0, 0], "sudut": 0, "batas": [-6.0, 0, LS, DR], "tepiBawah": TOP, "tonjolan": 0.9, "kemiringan": 30,
          "potong": [{"a": [0, 0], "b": [2.68, DR], "simpan": [10, 5], "jurai": True}], "plafonPoligon": [C_REAL],
+         "gablet": {"ujung": [1], "lebar": 2.6},
          "sumber": UD, "catatan": "Sayap R. Seminar / Lab (lurus di denah, serong ke tenggara di kampus)"},
         # sumbu x lokal ke arah pertemuan (sudut -30), jadi sayap R. Dosen ada di x lokal negatif
         {"jenis": "perisai", "asal": [0, 0], "sudut": -30, "batas": [-AB, 0, 6.0, DR], "tepiBawah": TOP, "tonjolan": 0.9, "kemiringan": 30,
          "potong": [{"a": [0, 0], "b": [2.68, DR], "simpan": [-6.16, 9.33]}], "plafonPoligon": [],
+         "gablet": {"ujung": [0], "lebar": 2.6},
          "sumber": UD, "catatan": "Sayap R. Dosen (miring di denah, sejajar A dan B di kampus)"},
     ],
     "mulaiJalan": {"posisi": pt((20.0, 11.4)), "arah": 0},

@@ -89,6 +89,7 @@ Di tingkat gedung ada `kolom`, `tangga`, `tritisan`, `atap`, `fondasi` (alas gel
 
 - Atap perisai bisa dipotong miring (`potong`: garis `a`–`b` dalam koordinat gedung, `simpan` = titik di sisi yang dipertahankan, `jurai: true` menggambar garis jurai di potongan). Dipakai untuk menyatukan atap dua sayap Gedung E: tiap atap diperpanjang (`batas`) lalu dipotong di garis bagi sudut, sementara plafon tetap memakai `batasPlafon`.
 - Atap juga bisa dilubangi: `buang` = daftar poligon cembung (koordinat gedung) yang dikeluarkan dari atap. Dipakai di sayap Gedung G yang atapnya masuk ke dinding petak ujung lantai 3. `plafonPoligon` = daftar poligon plafon (koordinat gedung) pengganti kotak `batasPlafon`, untuk plafon yang tidak persegi atau atap yang bertumpuk.
+- `atap[].gablet` = { `ujung`: [0] dan/atau [1], `lebar` }: ujung atap perisai diberi gevel segitiga tegak berkisi (atap limasan bergevel), seperti Gedung F. `tritisan[].sudutA/sudutB` memotong miring ujung tritisan supaya dua potongan bertemu rapi di sudut (positif = sudut luar, negatif = sudut dalam).
 - `kolom.tambahan`: kelompok kolom yang hanya ada di lantai tertentu (`lantai`: [dari, sampai]) dengan `dasar`/`puncak` sendiri. Dipakai untuk gedung yang jumlah lantainya tidak sama di semua bagian (sayap dua lantai, kolom kanopi).
 - `selasar.tambahan`: pelat selasar lain di lantai yang sama, boleh dengan `elevasi` sendiri (selasar sayap, area drop-off).
 - Tangga bisa diputar: `putar` (derajat, kelipatan 90) memutar tangga yang disusun di bingkai bawaan (lajur sejajar sumbu z, bordes di z kecil) terhadap titik (0,0) gedung. Dengan `putar: 180` bordesnya ada di z besar.
@@ -109,6 +110,7 @@ Setiap gedung punya sistem koordinat sendiri (dijelaskan di field `koordinat` ti
 - `penampang[]`: urutan jalur sejajar dari garis acuan ke luar. Tiap jalur punya `nama`, `lebar`, `atas` (tinggi permukaan), `bahan` (permukaan), `muka` (muka tegak di sisi gedung), dan `ujung` (muka di ujung-ujungnya).
 - Bahan yang tersedia: `granit`, `beton`, `selokan`, `batu-kali`, `paving-merah`, `bata-merah`. Teksturnya digambar di canvas dan menyambung antar blok.
 - `tangga[]`: `t` (posisi sepanjang garis), `lebar`, dan jalur `dari` dan `ke` (indeks penampang). Jalur di antaranya dipotong dan diganti anak tangga. `pegangan: true` menambah pipa pegangan.
+- `benda[]`: benda di koordinat kawasan, tidak terikat jalur: `jenis` `paviliun` (atap datar, 4 kolom, meja bar), `tugu`, `rumah-kecil`, `bangku-segienam`, `pot-bundar`, `ayunan`; posisi `x`, `z`, tinggi alas `y`, `arah` (derajat). Kolom paviliun, tugu, rumah kecil, bangku, dan bak tanaman menahan pejalan; atap paviliun bisa dipijak saat terbang.
 - `pot[]`: pot tanaman berjarak tetap di sebuah jalur. `perabot[]`: `bangku` atau `ayunan` di jalur terakhir, posisinya `t` dan `v` (jarak dari awal jalur itu).
 
 Setiap ruang, pintu, dan tangga punya `sumber`:
@@ -208,7 +210,8 @@ Sumber: denah Gedung G LT.1 sampai LT.3 dan foto udara dari pengguna dengan temp
   - rumput 0,88 sebagai permukaan dasar di sekitar B dan G, tepinya tembok batu kali (di sisi Gedung E sekitar 2 m dari selasar E);
   - parkir aspal 0,95 di sisi drop-off G.
   - Jalur depan A diperpanjang sampai sisi penghubung A–B (x 41,85); ujungnya jadi tembok batu kali. Tembok batu kali di depan selasar A sekarang setinggi ±1,2 m dari jalur beton.
-  - Pohon, kios, dan bangku belum dibuat. Batas parkir dan batas rumput perkiraan.
+  - Batas parkir dan batas rumput perkiraan. Pohon tidak dibuat.
+- **Isi lahan terbuka dari video pengguna (23 Nov 2026, direkam dari selasar lt 3 Gedung A)**, `benda[]` dan dua `bidang` baru di `halaman-selatan-A`: paviliun beratap datar gelap di atas pelataran beton (0,30 m di atas paving) di depan Gedung E dan sayap Perpustakaan G, ayunan di bak tanaman bertepi beton di depan E (ayunan lama di plaza A dipindah ke sini), tugu persegi merah muda, dua rumah kecil merah muda, bak bundar, dan dua bangku segi enam. **Letaknya masih perkiraan** (posisi kamera tidak bisa dipastikan); di video paviliun tampak lebih jauh dari A daripada yang muat di model, jadi letak sayap Perpustakaan G perlu dicek. Undakan kecil di lahan sengaja tidak dibuat (lahan tetap rata).
 
 ## Gedung F (November 2026)
 
@@ -218,8 +221,9 @@ Sumber: denah Gedung F LT.1 sampai LT.3 dan foto udara dari pengguna (22 Nov 202
 - **Letak**: di timur Gedung A dan utara Gedung B (`posisi` [93,8, -5,7] = sudut luar belokan atap di foto). Ujung barat sekitar 23 m di timur ujung A, selasar menghadap halaman ke Gedung B. Diukur dari foto terhadap atap Gedung B (perkiraan).
 - **Bentuk**: sayap R. Seminar 30,28 x 10 m dan sayap R. Dosen 30 derajat terhadapnya (dinding belakang 25,6 m, dinding depan 28,8 m, dalam 10 m), selasar 2,8 m di sisi dalam sudut. Pertemuan dua sayap: KM/WC, tangga U yang naik dari selasar, dan gudang di belakang tangga (gudang perkiraan). Tangga luar 2,8 m di ujung barat (ujung sayap R. Dosen). Koordinat data gedung = koordinat denah.
 - **Ruang**: sayap barat satu ruang dosen tiap lantai (R. Dosen 1–3; lt 3 ada R. Himpunan Mahasiswa Statistika di pojok ujung barat). Sayap tenggara: lt 1 R. Kerja / R. Hukum S2 Matematika dan R. Seminar / R. Sidang; lt 2 R. Terapan & Analisis dan Lab Komputasi; lt 3 R. Teknisi Lab Komputasi dan R. Baca.
-- **Atap genteng kemerahan** (foto udara) hanya menutup ruang: dua atap perisai dipotong di garis bagi sudut pertemuan seperti Gedung E. Selasar lantai 3 diberi atap sandar (`tritisan` lebar 3,7 m), kolom tepi selasar lantai 3 berhenti di bawahnya.
-- **Tinggi lantai 1 F dianggap sama dengan Gedung A (0,00)** karena sebaris dengan A. Belum dicek; gampang diubah di `ELEV` alat penyusun F.
+- **Atap bertingkat** (foto ujung barat dari arah B, 23 Nov 2026): atap utama genteng merah bata menutup ruang, dua atap perisai dipotong di garis bagi sudut pertemuan, **kedua ujungnya bergevel berkisi** (`gablet`). Di bawahnya **atap tingkat bawah** setinggi plafon lt 3: lebar 3,7 m di atas selasar dan **membungkus ujung barat sampai menaungi tangga luar**; di sisi belakang dan ujung tenggara 1,5 m (tidak terlihat di foto, perkiraan). **Tritisan genteng di tepi luar selasar setinggi lantai 2 dan lantai 3** (di bawah tembok pembatas), menerus dari dinding ujung barat sampai ujung tenggara.
+- **Tangga luar ujung barat** terbuka, bertembok pembatas di sisi luar, di antara dua lajur, dan di belakang bordes, anak tangga terang (foto). **Tembok pembatas selasar putih bercelah tegak**, kolom dan lis abu kebiruan, dinding putih (foto).
+- **Tinggi lantai 1 F masih 0,00 (sama dengan A).** Menurut pengguna (23 Nov 2026) F sebenarnya lebih rendah dari A dan B; menunggu footage untuk tahu seberapa rendah (ubah `ELEV` di alat penyusun F, sekalian halaman F–B).
 
 ## Menambah gedung berikutnya
 

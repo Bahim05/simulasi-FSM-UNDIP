@@ -8,6 +8,7 @@
   "denah-gedung-f": "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai apa adanya, gedung diputar -30 derajat.",
   "foto-udara-2026": "Foto udara pengguna (22 Nov 2026): letak di utara B dan timur A, atap genteng kemerahan, sayap yang serong menuju tenggara.",
   "ingatan-pengguna": "Pengguna (22 Nov 2026): tangga luar ada di ujung kiri (barat) sayap ruang dosen.",
+  "foto-2026": "Foto pengguna 23 Nov 2026 (dari arah Gedung B): ujung barat dengan tangga luar terbuka bertembok pembatas, atap utama bergevel berkisi, atap tingkat bawah membungkus ujung barat, tritisan genteng di tepi selasar tiap lantai, tembok pembatas putih bercelah, kolom abu kebiruan.",
   "perkiraan": "Perkiraan tanpa footage: tinggi lantai 1, jendela, letak pintu kecil, gudang di belakang tangga, susunan tangga."
  },
  "koordinat": "Meter, sama dengan denah: (0,0) = sudut luar pertemuan dinding belakang dua sayap, x sepanjang sayap lurus denah (R. Seminar), z dari dinding belakang ke arah selasar. Di kampus.json gedung diputar -30 derajat, jadi sayap R. Dosen mengarah ke barat dan sayap R. Seminar ke tenggara. y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A).",
@@ -22,15 +23,15 @@
   "tebalPelat": 0.15
  },
  "tampilan": {
-  "dinding": "#dcdcd6",
+  "dinding": "#e6e5df",
   "dindingDalam": "#ecebe6",
-  "kolom": "#c8c9c4",
+  "kolom": "#a9b3c0",
   "lantai": "#e6e1d7",
   "selasar": "#cdccc6",
-  "atap": "#7b4c3d",
+  "atap": "#84473a",
   "kusen": "#3b464d",
   "pintu": "#7a3f2c",
-  "pagar": "#c6cacd"
+  "pagar": "#b9c1cb"
  },
  "kolom": {
   "ukuran": 0.4,
@@ -1853,9 +1854,10 @@
       12.700000000000001,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -1868,9 +1870,10 @@
       12.700000000000001,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -1883,9 +1886,10 @@
       9.399,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -1898,9 +1902,10 @@
       25.149,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -1913,9 +1918,10 @@
       23.676,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     }
    ]
   },
@@ -2748,9 +2754,10 @@
       12.700000000000001,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -2763,9 +2770,10 @@
       12.700000000000001,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -2778,9 +2786,10 @@
       9.399,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -2793,9 +2802,10 @@
       25.149,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -2808,9 +2818,10 @@
       23.676,
       -0.05
      ],
-     "jenis": "tembok-handrail",
+     "jenis": "tembok-celah",
      "tinggi": 0.9,
-     "sumber": "denah-gedung-f"
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     },
     {
      "a": [
@@ -2892,6 +2903,8 @@
    "bentuk": "U dengan bordes",
    "belakang": "tembok",
    "sisiLuar": "tembok",
+   "pembatas": "tembok",
+   "gaya": "krem",
    "sumber": "denah-gedung-f",
    "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar 30 derajat."
   },
@@ -2909,6 +2922,8 @@
    "bentuk": "U dengan bordes",
    "belakang": "tembok",
    "sisiLuar": "tembok",
+   "pembatas": "tembok",
+   "gaya": "krem",
    "sumber": "denah-gedung-f",
    "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar 30 derajat."
   }
@@ -2929,8 +2944,8 @@
    "lebar": 3.7,
    "turun": 0.8,
    "jarak": 0.1,
-   "sumber": "foto-udara-2026",
-   "catatan": "Atap sandar di atas selasar lantai 3 (atap utama hanya menutup ruang, foto udara)."
+   "sumber": "foto-2026",
+   "catatan": "Atap tingkat bawah di atas selasar lt 3 (foto 23 Nov 2026)."
   },
   {
    "a": [
@@ -2938,8 +2953,8 @@
     7.06
    ],
    "b": [
-    -19.595,
-    22.86
+    -17.17,
+    21.46
    ],
    "sisi": -1,
    "elevasi": 12.0,
@@ -2947,8 +2962,202 @@
    "lebar": 3.7,
    "turun": 0.8,
    "jarak": 0.1,
-   "sumber": "foto-udara-2026",
-   "catatan": "Atap sandar di atas selasar lantai 3 (atap utama hanya menutup ruang, foto udara)."
+   "sumber": "foto-2026",
+   "catatan": "Atap tingkat bawah di atas selasar lt 3 (foto 23 Nov 2026).",
+   "sudutB": 90
+  },
+  {
+   "a": [
+    -17.17,
+    21.46
+   ],
+   "b": [
+    -22.17,
+    12.8
+   ],
+   "sisi": -1,
+   "elevasi": 12.0,
+   "lantai": 3,
+   "lebar": 3.7,
+   "turun": 0.8,
+   "jarak": 0.1,
+   "sumber": "foto-2026",
+   "catatan": "Atap tingkat bawah membungkus ujung barat, menaungi tangga luar (foto 23 Nov 2026).",
+   "sudutA": 90
+  },
+  {
+   "a": [
+    -22.17,
+    12.8
+   ],
+   "b": [
+    0.0,
+    0.0
+   ],
+   "sisi": -1,
+   "elevasi": 12.0,
+   "lantai": 3,
+   "lebar": 1.5,
+   "turun": 0.32432432432432434,
+   "jarak": 0.1,
+   "sumber": "foto-2026",
+   "catatan": "Atap tingkat bawah sisi belakang (perkiraan).",
+   "sudutB": 30
+  },
+  {
+   "a": [
+    0.0,
+    0.0
+   ],
+   "b": [
+    30.28,
+    0
+   ],
+   "sisi": -1,
+   "elevasi": 12.0,
+   "lantai": 3,
+   "lebar": 1.5,
+   "turun": 0.32432432432432434,
+   "jarak": 0.1,
+   "sumber": "foto-2026",
+   "catatan": "Atap tingkat bawah sisi belakang (perkiraan).",
+   "sudutA": 30,
+   "sudutB": 90
+  },
+  {
+   "a": [
+    30.28,
+    0
+   ],
+   "b": [
+    30.28,
+    10.0
+   ],
+   "sisi": -1,
+   "elevasi": 12.0,
+   "lantai": 3,
+   "lebar": 1.5,
+   "turun": 0.32432432432432434,
+   "jarak": 0.1,
+   "sumber": "foto-2026",
+   "catatan": "Atap tingkat bawah ujung tenggara (perkiraan).",
+   "sudutA": 90
+  },
+  {
+   "sisi": 1,
+   "elevasi": 4.0,
+   "lantai": 2,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
+   "a": [
+    -15.77,
+    23.885
+   ],
+   "b": [
+    9.171,
+    9.485
+   ],
+   "sudutB": -68.896
+  },
+  {
+   "sisi": 1,
+   "elevasi": 4.0,
+   "lantai": 2,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
+   "a": [
+    9.171,
+    9.485
+   ],
+   "b": [
+    13.28,
+    12.8
+   ],
+   "sudutA": -68.896,
+   "sudutB": 38.896
+  },
+  {
+   "sisi": 1,
+   "elevasi": 4.0,
+   "lantai": 2,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
+   "a": [
+    13.28,
+    12.8
+   ],
+   "b": [
+    30.48,
+    12.8
+   ],
+   "sudutA": 38.896
+  },
+  {
+   "sisi": 1,
+   "elevasi": 8.0,
+   "lantai": 3,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
+   "a": [
+    -15.77,
+    23.885
+   ],
+   "b": [
+    9.171,
+    9.485
+   ],
+   "sudutB": -68.896
+  },
+  {
+   "sisi": 1,
+   "elevasi": 8.0,
+   "lantai": 3,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
+   "a": [
+    9.171,
+    9.485
+   ],
+   "b": [
+    13.28,
+    12.8
+   ],
+   "sudutA": -68.896,
+   "sudutB": 38.896
+  },
+  {
+   "sisi": 1,
+   "elevasi": 8.0,
+   "lantai": 3,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
+   "a": [
+    13.28,
+    12.8
+   ],
+   "b": [
+    30.48,
+    12.8
+   ],
+   "sudutA": 38.896
   }
  ],
  "atap": [
@@ -3013,6 +3222,12 @@
      ]
     ]
    ],
+   "gablet": {
+    "ujung": [
+     1
+    ],
+    "lebar": 2.6
+   },
    "sumber": "foto-udara-2026",
    "catatan": "Sayap R. Seminar / Lab (lurus di denah, serong ke tenggara di kampus)"
   },
@@ -3049,6 +3264,12 @@
     }
    ],
    "plafonPoligon": [],
+   "gablet": {
+    "ujung": [
+     0
+    ],
+    "lebar": 2.6
+   },
    "sumber": "foto-udara-2026",
    "catatan": "Sayap R. Dosen (miring di denah, sejajar A dan B di kampus)"
   }

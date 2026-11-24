@@ -1530,12 +1530,6 @@
    ],
    "perabot": [
     {
-     "jenis": "ayunan",
-     "t": 18.3,
-     "v": 2.4,
-     "panjang": 2.4
-    },
-    {
      "jenis": "bangku",
      "t": 21.6,
      "v": 1.0,
@@ -1562,6 +1556,60 @@
    "nama": "Lahan terbuka depan Gedung A dan sekitar Gedung B, G",
    "dasar": -0.8,
    "bidang": [
+    {
+     "nama": "Pelataran paviliun",
+     "poligon": [
+      [
+       -2.7,
+       24.7
+      ],
+      [
+       8.3,
+       24.7
+      ],
+      [
+       8.3,
+       32.2
+      ],
+      [
+       -2.7,
+       32.2
+      ]
+     ],
+     "atas": 1.35,
+     "dasar": 0.9,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-lahan-2026",
+     "catatan": "Pelataran beton abu-abu paviliun (video 23 Nov 2026). Letak perkiraan dari video, belum dicocokkan ukur."
+    },
+    {
+     "nama": "Bak tanaman ayunan",
+     "poligon": [
+      [
+       -4.2,
+       19.9
+      ],
+      [
+       1.5,
+       19.9
+      ],
+      [
+       1.5,
+       24.3
+      ],
+      [
+       -4.2,
+       24.3
+      ]
+     ],
+     "atas": 1.45,
+     "dasar": 0.9,
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "footage-lahan-2026",
+     "catatan": "Bak tanaman bertepi beton di depan Gedung E, berisi pohon besar (pohon tidak dibuat) dan ayunan (video 23 Nov 2026). Letak perkiraan."
+    },
     {
      "nama": "Paving bata merah",
      "poligon": [
@@ -1711,7 +1759,70 @@
     }
    ],
    "sumber": "footage-2026",
-   "catatan": "Dari footage koridor B (lahan paving bata merah berundak naik ke plaza A, bedeng di sisi lain koridor) dan foto udara. Tinggi: plaza A dan seluruh paving bata merah 1,05 (rata, naik-turun kecil di lapangan diabaikan), koridor dan selasar B 1,15, lantai 1 G 1,2, bedeng 1,12, rumput 0,88. Pohon, kios, dan bangku belum dibuat."
+   "catatan": "Dari footage koridor B (lahan paving bata merah berundak naik ke plaza A, bedeng di sisi lain koridor) dan foto udara. Tinggi: plaza A dan seluruh paving bata merah 1,05 (rata, naik-turun kecil di lapangan diabaikan), koridor dan selasar B 1,15, lantai 1 G 1,2, bedeng 1,12, rumput 0,88. Pohon, kios, dan bangku belum dibuat. Benda di lahan terbuka (paviliun, tugu, dua rumah kecil, bak bundar, dua bangku segi enam, ayunan di bak tanaman depan E) dari video pengguna 23 Nov 2026 yang direkam dari selasar lt 3 Gedung A; letaknya masih perkiraan.",
+   "benda": [
+    {
+     "jenis": "paviliun",
+     "x": 2.8,
+     "z": 28.45,
+     "y": 1.35,
+     "arah": 0,
+     "panjang": 9.0,
+     "lebar": 6.0,
+     "tinggi": 3.0,
+     "sumber": "footage-lahan-2026",
+     "catatan": "Paviliun beratap datar gelap, empat kolom, meja bar dan kursi tinggi."
+    },
+    {
+     "jenis": "ayunan",
+     "x": -1.4,
+     "z": 22.1,
+     "y": 1.45,
+     "arah": 0,
+     "sumber": "footage-lahan-2026"
+    },
+    {
+     "jenis": "tugu",
+     "x": 32.8,
+     "z": 20.8,
+     "tinggi": 11.0,
+     "sumber": "footage-lahan-2026",
+     "catatan": "Tugu persegi merah muda (video 23 Nov 2026)."
+    },
+    {
+     "jenis": "rumah-kecil",
+     "x": 35.6,
+     "z": 21.6,
+     "arah": 10,
+     "sumber": "footage-lahan-2026"
+    },
+    {
+     "jenis": "rumah-kecil",
+     "x": 37.2,
+     "z": 25.6,
+     "arah": 10,
+     "sumber": "footage-lahan-2026"
+    },
+    {
+     "jenis": "pot-bundar",
+     "x": 28.4,
+     "z": 25.4,
+     "jari": 1.3,
+     "sumber": "footage-lahan-2026"
+    },
+    {
+     "jenis": "bangku-segienam",
+     "x": 12.5,
+     "z": 24.2,
+     "sumber": "footage-lahan-2026"
+    },
+    {
+     "jenis": "bangku-segienam",
+     "x": 17.5,
+     "z": 28.5,
+     "sumber": "footage-lahan-2026"
+    }
+   ]
   }
  ]
 }
