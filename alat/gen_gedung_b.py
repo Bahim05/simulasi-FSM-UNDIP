@@ -19,6 +19,7 @@ H = 4.0           # tinggi antar lantai (denah: +4,00 dan +8,00 dari lantai 1 B)
 Y1 = 1.2          # lantai 1 B terhadap lantai 1 A (keterangan lapangan)
 PX = 82.0         # posisi x gedung di kawasan (harus sama dengan kampus.json); x kawasan = PX - x lokal
 JB = (PX - 44.7, PX - 42.3)   # rentang x lokal jembatan lt 2 dan lt 3 (kawasan x 42,3-44,7, pojok timur Gedung A)
+JF = (PX - 84.2, PX - 81.0)   # rentang x lokal penghubung F-B (kawasan x 81,0-84,2, pojok timur selasar depan B; footage 2026)
 SLAB = 0.15
 EXT, INT = 0.2, 0.15
 KOLOM_X = [0, 5, 10, 15, 20, 25, 30, 35, 40]
@@ -155,8 +156,9 @@ def floor(no, rooms, doors):
     if no > 1:
         dy = -0.05
         tembok = {"jenis": "tembok-handrail", "tinggi": 0.9, "sumber": FT}
-        # celah di depan lobi untuk jembatan ke Gedung A
-        pagar += [{"a": [-SU + 0.1, ZS - 0.1, dy], "b": [JB[0] - 0.05, ZS - 0.1, dy], **tembok},
+        # celah di depan lobi untuk jembatan ke Gedung A, dan di pojok timur untuk penghubung ke Gedung F
+        pagar += [{"a": [-SU + 0.1, ZS - 0.1, dy], "b": [JF[0] - 0.05, ZS - 0.1, dy], **tembok},
+                  {"a": [JF[1] + 0.05, ZS - 0.1, dy], "b": [JB[0] - 0.05, ZS - 0.1, dy], **tembok},
                   {"a": [JB[1] + 0.05, ZS - 0.1, dy], "b": [L + SU - 0.1, ZS - 0.1, dy], **tembok},
                   {"a": [-SU + 0.1, 0.1, dy], "b": [-SU + 0.1, ZS - 0.1, dy], **tembok},
                   {"a": [L + SU - 0.1, 0.1, dy], "b": [L + SU - 0.1, ZS - 0.1, dy], **tembok},
@@ -198,6 +200,8 @@ kol += [[r2(x + (KS if x < 0 else -KS)), r2(KS if z == 0 else ZS - KS if z == ZS
 # supaya di lantai 1 tidak ada tiang di tengah jalan masuk koridor (koreksi pengguna 22 Nov 2026)
 MULUT = [[r2(L + SU - KS), 7.4], [r2(L + SU - KS), DR]]
 kol = [k for k in kol if k not in MULUT]
+# mulut penghubung F-B di pojok timur selasar depan: kolom tepi selasar di x 0 jatuh di tengah jembatan, jadi dihapus
+kol = [k for k in kol if k != [0, r2(ZS - KS)]]
 
 data = {
     "schema": "fsm-gedung@1",
@@ -233,8 +237,8 @@ data = {
     "tritisan": [
         {"a": [x0, ZS], "b": [x1, ZS], "sisi": 1, "elevasi": Y1 + (no - 1) * H, "lantai": no,
          "lebar": 1.3, "turun": 0.6, "jarak": 0.12, "sumber": FT,
-         "catatan": "Atap genteng miring di depan selasar, terputus di jembatan ke Gedung A."}
-        for no in (2, 3) for x0, x1 in ((-SU, round(JB[0] - 0.1, 2)), (round(JB[1] + 0.1, 2), L + SU))],
+         "catatan": "Atap genteng miring di depan selasar, terputus di jembatan ke Gedung A dan di penghubung ke Gedung F."}
+        for no in (2, 3) for x0, x1 in ((round(JF[1] + 0.1, 2), round(JB[0] - 0.1, 2)), (round(JB[1] + 0.1, 2), L + SU))],
     "atap": [{"jenis": "perisai", "asal": [0, 0], "sudut": 0, "tepiBawah": Y1 + 3 * H + SLAB, "tonjolan": 0.9, "kemiringan": 30,
               "batas": [-SU, 0, L + SU, ZS], "sumber": UD}],
     "mulaiJalan": {"posisi": [37.6, 12.7], "arah": 0},

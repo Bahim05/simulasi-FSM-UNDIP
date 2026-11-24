@@ -214,7 +214,7 @@ data = {
     "deskripsi": "Gedung kelas memanjang tiga lantai di sisi utara kawasan, Selasarnya tersambung ke Gedung E lewat penghubung di ujung barat. Semua ruang menghadap selasar; di tengah ada tangga, lorong servis, gudang, dan toilet pria/wanita.",
     "sumberData": {
         "denah-2023": "Denah Gedung FSM Undip (2023), skala 1:150, lembar A LT.1 sampai LT.3.",
-        "koreksi-lapangan": "Keterangan lapangan November 2026: sekat dan penomoran ulang lantai 3, ventilasi atas di sisi selasar.",
+        "koreksi-lapangan": "Keterangan lapangan November 2026: sekat dan penomoran ulang lantai 3, ventilasi atas di sisi selasar, atap pinggiran di semua sisi (24 Nov).",
         "footage-2026": "Footage video lapangan 21 November 2026 (10 klip Gedung A): susunan tangga, lorong servis, toilet, gudang di tiap lantai, pembatas selasar, atap tritisan."
     },
     "koordinat": "Meter. x sepanjang gedung dari ujung A101 (sisi Gedung E, barat) ke timur; z dari dinding belakang (utara) ke tepi selasar (selatan); y ke atas, 0 = lantai 1.",
@@ -237,7 +237,15 @@ data = {
         {"a": [x0, ZS], "b": [x1, ZS], "sisi": 1, "elevasi": e, "lantai": no, "lebar": 1.3, "turun": 0.6, "jarak": 0.12, "sumber": FT,
          "catatan": "Atap genteng miring di depan selasar (tampak depan). Berhenti sebelum tangga jembatan ke Gedung B di pojok timur."}
         for no, e in ((2, H), (3, 2 * H))
-        for x0, x1 in ((0, 42.1),)],
+        for x0, x1 in ((0, 42.1),)]
+    # atap pinggiran di sisi lain (keterangan pengguna 24 Nov 2026: A beratap pinggiran di semua sisi, seperti B; jalur beratap dari F
+    # bersambung ke atap pinggiran belakang). Ujung barat berhenti di selasar karena di situ ada penghubung ke Gedung E.
+    + [{"a": a, "b": b, "sisi": sd, "elevasi": e, "lantai": no, "lebar": 1.3, "turun": 0.6, "jarak": 0.12, "sumber": KL, **kw,
+        "catatan": cat}
+       for no, e in ((2, H), (3, 2 * H))
+       for a, b, sd, kw, cat in (([0, 0], [L, 0], -1, {"sudutA": 90, "sudutB": 90}, "Atap pinggiran sisi belakang (keterangan pengguna)."),
+                                 ([L, 0], [L, ZS], -1, {"sudutA": 90}, "Atap pinggiran ujung timur (keterangan pengguna)."),
+                                 ([0, 0], [0, DR], 1, {"sudutA": 90}, "Atap pinggiran ujung barat, berhenti di penghubung ke Gedung E (keterangan pengguna)."))],
     "atap": [{"jenis": "perisai", "asal": [0, 0], "sudut": 0, "tepiBawah": 3 * H + SLAB, "tonjolan": 0.9, "kemiringan": 30,
               "batas": [0, 0, L, ZS], "sumber": KL}],
     "mulaiJalan": {"posisi": [2.5, 12.5], "arah": -90},

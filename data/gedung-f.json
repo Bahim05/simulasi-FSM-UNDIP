@@ -3,13 +3,14 @@
  "id": "F",
  "nama": "Gedung F",
  "kategori": "Ruang dosen dan laboratorium",
- "deskripsi": "Gedung tiga lantai di timur Gedung A dan utara Gedung B, berbentuk siku: sayap ruang dosen sejajar A dan B di barat, lalu sayap R. Seminar / Lab belok 30 derajat menuju tenggara; selasar di sisi dalam menghadap halaman ke Gedung B. Sayap barat berisi ruang dosen di tiap lantai; sayap tenggara berisi R. Seminar / R. Sidang (lt 1), Lab Komputasi (lt 2), dan R. Baca (lt 3). Tangga di pertemuan dua sayap dan tangga luar di ujung barat.",
+ "deskripsi": "Gedung tiga lantai di timur Gedung A dan utara Gedung B, paling rendah di antara ketiganya (lantai 1 0,8 m di bawah A), berbentuk siku: sayap ruang dosen sejajar A dan B di barat, lalu sayap R. Seminar / Lab belok 30 derajat menuju tenggara; selasar di sisi dalam menghadap halaman ke Gedung B. Sayap barat berisi ruang dosen di tiap lantai; sayap tenggara berisi R. Seminar / R. Sidang (lt 1), Lab Komputasi (lt 2), dan R. Baca (lt 3). Tangga, toilet, dan pintu belakang ke parkir di pertemuan dua sayap; tangga luar di ujung barat. Penghubung ke Gedung B di tiap lantai dan jalur beratap ke Gedung A.",
  "sumberData": {
   "denah-gedung-f": "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai apa adanya, gedung diputar -30 derajat.",
   "foto-udara-2026": "Foto udara pengguna (22 Nov 2026): letak di utara B dan timur A, atap genteng kemerahan, sayap yang serong menuju tenggara.",
   "ingatan-pengguna": "Pengguna (22 Nov 2026): tangga luar ada di ujung kiri (barat) sayap ruang dosen.",
   "foto-2026": "Foto pengguna 23 Nov 2026 (dari arah Gedung B): ujung barat dengan tangga luar terbuka bertembok pembatas, atap utama bergevel berkisi, atap tingkat bawah membungkus ujung barat, tritisan genteng di tepi selasar tiap lantai, tembok pembatas putih bercelah, kolom abu kebiruan.",
-  "perkiraan": "Perkiraan tanpa footage: tinggi lantai 1, jendela, letak pintu kecil, gudang di belakang tangga, susunan tangga."
+  "footage-2026": "FIX FOOTAGE pengguna (24 Nov 2026): lobby lt 1 dekat tangga dalam, tangga lt 1-2 dan lt 2-3, koridor lt 1-3, KM dan gudang lt 2-3, penghubung F-B (tinggi F terhadap B). Dipakai untuk tinggi lantai, susunan pertemuan dua sayap, papan nama, dan perabot selasar.",
+  "perkiraan": "Perkiraan: ukuran toilet dan ruang kecil di pertemuan, jendela, letak pintu kecil di sayap."
  },
  "koordinat": "Meter, sama dengan denah: (0,0) = sudut luar pertemuan dinding belakang dua sayap, x sepanjang sayap lurus denah (R. Seminar), z dari dinding belakang ke arah selasar. Di kampus.json gedung diputar -30 derajat, jadi sayap R. Dosen mengarah ke barat dan sayap R. Seminar ke tenggara. y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A).",
  "ukuran": {
@@ -33,10 +34,15 @@
   "pintu": "#7a3f2c",
   "pagar": "#b9c1cb"
  },
+ "fondasi": {
+  "dasar": -1.4,
+  "warna": "#4a4f55",
+  "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar (footage)."
+ },
  "kolom": {
   "ukuran": 0.4,
-  "dasar": -0.2,
-  "puncak": 12.0,
+  "dasar": -1.0,
+  "puncak": 11.2,
   "titik": [
    [
     0.05,
@@ -51,7 +57,7 @@
     0.1
    ],
    [
-    10.28,
+    10.78,
     0.1
    ],
    [
@@ -189,6 +195,10 @@
    [
     -18.749,
     18.526
+   ],
+   [
+    10.78,
+    4.8
    ]
   ],
   "tambahan": [
@@ -335,7 +345,7 @@
      3,
      3
     ],
-    "puncak": 11.3,
+    "puncak": 10.5,
     "catatan": "Di bawah atap sandar selasar lt 3."
    }
   ]
@@ -343,8 +353,8 @@
  "lantai": [
   {
    "no": 1,
-   "elevasi": 0.0,
-   "elevasiSelasar": -0.05,
+   "elevasi": -0.8,
+   "elevasiSelasar": -0.85,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/F1.jpg",
@@ -367,16 +377,12 @@
        0.0
       ],
       [
-       8.28,
+       4.6,
        0
       ],
       [
-       8.28,
-       5.55
-      ],
-      [
-       7.771,
-       7.06
+       4.6,
+       8.891
       ],
       [
        -17.17,
@@ -388,11 +394,89 @@
       ]
      ],
      "sumber": "denah-gedung-f",
-     "catatan": "Seluruh sayap miring satu ruang dosen (denah)."
+     "catatan": "Sayap miring satu ruang dosen (denah), kecuali ujung timur untuk toilet dan ruang kecil (footage)."
     },
     {
-     "kode": "F1-KM",
-     "nama": "KM/WC",
+     "kode": "F1-RKM",
+     "nama": "R. Kegiatan Mahasiswa Departemen Matematika",
+     "fungsi": "organisasi",
+     "poligon": [
+      [
+       4.6,
+       4.4
+      ],
+      [
+       8.28,
+       4.4
+      ],
+      [
+       8.28,
+       5.55
+      ],
+      [
+       7.771,
+       7.06
+      ],
+      [
+       4.6,
+       8.891
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Ruang kecil berpintu kayu menghadap lobi (footage). Ukuran perkiraan."
+    },
+    {
+     "kode": "F1-KMP",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       4.6,
+       0
+      ],
+      [
+       8.28,
+       0
+      ],
+      [
+       8.28,
+       3.0
+      ],
+      [
+       4.6,
+       3.0
+      ]
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "kode": "F1-KMW",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       4.6,
+       3.0
+      ],
+      [
+       8.28,
+       3.0
+      ],
+      [
+       8.28,
+       4.4
+      ],
+      [
+       4.6,
+       4.4
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Pintu Toilet Wanita dan Toilet Pria berdampingan menghadap lorong (footage). Letak di ujung sayap R. Dosen perkiraan."
+    },
+    {
+     "kode": "F1-KMD",
+     "nama": "Toilet Difabel",
      "fungsi": "toilet",
      "poligon": [
       [
@@ -400,19 +484,20 @@
        0
       ],
       [
-       10.28,
+       9.58,
        0
       ],
       [
-       10.28,
-       5.55
+       9.58,
+       2.0
       ],
       [
        8.28,
-       5.55
+       2.0
       ]
      ],
-     "sumber": "denah-gedung-f"
+     "sumber": "footage-2026",
+     "catatan": "Pintu berpapan kursi roda di pojok belakang lorong, menghadap ke depan (footage)."
     },
     {
      "kode": "F1-GD",
@@ -420,24 +505,24 @@
      "fungsi": "gudang",
      "poligon": [
       [
-       10.28,
+       10.88,
        0
       ],
       [
-       13.28,
+       12.08,
        0
       ],
       [
-       13.28,
-       4.5
+       12.08,
+       2.5
       ],
       [
-       10.28,
-       4.5
+       10.88,
+       2.5
       ]
      ],
-     "sumber": "perkiraan",
-     "catatan": "Petak di belakang tangga pertemuan; denah tidak menggambar isinya."
+     "sumber": "footage-2026",
+     "catatan": "Di bawah lajur 2 tangga, pintu aluminium menghadap lobi (footage)."
     },
     {
      "kode": "F1-KRJ",
@@ -490,58 +575,60 @@
    ],
    "dinding": [
     {
-     "id": "F1-dosen-km",
+     "id": "F1-dosen-servis",
+     "a": [
+      4.6,
+      0
+     ],
+     "b": [
+      4.6,
+      8.891
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F1-pria-wanita",
+     "a": [
+      4.6,
+      3.0
+     ],
+     "b": [
+      8.28,
+      3.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F1-wanita-ruang",
+     "a": [
+      4.6,
+      4.4
+     ],
+     "b": [
+      8.28,
+      4.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F1-pria-difabel",
      "a": [
       8.28,
       0
      ],
      "b": [
       8.28,
-      5.55
+      2.0
      ],
      "tebal": 0.15,
      "bukaan": [],
-     "sumber": "denah-gedung-f"
-    },
-    {
-     "id": "F1-km-gudang",
-     "a": [
-      10.28,
-      0
-     ],
-     "b": [
-      10.28,
-      4.5
-     ],
-     "tebal": 0.15,
-     "bukaan": [],
-     "sumber": "denah-gedung-f"
-    },
-    {
-     "id": "F1-gudang-KRJ",
-     "a": [
-      13.28,
-      0
-     ],
-     "b": [
-      13.28,
-      4.5
-     ],
-     "tebal": 0.15,
-     "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 2.25,
-       "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "perkiraan",
-       "ruang": "F1-GD",
-       "papanNama": true,
-       "papanTeks": "Gudang"
-      }
-     ],
-     "sumber": "denah-gedung-f"
+     "sumber": "footage-2026"
     },
     {
      "id": "F1-KRJ-SEM",
@@ -558,13 +645,107 @@
      "sumber": "denah-gedung-f"
     },
     {
-     "id": "F1-luar-0",
+     "id": "F1-sumur-tangga",
+     "a": [
+      10.88,
+      0
+     ],
+     "b": [
+      10.88,
+      4.6
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F1-gudang-depan",
+     "a": [
+      10.88,
+      2.5
+     ],
+     "b": [
+      12.08,
+      2.5
+     ],
+     "tebal": 0.08,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 0.6,
+       "lebar": 1.0,
+       "tinggi": 2.05,
+       "boven": 0,
+       "ruang": "F1-GD",
+       "warnaDaun": "#cfd4d4",
+       "pegangan": true,
+       "papanNama": true,
+       "papanTeks": "Gudang",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "footage-2026",
+     "tinggi": 2.3,
+     "catatan": "Panel aluminium di bawah lajur 2 tangga (footage)."
+    },
+    {
+     "id": "F1-gudang-timur",
+     "a": [
+      12.08,
+      0
+     ],
+     "b": [
+      12.08,
+      2.5
+     ],
+     "tebal": 0.08,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "tinggi": 1.8
+    },
+    {
+     "id": "F1-belakang-pertemuan",
+     "a": [
+      9.58,
+      0
+     ],
+     "b": [
+      13.28,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.5,
+       "lebar": 2.0,
+       "ambang": 2.95,
+       "tinggi": 0.85,
+       "sumber": "footage-2026",
+       "catatan": "Jendela memanjang berteralis besi di atas bordes, menghadap kanopi di belakang (footage tangga)."
+      },
+      {
+       "jenis": "pintu",
+       "t": 0.55,
+       "lebar": 0.85,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "warnaDaun": "#2b2f33",
+       "sumber": "footage-2026",
+       "catatan": "Pintu belakang berteralis besi ke parkir motor dan kanopi (footage lobby lt 1)."
+      }
+     ],
+     "sumber": "footage-2026",
+     "luar": true
+    },
+    {
+     "id": "F1-luarw-0",
      "a": [
       0.0,
       0.0
      ],
      "b": [
-      30.28,
+      9.58,
       0.0
      ],
      "tebal": 0.2,
@@ -577,220 +758,63 @@
        "tinggi": 1.7
       },
       {
-       "jenis": "jendela",
-       "t": 5.455,
-       "lebar": 1.93,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
        "jenis": "jendela-tinggi",
-       "t": 9.23,
-       "lebar": 0.9,
-       "ambang": 1.9,
-       "tinggi": 0.6
-      },
-      {
-       "jenis": "jendela-tinggi",
-       "t": 11.78,
+       "t": 5.785,
        "lebar": 1.2,
        "ambang": 1.9,
        "tinggi": 0.6
-      },
-      {
-       "jenis": "jendela",
-       "t": 15.08,
-       "lebar": 2.2,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 18.925,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 22.175,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 25.425,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 28.615,
-       "lebar": 1.83,
-       "ambang": 0.9,
-       "tinggi": 1.7
       }
      ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F1-luar-1",
+     "id": "F1-luarw-1",
      "a": [
-      30.28,
+      9.58,
       0.0
      ],
      "b": [
-      30.28,
-      10.0
+      9.58,
+      2.0
      ],
      "tebal": 0.2,
-     "bukaan": [
-      {
-       "jenis": "jendela",
-       "t": 1.85,
-       "lebar": 2.2,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 5.175,
-       "lebar": 1.85,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 8.325,
-       "lebar": 1.85,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      }
-     ],
+     "bukaan": [],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F1-luar-2",
+     "id": "F1-luarw-2",
      "a": [
-      30.28,
-      10.0
+      9.58,
+      2.0
      ],
      "b": [
-      13.28,
-      10.0
+      8.28,
+      2.0
      ],
      "tebal": 0.2,
      "bukaan": [
       {
-       "jenis": "pintu-ganda",
-       "t": 1.98,
-       "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F1-SEM",
-       "papanNama": true,
-       "papanTeks": "R. Seminar"
-      },
-      {
-       "jenis": "pintu-ganda",
-       "t": 9.0,
-       "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F1-SEM"
-      },
-      {
        "jenis": "pintu",
-       "t": 16.38,
+       "t": 0.65,
        "lebar": 0.9,
        "tinggi": 2.2,
        "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F1-KRJ",
+       "sumber": "footage-2026",
+       "ruang": "F1-KMD",
        "papanNama": true,
-       "papanTeks": "R. Kerja"
-      },
-      {
-       "jenis": "jendela",
-       "t": 4.855,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 11.355,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.74,
-       "lebar": 1.38,
-       "ambang": 0.9,
-       "tinggi": 1.7
+       "papanTeks": "Toilet Difabel"
       }
      ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F1-luar-3",
+     "id": "F1-luarw-3",
      "a": [
-      13.28,
-      10.0
-     ],
-     "b": [
-      13.28,
-      4.5
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F1-luar-4",
-     "a": [
-      13.28,
-      4.5
-     ],
-     "b": [
-      10.28,
-      4.5
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F1-luar-5",
-     "a": [
-      10.28,
-      4.5
-     ],
-     "b": [
-      10.28,
-      5.55
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F1-luar-6",
-     "a": [
-      10.28,
-      5.55
+      8.28,
+      2.0
      ],
      "b": [
       8.28,
@@ -800,21 +824,32 @@
      "bukaan": [
       {
        "jenis": "pintu",
-       "t": 1.0,
+       "t": 0.5,
        "lebar": 0.8,
        "tinggi": 2.2,
        "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F1-KM",
+       "sumber": "footage-2026",
+       "ruang": "F1-KMP",
        "papanNama": true,
-       "papanTeks": "KM/WC"
+       "papanTeks": "Toilet Pria"
+      },
+      {
+       "jenis": "pintu",
+       "t": 1.6,
+       "lebar": 0.8,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F1-KMW",
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita"
       }
      ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F1-luar-7",
+     "id": "F1-luarw-4",
      "a": [
       8.28,
       5.55
@@ -824,12 +859,24 @@
       7.06
      ],
      "tebal": 0.2,
-     "bukaan": [],
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.8,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F1-RKM",
+       "papanNama": true,
+       "papanTeks": "R. Kegiatan Mhs"
+      }
+     ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F1-luar-8",
+     "id": "F1-luarw-5",
      "a": [
       7.771,
       7.06
@@ -840,15 +887,6 @@
      ],
      "tebal": 0.2,
      "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 1.2,
-       "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F1-DSN"
-      },
       {
        "jenis": "pintu",
        "t": 5.0,
@@ -877,6 +915,13 @@
        "boven": 0.5,
        "sumber": "denah-gedung-f",
        "ruang": "F1-DSN"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.633,
+       "lebar": 1.834,
+       "ambang": 0.9,
+       "tinggi": 1.7
       },
       {
        "jenis": "jendela",
@@ -915,10 +960,22 @@
       }
      ],
      "sumber": "denah-gedung-f",
-     "luar": true
+     "luar": true,
+     "tempelan": [
+      {
+       "jenis": "papan-pengumuman",
+       "t": 2.0,
+       "lebar": 2.2,
+       "tinggi": 1.1,
+       "ambang": 1.0,
+       "ruang": "F1-RKM",
+       "sumber": "footage-2026",
+       "catatan": "Papan Informasi Departemen Matematika berbingkai merah (footage lobby lt 1)."
+      }
+     ]
     },
     {
-     "id": "F1-luar-9",
+     "id": "F1-luarw-6",
      "a": [
       -17.17,
       21.46
@@ -955,7 +1012,7 @@
      "luar": true
     },
     {
-     "id": "F1-luar-10",
+     "id": "F1-luarw-7",
      "a": [
       -22.17,
       12.8
@@ -1025,6 +1082,177 @@
      ],
      "sumber": "denah-gedung-f",
      "luar": true
+    },
+    {
+     "id": "F1-luare-0",
+     "a": [
+      13.28,
+      0.0
+     ],
+     "b": [
+      30.28,
+      0.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.8,
+       "lebar": 2.2,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.645,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.895,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 12.145,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.335,
+       "lebar": 1.83,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F1-luare-1",
+     "a": [
+      30.28,
+      0.0
+     ],
+     "b": [
+      30.28,
+      10.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.85,
+       "lebar": 2.2,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.175,
+       "lebar": 1.85,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.325,
+       "lebar": 1.85,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F1-luare-2",
+     "a": [
+      30.28,
+      10.0
+     ],
+     "b": [
+      13.28,
+      10.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.98,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F1-SEM",
+       "papanNama": true,
+       "papanTeks": "R. Seminar"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.0,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F1-SEM"
+      },
+      {
+       "jenis": "pintu",
+       "t": 16.38,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F1-KRJ",
+       "papanNama": true,
+       "papanTeks": "R. Kerja"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.855,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.355,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.74,
+       "lebar": 1.38,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F1-luare-3",
+     "a": [
+      13.28,
+      10.0
+     ],
+     "b": [
+      13.28,
+      0.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-gedung-f",
+     "luar": true
     }
    ],
    "selasar": {
@@ -1042,16 +1270,36 @@
       5.55
      ],
      [
-      10.28,
-      5.55
+      8.28,
+      2.0
      ],
      [
-      10.28,
-      4.5
+      9.58,
+      2.0
+     ],
+     [
+      9.58,
+      0.1
+     ],
+     [
+      10.88,
+      0.1
+     ],
+     [
+      10.88,
+      2.5
+     ],
+     [
+      12.08,
+      2.5
+     ],
+     [
+      12.08,
+      0.1
      ],
      [
       13.28,
-      4.5
+      0.1
      ],
      [
       13.28,
@@ -1087,12 +1335,62 @@
      ]
     ]
    },
-   "pagar": []
+   "pagar": [],
+   "perabot": [
+    {
+     "jenis": "kotak",
+     "posisi": [
+      16.2,
+      10.35
+     ],
+     "ukuran": [
+      1.8,
+      0.5,
+      0.45
+     ],
+     "arah": 0,
+     "warna": "#8d9296",
+     "sumber": "footage-2026",
+     "catatan": "Kursi tunggu besi di selasar (footage)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      22.6,
+      10.35
+     ],
+     "ukuran": [
+      1.8,
+      0.5,
+      0.45
+     ],
+     "arah": 0,
+     "warna": "#8d9296",
+     "sumber": "footage-2026",
+     "catatan": "Kursi tunggu besi di selasar (footage)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      27.5,
+      10.35
+     ],
+     "ukuran": [
+      1.8,
+      0.5,
+      0.45
+     ],
+     "arah": 0,
+     "warna": "#8d9296",
+     "sumber": "footage-2026",
+     "catatan": "Kursi tunggu besi di selasar (footage)."
+    }
+   ]
   },
   {
    "no": 2,
-   "elevasi": 4.0,
-   "elevasiSelasar": 3.95,
+   "elevasi": 3.2,
+   "elevasiSelasar": 3.15,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/F2.jpg",
@@ -1115,16 +1413,12 @@
        0.0
       ],
       [
-       8.28,
+       4.6,
        0
       ],
       [
-       8.28,
-       5.55
-      ],
-      [
-       7.771,
-       7.06
+       4.6,
+       8.891
       ],
       [
        -17.17,
@@ -1136,11 +1430,89 @@
       ]
      ],
      "sumber": "denah-gedung-f",
-     "catatan": "Seluruh sayap miring satu ruang dosen (denah)."
+     "catatan": "Sayap miring satu ruang dosen (denah), kecuali ujung timur untuk toilet dan ruang kecil (footage)."
     },
     {
-     "kode": "F2-KM",
-     "nama": "KM/WC",
+     "kode": "F2-RKM",
+     "nama": "F205",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       4.6,
+       4.4
+      ],
+      [
+       8.28,
+       4.4
+      ],
+      [
+       8.28,
+       5.55
+      ],
+      [
+       7.771,
+       7.06
+      ],
+      [
+       4.6,
+       8.891
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Ruang kecil berpintu kayu menghadap lobi (footage). Ukuran perkiraan."
+    },
+    {
+     "kode": "F2-KMP",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       4.6,
+       0
+      ],
+      [
+       8.28,
+       0
+      ],
+      [
+       8.28,
+       3.0
+      ],
+      [
+       4.6,
+       3.0
+      ]
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "kode": "F2-KMW",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       4.6,
+       3.0
+      ],
+      [
+       8.28,
+       3.0
+      ],
+      [
+       8.28,
+       4.4
+      ],
+      [
+       4.6,
+       4.4
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Pintu Toilet Wanita dan Toilet Pria berdampingan menghadap lorong (footage). Letak di ujung sayap R. Dosen perkiraan."
+    },
+    {
+     "kode": "F2-KMD",
+     "nama": "Toilet Difabel",
      "fungsi": "toilet",
      "poligon": [
       [
@@ -1148,44 +1520,45 @@
        0
       ],
       [
-       10.28,
+       9.58,
        0
       ],
       [
-       10.28,
-       5.55
+       9.58,
+       2.0
       ],
       [
        8.28,
-       5.55
+       2.0
       ]
      ],
-     "sumber": "denah-gedung-f"
+     "sumber": "footage-2026",
+     "catatan": "Pintu berpapan kursi roda di pojok belakang lorong, menghadap ke depan (footage)."
     },
     {
      "kode": "F2-GD",
-     "nama": "Gudang",
+     "nama": "Gudang Departemen Matematika",
      "fungsi": "gudang",
      "poligon": [
       [
-       10.28,
+       9.58,
        0
       ],
       [
-       13.28,
+       10.88,
        0
       ],
       [
-       13.28,
-       4.5
+       10.88,
+       2.0
       ],
       [
-       10.28,
-       4.5
+       9.58,
+       2.0
       ]
      ],
-     "sumber": "perkiraan",
-     "catatan": "Petak di belakang tangga pertemuan; denah tidak menggambar isinya."
+     "sumber": "footage-2026",
+     "catatan": "Di samping Toilet Difabel (footage KM lt 2 dan lt 3); letak perkiraan."
     },
     {
      "kode": "F2-TRP",
@@ -1238,58 +1611,60 @@
    ],
    "dinding": [
     {
-     "id": "F2-dosen-km",
+     "id": "F2-dosen-servis",
+     "a": [
+      4.6,
+      0
+     ],
+     "b": [
+      4.6,
+      8.891
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F2-pria-wanita",
+     "a": [
+      4.6,
+      3.0
+     ],
+     "b": [
+      8.28,
+      3.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F2-wanita-ruang",
+     "a": [
+      4.6,
+      4.4
+     ],
+     "b": [
+      8.28,
+      4.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F2-pria-difabel",
      "a": [
       8.28,
       0
      ],
      "b": [
       8.28,
-      5.55
+      2.0
      ],
      "tebal": 0.15,
      "bukaan": [],
-     "sumber": "denah-gedung-f"
-    },
-    {
-     "id": "F2-km-gudang",
-     "a": [
-      10.28,
-      0
-     ],
-     "b": [
-      10.28,
-      4.5
-     ],
-     "tebal": 0.15,
-     "bukaan": [],
-     "sumber": "denah-gedung-f"
-    },
-    {
-     "id": "F2-gudang-TRP",
-     "a": [
-      13.28,
-      0
-     ],
-     "b": [
-      13.28,
-      4.5
-     ],
-     "tebal": 0.15,
-     "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 2.25,
-       "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "perkiraan",
-       "ruang": "F2-GD",
-       "papanNama": true,
-       "papanTeks": "Gudang"
-      }
-     ],
-     "sumber": "denah-gedung-f"
+     "sumber": "footage-2026"
     },
     {
      "id": "F2-TRP-LAB",
@@ -1306,13 +1681,66 @@
      "sumber": "denah-gedung-f"
     },
     {
-     "id": "F2-luar-0",
+     "id": "F2-difabel-gudang",
+     "a": [
+      9.58,
+      0
+     ],
+     "b": [
+      9.58,
+      2.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F2-sumur-tangga",
+     "a": [
+      10.88,
+      2.0
+     ],
+     "b": [
+      10.88,
+      4.6
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F2-belakang-pertemuan",
+     "a": [
+      10.88,
+      0
+     ],
+     "b": [
+      13.28,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.2,
+       "lebar": 2.0,
+       "ambang": 2.95,
+       "tinggi": 0.85,
+       "sumber": "footage-2026",
+       "catatan": "Jendela memanjang berteralis besi di atas bordes, menghadap kanopi di belakang (footage tangga)."
+      }
+     ],
+     "sumber": "footage-2026",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-0",
      "a": [
       0.0,
       0.0
      ],
      "b": [
-      30.28,
+      10.88,
       0.0
      ],
      "tebal": 0.2,
@@ -1325,57 +1753,386 @@
        "tinggi": 1.7
       },
       {
+       "jenis": "jendela-tinggi",
+       "t": 5.785,
+       "lebar": 1.2,
+       "ambang": 1.9,
+       "tinggi": 0.6
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-1",
+     "a": [
+      10.88,
+      0.0
+     ],
+     "b": [
+      10.88,
+      2.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-2",
+     "a": [
+      10.88,
+      2.0
+     ],
+     "b": [
+      8.28,
+      2.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.95,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F2-KMD",
+       "papanNama": true,
+       "papanTeks": "Toilet Difabel"
+      },
+      {
+       "jenis": "pintu",
+       "t": 0.65,
+       "lebar": 0.8,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F2-GD",
+       "papanNama": true,
+       "papanTeks": "Gudang"
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-3",
+     "a": [
+      8.28,
+      2.0
+     ],
+     "b": [
+      8.28,
+      5.55
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.5,
+       "lebar": 0.8,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F2-KMP",
+       "papanNama": true,
+       "papanTeks": "Toilet Pria"
+      },
+      {
+       "jenis": "pintu",
+       "t": 1.6,
+       "lebar": 0.8,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F2-KMW",
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita"
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-4",
+     "a": [
+      8.28,
+      5.55
+     ],
+     "b": [
+      7.771,
+      7.06
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.8,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F2-RKM",
+       "papanNama": true,
+       "papanTeks": "F205"
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-5",
+     "a": [
+      7.771,
+      7.06
+     ],
+     "b": [
+      -17.17,
+      21.46
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 5.0,
+       "lebar": 1.0,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F2-DSN"
+      },
+      {
+       "jenis": "pintu",
+       "t": 11.2,
+       "lebar": 1.0,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F2-DSN",
+       "papanNama": true,
+       "papanTeks": "R. Dosen 2"
+      },
+      {
+       "jenis": "pintu",
+       "t": 26.8,
+       "lebar": 1.0,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F2-DSN"
+      },
+      {
        "jenis": "jendela",
-       "t": 5.455,
-       "lebar": 1.93,
+       "t": 1.633,
+       "lebar": 1.834,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
-       "jenis": "jendela-tinggi",
-       "t": 9.23,
-       "lebar": 0.9,
-       "ambang": 1.9,
-       "tinggi": 0.6
-      },
-      {
-       "jenis": "jendela-tinggi",
-       "t": 11.78,
-       "lebar": 1.2,
-       "ambang": 1.9,
-       "tinggi": 0.6
+       "jenis": "jendela",
+       "t": 8.0,
+       "lebar": 1.901,
+       "ambang": 0.9,
+       "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 15.29,
+       "t": 14.4,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.6,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.8,
+       "lebar": 1.901,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.0,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true,
+     "tempelan": [
+      {
+       "jenis": "plakat",
+       "t": 14.4,
+       "lebar": 2.4,
+       "tinggi": 1.7,
+       "ambang": 0.8,
+       "ruang": "F2-DSN",
+       "sumber": "footage-2026",
+       "teks": "PROGRAM STUDI SARJANA|DEPARTEMEN MATEMATIKA|FAKULTAS SAINS DAN MATEMATIKA",
+       "catatan": "Papan nama kayu Departemen Matematika, tepat di ujung penghubung F-B lt 2 (footage)."
+      }
+     ]
+    },
+    {
+     "id": "F2-luarw-6",
+     "a": [
+      -17.17,
+      21.46
+     ],
+     "b": [
+      -22.17,
+      12.8
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.715,
+       "lebar": 1.931,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.0,
+       "lebar": 2.04,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.285,
+       "lebar": 1.93,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luarw-7",
+     "a": [
+      -22.17,
+      12.8
+     ],
+     "b": [
+      0.0,
+      0.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.65,
+       "lebar": 1.8,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.8,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.0,
+       "lebar": 1.901,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.2,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.4,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.6,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.8,
+       "lebar": 1.901,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 23.975,
+       "lebar": 1.85,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F2-luare-0",
+     "a": [
+      13.28,
+      0.0
+     ],
+     "b": [
+      30.28,
+      0.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.01,
        "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 18.965,
+       "t": 5.685,
        "lebar": 1.87,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 22.175,
+       "t": 8.895,
        "lebar": 1.95,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 25.425,
+       "t": 12.145,
        "lebar": 1.95,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 28.615,
+       "t": 15.335,
        "lebar": 1.83,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -1385,7 +2142,7 @@
      "luar": true
     },
     {
-     "id": "F2-luar-1",
+     "id": "F2-luare-1",
      "a": [
       30.28,
       0.0
@@ -1422,7 +2179,7 @@
      "luar": true
     },
     {
-     "id": "F2-luar-2",
+     "id": "F2-luare-2",
      "a": [
       30.28,
       10.0
@@ -1497,287 +2254,17 @@
      "luar": true
     },
     {
-     "id": "F2-luar-3",
+     "id": "F2-luare-3",
      "a": [
       13.28,
       10.0
      ],
      "b": [
       13.28,
-      4.5
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-4",
-     "a": [
-      13.28,
-      4.5
-     ],
-     "b": [
-      10.28,
-      4.5
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-5",
-     "a": [
-      10.28,
-      4.5
-     ],
-     "b": [
-      10.28,
-      5.55
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-6",
-     "a": [
-      10.28,
-      5.55
-     ],
-     "b": [
-      8.28,
-      5.55
-     ],
-     "tebal": 0.2,
-     "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 1.0,
-       "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F2-KM",
-       "papanNama": true,
-       "papanTeks": "KM/WC"
-      }
-     ],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-7",
-     "a": [
-      8.28,
-      5.55
-     ],
-     "b": [
-      7.771,
-      7.06
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-8",
-     "a": [
-      7.771,
-      7.06
-     ],
-     "b": [
-      -17.17,
-      21.46
-     ],
-     "tebal": 0.2,
-     "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 1.2,
-       "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F2-DSN"
-      },
-      {
-       "jenis": "pintu",
-       "t": 5.0,
-       "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F2-DSN"
-      },
-      {
-       "jenis": "pintu",
-       "t": 11.2,
-       "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F2-DSN",
-       "papanNama": true,
-       "papanTeks": "R. Dosen 2"
-      },
-      {
-       "jenis": "pintu",
-       "t": 26.8,
-       "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F2-DSN"
-      },
-      {
-       "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.4,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 17.6,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 24.0,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      }
-     ],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-9",
-     "a": [
-      -17.17,
-      21.46
-     ],
-     "b": [
-      -22.17,
-      12.8
-     ],
-     "tebal": 0.2,
-     "bukaan": [
-      {
-       "jenis": "jendela",
-       "t": 1.715,
-       "lebar": 1.931,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 5.0,
-       "lebar": 2.04,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 8.285,
-       "lebar": 1.93,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      }
-     ],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F2-luar-10",
-     "a": [
-      -22.17,
-      12.8
-     ],
-     "b": [
-      0.0,
       0.0
      ],
      "tebal": 0.2,
-     "bukaan": [
-      {
-       "jenis": "jendela",
-       "t": 1.65,
-       "lebar": 1.8,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 4.8,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 11.2,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.4,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 17.6,
-       "lebar": 1.9,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 23.975,
-       "lebar": 1.85,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      }
-     ],
+     "bukaan": [],
      "sumber": "denah-gedung-f",
      "luar": true
     }
@@ -1797,16 +2284,20 @@
       5.55
      ],
      [
-      10.28,
-      5.55
+      8.28,
+      2.0
      ],
      [
-      10.28,
-      9.9
+      10.88,
+      2.0
+     ],
+     [
+      10.88,
+      4.6
      ],
      [
       13.28,
-      9.9
+      4.6
      ],
      [
       13.28,
@@ -1898,6 +2389,22 @@
       -0.05
      ],
      "b": [
+      -1.895,
+      15.759,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
+    },
+    {
+     "a": [
+      -4.804,
+      17.439,
+      -0.05
+     ],
+     "b": [
       -18.159,
       25.149,
       -0.05
@@ -1923,12 +2430,94 @@
      "sumber": "foto-2026",
      "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
     }
+   ],
+   "perabot": [
+    {
+     "jenis": "kotak",
+     "posisi": [
+      16.25,
+      10.35
+     ],
+     "ukuran": [
+      2.4,
+      0.55,
+      0.75
+     ],
+     "arah": 0,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      21.5,
+      10.35
+     ],
+     "ukuran": [
+      3.6,
+      0.55,
+      0.75
+     ],
+     "arah": 0,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      27.6,
+      10.35
+     ],
+     "ukuran": [
+      3.6,
+      0.55,
+      0.75
+     ],
+     "arah": 0,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      0.931,
+      11.413
+     ],
+     "ukuran": [
+      3.0,
+      0.55,
+      0.75
+     ],
+     "arah": 30,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      -9.98,
+      17.713
+     ],
+     "ukuran": [
+      5.0,
+      0.55,
+      0.75
+     ],
+     "arah": 30,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    }
    ]
   },
   {
    "no": 3,
-   "elevasi": 8.0,
-   "elevasiSelasar": 7.95,
+   "elevasi": 7.2,
+   "elevasiSelasar": 7.15,
    "tinggiPlafon": 4.0,
    "denah": {
     "gambar": "assets/denah/F3.jpg",
@@ -1951,16 +2540,12 @@
        0.0
       ],
       [
-       8.28,
+       4.6,
        0
       ],
       [
-       8.28,
-       5.55
-      ],
-      [
-       7.771,
-       7.06
+       4.6,
+       8.891
       ],
       [
        -14.399,
@@ -1980,11 +2565,89 @@
       ]
      ],
      "sumber": "denah-gedung-f",
-     "catatan": "Seluruh sayap miring satu ruang dosen (denah)."
+     "catatan": "Sayap miring satu ruang dosen (denah), kecuali ujung timur untuk toilet dan ruang kecil (footage)."
     },
     {
-     "kode": "F3-KM",
-     "nama": "KM/WC",
+     "kode": "F3-RKM",
+     "nama": "Ruang dekat tangga",
+     "fungsi": "ruang",
+     "poligon": [
+      [
+       4.6,
+       4.4
+      ],
+      [
+       8.28,
+       4.4
+      ],
+      [
+       8.28,
+       5.55
+      ],
+      [
+       7.771,
+       7.06
+      ],
+      [
+       4.6,
+       8.891
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Ruang kecil berpintu kayu menghadap lobi (footage). Ukuran perkiraan."
+    },
+    {
+     "kode": "F3-KMP",
+     "nama": "Toilet Pria",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       4.6,
+       0
+      ],
+      [
+       8.28,
+       0
+      ],
+      [
+       8.28,
+       3.0
+      ],
+      [
+       4.6,
+       3.0
+      ]
+     ],
+     "sumber": "footage-2026"
+    },
+    {
+     "kode": "F3-KMW",
+     "nama": "Toilet Wanita",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       4.6,
+       3.0
+      ],
+      [
+       8.28,
+       3.0
+      ],
+      [
+       8.28,
+       4.4
+      ],
+      [
+       4.6,
+       4.4
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Pintu Toilet Wanita dan Toilet Pria berdampingan menghadap lorong (footage). Letak di ujung sayap R. Dosen perkiraan."
+    },
+    {
+     "kode": "F3-KMD",
+     "nama": "Toilet Difabel",
      "fungsi": "toilet",
      "poligon": [
       [
@@ -1992,19 +2655,20 @@
        0
       ],
       [
-       10.28,
+       9.58,
        0
       ],
       [
-       10.28,
-       5.55
+       9.58,
+       2.0
       ],
       [
        8.28,
-       5.55
+       2.0
       ]
      ],
-     "sumber": "denah-gedung-f"
+     "sumber": "footage-2026",
+     "catatan": "Pintu berpapan kursi roda di pojok belakang lorong, menghadap ke depan (footage)."
     },
     {
      "kode": "F3-GD",
@@ -2012,24 +2676,24 @@
      "fungsi": "gudang",
      "poligon": [
       [
-       10.28,
+       9.58,
        0
       ],
       [
-       13.28,
+       10.88,
        0
       ],
       [
-       13.28,
-       4.5
+       10.88,
+       2.0
       ],
       [
-       10.28,
-       4.5
+       9.58,
+       2.0
       ]
      ],
-     "sumber": "perkiraan",
-     "catatan": "Petak di belakang tangga pertemuan; denah tidak menggambar isinya."
+     "sumber": "footage-2026",
+     "catatan": "Di samping Toilet Difabel (footage KM lt 2 dan lt 3); letak perkiraan."
     },
     {
      "kode": "F3-TKN",
@@ -2106,58 +2770,60 @@
    ],
    "dinding": [
     {
-     "id": "F3-dosen-km",
+     "id": "F3-dosen-servis",
+     "a": [
+      4.6,
+      0
+     ],
+     "b": [
+      4.6,
+      8.891
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F3-pria-wanita",
+     "a": [
+      4.6,
+      3.0
+     ],
+     "b": [
+      8.28,
+      3.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F3-wanita-ruang",
+     "a": [
+      4.6,
+      4.4
+     ],
+     "b": [
+      8.28,
+      4.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F3-pria-difabel",
      "a": [
       8.28,
       0
      ],
      "b": [
       8.28,
-      5.55
+      2.0
      ],
      "tebal": 0.15,
      "bukaan": [],
-     "sumber": "denah-gedung-f"
-    },
-    {
-     "id": "F3-km-gudang",
-     "a": [
-      10.28,
-      0
-     ],
-     "b": [
-      10.28,
-      4.5
-     ],
-     "tebal": 0.15,
-     "bukaan": [],
-     "sumber": "denah-gedung-f"
-    },
-    {
-     "id": "F3-gudang-TKN",
-     "a": [
-      13.28,
-      0
-     ],
-     "b": [
-      13.28,
-      4.5
-     ],
-     "tebal": 0.15,
-     "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 2.25,
-       "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "perkiraan",
-       "ruang": "F3-GD",
-       "papanNama": true,
-       "papanTeks": "Gudang"
-      }
-     ],
-     "sumber": "denah-gedung-f"
+     "sumber": "footage-2026"
     },
     {
      "id": "F3-TKN-BACA",
@@ -2172,6 +2838,34 @@
      "tebal": 0.15,
      "bukaan": [],
      "sumber": "denah-gedung-f"
+    },
+    {
+     "id": "F3-difabel-gudang",
+     "a": [
+      9.58,
+      0
+     ],
+     "b": [
+      9.58,
+      2.0
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
+    },
+    {
+     "id": "F3-sumur-tangga",
+     "a": [
+      10.88,
+      2.0
+     ],
+     "b": [
+      10.88,
+      4.6
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "footage-2026"
     },
     {
      "id": "F3-him-sisi",
@@ -2202,13 +2896,83 @@
      "sumber": "denah-gedung-f"
     },
     {
-     "id": "F3-luar-0",
+     "id": "F3-belakang-pertemuan",
+     "a": [
+      10.88,
+      0
+     ],
+     "b": [
+      13.28,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "luar": true
+    },
+    {
+     "id": "F3-sekat-rkm2",
+     "a": [
+      27.28,
+      10.0
+     ],
+     "b": [
+      27.28,
+      11.7
+     ],
+     "tebal": 0.12,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "tinggi": 1.6,
+     "tempelan": [
+      {
+       "jenis": "papan",
+       "t": 0.85,
+       "lebar": 1.0,
+       "tinggi": 0.3,
+       "ambang": 1.15,
+       "sisi": 1,
+       "teks": "Ruang Kerja Mahasiswa 2|Student Working Space 2",
+       "warna": "#1f3a7a"
+      }
+     ],
+     "catatan": "Sekat putih setengah tinggi; di baliknya meja kerja mahasiswa (footage koridor lt 3)."
+    },
+    {
+     "id": "F3-dinding-statistika",
+     "a": [
+      10.6,
+      8.6
+     ],
+     "b": [
+      12.6,
+      8.6
+     ],
+     "tebal": 0.3,
+     "bukaan": [],
+     "sumber": "footage-2026",
+     "tinggi": 3.1,
+     "tempelan": [
+      {
+       "jenis": "dinding-departemen",
+       "t": 1.0,
+       "lebar": 1.95,
+       "tinggi": 2.7,
+       "ambang": 0.15,
+       "sisi": -1,
+       "teks": "DEPARTEMEN|STATISTIKA|FAKULTAS SAINS DAN MATEMATIKA|UNIVERSITAS DIPONEGORO"
+      }
+     ],
+     "catatan": "Dinding nama Departemen Statistika (bingkai kayu merah, panel marmer) tepat di depan anak tangga teratas (footage)."
+    },
+    {
+     "id": "F3-luarw-0",
      "a": [
       0.0,
       0.0
      ],
      "b": [
-      30.28,
+      10.88,
       0.0
      ],
      "tebal": 0.2,
@@ -2221,220 +2985,77 @@
        "tinggi": 1.7
       },
       {
-       "jenis": "jendela",
-       "t": 5.455,
-       "lebar": 1.93,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
        "jenis": "jendela-tinggi",
-       "t": 9.23,
-       "lebar": 0.9,
-       "ambang": 1.9,
-       "tinggi": 0.6
-      },
-      {
-       "jenis": "jendela-tinggi",
-       "t": 11.78,
+       "t": 5.785,
        "lebar": 1.2,
        "ambang": 1.9,
        "tinggi": 0.6
-      },
-      {
-       "jenis": "jendela",
-       "t": 15.08,
-       "lebar": 2.2,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 18.925,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 22.175,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 25.425,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 28.615,
-       "lebar": 1.83,
-       "ambang": 0.9,
-       "tinggi": 1.7
       }
      ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F3-luar-1",
+     "id": "F3-luarw-1",
      "a": [
-      30.28,
+      10.88,
       0.0
      ],
      "b": [
-      30.28,
-      10.0
+      10.88,
+      2.0
      ],
      "tebal": 0.2,
-     "bukaan": [
-      {
-       "jenis": "jendela",
-       "t": 1.85,
-       "lebar": 2.2,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 5.175,
-       "lebar": 1.85,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 8.325,
-       "lebar": 1.85,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      }
-     ],
+     "bukaan": [],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F3-luar-2",
+     "id": "F3-luarw-2",
      "a": [
-      30.28,
-      10.0
+      10.88,
+      2.0
      ],
      "b": [
-      13.28,
-      10.0
+      8.28,
+      2.0
      ],
      "tebal": 0.2,
      "bukaan": [
       {
-       "jenis": "pintu-ganda",
-       "t": 1.98,
-       "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F3-BACA",
-       "papanNama": true,
-       "papanTeks": "R. Baca"
-      },
-      {
-       "jenis": "pintu-ganda",
-       "t": 9.0,
-       "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F3-BACA"
-      },
-      {
        "jenis": "pintu",
-       "t": 16.38,
+       "t": 1.95,
        "lebar": 0.9,
        "tinggi": 2.2,
        "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F3-TKN",
+       "sumber": "footage-2026",
+       "ruang": "F3-KMD",
        "papanNama": true,
-       "papanTeks": "R. Teknisi Laboratorium Komputasi"
+       "papanTeks": "Toilet Difabel"
       },
       {
-       "jenis": "jendela",
-       "t": 4.855,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 11.355,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.74,
-       "lebar": 1.38,
-       "ambang": 0.9,
-       "tinggi": 1.7
+       "jenis": "pintu",
+       "t": 0.65,
+       "lebar": 0.8,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F3-GD",
+       "papanNama": true,
+       "papanTeks": "Gudang",
+       "warnaDaun": "#6f8790",
+       "lisKaca": true,
+       "pegangan": true
       }
      ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F3-luar-3",
+     "id": "F3-luarw-3",
      "a": [
-      13.28,
-      10.0
-     ],
-     "b": [
-      13.28,
-      4.5
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F3-luar-4",
-     "a": [
-      13.28,
-      4.5
-     ],
-     "b": [
-      10.28,
-      4.5
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F3-luar-5",
-     "a": [
-      10.28,
-      4.5
-     ],
-     "b": [
-      10.28,
-      5.55
-     ],
-     "tebal": 0.2,
-     "bukaan": [],
-     "sumber": "denah-gedung-f",
-     "luar": true
-    },
-    {
-     "id": "F3-luar-6",
-     "a": [
-      10.28,
-      5.55
+      8.28,
+      2.0
      ],
      "b": [
       8.28,
@@ -2444,21 +3065,32 @@
      "bukaan": [
       {
        "jenis": "pintu",
-       "t": 1.0,
+       "t": 0.5,
        "lebar": 0.8,
        "tinggi": 2.2,
        "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F3-KM",
+       "sumber": "footage-2026",
+       "ruang": "F3-KMP",
        "papanNama": true,
-       "papanTeks": "KM/WC"
+       "papanTeks": "Toilet Pria"
+      },
+      {
+       "jenis": "pintu",
+       "t": 1.6,
+       "lebar": 0.8,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F3-KMW",
+       "papanNama": true,
+       "papanTeks": "Toilet Wanita"
       }
      ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F3-luar-7",
+     "id": "F3-luarw-4",
      "a": [
       8.28,
       5.55
@@ -2468,12 +3100,22 @@
       7.06
      ],
      "tebal": 0.2,
-     "bukaan": [],
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 0.8,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "footage-2026",
+       "ruang": "F3-RKM"
+      }
+     ],
      "sumber": "denah-gedung-f",
      "luar": true
     },
     {
-     "id": "F3-luar-8",
+     "id": "F3-luarw-5",
      "a": [
       7.771,
       7.06
@@ -2484,15 +3126,6 @@
      ],
      "tebal": 0.2,
      "bukaan": [
-      {
-       "jenis": "pintu",
-       "t": 1.2,
-       "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
-       "sumber": "denah-gedung-f",
-       "ruang": "F3-DSN"
-      },
       {
        "jenis": "pintu",
        "t": 5.0,
@@ -2535,6 +3168,13 @@
       },
       {
        "jenis": "jendela",
+       "t": 1.633,
+       "lebar": 1.834,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
        "t": 8.0,
        "lebar": 1.901,
        "ambang": 0.9,
@@ -2570,10 +3210,23 @@
       }
      ],
      "sumber": "denah-gedung-f",
-     "luar": true
+     "luar": true,
+     "tempelan": [
+      {
+       "jenis": "plakat",
+       "t": 14.4,
+       "lebar": 2.0,
+       "tinggi": 1.5,
+       "ambang": 0.9,
+       "ruang": "F3-DSN",
+       "sumber": "footage-2026",
+       "teks": "DEPARTEMEN STATISTIKA|FAKULTAS SAINS DAN MATEMATIKA",
+       "catatan": "Papan nama kayu Departemen Statistika di dekat ujung penghubung F-B lt 3 (footage)."
+      }
+     ]
     },
     {
-     "id": "F3-luar-9",
+     "id": "F3-luarw-6",
      "a": [
       -17.17,
       21.46
@@ -2610,7 +3263,7 @@
      "luar": true
     },
     {
-     "id": "F3-luar-10",
+     "id": "F3-luarw-7",
      "a": [
       -22.17,
       12.8
@@ -2680,6 +3333,177 @@
      ],
      "sumber": "denah-gedung-f",
      "luar": true
+    },
+    {
+     "id": "F3-luare-0",
+     "a": [
+      13.28,
+      0.0
+     ],
+     "b": [
+      30.28,
+      0.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.8,
+       "lebar": 2.2,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.645,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.895,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 12.145,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.335,
+       "lebar": 1.83,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F3-luare-1",
+     "a": [
+      30.28,
+      0.0
+     ],
+     "b": [
+      30.28,
+      10.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.85,
+       "lebar": 2.2,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.175,
+       "lebar": 1.85,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.325,
+       "lebar": 1.85,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F3-luare-2",
+     "a": [
+      30.28,
+      10.0
+     ],
+     "b": [
+      13.28,
+      10.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.98,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F3-BACA",
+       "papanNama": true,
+       "papanTeks": "R. Baca"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.0,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F3-BACA"
+      },
+      {
+       "jenis": "pintu",
+       "t": 16.38,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "boven": 0.5,
+       "sumber": "denah-gedung-f",
+       "ruang": "F3-TKN",
+       "papanNama": true,
+       "papanTeks": "R. Teknisi Laboratorium Komputasi"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.855,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.355,
+       "lebar": 1.95,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.74,
+       "lebar": 1.38,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      }
+     ],
+     "sumber": "denah-gedung-f",
+     "luar": true
+    },
+    {
+     "id": "F3-luare-3",
+     "a": [
+      13.28,
+      10.0
+     ],
+     "b": [
+      13.28,
+      0.0
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-gedung-f",
+     "luar": true
     }
    ],
    "selasar": {
@@ -2697,16 +3521,20 @@
       5.55
      ],
      [
-      10.28,
-      5.55
+      8.28,
+      2.0
      ],
      [
-      10.28,
-      9.9
+      10.88,
+      2.0
+     ],
+     [
+      10.88,
+      4.6
      ],
      [
       13.28,
-      9.9
+      4.6
      ],
      [
       13.28,
@@ -2798,6 +3626,22 @@
       -0.05
      ],
      "b": [
+      -1.895,
+      15.759,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "foto-2026",
+     "catatan": "Tembok pembatas putih bercelah tegak (foto 23 Nov 2026)."
+    },
+    {
+     "a": [
+      -4.804,
+      17.439,
+      -0.05
+     ],
+     "b": [
       -18.159,
       25.149,
       -0.05
@@ -2825,13 +3669,13 @@
     },
     {
      "a": [
-      11.72,
-      9.85,
+      12.02,
+      4.55,
       0
      ],
      "b": [
       13.18,
-      9.85,
+      4.55,
       0
      ],
      "jenis": "besi",
@@ -2853,6 +3697,56 @@
      "sumber": "perkiraan",
      "catatan": "Tepi lubang tangga luar."
     }
+   ],
+   "perabot": [
+    {
+     "jenis": "kotak",
+     "posisi": [
+      16.2,
+      10.35
+     ],
+     "ukuran": [
+      1.8,
+      0.5,
+      0.45
+     ],
+     "arah": 0,
+     "warna": "#8d9296",
+     "sumber": "footage-2026",
+     "catatan": "Kursi tunggu besi di selasar (footage)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      24.3,
+      10.35
+     ],
+     "ukuran": [
+      1.8,
+      0.5,
+      0.45
+     ],
+     "arah": 0,
+     "warna": "#8d9296",
+     "sumber": "footage-2026",
+     "catatan": "Kursi tunggu besi di selasar (footage)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      28.88,
+      11.3
+     ],
+     "ukuran": [
+      2.0,
+      0.55,
+      0.75
+     ],
+     "arah": 90,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    }
    ]
   }
  ],
@@ -2862,32 +3756,38 @@
    "dariLantai": 1,
    "keLantai": 2,
    "x0": 13.18,
-   "x1": 10.38,
-   "zDepan": 9.9,
-   "zBelakang": 4.6,
+   "x1": 10.98,
+   "zDepan": 4.6,
+   "zBelakang": 0.1,
    "jumlahAnakTangga": 24,
    "lebarInjakan": 0.28,
    "bentuk": "U dengan bordes",
    "dindingBelakang": true,
-   "sisiLuar": "pagar",
-   "sumber": "denah-gedung-f",
-   "catatan": "Tangga di pertemuan dua sayap (denah: celah 3 m di antara KM/WC dan R. Kerja), naik dari selasar."
+   "sisiLuar": "dinding",
+   "pembatas": "tembok",
+   "tiangAwal": true,
+   "celah": 0.14,
+   "sumber": "footage-2026",
+   "catatan": "Tangga di pertemuan dua sayap (footage): lajur 1 menempel dinding R. Kerja naik dari lobi ke belakang, bordes menempel dinding belakang berjendela teralis, lajur 2 berbalik ke depan; tembok setengah badan bertutup abu di antara lajur, tiang hias putih di anak tangga pertama. Gudang di bawah lajur 2 (lt 1)."
   },
   {
    "id": "TJ2",
    "dariLantai": 2,
    "keLantai": 3,
    "x0": 13.18,
-   "x1": 10.38,
-   "zDepan": 9.9,
-   "zBelakang": 4.6,
+   "x1": 10.98,
+   "zDepan": 4.6,
+   "zBelakang": 0.1,
    "jumlahAnakTangga": 24,
    "lebarInjakan": 0.28,
    "bentuk": "U dengan bordes",
    "dindingBelakang": true,
-   "sisiLuar": "pagar",
-   "sumber": "denah-gedung-f",
-   "catatan": "Tangga di pertemuan dua sayap (denah: celah 3 m di antara KM/WC dan R. Kerja), naik dari selasar."
+   "sisiLuar": "dinding",
+   "pembatas": "tembok",
+   "tiangAwal": true,
+   "celah": 0.14,
+   "sumber": "footage-2026",
+   "catatan": "Tangga di pertemuan dua sayap (footage): lajur 1 menempel dinding R. Kerja naik dari lobi ke belakang, bordes menempel dinding belakang berjendela teralis, lajur 2 berbalik ke depan; tembok setengah badan bertutup abu di antara lajur, tiang hias putih di anak tangga pertama. Gudang di bawah lajur 2 (lt 1)."
   },
   {
    "id": "TL1",
@@ -2939,7 +3839,7 @@
     10.0
    ],
    "sisi": 1,
-   "elevasi": 12.0,
+   "elevasi": 11.2,
    "lantai": 3,
    "lebar": 3.7,
    "turun": 0.8,
@@ -2957,7 +3857,7 @@
     21.46
    ],
    "sisi": -1,
-   "elevasi": 12.0,
+   "elevasi": 11.2,
    "lantai": 3,
    "lebar": 3.7,
    "turun": 0.8,
@@ -2976,7 +3876,7 @@
     12.8
    ],
    "sisi": -1,
-   "elevasi": 12.0,
+   "elevasi": 11.2,
    "lantai": 3,
    "lebar": 3.7,
    "turun": 0.8,
@@ -2995,7 +3895,7 @@
     0.0
    ],
    "sisi": -1,
-   "elevasi": 12.0,
+   "elevasi": 11.2,
    "lantai": 3,
    "lebar": 1.5,
    "turun": 0.32432432432432434,
@@ -3014,7 +3914,7 @@
     0
    ],
    "sisi": -1,
-   "elevasi": 12.0,
+   "elevasi": 11.2,
    "lantai": 3,
    "lebar": 1.5,
    "turun": 0.32432432432432434,
@@ -3034,7 +3934,7 @@
     10.0
    ],
    "sisi": -1,
-   "elevasi": 12.0,
+   "elevasi": 11.2,
    "lantai": 3,
    "lebar": 1.5,
    "turun": 0.32432432432432434,
@@ -3045,7 +3945,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 4.0,
+   "elevasi": 3.2,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3057,6 +3957,24 @@
     23.885
    ],
    "b": [
+    -4.858,
+    17.585
+   ]
+  },
+  {
+   "sisi": 1,
+   "elevasi": 3.2,
+   "lantai": 2,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
+   "a": [
+    -1.741,
+    15.785
+   ],
+   "b": [
     9.171,
     9.485
    ],
@@ -3064,7 +3982,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 4.0,
+   "elevasi": 3.2,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3084,7 +4002,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 4.0,
+   "elevasi": 3.2,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3103,7 +4021,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 8.0,
+   "elevasi": 7.2,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3115,6 +4033,24 @@
     23.885
    ],
    "b": [
+    -4.858,
+    17.585
+   ]
+  },
+  {
+   "sisi": 1,
+   "elevasi": 7.2,
+   "lantai": 3,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
+   "a": [
+    -1.741,
+    15.785
+   ],
+   "b": [
     9.171,
     9.485
    ],
@@ -3122,7 +4058,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 8.0,
+   "elevasi": 7.2,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3142,7 +4078,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 8.0,
+   "elevasi": 7.2,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3174,7 +4110,7 @@
     30.28,
     10.0
    ],
-   "tepiBawah": 12.15,
+   "tepiBawah": 11.35,
    "tonjolan": 0.9,
    "kemiringan": 30,
    "potong": [
@@ -3244,7 +4180,7 @@
     6.0,
     10.0
    ],
-   "tepiBawah": 12.15,
+   "tepiBawah": 11.35,
    "tonjolan": 0.9,
    "kemiringan": 30,
    "potong": [

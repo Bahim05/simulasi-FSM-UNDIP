@@ -285,6 +285,34 @@ function tempelTexture(o) {
       }
       break;
     }
+    case 'papan-putih': {                                     // papan putih bertulisan hitam (papan nama Departemen Matematika di jembatan F-B)
+      g.fillStyle = o.warna || '#f4f4f0'; g.fillRect(0, 0, W, H);
+      g.strokeStyle = '#d5d5cf'; g.lineWidth = 6; g.strokeRect(3, 3, W - 6, H - 6);
+      const t = (o.teks || '').split('|');
+      g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillStyle = '#1d1f22';
+      t.forEach((line, i) => { const sz = Math.round(H * (i ? 0.15 : 0.22)); g.font = `800 ${sz}px Inter, Arial, sans-serif`;
+        g.fillText(line, W * (i ? 0.1 : 0.05), H * (i ? 0.42 + i * 0.2 : 0.24), W * 0.9); });
+      break;
+    }
+    case 'dinding-departemen': {                             // dinding nama departemen (footage lt 3 F): bilah kayu merah tua di kiri-kanan,
+      // panel marmer putih di tengah dengan lambang Undip dan huruf biru, huruf tegak biru di bilah kanan
+      g.fillStyle = '#6b2a1f'; g.fillRect(0, 0, W, H);
+      for (let x = 0; x < W; x += 9) { g.fillStyle = rnd() < 0.5 ? 'rgba(0,0,0,0.12)' : 'rgba(255,200,170,0.07)'; g.fillRect(x, 0, 3, H); }
+      const mx = W * 0.2, mw = W * 0.6, my = H * 0.08, mh = H * 0.86;
+      g.fillStyle = '#ecebe6'; g.fillRect(mx, my, mw, mh);
+      for (let i = 0; i < 260; i++) { g.strokeStyle = `rgba(120,120,125,${0.08 + rnd() * 0.12})`; g.lineWidth = 1 + rnd() * 2;
+        const x = mx + rnd() * mw, y = my + rnd() * mh; g.beginPath(); g.moveTo(x, y); g.lineTo(x + (rnd() - 0.5) * 60, y + (rnd() - 0.5) * 60); g.stroke(); }
+      g.fillStyle = '#c9a646'; g.beginPath(); g.arc(W / 2, my + mh * 0.2, mw * 0.08, 0, Math.PI * 2); g.fill();
+      g.fillStyle = '#1e3326'; g.beginPath(); g.arc(W / 2, my + mh * 0.2, mw * 0.06, 0, Math.PI * 2); g.fill();
+      const t = (o.teks || 'DEPARTEMEN').split('|');
+      g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#2c3f9a';
+      t.forEach((line, i) => { const sz = Math.round(mw * (i === 1 ? 0.16 : i === 0 ? 0.075 : 0.045)); g.font = `800 ${sz}px Inter, Arial, sans-serif`;
+        g.fillText(line, W / 2, my + mh * (0.36 + [0, 0.09, 0.2, 0.26][i] ?? 0.3), mw * 0.9); });
+      if (t[1]) { g.font = `800 ${Math.round(W * 0.09)}px Inter, Arial, sans-serif`;
+        [...t[1]].forEach((ch, i) => g.fillText(ch, W * 0.9, my + (i + 0.6) * (mh / t[1].length), W)); }
+      g.fillStyle = '#4b6b3a'; for (const px of [mx + mw * 0.12, mx + mw * 0.88]) { g.beginPath(); g.arc(px, my + mh * 0.9, mw * 0.07, 0, Math.PI * 2); g.fill(); }
+      break;
+    }
     case 'panel-kayu': {                                      // panel kayu polos cokelat muda berserat halus
       const grd = g.createLinearGradient(0, 0, W, 0);
       grd.addColorStop(0, o.warna || '#cf8a45'); grd.addColorStop(1, o.warna || '#e2a258');
@@ -770,6 +798,25 @@ function buildParapet(p0, p1, P, h = 1.0, jenis = 'tembok-roster', spec = {}) {
   const ux = (p1.x - p0.x) / len, uz = (p1.z - p0.z) / len;
   const at = t => [p0.x + ux * t, p0.z + uz * t];
   const seg = (t0, t1, y0, y1, d, arr = P.wall) => { const [x0, z0] = at(t0), [x1, z1] = at(t1); arr.push(wallBox(x0, z0, x1, z1, y0, y1, d)); };
+  if (jenis === 'tembok-celah' && Math.abs(p1.y - p0.y) > 1e-3) {
+    // tembok bercelah yang ikut miring (sisi ramp dan tangga jembatan): pita bawah dan atas miring, tiang di antara celah tegak
+    const hw = Math.min(h, 0.9), yAt = t => p0.y + (p1.y - p0.y) * t / len;
+    const sw = (t0, t1, d0, d1, d = th, arr = P.wall) => { const [x0, z0] = at(t0), [x1, z1] = at(t1);
+      slopedWall(arr, x0, z0, x1, z1, yAt(t0) + d0, yAt(t1) + d0, yAt(t0) + d1, yAt(t1) + d1, d); };
+    sw(-0.05, len + 0.05, -0.5, -0.15, 0.25, P.col);                       // balok tepi pelat, ikut miring
+    sw(-0.05, len + 0.05, -0.15, 0.25);
+    sw(-0.05, len + 0.05, hw - 0.17, hw - 0.05);
+    sw(-0.07, len + 0.07, hw - 0.05, hw, th + 0.05);
+    const pitch = 0.3, sl = 0.08, n = Math.max(0, Math.floor((len - 0.7) / pitch)), start = (len - n * pitch) / 2;
+    let cur = -0.05;
+    for (let i = 0; i <= n; i++) { const c = start + i * pitch; sw(cur, c - sl / 2, 0.24, hw - 0.16); cur = c + sl / 2; }
+    sw(cur, len + 0.05, 0.24, hw - 0.16);
+    P.rail.push(beam(new V3(p0.x, p0.y + hw + 0.14, p0.z), new V3(p1.x, p1.y + hw + 0.14, p1.z), 0.045, 0.045));
+    const k = Math.max(1, Math.round(len / 1.6));
+    for (let i = 0; i <= k; i++) { const t = (len * i) / k, [x, z] = at(t); P.rail.push(boxXZ(x - 0.018, z - 0.018, x + 0.018, z + 0.018, yAt(t) + hw, yAt(t) + hw + 0.14)); }
+    sw(0, len, 0, hw + 0.2, 0.16, P.collider);
+    return;
+  }
   P.col.push(wallBox(p0.x, p0.z, p1.x, p1.z, y - 0.5, y - 0.15, 0.25));   // balok tepi pelat di bawah tembok
   if (jenis === 'tembok-handrail') {
     const hw = Math.min(h, 0.9);
@@ -1202,7 +1249,9 @@ function buildGable(ap, P) {
   // ujung miring: miringA / miringB = geseran ujung sepanjang sumbu (meter) per meter ke arah +n (kiri sumbu a->b).
   // Dipakai kalau atap berhenti di tepi yang tidak tegak lurus sumbu, mis. tepi selasar gedung yang dipotong 45 derajat.
   const kA = ap.miringA ?? 0, kB = ap.miringB ?? 0;
-  const endA = (p, off) => p.addScaledVector(u, kA * off), endB = (p, off) => p.addScaledVector(u, kB * off);
+  // naik: ujung b lebih tinggi dari ujung a (meter), untuk kanopi di atas jalan yang menanjak
+  const nk = ap.naik ?? 0;
+  const endA = (p, off) => p.addScaledVector(u, kA * off), endB = (p, off) => { p.addScaledVector(u, kB * off); p.y += nk; return p; };
   for (const sd of [1, -1]) {
     if (ap.sisiSaja && sd !== ap.sisiSaja) continue;
     const e0 = endA(a.clone().addScaledVector(n, sd * hw).setY(ap.tepiBawah), sd * hw), e1 = endB(b.clone().addScaledVector(n, sd * hw).setY(ap.tepiBawah), sd * hw);
@@ -1258,10 +1307,11 @@ function buildGable(ap, P) {
       P.plafon.push(beam(at(0, yt), at(0, ap.puncak - 0.16), 0.12, 0.12));
     }
   }
-  if (!m0) (ap.bahan === 'seng' ? P.baja : P.plafon).push(beam(a.clone().setY(a.y - 0.08), b.clone().setY(b.y - 0.08), ap.bahan === 'seng' ? 0.1 : 0.5, 0.14));
+  if (!m0) (ap.bahan === 'seng' ? P.baja : P.plafon).push(beam(a.clone().setY(a.y - 0.08), b.clone().setY(b.y - 0.08 + nk), ap.bahan === 'seng' ? 0.1 : 0.5, 0.14));
 }
 
 export function buildPenghubung(spec, T) {
+  T = { ...T, ...(spec.tampilan || {}) };                          // warna khusus penghubung (mis. atap genteng merah bata F-B)
   const mat = {
     slab: new THREE.MeshStandardMaterial({ color: T.selasar, map: tileTexture(), roughness: 0.35 }),
     wall: new THREE.MeshStandardMaterial({ color: T.dinding, roughness: 0.92 }),
@@ -1298,12 +1348,13 @@ export function buildPenghubung(spec, T) {
     // ramp (landai): pelat miring dari a (tinggi `dari`) ke b (tinggi `ke`), lebar tegak lurus garis a-b
     for (const rp of (spec.landai || []).filter(r => (r.lantai ?? 1) === lf.no)) {
       const a = new V3(rp.a[0], rp.dari, rp.a[1]), b = new V3(rp.b[0], rp.ke, rp.b[1]);
-      const m = new THREE.Mesh(beam(new V3(a.x, a.y - 0.08, a.z), new V3(b.x, b.y - 0.08, b.z), rp.lebar, 0.16), mat.ramp);
+      const tb = rp.tebal ?? 0.16;                                           // tebal pelat ramp (jembatan lantai atas: ±0,4)
+      const m = new THREE.Mesh(beam(new V3(a.x, a.y - tb / 2, a.z), new V3(b.x, b.y - tb / 2, b.z), rp.lebar, tb), mat.ramp);
       m.castShadow = m.receiveShadow = true;
       g.add(m);
       out.walkables.push(m);
-      // dinding bawah ramp sampai tanah (supaya tidak melayang)
-      P.alas.push(slopedWallGeo(a, b, rp.lebar, lf.elevasi - 0.25));
+      // dinding bawah ramp sampai tanah (supaya tidak melayang); `dinding: false` untuk ramp jembatan di lantai atas
+      if (rp.dinding !== false) P.alas.push(slopedWallGeo(a, b, rp.lebar, rp.dasar ?? lf.elevasi - 0.25));
     }
     for (const st of (spec.anakTangga || []).filter(st => st.lantai === lf.no)) {
       const m = new THREE.Mesh(slabGeo(st.poligon, st.elevasi, st.tebal ?? (st.elevasi - lf.elevasi + 0.05)), mat.slab);
@@ -1328,15 +1379,16 @@ export function buildPenghubung(spec, T) {
     const y1 = lf.kolomPuncak ?? (i + 1 < lantai.length ? lantai[i + 1].elevasi : lf.elevasi + 1.0);
     const y0 = lf.kolomDasar ?? (lf.no === 1 ? -0.2 : lf.elevasi);
     const ks = (spec.ukuranKolom ?? 0.4) / 2;
-    for (const [x, z] of lf.kolom || spec.kolom || []) {
-      P.col.push(boxXZ(x - ks, z - ks, x + ks, z + ks, y0, y1));
+    for (const [x, z, ya, yb] of lf.kolom || spec.kolom || []) {
+      // titik kolom boleh [x, z, bawah, atas] (tinggi mutlak) untuk penghubung yang lantainya berundak
+      P.col.push(boxXZ(x - ks, z - ks, x + ks, z + ks, ya ?? y0, yb ?? y1));
       // alas kolom dari batu alam hitam (penghubung A-B lt 1, footage)
       const ka = spec.alasKolom?.lebar ? spec.alasKolom.lebar / 2 : ks + 0.05;
       if (spec.alasKolom && lf.no === 1) P.alas.push(boxXZ(x - ka, z - ka, x + ka, z + ka, y0, lf.elevasi + spec.alasKolom.tinggi));
     }
     // tiang baja kanopi (ramping) di atas lantai ini
     for (const tg of (spec.tiang || []).filter(t => t.lantai === lf.no))
-      for (const [x, z] of tg.titik) P.baja.push(boxXZ(x - 0.06, z - 0.06, x + 0.06, z + 0.06, lf.elevasi, lf.elevasi + tg.tinggi));
+      for (const [x, z, ya, yb] of tg.titik) P.baja.push(boxXZ(x - 0.06, z - 0.06, x + 0.06, z + 0.06, ya ?? lf.elevasi, yb ?? lf.elevasi + tg.tinggi));
     // atap pelana: dua bidang miring dari garis bubungan a-b, lebar total `lebar`
     for (const ap of (spec.atapPelana || []).filter(t => t.lantai === lf.no)) buildGable(ap, P);
     // bangku besi berderet di sepanjang garis a-b, menghadap ke kiri garis (hadap 1) atau kanan (-1)
@@ -1353,6 +1405,19 @@ export function buildPenghubung(spec, T) {
       }
     }
     for (const tr of (spec.tritisan || []).filter(t => t.lantai === lf.no)) buildTritisan(tr, P);
+    // papan: pelat tipis bertekstur (jenis tempelan, mis. 'papan-putih') di titik a-b, menghadap ke kiri garis (sisi 1) atau kanan (-1)
+    for (const pp of (spec.papan || []).filter(t => t.lantai === lf.no)) {
+      const a = new V3(pp.a[0], 0, pp.a[1]), b = new V3(pp.b[0], 0, pp.b[1]), len = a.distanceTo(b);
+      const u = new V3().subVectors(b, a).normalize(), sd = pp.sisi ?? 1, nn = new V3(-u.z, 0, u.x).multiplyScalar(sd);
+      const geo = new THREE.BoxGeometry(len, pp.tinggi, 0.03);
+      geo.rotateY(Math.atan2(-u.z, u.x));
+      const c = a.clone().lerp(b, 0.5).addScaledVector(nn, pp.jarak ?? 0.1);
+      geo.translate(c.x, pp.y + pp.tinggi / 2, c.z);
+      const o = { jenis: pp.jenis || 'papan-putih', teks: pp.teks, lebar: len, tinggi: pp.tinggi };
+      const face = new THREE.MeshStandardMaterial({ map: tempelTexture(o), roughness: 0.6 }), plain = new THREE.MeshStandardMaterial({ color: '#e9e9e4', roughness: 0.7 });
+      const m = new THREE.Mesh(geo, [plain, plain, plain, plain, sd > 0 ? face : plain, sd > 0 ? plain : face]);
+      m.castShadow = true; g.add(m);
+    }
     for (const [list, m, solid] of [[P.wall, mat.wall, true], [P.col, mat.col, true], [P.rail, mat.rail], [P.tritTop, mat.roof],
       [P.tritBawah, mat.tritBawah], [P.kayu, mat.kayu], [P.alas, mat.alas, true], [P.baja, mat.baja], [P.seng, mat.seng],
       [P.genteng, mat.roof], [P.plafon, mat.plafon], [P.bangku, mat.bangku], [P.logam, mat.logam]]) {
@@ -1617,7 +1682,7 @@ export function buildLansekap(spec) {
   }
   // benda: perabot dan bangunan kecil di koordinat kawasan (tidak terikat jalur), mis. di lahan terbuka depan Gedung A.
   // { jenis, x, z, y (tinggi alas), arah (derajat, sumbu panjang dari +x ke +z) , ... }
-  Object.assign(pots, { pink: [], pinkTua: [], abu: [], atapDatar: [], kawat: [] });
+  Object.assign(pots, { pink: [], pinkTua: [], abu: [], atapDatar: [], kawat: [], alasPendopo: [], kayuMuda: [] });
   const keras = [], pijak = [];                                    // penghalang jalan kaki, dan permukaan yang bisa dipijak
   for (const b of spec.benda || []) {
     const ang = -THREE.MathUtils.degToRad(b.arah || 0), y0 = b.y ?? 1.05;
@@ -1644,6 +1709,28 @@ export function buildLansekap(spec) {
           put2(pots.logam, box(0.04, 0.75, 0.04), sx + k, 0.37, sz);
         }
       }
+    } else if (b.jenis === 'pendopo') {
+      // pendopo taman depan Gedung B (foto 2026): alas beton merah muda keabuan, tiang kayu, atap datar tipis gelap,
+      // plafon bilah kayu, kisi kayu mendatar di satu sisi pendek, bangku beton berdudukan kayu bentuk L.
+      const L = b.panjang ?? 6.0, Wd = b.lebar ?? 5.0, ha = b.alas ?? 0.3, Hc = b.tinggi ?? 2.7;
+      const alas = put2(pots.alasPendopo, box(L, ha, Wd), 0, ha / 2, 0, false);
+      pijak.push(alas.clone());
+      const xs = [-L / 2 + 0.25, 0, L / 2 - 0.25], zs = [-Wd / 2 + 0.25, Wd / 2 - 0.25];
+      for (const x of xs) for (const z of zs) put2(pots.kayuMuda, box(0.14, Hc, 0.14), x, ha + Hc / 2, z, true);
+      put2(pots.atapDatar, box(L + 0.6, 0.14, Wd + 0.6), 0, ha + Hc + 0.07, 0);
+      for (const z of [-(Wd + 0.6) / 2, (Wd + 0.6) / 2]) put2(pots.atapDatar, box(L + 0.64, 0.24, 0.04), 0, ha + Hc + 0.02, z);
+      for (const x of [-(L + 0.6) / 2, (L + 0.6) / 2]) put2(pots.atapDatar, box(0.04, 0.24, Wd + 0.64), x, ha + Hc + 0.02, 0);
+      for (const z of zs) put2(pots.kayuMuda, box(L, 0.18, 0.12), 0, ha + Hc - 0.09, z);          // balok kayu memanjang
+      for (let x = -L / 2 + 0.15; x <= L / 2 - 0.1; x += 0.28) put2(pots.kayuMuda, box(0.05, 0.06, Wd - 0.3), x, ha + Hc - 0.03, 0);  // plafon bilah
+      const ks = b.sisiKisi ?? 1;                                                                  // kisi mendatar di ujung +x (1) atau -x (-1)
+      for (let y = 0.5; y <= Hc - 0.3; y += 0.22) put2(pots.kayuMuda, box(0.04, 0.08, Wd - 0.5), ks * (L / 2 - 0.25), ha + y, 0);
+      // bangku L: sepanjang sisi belakang (-z) dan sisi kisi
+      const bs = (w, d, x, z) => { put2(pots.alasPendopo, box(w, 0.42, d), x, ha + 0.21, z, true); put2(pots.kayuMuda, box(w, 0.04, d), x, ha + 0.44, z);
+        };
+      bs(L - 1.2, 0.5, -ks * 0.35, -Wd / 2 + 0.6);
+      put2(pots.alasPendopo, box(L - 1.2, 0.45, 0.12), -ks * 0.35, ha + 0.64, -Wd / 2 + 0.4, true);
+      bs(0.5, Wd - 1.6, ks * (L / 2 - 0.75), 0.25);
+      put2(pots.alasPendopo, box(0.12, 0.45, Wd - 1.6), ks * (L / 2 - 0.55), ha + 0.64, 0.25, true);
     } else if (b.jenis === 'tugu') {
       // tugu persegi merah muda yang tinggi di atas alas berundak
       const h = b.tinggi ?? 11, w = b.lebar ?? 0.75;
@@ -1706,14 +1793,16 @@ export function buildLansekap(spec) {
     root.add(m); out.walkables.push(m);
   }
   const pm = { pot: '#d48a7c', potGelap: '#44494d', tanaman: '#5f8f45', tanamanKuning: '#c39a35', logam: '#5d6266', kayu: '#7a5434', putih: '#f1f1ee',
-               pink: '#dba8a4', pinkTua: '#c98e8a', abu: '#7f8489', atapDatar: '#454b52', kawat: '#3e4144' };
+               pink: '#dba8a4', pinkTua: '#c98e8a', abu: '#7f8489', atapDatar: '#454b52', kawat: '#3e4144',
+               alasPendopo: '#a8918e', kayuMuda: '#b9864f' };
   for (const [k, list] of Object.entries(pots)) {
     const m = merged(list, new THREE.MeshStandardMaterial({ color: pm[k], roughness: 0.75, flatShading: k.startsWith('tanaman') }));
     if (m) root.add(m);
   }
 
   // tapak jalur (untuk melubangi bidang tanah); bidang tidak perlu dilubangi karena permukaannya di atas tanah
-  out.footprint = strips.length ? [[W(0, 0, 0).x, W(0, 0, 0).z], [W(L, 0, 0).x, W(L, 0, 0).z], [W(L, v, 0).x, W(L, v, 0).z], [W(0, v, 0).x, W(0, v, 0).z]] : null;
+  // `tapak` (poligon kawasan) dipakai kalau lansekap hanya berisi bidang tetapi permukaannya lebih rendah dari tanah dasar (-0,22)
+  out.footprint = spec.tapak || (strips.length ? [[W(0, 0, 0).x, W(0, 0, 0).z], [W(L, 0, 0).x, W(L, 0, 0).z], [W(L, v, 0).x, W(L, v, 0).z], [W(0, v, 0).x, W(0, v, 0).z]] : null);
   // jalur tempat sebuah titik kawasan berada (untuk label "di mana saya")
   out.where = (x, z) => {
     const bd = bidang.find(q => pointInPoly(x, z, q.poligon));

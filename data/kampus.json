@@ -61,10 +61,10 @@
    "file": "data/gedung-f.json",
    "posisi": [
     93.8,
-    -5.7
+    -12.6
    ],
    "rotasi": -30,
-   "catatan": "Letak dari foto udara pengguna (22 Nov 2026), diukur terhadap atap Gedung B: titik (0,0) gedung = sudut luar belokan atap di foto, dinding belakang sayap barat sekitar 5,7 m di utara garis dinding belakang A. Diputar -30 derajat: sayap R. Dosen sejajar A dan B di barat (ujungnya kira-kira 23 m di timur ujung timur A), sayap R. Seminar belok ke tenggara, selasar menghadap halaman ke Gedung B. Perkiraan."
+   "catatan": "Diputar -30 derajat (foto udara). Letak mula-mula dari foto udara di (93,8, -5,7); 24 Nov 2026 dimundurkan 6,9 m ke utara karena ukuran pengguna di Google Earth: panjang penghubung F-B 23,19 m (B tetap, A-B 9,3 m cocok dengan model). Dengan itu pojok selasar F di dekat tangga luar segaris dengan dinding belakang A (keterangan pengguna). Lantai 1 F 0,8 m di bawah A (FIX FOOTAGE, dari tinggi penghubung F-B), diatur di alat penyusun F."
   },
   {
    "id": "G",
@@ -1419,6 +1419,2542 @@
    "atap": null,
    "sumber": "footage-2026",
    "catatan": "Footage 'Penghubung gedung A dan B dilihat dari lt 1 gedung B' (ujung video: koridor lurus menuju Gedung G) dan garis merah biru pengguna (22 Nov 2026): dari pojok barat laut selasar Gedung B (di samping ramp penghubung A-B) koridor lurus ke pintu kaca Area Resepsionis Gedung G, sekitar 17 derajat dari tegak lurus dinding G. Lantai keramik rata dengan selasar B, tanpa anak tangga (keterangan pengguna). Kolom putih ramping beralas batu kali hitam ±80 cm, atap pelana genteng dengan kuda-kuda putih tiap pasang kolom, gording kayu gelap, plafon putih. Kedua ujung atap dipotong miring (muka dinding G dan tepi selasar B). Lebar perkiraan."
+  },
+  {
+   "id": "FB",
+   "nama": "Penghubung Gedung F dan B",
+   "antara": [
+    "F",
+    "B"
+   ],
+   "poligon": [
+    [
+     80.8,
+     0.0
+    ],
+    [
+     84.4,
+     0.0
+    ],
+    [
+     84.4,
+     23.4
+    ],
+    [
+     80.8,
+     23.4
+    ]
+   ],
+   "lantai": [
+    {
+     "no": 1,
+     "elevasi": -0.85,
+     "tebal": 0.5,
+     "poligon": [
+      [
+       81.0,
+       0.2
+      ],
+      [
+       84.2,
+       0.2
+      ],
+      [
+       84.2,
+       2.5
+      ],
+      [
+       81.0,
+       2.5
+      ]
+     ],
+     "area": [
+      [
+       80.8,
+       0.0
+      ],
+      [
+       84.4,
+       0.0
+      ],
+      [
+       84.4,
+       23.4
+      ],
+      [
+       80.8,
+       23.4
+      ]
+     ],
+     "kolom": [
+      [
+       81.0,
+       2.3,
+       -1.3,
+       7.0
+      ],
+      [
+       84.2,
+       2.3,
+       -1.3,
+       7.0
+      ],
+      [
+       81.0,
+       8.0,
+       -1.3,
+       7.688
+      ],
+      [
+       84.2,
+       8.0,
+       -1.3,
+       8.0
+      ],
+      [
+       81.0,
+       13.7,
+       -1.3,
+       8.15
+      ],
+      [
+       84.2,
+       13.7,
+       -1.3,
+       8.467
+      ],
+      [
+       81.0,
+       19.4,
+       -1.3,
+       8.862
+      ],
+      [
+       84.2,
+       19.4,
+       -1.3,
+       9.0
+      ]
+     ]
+    },
+    {
+     "no": 2,
+     "elevasi": 3.15,
+     "tebal": 0.35,
+     "poligon": [
+      [
+       81.0,
+       0.2
+      ],
+      [
+       84.2,
+       0.2
+      ],
+      [
+       84.2,
+       2.5
+      ],
+      [
+       81.0,
+       2.5
+      ]
+     ],
+     "area": [
+      [
+       80.8,
+       0.0
+      ],
+      [
+       84.4,
+       0.0
+      ],
+      [
+       84.4,
+       23.4
+      ],
+      [
+       80.8,
+       23.4
+      ]
+     ],
+     "kolom": []
+    },
+    {
+     "no": 3,
+     "elevasi": 7.15,
+     "tebal": 0.35,
+     "poligon": [
+      [
+       81.0,
+       0.2
+      ],
+      [
+       84.2,
+       0.2
+      ],
+      [
+       84.2,
+       2.5
+      ],
+      [
+       81.0,
+       2.5
+      ]
+     ],
+     "area": [
+      [
+       80.8,
+       0.0
+      ],
+      [
+       84.4,
+       0.0
+      ],
+      [
+       84.4,
+       23.4
+      ],
+      [
+       80.8,
+       23.4
+      ]
+     ],
+     "kolom": []
+    }
+   ],
+   "ukuranKolom": 0.4,
+   "tampilan": {
+    "atap": "#84473a",
+    "kolom": "#a9b3c0",
+    "dinding": "#e9e8e3",
+    "pagar": "#b9c1cb"
+   },
+   "anakTangga": [
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       81.0,
+       10.5
+      ],
+      [
+       84.2,
+       10.5
+      ],
+      [
+       84.2,
+       12.5
+      ],
+      [
+       81.0,
+       12.5
+      ]
+     ],
+     "elevasi": 0.15
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       81.0,
+       20.5
+      ],
+      [
+       84.2,
+       20.5
+      ],
+      [
+       84.2,
+       23.4
+      ],
+      [
+       81.0,
+       23.4
+      ]
+     ],
+     "elevasi": 1.15
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       4.0
+      ],
+      [
+       84.2,
+       4.0
+      ],
+      [
+       84.2,
+       10.5
+      ],
+      [
+       82.6,
+       10.5
+      ]
+     ],
+     "elevasi": 0.15
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       12.5
+      ],
+      [
+       84.2,
+       12.5
+      ],
+      [
+       84.2,
+       13.0
+      ],
+      [
+       82.6,
+       13.0
+      ]
+     ],
+     "elevasi": 0.15
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       14.5
+      ],
+      [
+       84.2,
+       14.5
+      ],
+      [
+       84.2,
+       20.5
+      ],
+      [
+       82.6,
+       20.5
+      ]
+     ],
+     "elevasi": 1.15
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       2.5
+      ],
+      [
+       84.2,
+       2.5
+      ],
+      [
+       84.2,
+       2.8
+      ],
+      [
+       82.6,
+       2.8
+      ]
+     ],
+     "elevasi": -0.683
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       2.8
+      ],
+      [
+       84.2,
+       2.8
+      ],
+      [
+       84.2,
+       3.1
+      ],
+      [
+       82.6,
+       3.1
+      ]
+     ],
+     "elevasi": -0.517
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       3.1
+      ],
+      [
+       84.2,
+       3.1
+      ],
+      [
+       84.2,
+       3.4
+      ],
+      [
+       82.6,
+       3.4
+      ]
+     ],
+     "elevasi": -0.35
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       3.4
+      ],
+      [
+       84.2,
+       3.4
+      ],
+      [
+       84.2,
+       3.7
+      ],
+      [
+       82.6,
+       3.7
+      ]
+     ],
+     "elevasi": -0.183
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       3.7
+      ],
+      [
+       84.2,
+       3.7
+      ],
+      [
+       84.2,
+       4.0
+      ],
+      [
+       82.6,
+       4.0
+      ]
+     ],
+     "elevasi": -0.017
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       13.0
+      ],
+      [
+       84.2,
+       13.0
+      ],
+      [
+       84.2,
+       13.3
+      ],
+      [
+       82.6,
+       13.3
+      ]
+     ],
+     "elevasi": 0.317
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       13.3
+      ],
+      [
+       84.2,
+       13.3
+      ],
+      [
+       84.2,
+       13.6
+      ],
+      [
+       82.6,
+       13.6
+      ]
+     ],
+     "elevasi": 0.483
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       13.6
+      ],
+      [
+       84.2,
+       13.6
+      ],
+      [
+       84.2,
+       13.9
+      ],
+      [
+       82.6,
+       13.9
+      ]
+     ],
+     "elevasi": 0.65
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       13.9
+      ],
+      [
+       84.2,
+       13.9
+      ],
+      [
+       84.2,
+       14.2
+      ],
+      [
+       82.6,
+       14.2
+      ]
+     ],
+     "elevasi": 0.817
+    },
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       82.6,
+       14.2
+      ],
+      [
+       84.2,
+       14.2
+      ],
+      [
+       84.2,
+       14.5
+      ],
+      [
+       82.6,
+       14.5
+      ]
+     ],
+     "elevasi": 0.983
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       81.0,
+       10.5
+      ],
+      [
+       84.2,
+       10.5
+      ],
+      [
+       84.2,
+       12.5
+      ],
+      [
+       81.0,
+       12.5
+      ]
+     ],
+     "elevasi": 4.15,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       81.0,
+       20.5
+      ],
+      [
+       84.2,
+       20.5
+      ],
+      [
+       84.2,
+       23.4
+      ],
+      [
+       81.0,
+       23.4
+      ]
+     ],
+     "elevasi": 5.15,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       4.0
+      ],
+      [
+       84.2,
+       4.0
+      ],
+      [
+       84.2,
+       10.5
+      ],
+      [
+       82.6,
+       10.5
+      ]
+     ],
+     "elevasi": 4.15,
+     "tebal": 1.212
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       12.5
+      ],
+      [
+       84.2,
+       12.5
+      ],
+      [
+       84.2,
+       13.0
+      ],
+      [
+       82.6,
+       13.0
+      ]
+     ],
+     "elevasi": 4.15,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       14.5
+      ],
+      [
+       84.2,
+       14.5
+      ],
+      [
+       84.2,
+       20.5
+      ],
+      [
+       82.6,
+       20.5
+      ]
+     ],
+     "elevasi": 5.15,
+     "tebal": 1.15
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       2.5
+      ],
+      [
+       84.2,
+       2.5
+      ],
+      [
+       84.2,
+       2.8
+      ],
+      [
+       82.6,
+       2.8
+      ]
+     ],
+     "elevasi": 3.317,
+     "tebal": 0.567
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       2.8
+      ],
+      [
+       84.2,
+       2.8
+      ],
+      [
+       84.2,
+       3.1
+      ],
+      [
+       82.6,
+       3.1
+      ]
+     ],
+     "elevasi": 3.483,
+     "tebal": 0.696
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       3.1
+      ],
+      [
+       84.2,
+       3.1
+      ],
+      [
+       84.2,
+       3.4
+      ],
+      [
+       82.6,
+       3.4
+      ]
+     ],
+     "elevasi": 3.65,
+     "tebal": 0.825
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       3.4
+      ],
+      [
+       84.2,
+       3.4
+      ],
+      [
+       84.2,
+       3.7
+      ],
+      [
+       82.6,
+       3.7
+      ]
+     ],
+     "elevasi": 3.817,
+     "tebal": 0.954
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       3.7
+      ],
+      [
+       84.2,
+       3.7
+      ],
+      [
+       84.2,
+       4.0
+      ],
+      [
+       82.6,
+       4.0
+      ]
+     ],
+     "elevasi": 3.983,
+     "tebal": 1.083
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       13.0
+      ],
+      [
+       84.2,
+       13.0
+      ],
+      [
+       84.2,
+       13.3
+      ],
+      [
+       82.6,
+       13.3
+      ]
+     ],
+     "elevasi": 4.317,
+     "tebal": 0.504
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       13.3
+      ],
+      [
+       84.2,
+       13.3
+      ],
+      [
+       84.2,
+       13.6
+      ],
+      [
+       82.6,
+       13.6
+      ]
+     ],
+     "elevasi": 4.483,
+     "tebal": 0.633
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       13.6
+      ],
+      [
+       84.2,
+       13.6
+      ],
+      [
+       84.2,
+       13.9
+      ],
+      [
+       82.6,
+       13.9
+      ]
+     ],
+     "elevasi": 4.65,
+     "tebal": 0.763
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       13.9
+      ],
+      [
+       84.2,
+       13.9
+      ],
+      [
+       84.2,
+       14.2
+      ],
+      [
+       82.6,
+       14.2
+      ]
+     ],
+     "elevasi": 4.817,
+     "tebal": 0.892
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       82.6,
+       14.2
+      ],
+      [
+       84.2,
+       14.2
+      ],
+      [
+       84.2,
+       14.5
+      ],
+      [
+       82.6,
+       14.5
+      ]
+     ],
+     "elevasi": 4.983,
+     "tebal": 1.021
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       81.0,
+       10.5
+      ],
+      [
+       84.2,
+       10.5
+      ],
+      [
+       84.2,
+       12.5
+      ],
+      [
+       81.0,
+       12.5
+      ]
+     ],
+     "elevasi": 8.15,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       81.0,
+       20.5
+      ],
+      [
+       84.2,
+       20.5
+      ],
+      [
+       84.2,
+       23.4
+      ],
+      [
+       81.0,
+       23.4
+      ]
+     ],
+     "elevasi": 9.15,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       4.0
+      ],
+      [
+       84.2,
+       4.0
+      ],
+      [
+       84.2,
+       10.5
+      ],
+      [
+       82.6,
+       10.5
+      ]
+     ],
+     "elevasi": 8.15,
+     "tebal": 1.212
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       12.5
+      ],
+      [
+       84.2,
+       12.5
+      ],
+      [
+       84.2,
+       13.0
+      ],
+      [
+       82.6,
+       13.0
+      ]
+     ],
+     "elevasi": 8.15,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       14.5
+      ],
+      [
+       84.2,
+       14.5
+      ],
+      [
+       84.2,
+       20.5
+      ],
+      [
+       82.6,
+       20.5
+      ]
+     ],
+     "elevasi": 9.15,
+     "tebal": 1.15
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       2.5
+      ],
+      [
+       84.2,
+       2.5
+      ],
+      [
+       84.2,
+       2.8
+      ],
+      [
+       82.6,
+       2.8
+      ]
+     ],
+     "elevasi": 7.317,
+     "tebal": 0.567
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       2.8
+      ],
+      [
+       84.2,
+       2.8
+      ],
+      [
+       84.2,
+       3.1
+      ],
+      [
+       82.6,
+       3.1
+      ]
+     ],
+     "elevasi": 7.483,
+     "tebal": 0.696
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       3.1
+      ],
+      [
+       84.2,
+       3.1
+      ],
+      [
+       84.2,
+       3.4
+      ],
+      [
+       82.6,
+       3.4
+      ]
+     ],
+     "elevasi": 7.65,
+     "tebal": 0.825
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       3.4
+      ],
+      [
+       84.2,
+       3.4
+      ],
+      [
+       84.2,
+       3.7
+      ],
+      [
+       82.6,
+       3.7
+      ]
+     ],
+     "elevasi": 7.817,
+     "tebal": 0.954
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       3.7
+      ],
+      [
+       84.2,
+       3.7
+      ],
+      [
+       84.2,
+       4.0
+      ],
+      [
+       82.6,
+       4.0
+      ]
+     ],
+     "elevasi": 7.983,
+     "tebal": 1.083
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       13.0
+      ],
+      [
+       84.2,
+       13.0
+      ],
+      [
+       84.2,
+       13.3
+      ],
+      [
+       82.6,
+       13.3
+      ]
+     ],
+     "elevasi": 8.317,
+     "tebal": 0.504
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       13.3
+      ],
+      [
+       84.2,
+       13.3
+      ],
+      [
+       84.2,
+       13.6
+      ],
+      [
+       82.6,
+       13.6
+      ]
+     ],
+     "elevasi": 8.483,
+     "tebal": 0.633
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       13.6
+      ],
+      [
+       84.2,
+       13.6
+      ],
+      [
+       84.2,
+       13.9
+      ],
+      [
+       82.6,
+       13.9
+      ]
+     ],
+     "elevasi": 8.65,
+     "tebal": 0.763
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       13.9
+      ],
+      [
+       84.2,
+       13.9
+      ],
+      [
+       84.2,
+       14.2
+      ],
+      [
+       82.6,
+       14.2
+      ]
+     ],
+     "elevasi": 8.817,
+     "tebal": 0.892
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       82.6,
+       14.2
+      ],
+      [
+       84.2,
+       14.2
+      ],
+      [
+       84.2,
+       14.5
+      ],
+      [
+       82.6,
+       14.5
+      ]
+     ],
+     "elevasi": 8.983,
+     "tebal": 1.021
+    }
+   ],
+   "landai": [
+    {
+     "lantai": 1,
+     "a": [
+      81.8,
+      2.5
+     ],
+     "b": [
+      81.8,
+      10.5
+     ],
+     "lebar": 1.5,
+     "dari": -0.85,
+     "ke": 0.15
+    },
+    {
+     "lantai": 1,
+     "a": [
+      81.8,
+      12.5
+     ],
+     "b": [
+      81.8,
+      20.5
+     ],
+     "lebar": 1.5,
+     "dari": 0.15,
+     "ke": 1.15
+    },
+    {
+     "lantai": 2,
+     "a": [
+      81.8,
+      2.5
+     ],
+     "b": [
+      81.8,
+      10.5
+     ],
+     "lebar": 1.5,
+     "dari": 3.15,
+     "ke": 4.15,
+     "dinding": false,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 2,
+     "a": [
+      81.8,
+      12.5
+     ],
+     "b": [
+      81.8,
+      20.5
+     ],
+     "lebar": 1.5,
+     "dari": 4.15,
+     "ke": 5.15,
+     "dinding": false,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 3,
+     "a": [
+      81.8,
+      2.5
+     ],
+     "b": [
+      81.8,
+      10.5
+     ],
+     "lebar": 1.5,
+     "dari": 7.15,
+     "ke": 8.15,
+     "dinding": false,
+     "tebal": 0.4
+    },
+    {
+     "lantai": 3,
+     "a": [
+      81.8,
+      12.5
+     ],
+     "b": [
+      81.8,
+      20.5
+     ],
+     "lebar": 1.5,
+     "dari": 8.15,
+     "ke": 9.15,
+     "dinding": false,
+     "tebal": 0.4
+    }
+   ],
+   "pagar": [
+    {
+     "a": [
+      82.6,
+      2.5,
+      -0.85
+     ],
+     "b": [
+      82.6,
+      10.5,
+      0.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      81.07,
+      2.5,
+      -0.85
+     ],
+     "b": [
+      81.07,
+      10.5,
+      0.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      82.6,
+      12.5,
+      0.15
+     ],
+     "b": [
+      82.6,
+      20.5,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      81.07,
+      12.5,
+      0.15
+     ],
+     "b": [
+      81.07,
+      20.5,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      84.13000000000001,
+      2.5,
+      -0.85
+     ],
+     "b": [
+      84.13000000000001,
+      4.0,
+      0.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      84.13000000000001,
+      13.0,
+      0.15
+     ],
+     "b": [
+      84.13000000000001,
+      14.5,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      81.07,
+      10.5,
+      0.15
+     ],
+     "b": [
+      81.07,
+      12.5,
+      0.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      81.07,
+      20.5,
+      1.15
+     ],
+     "b": [
+      81.07,
+      23.099999999999998,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      84.13000000000001,
+      4.0,
+      0.15
+     ],
+     "b": [
+      84.13000000000001,
+      13.0,
+      0.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      84.13000000000001,
+      14.5,
+      1.15
+     ],
+     "b": [
+      84.13000000000001,
+      23.099999999999998,
+      1.15
+     ],
+     "jenis": "besi",
+     "tinggi": 0.9,
+     "lantai": [
+      1
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      0.1,
+      3.15
+     ],
+     "b": [
+      81.0,
+      2.5,
+      3.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      2.5,
+      3.15
+     ],
+     "b": [
+      81.0,
+      10.5,
+      4.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      10.5,
+      4.15
+     ],
+     "b": [
+      81.0,
+      12.5,
+      4.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      12.5,
+      4.15
+     ],
+     "b": [
+      81.0,
+      20.5,
+      5.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      20.5,
+      5.15
+     ],
+     "b": [
+      81.0,
+      23.4,
+      5.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      0.1,
+      3.15
+     ],
+     "b": [
+      84.2,
+      2.5,
+      3.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      2.5,
+      3.15
+     ],
+     "b": [
+      84.2,
+      4.0,
+      4.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      4.0,
+      4.15
+     ],
+     "b": [
+      84.2,
+      13.0,
+      4.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      13.0,
+      4.15
+     ],
+     "b": [
+      84.2,
+      14.5,
+      5.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      14.5,
+      5.15
+     ],
+     "b": [
+      84.2,
+      23.4,
+      5.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      82.6,
+      2.5,
+      3.15
+     ],
+     "b": [
+      82.6,
+      10.5,
+      4.15
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      82.6,
+      12.5,
+      4.15
+     ],
+     "b": [
+      82.6,
+      20.5,
+      5.15
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 0.9,
+     "lantai": [
+      2
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      0.1,
+      7.15
+     ],
+     "b": [
+      81.0,
+      2.5,
+      7.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      2.5,
+      7.15
+     ],
+     "b": [
+      81.0,
+      10.5,
+      8.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      10.5,
+      8.15
+     ],
+     "b": [
+      81.0,
+      12.5,
+      8.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      12.5,
+      8.15
+     ],
+     "b": [
+      81.0,
+      20.5,
+      9.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      81.0,
+      20.5,
+      9.15
+     ],
+     "b": [
+      81.0,
+      23.4,
+      9.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      0.1,
+      7.15
+     ],
+     "b": [
+      84.2,
+      2.5,
+      7.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      2.5,
+      7.15
+     ],
+     "b": [
+      84.2,
+      4.0,
+      8.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      4.0,
+      8.15
+     ],
+     "b": [
+      84.2,
+      13.0,
+      8.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      13.0,
+      8.15
+     ],
+     "b": [
+      84.2,
+      14.5,
+      9.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      84.2,
+      14.5,
+      9.15
+     ],
+     "b": [
+      84.2,
+      23.4,
+      9.15
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      82.6,
+      2.5,
+      7.15
+     ],
+     "b": [
+      82.6,
+      10.5,
+      8.15
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    },
+    {
+     "a": [
+      82.6,
+      12.5,
+      8.15
+     ],
+     "b": [
+      82.6,
+      20.5,
+      9.15
+     ],
+     "jenis": "tembok-miring",
+     "tinggi": 0.9,
+     "lantai": [
+      3
+     ]
+    }
+   ],
+   "tiang": [
+    {
+     "lantai": 3,
+     "titik": [
+      [
+       81.0,
+       0.35,
+       7.15,
+       9.5
+      ],
+      [
+       84.2,
+       0.35,
+       7.15,
+       9.5
+      ],
+      [
+       81.0,
+       2.5,
+       7.15,
+       10.5
+      ],
+      [
+       84.2,
+       2.5,
+       7.15,
+       10.5
+      ],
+      [
+       81.0,
+       5.3,
+       7.5,
+       10.5
+      ],
+      [
+       84.2,
+       5.3,
+       8.15,
+       10.5
+      ],
+      [
+       81.0,
+       8.1,
+       7.85,
+       10.5
+      ],
+      [
+       84.2,
+       8.1,
+       8.15,
+       10.5
+      ],
+      [
+       81.0,
+       10.9,
+       8.15,
+       10.5
+      ],
+      [
+       84.2,
+       10.9,
+       8.15,
+       10.5
+      ],
+      [
+       81.0,
+       13.0,
+       8.213,
+       10.5
+      ],
+      [
+       84.2,
+       13.0,
+       8.15,
+       10.5
+      ],
+      [
+       81.0,
+       15.6,
+       8.537,
+       11.5
+      ],
+      [
+       84.2,
+       15.6,
+       9.15,
+       11.5
+      ],
+      [
+       81.0,
+       18.2,
+       8.863,
+       11.5
+      ],
+      [
+       84.2,
+       18.2,
+       9.15,
+       11.5
+      ],
+      [
+       81.0,
+       20.8,
+       9.15,
+       11.5
+      ],
+      [
+       84.2,
+       20.8,
+       9.15,
+       11.5
+      ],
+      [
+       81.0,
+       23.299999999999997,
+       9.15,
+       11.5
+      ],
+      [
+       84.2,
+       23.299999999999997,
+       9.15,
+       11.5
+      ]
+     ],
+     "tinggi": 2.4
+    }
+   ],
+   "atapPelana": [
+    {
+     "lantai": 3,
+     "a": [
+      82.6,
+      0.05000000000000002
+     ],
+     "b": [
+      82.6,
+      3.1
+     ],
+     "lebar": 3.8,
+     "tepiBawah": 9.55,
+     "puncak": 10.15,
+     "bahan": "seng"
+    },
+    {
+     "lantai": 3,
+     "a": [
+      82.6,
+      2.2
+     ],
+     "b": [
+      82.6,
+      13.6
+     ],
+     "lebar": 3.8,
+     "tepiBawah": 10.55,
+     "puncak": 11.15,
+     "bahan": "seng"
+    },
+    {
+     "lantai": 3,
+     "a": [
+      82.6,
+      12.4
+     ],
+     "b": [
+      82.6,
+      23.549999999999997
+     ],
+     "lebar": 3.8,
+     "tepiBawah": 11.55,
+     "puncak": 12.15,
+     "bahan": "seng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      0.2
+     ],
+     "b": [
+      82.6,
+      2.55
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": 1,
+     "tepiBawah": 2.2,
+     "puncak": 2.7,
+     "naik": 0.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      2.45
+     ],
+     "b": [
+      82.6,
+      10.55
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": 1,
+     "tepiBawah": 2.2,
+     "puncak": 2.7,
+     "naik": 1.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      10.45
+     ],
+     "b": [
+      82.6,
+      12.55
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": 1,
+     "tepiBawah": 3.2,
+     "puncak": 3.7,
+     "naik": 0.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      12.45
+     ],
+     "b": [
+      82.6,
+      20.55
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": 1,
+     "tepiBawah": 3.2,
+     "puncak": 3.7,
+     "naik": 1.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      20.45
+     ],
+     "b": [
+      82.6,
+      23.4
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": 1,
+     "tepiBawah": 4.2,
+     "puncak": 4.7,
+     "naik": 0.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      0.2
+     ],
+     "b": [
+      82.6,
+      2.55
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": -1,
+     "tepiBawah": 2.2,
+     "puncak": 2.7,
+     "naik": 0.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      2.45
+     ],
+     "b": [
+      82.6,
+      4.05
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": -1,
+     "tepiBawah": 2.2,
+     "puncak": 2.7,
+     "naik": 1.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      3.95
+     ],
+     "b": [
+      82.6,
+      13.05
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": -1,
+     "tepiBawah": 3.2,
+     "puncak": 3.7,
+     "naik": 0.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      12.95
+     ],
+     "b": [
+      82.6,
+      14.55
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": -1,
+     "tepiBawah": 3.2,
+     "puncak": 3.7,
+     "naik": 1.0,
+     "bahan": "genteng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      82.6,
+      14.45
+     ],
+     "b": [
+      82.6,
+      23.4
+     ],
+     "lebar": 6.1,
+     "mulai": 1.65,
+     "sisiSaja": -1,
+     "tepiBawah": 4.2,
+     "puncak": 4.7,
+     "naik": 0.0,
+     "bahan": "genteng"
+    }
+   ],
+   "papan": [
+    {
+     "lantai": 2,
+     "a": [
+      80.83,
+      2.9
+     ],
+     "b": [
+      80.83,
+      7.4
+     ],
+     "sisi": 1,
+     "jarak": 0.0,
+     "y": 3.13,
+     "tinggi": 1.05,
+     "jenis": "papan-putih",
+     "teks": "DEPARTEMEN MATEMATIKA|PROGRAM STUDI S1 MATEMATIKA|PROGRAM STUDI S2 MATEMATIKA"
+    }
+   ],
+   "atap": null,
+   "sumber": "footage-2026",
+   "catatan": "FIX FOOTAGE 24 Nov 2026 (penghubung B-F dari B lt 2, dari F lt 3, lt 1, lt 3, tampak samping) dan foto udara (atap putih panjang dari selasar F ke ujung timur B). Lurus dari selasar sayap R. Dosen F (di antara dua kolom tepi selasar) ke pojok timur selasar depan B, tiga lantai. Tiap lantai naik ±2 m dari F ke B: lajur barat ramp, lajur timur dua kelompok 6 anak tangga, bordes bersama di tengah. Lt 1 jalan beratap genteng di kedua sisi dengan railing stainless; lt 2 jembatan bertembok putih bercelah (papan nama Departemen Matematika di sisi barat), beratap pelat lt 3; lt 3 terbuka bertembok sama, beratap seng berangka besi merah bata berundak tiga. Lebar 3,2 m, panjang bagian datar, ramp, dan tangga perkiraan dari video."
+  },
+  {
+   "id": "FA",
+   "nama": "Jalur beratap Gedung F ke Gedung A",
+   "antara": [
+    "F",
+    "A"
+   ],
+   "poligon": [
+    [
+     43.0,
+     0.3
+    ],
+    [
+     65.4,
+     0.3
+    ],
+    [
+     65.4,
+     -2.3
+    ],
+    [
+     43.0,
+     -2.3
+    ]
+   ],
+   "lantai": [
+    {
+     "no": 1,
+     "elevasi": -0.15,
+     "tebal": 0.3,
+     "poligon": [
+      [
+       43.0,
+       -0.1
+      ],
+      [
+       46.0,
+       -0.1
+      ],
+      [
+       46.0,
+       -1.9
+      ],
+      [
+       43.0,
+       -1.9
+      ]
+     ],
+     "area": [
+      [
+       43.0,
+       0.3
+      ],
+      [
+       65.4,
+       0.3
+      ],
+      [
+       65.4,
+       -2.3
+      ],
+      [
+       43.0,
+       -2.3
+      ]
+     ],
+     "kolom": []
+    }
+   ],
+   "anakTangga": [
+    {
+     "lantai": 1,
+     "poligon": [
+      [
+       64.8,
+       -0.1
+      ],
+      [
+       65.4,
+       -0.1
+      ],
+      [
+       65.4,
+       -1.9
+      ],
+      [
+       64.8,
+       -1.9
+      ]
+     ],
+     "elevasi": -1.0,
+     "tebal": 0.3
+    }
+   ],
+   "landai": [
+    {
+     "lantai": 1,
+     "a": [
+      46.0,
+      -1.0
+     ],
+     "b": [
+      64.8,
+      -1.0
+     ],
+     "lebar": 1.8,
+     "dari": -0.15,
+     "ke": -1.0,
+     "dasar": -1.25
+    }
+   ],
+   "tiang": [
+    {
+     "lantai": 1,
+     "titik": [
+      [
+       45.25,
+       0.1,
+       -0.17,
+       2.15
+      ],
+      [
+       45.25,
+       -2.1,
+       -0.17,
+       2.15
+      ],
+      [
+       47.85,
+       0.1,
+       -0.254,
+       2.066
+      ],
+      [
+       47.85,
+       -2.1,
+       -0.254,
+       2.066
+      ],
+      [
+       50.45,
+       0.1,
+       -0.371,
+       1.949
+      ],
+      [
+       50.45,
+       -2.1,
+       -0.371,
+       1.949
+      ],
+      [
+       53.05,
+       0.1,
+       -0.489,
+       1.831
+      ],
+      [
+       53.05,
+       -2.1,
+       -0.489,
+       1.831
+      ],
+      [
+       55.65,
+       0.1,
+       -0.606,
+       1.714
+      ],
+      [
+       55.65,
+       -2.1,
+       -0.606,
+       1.714
+      ],
+      [
+       58.25,
+       0.1,
+       -0.724,
+       1.596
+      ],
+      [
+       58.25,
+       -2.1,
+       -0.724,
+       1.596
+      ],
+      [
+       60.85,
+       0.1,
+       -0.841,
+       1.479
+      ],
+      [
+       60.85,
+       -2.1,
+       -0.841,
+       1.479
+      ],
+      [
+       63.45,
+       0.1,
+       -0.959,
+       1.361
+      ],
+      [
+       63.45,
+       -2.1,
+       -0.959,
+       1.361
+      ]
+     ],
+     "tinggi": 2.4
+    }
+   ],
+   "atapPelana": [
+    {
+     "lantai": 1,
+     "a": [
+      44.95,
+      -1.0
+     ],
+     "b": [
+      46.0,
+      -1.0
+     ],
+     "lebar": 2.5,
+     "tepiBawah": 2.2,
+     "puncak": 2.75,
+     "bahan": "seng"
+    },
+    {
+     "lantai": 1,
+     "a": [
+      45.98,
+      -1.0
+     ],
+     "b": [
+      65.3,
+      -1.0
+     ],
+     "lebar": 2.5,
+     "tepiBawah": 2.2,
+     "puncak": 2.75,
+     "naik": -0.85,
+     "bahan": "seng"
+    }
+   ],
+   "warnaBaja": "#2f5f9e",
+   "atap": null,
+   "sumber": "footage-2026",
+   "catatan": "Foto pengguna 24 Nov 2026 (4 foto ke arah barat-barat laut) dan keterangan pengguna: dari ujung barat selasar F (di samping tangga luar) turun satu anak tangga, lalu jalan paving block ±1,8 m menanjak landai lurus ke barat sampai pojok belakang Gedung A. Kanopi seng berangka besi biru bertiang ramping berhenti di pojok A, bersambung (dengan celah) ke atap pinggiran belakang A. Bedeng tanaman di sisi selatan, parkir motor di sisi utara."
   }
  ],
  "lansekap": [
@@ -1823,6 +4359,1171 @@
      "sumber": "footage-lahan-2026"
     }
    ]
+  },
+  {
+   "id": "halaman-F",
+   "nama": "Halaman Gedung F (antara A, F, B, dan C)",
+   "tapak": [
+    [
+     123.5,
+     -20.0
+    ],
+    [
+     123.5,
+     23.4
+    ],
+    [
+     45.2,
+     23.4
+    ],
+    [
+     45.2,
+     -20.0
+    ]
+   ],
+   "dasar": -1.6,
+   "bidang": [
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       3.0
+      ],
+      [
+       70.1,
+       3.0
+      ],
+      [
+       70.1,
+       3.3
+      ],
+      [
+       68.9,
+       3.3
+      ]
+     ],
+     "atas": -0.794,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       3.3
+      ],
+      [
+       70.1,
+       3.3
+      ],
+      [
+       70.1,
+       3.6
+      ],
+      [
+       68.9,
+       3.6
+      ]
+     ],
+     "atas": -0.658,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       3.6
+      ],
+      [
+       70.1,
+       3.6
+      ],
+      [
+       70.1,
+       3.9
+      ],
+      [
+       68.9,
+       3.9
+      ]
+     ],
+     "atas": -0.522,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       3.9
+      ],
+      [
+       70.1,
+       3.9
+      ],
+      [
+       70.1,
+       4.2
+      ],
+      [
+       68.9,
+       4.2
+      ]
+     ],
+     "atas": -0.386,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       8.5
+      ],
+      [
+       70.1,
+       8.5
+      ],
+      [
+       70.1,
+       8.8
+      ],
+      [
+       68.9,
+       8.8
+      ]
+     ],
+     "atas": -0.11,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       8.8
+      ],
+      [
+       70.1,
+       8.8
+      ],
+      [
+       70.1,
+       9.1
+      ],
+      [
+       68.9,
+       9.1
+      ]
+     ],
+     "atas": 0.03,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       9.1
+      ],
+      [
+       70.1,
+       9.1
+      ],
+      [
+       70.1,
+       9.4
+      ],
+      [
+       68.9,
+       9.4
+      ]
+     ],
+     "atas": 0.17,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Anak tangga halaman",
+     "poligon": [
+      [
+       68.9,
+       9.4
+      ],
+      [
+       70.1,
+       9.4
+      ],
+      [
+       70.1,
+       9.7
+      ],
+      [
+       68.9,
+       9.7
+      ]
+     ],
+     "atas": 0.31,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "catatan": "Anak tangga beton antar undakan (letak perkiraan)."
+    },
+    {
+     "nama": "Jalan beton di depan selasar B",
+     "poligon": [
+      [
+       80.75,
+       21.6
+      ],
+      [
+       80.75,
+       23.4
+      ],
+      [
+       45.2,
+       23.4
+      ],
+      [
+       45.2,
+       21.6
+      ]
+     ],
+     "atas": 0.55,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton di kaki selasar B, ±0,6 m di bawah lantai selasar (video pendopo, malam)."
+    },
+    {
+     "nama": "Jalan beton antar pendopo",
+     "poligon": [
+      [
+       62.6,
+       13.4
+      ],
+      [
+       62.6,
+       12.2
+      ],
+      [
+       60.4,
+       12.2
+      ],
+      [
+       60.4,
+       13.4
+      ]
+     ],
+     "atas": 0.49,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton menghubungkan pendopo dan jalan di depan B (video). Letak perkiraan."
+    },
+    {
+     "nama": "Jalan beton antar pendopo",
+     "poligon": [
+      [
+       70.6,
+       13.4
+      ],
+      [
+       70.6,
+       12.2
+      ],
+      [
+       68.4,
+       12.2
+      ],
+      [
+       68.4,
+       13.4
+      ]
+     ],
+     "atas": 0.49,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton menghubungkan pendopo dan jalan di depan B (video). Letak perkiraan."
+    },
+    {
+     "nama": "Jalan beton antar pendopo",
+     "poligon": [
+      [
+       58.1,
+       21.6
+      ],
+      [
+       58.1,
+       15.3
+      ],
+      [
+       56.9,
+       15.3
+      ],
+      [
+       56.9,
+       21.6
+      ]
+     ],
+     "atas": 0.49,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton menghubungkan pendopo dan jalan di depan B (video). Letak perkiraan."
+    },
+    {
+     "nama": "Jalan beton antar pendopo",
+     "poligon": [
+      [
+       66.1,
+       15.3
+      ],
+      [
+       64.9,
+       15.3
+      ],
+      [
+       64.9,
+       21.6
+      ],
+      [
+       66.1,
+       21.6
+      ]
+     ],
+     "atas": 0.49,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton menghubungkan pendopo dan jalan di depan B (video). Letak perkiraan."
+    },
+    {
+     "nama": "Jalan beton antar pendopo",
+     "poligon": [
+      [
+       74.1,
+       15.3
+      ],
+      [
+       72.9,
+       15.3
+      ],
+      [
+       72.9,
+       21.6
+      ],
+      [
+       74.1,
+       21.6
+      ]
+     ],
+     "atas": 0.49,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton menghubungkan pendopo dan jalan di depan B (video). Letak perkiraan."
+    },
+    {
+     "nama": "Undakan atas halaman F-B (rumput)",
+     "poligon": [
+      [
+       45.2,
+       23.4
+      ],
+      [
+       80.75,
+       23.4
+      ],
+      [
+       80.75,
+       9.7
+      ],
+      [
+       65.4,
+       9.7
+      ],
+      [
+       64.469,
+       9.654
+      ],
+      [
+       63.547,
+       9.517
+      ],
+      [
+       62.642,
+       9.291
+      ],
+      [
+       61.765,
+       8.977
+      ],
+      [
+       60.922,
+       8.578
+      ],
+      [
+       60.122,
+       8.099
+      ],
+      [
+       59.373,
+       7.544
+      ],
+      [
+       58.682,
+       6.918
+      ],
+      [
+       58.056,
+       6.227
+      ],
+      [
+       57.517,
+       5.5
+      ],
+      [
+       50.6,
+       5.5
+      ],
+      [
+       50.6,
+       14.0
+      ],
+      [
+       50.523,
+       14.78
+      ],
+      [
+       50.428,
+       15.161
+      ],
+      [
+       50.128,
+       15.886
+      ],
+      [
+       49.692,
+       16.538
+      ],
+      [
+       49.138,
+       17.092
+      ],
+      [
+       48.486,
+       17.528
+      ],
+      [
+       47.761,
+       17.828
+      ],
+      [
+       46.992,
+       17.981
+      ],
+      [
+       45.2,
+       18.0
+      ]
+     ],
+     "atas": 0.45,
+     "bahan": "rumput",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Halaman berundak dari B turun ke F (footage koridor F lt 1 dan tampak samping penghubung). Tiga undakan bertembok batu kali; tinggi dan batas perkiraan."
+    },
+    {
+     "nama": "Undakan atas halaman F-B (rumput)",
+     "poligon": [
+      [
+       123.5,
+       15.518
+      ],
+      [
+       121.85,
+       18.375
+      ],
+      [
+       121.345,
+       19.159
+      ],
+      [
+       120.766,
+       19.889
+      ],
+      [
+       120.117,
+       20.559
+      ],
+      [
+       119.406,
+       21.162
+      ],
+      [
+       118.64,
+       21.693
+      ],
+      [
+       117.825,
+       22.145
+      ],
+      [
+       116.97,
+       22.516
+      ],
+      [
+       116.082,
+       22.801
+      ],
+      [
+       115.171,
+       22.998
+      ],
+      [
+       114.245,
+       23.105
+      ],
+      [
+       113.312,
+       23.12
+      ],
+      [
+       112.383,
+       23.044
+      ],
+      [
+       111.466,
+       22.877
+      ],
+      [
+       110.57,
+       22.621
+      ],
+      [
+       109.703,
+       22.278
+      ],
+      [
+       108.873,
+       21.852
+      ],
+      [
+       94.151,
+       13.352
+      ],
+      [
+       93.377,
+       12.854
+      ],
+      [
+       92.654,
+       12.283
+      ],
+      [
+       91.99,
+       11.644
+      ],
+      [
+       91.392,
+       10.944
+      ],
+      [
+       90.863,
+       10.19
+      ],
+      [
+       90.587,
+       9.7
+      ],
+      [
+       84.45,
+       9.7
+      ],
+      [
+       84.45,
+       23.4
+      ],
+      [
+       123.5,
+       23.4
+      ]
+     ],
+     "atas": 0.45,
+     "bahan": "rumput",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Halaman berundak dari B turun ke F (footage koridor F lt 1 dan tampak samping penghubung). Tiga undakan bertembok batu kali; tinggi dan batas perkiraan."
+    },
+    {
+     "nama": "Undakan tengah halaman F-B",
+     "poligon": [
+      [
+       45.2,
+       23.4
+      ],
+      [
+       80.75,
+       23.4
+      ],
+      [
+       80.75,
+       4.2
+      ],
+      [
+       65.008,
+       4.181
+      ],
+      [
+       64.239,
+       4.028
+      ],
+      [
+       63.514,
+       3.728
+      ],
+      [
+       63.178,
+       3.526
+      ],
+      [
+       62.572,
+       3.028
+      ],
+      [
+       62.308,
+       2.738
+      ],
+      [
+       62.074,
+       2.422
+      ],
+      [
+       61.832,
+       2.0
+      ],
+      [
+       48.1,
+       2.0
+      ],
+      [
+       48.093,
+       14.147
+      ],
+      [
+       47.986,
+       14.574
+      ],
+      [
+       47.76,
+       14.952
+      ],
+      [
+       47.433,
+       15.247
+      ],
+      [
+       47.174,
+       15.386
+      ],
+      [
+       46.747,
+       15.493
+      ],
+      [
+       45.2,
+       15.5
+      ]
+     ],
+     "atas": -0.25,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Tanah merah dan rumput (footage). Tinggi dan batas perkiraan."
+    },
+    {
+     "nama": "Undakan tengah halaman F-B",
+     "poligon": [
+      [
+       123.5,
+       4.547
+      ],
+      [
+       116.875,
+       15.955
+      ],
+      [
+       116.631,
+       16.263
+      ],
+      [
+       116.058,
+       16.799
+      ],
+      [
+       115.392,
+       17.213
+      ],
+      [
+       115.032,
+       17.369
+      ],
+      [
+       114.275,
+       17.572
+      ],
+      [
+       113.492,
+       17.623
+      ],
+      [
+       112.715,
+       17.521
+      ],
+      [
+       111.972,
+       17.269
+      ],
+      [
+       111.623,
+       17.089
+      ],
+      [
+       96.575,
+       8.379
+      ],
+      [
+       96.271,
+       8.139
+      ],
+      [
+       95.739,
+       7.575
+      ],
+      [
+       95.326,
+       6.92
+      ],
+      [
+       94.256,
+       4.2
+      ],
+      [
+       84.45,
+       4.2
+      ],
+      [
+       84.45,
+       23.4
+      ],
+      [
+       123.5,
+       23.4
+      ]
+     ],
+     "atas": -0.25,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Tanah merah dan rumput (footage). Tinggi dan batas perkiraan."
+    },
+    {
+     "nama": "Bedeng tanaman jalur F-A",
+     "poligon": [
+      [
+       65.4,
+       -3.4
+      ],
+      [
+       45.2,
+       -3.4
+      ],
+      [
+       45.2,
+       -2.15
+      ],
+      [
+       65.4,
+       -2.15
+      ]
+     ],
+     "atas": -0.6,
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Bedeng semak di sisi selatan jalur beratap F-A (foto)."
+    },
+    {
+     "nama": "Jalan di pojok belakang Gedung A",
+     "poligon": [
+      [
+       46.6,
+       -1.9
+      ],
+      [
+       40.0,
+       -1.9
+      ],
+      [
+       40.0,
+       0.0
+      ],
+      [
+       44.95,
+       0.0
+      ],
+      [
+       44.95,
+       14.0
+      ],
+      [
+       46.6,
+       14.0
+      ]
+     ],
+     "atas": -0.15,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton di bawah atap pinggiran A, dari ujung jalur F-A di pojok belakang A ke selasar depan A (perkiraan, supaya jalur tersambung)."
+    },
+    {
+     "nama": "Parkir motor antara A dan F",
+     "poligon": [
+      [
+       65.2,
+       -20.0
+      ],
+      [
+       65.2,
+       -2.2
+      ],
+      [
+       45.2,
+       -2.2
+      ],
+      [
+       45.2,
+       -20.0
+      ]
+     ],
+     "atas": -0.7,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Parkir motor berpaving di sisi utara jalur F-A (foto). Batas perkiraan."
+    },
+    {
+     "nama": "Halaman bawah depan F",
+     "poligon": [
+      [
+       120.041,
+       2.55
+      ],
+      [
+       113.623,
+       13.645
+      ],
+      [
+       98.888,
+       5.14
+      ],
+      [
+       96.986,
+       0.22
+      ],
+      [
+       65.4,
+       0.22
+      ],
+      [
+       65.38,
+       -0.05
+      ],
+      [
+       46.6,
+       -0.05
+      ],
+      [
+       46.6,
+       14.0
+      ],
+      [
+       45.2,
+       14.0
+      ],
+      [
+       45.2,
+       23.4
+      ],
+      [
+       123.5,
+       23.4
+      ],
+      [
+       123.5,
+       4.547
+      ]
+     ],
+     "atas": -0.93,
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Rumput dan tanah di depan selasar F, sedikit di bawah selasar (footage)."
+    },
+    {
+     "nama": "Halaman bawah depan F",
+     "poligon": [
+      [
+       65.2,
+       -3.4
+      ],
+      [
+       65.38,
+       -3.4
+      ],
+      [
+       65.38,
+       -12.6
+      ],
+      [
+       65.2,
+       -12.6
+      ]
+     ],
+     "atas": -0.93,
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Rumput dan tanah di depan selasar F, sedikit di bawah selasar (footage)."
+    },
+    {
+     "nama": "Halaman bawah depan F",
+     "poligon": [
+      [
+       65.38,
+       -1.95
+      ],
+      [
+       65.38,
+       -2.15
+      ],
+      [
+       45.2,
+       -2.15
+      ],
+      [
+       45.2,
+       -1.95
+      ]
+     ],
+     "atas": -0.93,
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Rumput dan tanah di depan selasar F, sedikit di bawah selasar (footage)."
+    },
+    {
+     "nama": "Tembok penahan tepi halaman F",
+     "poligon": [
+      [
+       45.55,
+       -20.0
+      ],
+      [
+       45.55,
+       23.4
+      ],
+      [
+       45.2,
+       23.4
+      ],
+      [
+       45.2,
+       -20.0
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "catatan": "Tembok batu kali di tepi tapak: tanah di luar tapak (-0,22) lebih tinggi dari halaman F, supaya tidak bolong."
+    },
+    {
+     "nama": "Tembok penahan tepi halaman F",
+     "poligon": [
+      [
+       123.5,
+       -20.0
+      ],
+      [
+       123.5,
+       23.4
+      ],
+      [
+       123.15,
+       23.4
+      ],
+      [
+       123.15,
+       -20.0
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "catatan": "Tembok batu kali di tepi tapak: tanah di luar tapak (-0,22) lebih tinggi dari halaman F, supaya tidak bolong."
+    },
+    {
+     "nama": "Tembok penahan tepi halaman F",
+     "poligon": [
+      [
+       123.5,
+       -20.0
+      ],
+      [
+       123.5,
+       -19.65
+      ],
+      [
+       45.2,
+       -19.65
+      ],
+      [
+       45.2,
+       -20.0
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "catatan": "Tembok batu kali di tepi tapak: tanah di luar tapak (-0,22) lebih tinggi dari halaman F, supaya tidak bolong."
+    },
+    {
+     "nama": "Tembok penahan tepi halaman F",
+     "poligon": [
+      [
+       123.5,
+       23.05
+      ],
+      [
+       123.5,
+       23.4
+      ],
+      [
+       84.5,
+       23.4
+      ],
+      [
+       84.5,
+       23.05
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "catatan": "Tembok batu kali di tepi tapak: tanah di luar tapak (-0,22) lebih tinggi dari halaman F, supaya tidak bolong."
+    },
+    {
+     "nama": "Paving belakang Gedung F",
+     "poligon": [
+      [
+       123.5,
+       -20.0
+      ],
+      [
+       123.5,
+       23.4
+      ],
+      [
+       45.2,
+       23.4
+      ],
+      [
+       45.2,
+       -20.0
+      ]
+     ],
+     "atas": -0.95,
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Permukaan dasar di sekitar F (lantai 1 F -0,8). Di belakang F parkir motor berpaving dan kanopi (footage pintu belakang). Batas tapak perkiraan."
+    }
+   ],
+   "benda": [
+    {
+     "jenis": "pendopo",
+     "x": 57.5,
+     "z": 12.8,
+     "y": 0.45,
+     "arah": 0,
+     "panjang": 6.0,
+     "lebar": 5.0,
+     "alas": 0.3,
+     "tinggi": 2.7,
+     "sisiKisi": 1,
+     "sumber": "footage-2026",
+     "catatan": "Pendopo taman: alas beton merah muda keabuan, tiang kayu, atap datar tipis gelap, plafon bilah kayu, kisi kayu, bangku L (foto). Letak perkiraan dari video; lebih rendah dari lantai B."
+    },
+    {
+     "jenis": "pendopo",
+     "x": 65.5,
+     "z": 12.8,
+     "y": 0.45,
+     "arah": 0,
+     "panjang": 6.0,
+     "lebar": 5.0,
+     "alas": 0.3,
+     "tinggi": 2.7,
+     "sisiKisi": 1,
+     "sumber": "footage-2026",
+     "catatan": "Pendopo taman: alas beton merah muda keabuan, tiang kayu, atap datar tipis gelap, plafon bilah kayu, kisi kayu, bangku L (foto). Letak perkiraan dari video; lebih rendah dari lantai B."
+    },
+    {
+     "jenis": "pendopo",
+     "x": 73.5,
+     "z": 12.8,
+     "y": 0.45,
+     "arah": 0,
+     "panjang": 6.0,
+     "lebar": 5.0,
+     "alas": 0.3,
+     "tinggi": 2.7,
+     "sisiKisi": 1,
+     "sumber": "footage-2026",
+     "catatan": "Pendopo taman: alas beton merah muda keabuan, tiang kayu, atap datar tipis gelap, plafon bilah kayu, kisi kayu, bangku L (foto). Letak perkiraan dari video; lebih rendah dari lantai B."
+    }
+   ],
+   "sumber": "footage-2026",
+   "catatan": "Paket 1 FIX FOOTAGE (24 Nov 2026). Tanah di sekitar F diturunkan karena lantai 1 F 0,8 m di bawah A (tapak melubangi tanah dasar -0,22). Halaman F-B berundak naik dari F (-0,93) ke B (0,45, jalan beton 0,55 di kaki selasar B), bertembok batu kali; tiga pendopo di undakan atas. Di utara jalur F-A parkir motor berpaving, di belakang F paving. Batas undakan, tinggi, dan letak pendopo perkiraan."
   }
  ]
 }
