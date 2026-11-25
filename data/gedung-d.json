@@ -1,0 +1,1362 @@
+{
+ "schema": "fsm-gedung@1",
+ "id": "D",
+ "nama": "Gedung D",
+ "kategori": "Laboratorium",
+ "deskripsi": "Gedung laboratorium tiga lantai di selatan Gedung C, menempel ke menara Gedung L di baratnya. Selasar menghadap utara ke taman di antara C dan D; penghubung C-D (tiga lantai) tiba di ujung timur selasar. Lt 1: R. Teknisi, R. Penelitian II, R. Penelitian I; lt 2: R. Dosen, Lab Biokimia I, R. Instrumen; lt 3: Lab Kimia Dasar. Tidak ada tangga di dalam D; naik-turun lewat Gedung C (penghubung C-D) atau Gedung L.",
+ "sumberData": {
+  "denah-2023": "Denah Gedung FSM Undip (2023), skala 1:150, lembar D LT.1 sampai LT.3: susunan ruang, kedalaman ruang 10,7 m, selasar 2,9 m.",
+  "google-earth-2026": "Ukuran pengguna di Google Earth (25 Nov 2026): atap D 26,4 m barat-timur (dipakai, denah 20,1 m direntangkan), atap C ke atap D 8,6 m, atap penghubung C-D 10,9 m. Ukuran utara-selatan 20 m belum dipakai (foto udara: ±15-16 m).",
+  "footage-2026": "FIX FOOTAGE Gedung D dan Penghubung C-D (25 Nov 2026): arah selasar, letak penghubung, beda tinggi, tampak depan, pintu, pembatas.",
+  "foto-udara-2026": "Foto udara berlabel (23 Nov 2026): D di selatan bagian barat C, timur L, atap perisai abu-abu gelap memanjang barat-timur.",
+  "perkiraan": "Perkiraan: jendela sisi belakang dan ujung, sebagian letak pintu."
+ },
+ "koordinat": "Meter. x dari dinding ujung timur (sisi R. Teknisi, x=0) ke dinding ujung barat (x=24,6), z dari dinding belakang (selatan, z=0) ke dinding depan (z=10,7) dan tepi selasar (z=13,6); y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A; lantai 1 D di y=0,25, ±1,05 m di atas C menurut footage penghubung C-D). Di kawasan gedung diputar 180 derajat.",
+ "ukuran": {
+  "panjang": 24.6,
+  "panjangDenah": 20.1,
+  "kedalamanRuang": 10.7,
+  "lebarSelasar": 2.9,
+  "tinggiLantai": 4.0,
+  "tebalPelat": 0.15
+ },
+ "tampilan": {
+  "dinding": "#e6e4dc",
+  "dindingDalam": "#efede7",
+  "kolom": "#b9bec2",
+  "lantai": "#e6e1d7",
+  "selasar": "#d9d6cf",
+  "atap": "#4d5352",
+  "kusen": "#2f3538",
+  "pintu": "#6e3524",
+  "pagar": "#c6cacd"
+ },
+ "fondasi": {
+  "dasar": -1.6,
+  "warna": "#5a5f63",
+  "catatan": "Alas abu-abu di bawah lantai 1; jalan servis di timur D lebih rendah (-0,95)."
+ },
+ "kolom": {
+  "ukuran": 0.4,
+  "dasar": -1.6,
+  "puncak": 12.4,
+  "titik": [
+   [
+    0.1,
+    0.1
+   ],
+   [
+    6.15,
+    0.1
+   ],
+   [
+    12.3,
+    0.1
+   ],
+   [
+    18.45,
+    0.1
+   ],
+   [
+    24.5,
+    0.1
+   ],
+   [
+    0.1,
+    10.6
+   ],
+   [
+    6.15,
+    10.6
+   ],
+   [
+    12.3,
+    10.6
+   ],
+   [
+    18.45,
+    10.6
+   ],
+   [
+    24.5,
+    10.6
+   ],
+   [
+    0.1,
+    5.35
+   ],
+   [
+    24.5,
+    5.35
+   ],
+   [
+    0.25,
+    13.35
+   ],
+   [
+    6.15,
+    13.35
+   ],
+   [
+    12.3,
+    13.35
+   ],
+   [
+    18.45,
+    13.35
+   ],
+   [
+    24.35,
+    13.35
+   ]
+  ]
+ },
+ "lantai": [
+  {
+   "no": 1,
+   "elevasi": 0.25,
+   "elevasiSelasar": 0.2,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/D1.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     26.1,
+     15.1
+    ],
+    "keterangan": "Denah 2023 Gedung D lantai 1, diluruskan ke 30 px per meter dan direntangkan memanjang (20.1 -> 24.6 m) mengikuti panjang atap Google Earth."
+   },
+   "ruang": [
+    {
+     "kode": "D1-TK",
+     "nama": "R. Teknisi",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       0.0,
+       0
+      ],
+      [
+       5.875,
+       0
+      ],
+      [
+       5.875,
+       10.7
+      ],
+      [
+       0.0,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    },
+    {
+     "kode": "D1-P2",
+     "nama": "R. Penelitian II",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       5.875,
+       0
+      ],
+      [
+       14.197,
+       0
+      ],
+      [
+       14.197,
+       10.7
+      ],
+      [
+       5.875,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    },
+    {
+     "kode": "D1-P1",
+     "nama": "R. Penelitian I",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       14.197,
+       0
+      ],
+      [
+       24.6,
+       0
+      ],
+      [
+       24.6,
+       10.7
+      ],
+      [
+       14.197,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    }
+   ],
+   "dinding": [
+    {
+     "id": "D1-depan",
+     "luar": true,
+     "a": [
+      0,
+      10.7
+     ],
+     "b": [
+      24.6,
+      10.7
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.5,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D1-TK",
+       "sumber": "footage-2026",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 3.987,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-TK",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.0,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D1-P2",
+       "sumber": "perkiraan",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 7.35,
+       "lebar": 1.0,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 10.875,
+       "lebar": 1.45,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 16.7,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D1-P1",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 23.3,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D1-P1",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.148,
+       "lebar": 0.803,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.65,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P1",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "poster",
+       "t": 6.15,
+       "ambang": 1.4,
+       "lebar": 0.6,
+       "tinggi": 0.5,
+       "sisi": 1,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "poster",
+       "t": 12.3,
+       "ambang": 1.4,
+       "lebar": 0.6,
+       "tinggi": 0.5,
+       "sisi": 1,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "poster",
+       "t": 18.45,
+       "ambang": 1.4,
+       "lebar": 0.6,
+       "tinggi": 0.5,
+       "sisi": 1,
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Dinding depan menghadap selasar dan taman di utara (arah Gedung C)."
+    },
+    {
+     "id": "D1-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      24.6,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.938,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-TK",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.225,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 16.323,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.525,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D1-P1",
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "D1-ujung-timur",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      10.7
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.7,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.0,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      }
+     ],
+     "catatan": "Ujung timur, di samping penghubung C-D."
+    },
+    {
+     "id": "D1-ujung-barat",
+     "luar": true,
+     "a": [
+      24.6,
+      0
+     ],
+     "b": [
+      24.6,
+      10.7
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023",
+     "catatan": "Ujung barat menempel ke menara Gedung L (footage tampak depan)."
+    },
+    {
+     "id": "D1-sekat-5.875",
+     "a": [
+      5.875,
+      0
+     ],
+     "b": [
+      5.875,
+      10.7
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "D1-sekat-14.197",
+     "a": [
+      14.197,
+      0
+     ],
+     "b": [
+      14.197,
+      10.7
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      10.7
+     ],
+     [
+      24.6,
+      10.7
+     ],
+     [
+      24.6,
+      13.6
+     ],
+     [
+      0,
+      13.6
+     ]
+    ]
+   },
+   "pagar": []
+  },
+  {
+   "no": 2,
+   "elevasi": 4.25,
+   "elevasiSelasar": 4.2,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/D2.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     26.1,
+     15.1
+    ],
+    "keterangan": "Denah 2023 Gedung D lantai 2, diluruskan ke 30 px per meter dan direntangkan memanjang (20.1 -> 24.6 m) mengikuti panjang atap Google Earth."
+   },
+   "ruang": [
+    {
+     "kode": "D2-DS",
+     "nama": "R. Dosen",
+     "fungsi": "kantor",
+     "poligon": [
+      [
+       0.0,
+       0
+      ],
+      [
+       6.242,
+       0
+      ],
+      [
+       6.242,
+       10.7
+      ],
+      [
+       0.0,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    },
+    {
+     "kode": "D2-BK",
+     "nama": "R. Lab Biokimia I",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       6.242,
+       0
+      ],
+      [
+       18.725,
+       0
+      ],
+      [
+       18.725,
+       10.7
+      ],
+      [
+       6.242,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    },
+    {
+     "kode": "D2-IN",
+     "nama": "R. Instrumen",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       18.725,
+       0
+      ],
+      [
+       24.6,
+       0
+      ],
+      [
+       24.6,
+       10.7
+      ],
+      [
+       18.725,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    }
+   ],
+   "dinding": [
+    {
+     "id": "D2-depan",
+     "luar": true,
+     "a": [
+      0,
+      10.7
+     ],
+     "b": [
+      24.6,
+      10.7
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.5,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D2-DS",
+       "sumber": "footage-2026",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.05,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-DS",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.0,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D2-BK",
+       "sumber": "perkiraan",
+       "papanNama": true
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 16.7,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D2-BK",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 7.35,
+       "lebar": 1.0,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-BK",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 10.875,
+       "lebar": 1.45,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-BK",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.275,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-BK",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 23.3,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D2-IN",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.712,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-IN",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [],
+     "sumber": "denah-2023",
+     "catatan": "Dinding depan menghadap selasar dan taman di utara (arah Gedung C)."
+    },
+    {
+     "id": "D2-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      24.6,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 3.075,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-DS",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.271,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-BK",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 15.375,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-BK",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.663,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D2-IN",
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "D2-ujung-timur",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      10.7
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.7,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.0,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      }
+     ],
+     "catatan": "Ujung timur, di samping penghubung C-D."
+    },
+    {
+     "id": "D2-ujung-barat",
+     "luar": true,
+     "a": [
+      24.6,
+      0
+     ],
+     "b": [
+      24.6,
+      10.7
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023",
+     "catatan": "Ujung barat menempel ke menara Gedung L (footage tampak depan)."
+    },
+    {
+     "id": "D2-sekat-6.242",
+     "a": [
+      6.242,
+      0
+     ],
+     "b": [
+      6.242,
+      10.7
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "D2-sekat-18.725",
+     "a": [
+      18.725,
+      0
+     ],
+     "b": [
+      18.725,
+      10.7
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      10.7
+     ],
+     [
+      24.6,
+      10.7
+     ],
+     [
+      24.6,
+      13.6
+     ],
+     [
+      0,
+      13.6
+     ]
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.1,
+      13.5,
+      -0.05
+     ],
+     "b": [
+      0.25,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      3.1,
+      13.5,
+      -0.05
+     ],
+     "b": [
+      24.5,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      0.1,
+      10.799999999999999,
+      -0.05
+     ],
+     "b": [
+      0.1,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      24.5,
+      10.799999999999999,
+      -0.05
+     ],
+     "b": [
+      24.5,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Footage lt 3: ujung barat selasar menerus ke anak tangga + ramp naik ke Gedung L. Ditutup sampai L dibuat."
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "elevasi": 8.25,
+   "elevasiSelasar": 8.2,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/D3.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     26.1,
+     15.1
+    ],
+    "keterangan": "Denah 2023 Gedung D lantai 3, diluruskan ke 30 px per meter dan direntangkan memanjang (20.1 -> 24.6 m) mengikuti panjang atap Google Earth."
+   },
+   "ruang": [
+    {
+     "kode": "D3-KD",
+     "nama": "R. Lab Kimia Dasar",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       0.0,
+       0
+      ],
+      [
+       17.501,
+       0
+      ],
+      [
+       17.501,
+       10.7
+      ],
+      [
+       0.0,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Panjang ruang dari denah, direntangkan sebanding ke panjang atap Google Earth."
+    },
+    {
+     "kode": "D3-KB",
+     "nama": "R. Lab Kimia Dasar (bagian barat)",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       17.501,
+       0
+      ],
+      [
+       24.6,
+       0
+      ],
+      [
+       24.6,
+       10.7
+      ],
+      [
+       17.501,
+       10.7
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Denah lt 3 menggambar satu R. Lab Kimia Dasar dengan garis sekat di sini; nama bagian ini belum diketahui."
+    }
+   ],
+   "dinding": [
+    {
+     "id": "D3-depan",
+     "luar": true,
+     "a": [
+      0,
+      10.7
+     ],
+     "b": [
+      24.6,
+      10.7
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.2,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D3-KD",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 8.0,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D3-KD",
+       "sumber": "footage-2026",
+       "papanNama": true
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 16.6,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D3-KD",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 3.9,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KD",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 10.375,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KD",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.225,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KD",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 23.3,
+       "lebar": 1.2,
+       "tinggi": 2.6,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "D3-KB",
+       "sumber": "denah-2023",
+       "papanNama": true
+      },
+      {
+       "jenis": "jendela",
+       "t": 20.65,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KB",
+       "sumber": "footage-2026"
+      }
+     ],
+     "tempelan": [
+      {
+       "jenis": "papan-pengumuman",
+       "t": 6.15,
+       "ambang": 1.0,
+       "lebar": 0.8,
+       "tinggi": 0.9,
+       "sisi": 1,
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "papan-pengumuman",
+       "t": 18.45,
+       "ambang": 1.0,
+       "lebar": 0.8,
+       "tinggi": 0.9,
+       "sisi": 1,
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Dinding depan menghadap selasar dan taman di utara (arah Gedung C)."
+    },
+    {
+     "id": "D3-belakang",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      24.6,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 3.075,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KD",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.225,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KD",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.901,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KD",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.525,
+       "lebar": 2.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "D3-KB",
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "D3-ujung-timur",
+     "luar": true,
+     "a": [
+      0,
+      0
+     ],
+     "b": [
+      0,
+      10.7
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.7,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.0,
+       "lebar": 1.8,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      }
+     ],
+     "catatan": "Ujung timur, di samping penghubung C-D."
+    },
+    {
+     "id": "D3-ujung-barat",
+     "luar": true,
+     "a": [
+      24.6,
+      0
+     ],
+     "b": [
+      24.6,
+      10.7
+     ],
+     "tebal": 0.2,
+     "bukaan": [],
+     "sumber": "denah-2023",
+     "catatan": "Ujung barat menempel ke menara Gedung L (footage tampak depan)."
+    },
+    {
+     "id": "D3-sekat-17.501",
+     "a": [
+      17.501,
+      0
+     ],
+     "b": [
+      17.501,
+      10.7
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      10.7
+     ],
+     [
+      24.6,
+      10.7
+     ],
+     [
+      24.6,
+      13.6
+     ],
+     [
+      0,
+      13.6
+     ]
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.1,
+      13.5,
+      -0.05
+     ],
+     "b": [
+      0.25,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      3.1,
+      13.5,
+      -0.05
+     ],
+     "b": [
+      24.5,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      0.1,
+      10.799999999999999,
+      -0.05
+     ],
+     "b": [
+      0.1,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      24.5,
+      10.799999999999999,
+      -0.05
+     ],
+     "b": [
+      24.5,
+      13.5,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Footage lt 3: ujung barat selasar menerus ke anak tangga + ramp naik ke Gedung L. Ditutup sampai L dibuat."
+    }
+   ]
+  }
+ ],
+ "tangga": [],
+ "tritisan": [
+  {
+   "a": [
+    3.2,
+    13.6
+   ],
+   "b": [
+    24.6,
+    13.6
+   ],
+   "sisi": 1,
+   "elevasi": 4.25,
+   "lantai": 2,
+   "lebar": 1.8,
+   "turun": 0.75,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Atap genteng lebar di depan selasar lt 1."
+  },
+  {
+   "a": [
+    3.2,
+    13.6
+   ],
+   "b": [
+    24.6,
+    13.6
+   ],
+   "sisi": 1,
+   "elevasi": 8.25,
+   "lantai": 3,
+   "lebar": 1.2,
+   "turun": 0.5,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Tritisan genteng di bawah tembok selasar lt 3."
+  }
+ ],
+ "atap": [
+  {
+   "jenis": "perisai",
+   "asal": [
+    0,
+    0
+   ],
+   "sudut": 0,
+   "tepiBawah": 12.4,
+   "tonjolan": 0.9,
+   "kemiringan": 30,
+   "batas": [
+    0,
+    0,
+    24.6,
+    13.6
+   ],
+   "sumber": "foto-udara-2026",
+   "catatan": "Atap perisai abu-abu gelap memanjang barat-timur (foto udara); panjang atap 26,4 m (Google Earth)."
+  }
+ ],
+ "mulaiJalan": {
+  "posisi": [
+   1.7,
+   12.6
+  ],
+  "arah": 0
+ }
+}

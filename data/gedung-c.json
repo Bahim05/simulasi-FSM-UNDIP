@@ -1711,22 +1711,6 @@
     },
     {
      "a": [
-      22.6,
-      0.1,
-      -0.05
-     ],
-     "b": [
-      25.19,
-      0.1,
-      -0.05
-     ],
-     "jenis": "tembok-handrail",
-     "tinggi": 0.9,
-     "sumber": "perkiraan",
-     "catatan": "Ujung belakang lorong tembus (lt 1 terbuka ke belakang, arah Gedung D)."
-    },
-    {
-     "a": [
       23.65,
       7.55,
       0
@@ -2460,22 +2444,6 @@
      "jenis": "tembok-handrail",
      "tinggi": 0.9,
      "sumber": "perkiraan"
-    },
-    {
-     "a": [
-      22.6,
-      0.1,
-      -0.05
-     ],
-     "b": [
-      25.19,
-      0.1,
-      -0.05
-     ],
-     "jenis": "tembok-handrail",
-     "tinggi": 0.9,
-     "sumber": "perkiraan",
-     "catatan": "Ujung belakang lorong tembus (lt 1 terbuka ke belakang, arah Gedung D)."
     },
     {
      "a": [
