@@ -1,0 +1,2656 @@
+{
+ "schema": "fsm-gedung@1",
+ "id": "J",
+ "nama": "Gedung J",
+ "kategori": "Laboratorium",
+ "deskripsi": "Gedung Departemen Kimia, tiga lantai, memanjang barat-timur di selatan parkiran dosen, selasar menghadap utara ke taman dan parkiran. Lt 1: Lab Kimia Organik 1 dan 2; lt 2-3: Laboratorium 1 dan 2; KM/WC di ujung barat. Pintu masuk utama di lorong tengah (tangga U di belakangnya); tangga U luar di ujung timur dekat pendopo.",
+ "sumberData": {
+  "denah-2023": "Denah Gedung FSM Undip (2023), skala 1:150, lembar J LT.1 sampai LT.3: ukuran, ruang, tangga, pintu.",
+  "google-earth-2026": "Ukuran pengguna di Google Earth (25 Nov 2026): atap 56 m (cocok dengan denah), 93 m dari tepi belakang atap C, ujung timur segaris ujung timur C.",
+  "footage-2026": "FIX FOOTAGE Gedung J (tampak depan, koridor lt 1, pendopo samping J) dan penghubung I-J (25 Nov 2026).",
+  "foto-udara-2026": "Screenshot Google Maps berlabel pengguna (25 Nov 2026): letak J, P, parkiran dosen.",
+  "perkiraan": "Perkiraan: tinggi lantai terhadap kawasan, jendela sisi belakang, anak tangga sisi timur tangga luar."
+ },
+ "koordinat": "Meter. x dari muka timur tangga luar (x=0) ke dinding ujung barat (x=54,15), dinding ujung timur badan gedung di x=3,05; z dari dinding belakang (selatan, z=0) ke dinding depan (z=9,4) dan tepi selasar (z=11,2); y kawasan (lantai 1 J di -1,8, perkiraan). Di kawasan gedung diputar 180 derajat.",
+ "ukuran": {
+  "panjang": 54.15,
+  "panjangBadan": 51.1,
+  "kedalamanRuang": 9.4,
+  "lebarSelasar": 1.8,
+  "tinggiLantai": 4.0,
+  "tebalPelat": 0.15
+ },
+ "tampilan": {
+  "dinding": "#ecebe5",
+  "dindingDalam": "#f1efe9",
+  "kolom": "#c3c7ca",
+  "lantai": "#e6e1d7",
+  "selasar": "#e3e0da",
+  "atap": "#5e6265",
+  "kusen": "#2f3538",
+  "pintu": "#7a4a2c",
+  "pagar": "#eeede8"
+ },
+ "fondasi": {
+  "dasar": -3.0,
+  "warna": "#5a5f63",
+  "catatan": "Alas abu-abu; taman depan J -2,45, halaman timur -2,35 (perkiraan)."
+ },
+ "kolom": {
+  "ukuran": 0.4,
+  "dasar": -3.0,
+  "puncak": 10.35,
+  "titik": [
+   [
+    3.15,
+    0.1
+   ],
+   [
+    6.3,
+    0.1
+   ],
+   [
+    9.55,
+    0.1
+   ],
+   [
+    12.8,
+    0.1
+   ],
+   [
+    16.05,
+    0.1
+   ],
+   [
+    19.3,
+    0.1
+   ],
+   [
+    22.55,
+    0.1
+   ],
+   [
+    25.8,
+    0.1
+   ],
+   [
+    29.05,
+    0.1
+   ],
+   [
+    32.2,
+    0.1
+   ],
+   [
+    35.83,
+    0.1
+   ],
+   [
+    39.46,
+    0.1
+   ],
+   [
+    43.09,
+    0.1
+   ],
+   [
+    46.72,
+    0.1
+   ],
+   [
+    50.35,
+    0.1
+   ],
+   [
+    54.05,
+    0.1
+   ],
+   [
+    3.15,
+    9.3
+   ],
+   [
+    6.3,
+    9.3
+   ],
+   [
+    9.55,
+    9.3
+   ],
+   [
+    12.8,
+    9.3
+   ],
+   [
+    16.05,
+    9.3
+   ],
+   [
+    19.3,
+    9.3
+   ],
+   [
+    22.55,
+    9.3
+   ],
+   [
+    25.8,
+    9.3
+   ],
+   [
+    29.05,
+    9.3
+   ],
+   [
+    32.2,
+    9.3
+   ],
+   [
+    35.83,
+    9.3
+   ],
+   [
+    39.46,
+    9.3
+   ],
+   [
+    43.09,
+    9.3
+   ],
+   [
+    46.72,
+    9.3
+   ],
+   [
+    50.35,
+    9.3
+   ],
+   [
+    54.05,
+    9.3
+   ],
+   [
+    3.15,
+    4.7
+   ],
+   [
+    54.05,
+    4.7
+   ],
+   [
+    3.3,
+    10.95
+   ],
+   [
+    6.3,
+    10.95
+   ],
+   [
+    9.55,
+    10.95
+   ],
+   [
+    12.8,
+    10.95
+   ],
+   [
+    16.05,
+    10.95
+   ],
+   [
+    19.3,
+    10.95
+   ],
+   [
+    22.55,
+    10.95
+   ],
+   [
+    25.8,
+    10.95
+   ],
+   [
+    29.05,
+    10.95
+   ],
+   [
+    32.2,
+    10.95
+   ],
+   [
+    35.83,
+    10.95
+   ],
+   [
+    39.46,
+    10.95
+   ],
+   [
+    43.09,
+    10.95
+   ],
+   [
+    46.72,
+    10.95
+   ],
+   [
+    50.35,
+    10.95
+   ],
+   [
+    53.9,
+    10.95
+   ],
+   [
+    0.05,
+    9.3
+   ],
+   [
+    0.05,
+    4.85
+   ]
+  ]
+ },
+ "lantai": [
+  {
+   "no": 1,
+   "elevasi": -1.8,
+   "elevasiSelasar": -1.85,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/J1.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     55.65,
+     12.7
+    ],
+    "keterangan": "Denah 2023 Gedung J lantai 1, diluruskan ke 30 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "J1-L1",
+     "nama": "Lab. Kimia Organik 1",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       3.05,
+       0
+      ],
+      [
+       29.05,
+       0
+      ],
+      [
+       29.05,
+       9.4
+      ],
+      [
+       3.05,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J1-L2",
+     "nama": "Lab. Kimia Organik 2",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       32.2,
+       0
+      ],
+      [
+       50.35,
+       0
+      ],
+      [
+       50.35,
+       9.4
+      ],
+      [
+       32.2,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J1-KM1",
+     "nama": "KM/WC",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       50.35,
+       4.7
+      ],
+      [
+       54.15,
+       4.7
+      ],
+      [
+       54.15,
+       9.4
+      ],
+      [
+       50.35,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J1-KM2",
+     "nama": "KM/WC",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       50.35,
+       0
+      ],
+      [
+       54.15,
+       0
+      ],
+      [
+       54.15,
+       4.7
+      ],
+      [
+       50.35,
+       4.7
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J1-LB",
+     "nama": "Lobi dan tangga",
+     "fungsi": "sirkulasi",
+     "poligon": [
+      [
+       29.05,
+       0
+      ],
+      [
+       32.2,
+       0
+      ],
+      [
+       32.2,
+       9.4
+      ],
+      [
+       29.05,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023",
+     "catatan": "Lorong tengah = pintu masuk utama dari taman (footage tampak depan); tangga U di bagian belakang."
+    }
+   ],
+   "dinding": [
+    {
+     "id": "J1-depan-timur",
+     "luar": true,
+     "a": [
+      3.05,
+      9.4
+     ],
+     "b": [
+      29.05,
+      9.4
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.55,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J1-L1",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 20.55,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J1-L1",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 7.75,
+       "lebar": 1.1,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.55,
+       "lebar": 1.5,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J1-depan-barat",
+     "luar": true,
+     "a": [
+      32.2,
+      9.4
+     ],
+     "b": [
+      54.15,
+      9.4
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 12.7,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J1-L2",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu",
+       "t": 20.05,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "ruang": "J1-KM1",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.815,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.445,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.075,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 16.335,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 20.95,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J1-depan-lorong",
+     "luar": true,
+     "a": [
+      29.05,
+      9.4
+     ],
+     "b": [
+      32.2,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.575,
+       "lebar": 1.8,
+       "tinggi": 2.6,
+       "boven": 0.6,
+       "ruang": "J1-LB",
+       "sumber": "footage-2026"
+      }
+     ]
+    },
+    {
+     "id": "J1-belakang",
+     "luar": true,
+     "a": [
+      3.05,
+      0
+     ],
+     "b": [
+      54.15,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.125,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.125,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.965,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 34.595,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 38.225,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 41.855,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 45.485,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J1-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 27.575,
+       "lebar": 1.2,
+       "ambang": 2.3,
+       "tinggi": 1.0,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 50.1,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J1-ujung-timur",
+     "luar": true,
+     "a": [
+      3.05,
+      0
+     ],
+     "b": [
+      3.05,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.0,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      }
+     ],
+     "catatan": "Ujung timur badan gedung; tangga U luar di luar dinding ini."
+    },
+    {
+     "id": "J1-ujung-barat",
+     "luar": true,
+     "a": [
+      54.15,
+      0
+     ],
+     "b": [
+      54.15,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "ventilasi",
+       "t": 2.3,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 7.0,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ]
+    },
+    {
+     "id": "J1-sekat-lorong-timur",
+     "a": [
+      29.05,
+      0
+     ],
+     "b": [
+      29.05,
+      9.4
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 5.85,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "ruang": "J1-L1",
+       "sumber": "denah-2023"
+      }
+     ]
+    },
+    {
+     "id": "J1-sekat-lorong-barat",
+     "a": [
+      32.2,
+      0
+     ],
+     "b": [
+      32.2,
+      9.4
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 5.85,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "ruang": "J1-L2",
+       "sumber": "denah-2023"
+      }
+     ]
+    },
+    {
+     "id": "J1-sekat-km",
+     "a": [
+      50.35,
+      0
+     ],
+     "b": [
+      50.35,
+      9.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J1-sekat-km-dalam",
+     "a": [
+      50.35,
+      4.7
+     ],
+     "b": [
+      54.15,
+      4.7
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.0,
+       "lebar": 0.8,
+       "tinggi": 2.1,
+       "ruang": "J1-KM2",
+       "sumber": "denah-2023"
+      }
+     ]
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      3.05,
+      9.4
+     ],
+     [
+      29.05,
+      9.4
+     ],
+     [
+      29.05,
+      0
+     ],
+     [
+      32.2,
+      0
+     ],
+     [
+      32.2,
+      9.4
+     ],
+     [
+      54.15,
+      9.4
+     ],
+     [
+      54.15,
+      11.2
+     ],
+     [
+      3.05,
+      11.2
+     ]
+    ],
+    "tambahan": [
+     {
+      "poligon": [
+       [
+        0,
+        4.75
+       ],
+       [
+        3.05,
+        4.75
+       ],
+       [
+        3.05,
+        11.2
+       ],
+       [
+        0,
+        11.2
+       ]
+      ],
+      "catatan": "Selasar menerus ke ujung luar tangga timur (denah) dan lantai di bawah tangga."
+     }
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.1,
+      11.1,
+      -0.05
+     ],
+     "b": [
+      28.75,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      32.5,
+      11.1,
+      -0.05
+     ],
+     "b": [
+      54.05,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      54.05,
+      9.5,
+      -0.05
+     ],
+     "b": [
+      54.05,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Ujung barat selasar: penghubung I-J (lt 1) dibuat di Paket 5."
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "elevasi": 2.2,
+   "elevasiSelasar": 2.15,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/J2.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     55.65,
+     12.7
+    ],
+    "keterangan": "Denah 2023 Gedung J lantai 2, diluruskan ke 30 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "J2-L1",
+     "nama": "Laboratorium 1",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       3.05,
+       0
+      ],
+      [
+       29.05,
+       0
+      ],
+      [
+       29.05,
+       9.4
+      ],
+      [
+       3.05,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J2-L2",
+     "nama": "Laboratorium 2",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       32.2,
+       0
+      ],
+      [
+       50.35,
+       0
+      ],
+      [
+       50.35,
+       9.4
+      ],
+      [
+       32.2,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J2-KM1",
+     "nama": "KM/WC",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       50.35,
+       4.7
+      ],
+      [
+       54.15,
+       4.7
+      ],
+      [
+       54.15,
+       9.4
+      ],
+      [
+       50.35,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J2-KM2",
+     "nama": "KM/WC",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       50.35,
+       0
+      ],
+      [
+       54.15,
+       0
+      ],
+      [
+       54.15,
+       4.7
+      ],
+      [
+       50.35,
+       4.7
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J2-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       29.05,
+       0
+      ],
+      [
+       32.2,
+       0
+      ],
+      [
+       32.2,
+       3.85
+      ],
+      [
+       29.05,
+       3.85
+      ]
+     ],
+     "sumber": "denah-2023",
+     "void": true
+    }
+   ],
+   "dinding": [
+    {
+     "id": "J2-depan-timur",
+     "luar": true,
+     "a": [
+      3.05,
+      9.4
+     ],
+     "b": [
+      29.05,
+      9.4
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.55,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J2-L1",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 20.55,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J2-L1",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 7.75,
+       "lebar": 1.1,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.55,
+       "lebar": 1.5,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J2-depan-barat",
+     "luar": true,
+     "a": [
+      32.2,
+      9.4
+     ],
+     "b": [
+      54.15,
+      9.4
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 12.7,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J2-L2",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu",
+       "t": 20.05,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "ruang": "J2-KM1",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.815,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.445,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.075,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 16.335,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 20.95,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J2-depan-lorong",
+     "luar": true,
+     "a": [
+      29.05,
+      9.4
+     ],
+     "b": [
+      32.2,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.575,
+       "lebar": 1.8,
+       "tinggi": 2.6,
+       "boven": 0.6,
+       "sumber": "footage-2026"
+      }
+     ]
+    },
+    {
+     "id": "J2-belakang",
+     "luar": true,
+     "a": [
+      3.05,
+      0
+     ],
+     "b": [
+      54.15,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.125,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.125,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.965,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 34.595,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 38.225,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 41.855,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 45.485,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J2-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 27.575,
+       "lebar": 1.2,
+       "ambang": 2.3,
+       "tinggi": 1.0,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 50.1,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J2-ujung-timur",
+     "luar": true,
+     "a": [
+      3.05,
+      0
+     ],
+     "b": [
+      3.05,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.0,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      }
+     ],
+     "catatan": "Ujung timur badan gedung; tangga U luar di luar dinding ini."
+    },
+    {
+     "id": "J2-ujung-barat",
+     "luar": true,
+     "a": [
+      54.15,
+      0
+     ],
+     "b": [
+      54.15,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "ventilasi",
+       "t": 2.3,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 7.0,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ]
+    },
+    {
+     "id": "J2-sekat-lorong-timur",
+     "a": [
+      29.05,
+      0
+     ],
+     "b": [
+      29.05,
+      9.4
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 5.85,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "ruang": "J2-L1",
+       "sumber": "denah-2023"
+      }
+     ]
+    },
+    {
+     "id": "J2-sekat-lorong-barat",
+     "a": [
+      32.2,
+      0
+     ],
+     "b": [
+      32.2,
+      9.4
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 5.85,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "ruang": "J2-L2",
+       "sumber": "denah-2023"
+      }
+     ]
+    },
+    {
+     "id": "J2-sekat-km",
+     "a": [
+      50.35,
+      0
+     ],
+     "b": [
+      50.35,
+      9.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J2-sekat-km-dalam",
+     "a": [
+      50.35,
+      4.7
+     ],
+     "b": [
+      54.15,
+      4.7
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.0,
+       "lebar": 0.8,
+       "tinggi": 2.1,
+       "ruang": "J2-KM2",
+       "sumber": "denah-2023"
+      }
+     ]
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      3.05,
+      9.4
+     ],
+     [
+      29.05,
+      9.4
+     ],
+     [
+      29.05,
+      3.85
+     ],
+     [
+      32.2,
+      3.85
+     ],
+     [
+      32.2,
+      9.4
+     ],
+     [
+      54.15,
+      9.4
+     ],
+     [
+      54.15,
+      11.2
+     ],
+     [
+      3.05,
+      11.2
+     ]
+    ],
+    "tambahan": [
+     {
+      "poligon": [
+       [
+        0,
+        9.4
+       ],
+       [
+        3.05,
+        9.4
+       ],
+       [
+        3.05,
+        11.2
+       ],
+       [
+        0,
+        11.2
+       ]
+      ],
+      "catatan": "Selasar menerus ke ujung luar tangga timur (denah)."
+     }
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.1,
+      11.1,
+      -0.05
+     ],
+     "b": [
+      54.05,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "tulisan": {
+      "teks": "DEPARTEMEN KIMIA",
+      "t": 30.525,
+      "tinggi": 0.4,
+      "sisi": 1
+     }
+    },
+    {
+     "a": [
+      0.1,
+      9.4,
+      -0.05
+     ],
+     "b": [
+      0.1,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      54.05,
+      9.5,
+      -0.05
+     ],
+     "b": [
+      54.05,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Ujung barat selasar: penghubung I-J (lt 1) dibuat di Paket 5."
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "elevasi": 6.2,
+   "elevasiSelasar": 6.15,
+   "tinggiPlafon": 3.85,
+   "denah": {
+    "gambar": "assets/denah/J3.jpg",
+    "batas": [
+     -1.5,
+     -1.5,
+     55.65,
+     12.7
+    ],
+    "keterangan": "Denah 2023 Gedung J lantai 3, diluruskan ke 30 px per meter."
+   },
+   "ruang": [
+    {
+     "kode": "J3-L1",
+     "nama": "Laboratorium 1",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       3.05,
+       0
+      ],
+      [
+       29.05,
+       0
+      ],
+      [
+       29.05,
+       9.4
+      ],
+      [
+       3.05,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J3-L2",
+     "nama": "Laboratorium 2",
+     "fungsi": "lab",
+     "poligon": [
+      [
+       32.2,
+       0
+      ],
+      [
+       50.35,
+       0
+      ],
+      [
+       50.35,
+       9.4
+      ],
+      [
+       32.2,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J3-KM1",
+     "nama": "KM/WC",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       50.35,
+       4.7
+      ],
+      [
+       54.15,
+       4.7
+      ],
+      [
+       54.15,
+       9.4
+      ],
+      [
+       50.35,
+       9.4
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J3-KM2",
+     "nama": "KM/WC",
+     "fungsi": "toilet",
+     "poligon": [
+      [
+       50.35,
+       0
+      ],
+      [
+       54.15,
+       0
+      ],
+      [
+       54.15,
+       4.7
+      ],
+      [
+       50.35,
+       4.7
+      ]
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "kode": "J3-TG",
+     "nama": "Tangga",
+     "fungsi": "tangga",
+     "poligon": [
+      [
+       29.05,
+       0
+      ],
+      [
+       32.2,
+       0
+      ],
+      [
+       32.2,
+       3.85
+      ],
+      [
+       29.05,
+       3.85
+      ]
+     ],
+     "sumber": "denah-2023",
+     "void": true
+    }
+   ],
+   "dinding": [
+    {
+     "id": "J3-depan-timur",
+     "luar": true,
+     "a": [
+      3.05,
+      9.4
+     ],
+     "b": [
+      29.05,
+      9.4
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 9.55,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J3-L1",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu-ganda",
+       "t": 20.55,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J3-L1",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 7.75,
+       "lebar": 1.1,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.55,
+       "lebar": 1.5,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "footage-2026"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J3-depan-barat",
+     "luar": true,
+     "a": [
+      32.2,
+      9.4
+     ],
+     "b": [
+      54.15,
+      9.4
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 12.7,
+       "lebar": 1.4,
+       "tinggi": 2.5,
+       "boven": 0.5,
+       "bovenGelap": true,
+       "ruang": "J3-L2",
+       "papanNama": true,
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "pintu",
+       "t": 20.05,
+       "lebar": 0.9,
+       "tinggi": 2.2,
+       "ruang": "J3-KM1",
+       "sumber": "denah-2023"
+      },
+      {
+       "jenis": "jendela",
+       "t": 1.815,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 5.445,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 9.075,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "jendela",
+       "t": 16.335,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "footage-2026"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 20.95,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J3-depan-lorong",
+     "luar": true,
+     "a": [
+      29.05,
+      9.4
+     ],
+     "b": [
+      32.2,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "footage-2026",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 1.575,
+       "lebar": 1.8,
+       "tinggi": 2.6,
+       "boven": 0.6,
+       "sumber": "footage-2026"
+      }
+     ]
+    },
+    {
+     "id": "J3-belakang",
+     "luar": true,
+     "a": [
+      3.05,
+      0
+     ],
+     "b": [
+      54.15,
+      0
+     ],
+     "tebal": 0.2,
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 1.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 4.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 8.125,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 11.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 14.625,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 17.875,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 21.125,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 24.375,
+       "lebar": 1.85,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L1",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 30.965,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 34.595,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 38.225,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 41.855,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 45.485,
+       "lebar": 2.2,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "ruang": "J3-L2",
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "jendela",
+       "t": 27.575,
+       "lebar": 1.2,
+       "ambang": 2.3,
+       "tinggi": 1.0,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 50.1,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J3-ujung-timur",
+     "luar": true,
+     "a": [
+      3.05,
+      0
+     ],
+     "b": [
+      3.05,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "jendela",
+       "t": 2.0,
+       "lebar": 1.6,
+       "ambang": 1.0,
+       "tinggi": 1.5,
+       "sumber": "perkiraan"
+      }
+     ],
+     "catatan": "Ujung timur badan gedung; tangga U luar di luar dinding ini."
+    },
+    {
+     "id": "J3-ujung-barat",
+     "luar": true,
+     "a": [
+      54.15,
+      0
+     ],
+     "b": [
+      54.15,
+      9.4
+     ],
+     "tebal": 0.2,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "ventilasi",
+       "t": 2.3,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      },
+      {
+       "jenis": "ventilasi",
+       "t": 7.0,
+       "lebar": 0.8,
+       "ambang": 1.9,
+       "tinggi": 0.4,
+       "sumber": "perkiraan"
+      }
+     ]
+    },
+    {
+     "id": "J3-sekat-lorong-timur",
+     "a": [
+      29.05,
+      0
+     ],
+     "b": [
+      29.05,
+      9.4
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 5.85,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "ruang": "J3-L1",
+       "sumber": "denah-2023"
+      }
+     ]
+    },
+    {
+     "id": "J3-sekat-lorong-barat",
+     "a": [
+      32.2,
+      0
+     ],
+     "b": [
+      32.2,
+      9.4
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu-ganda",
+       "t": 5.85,
+       "lebar": 1.4,
+       "tinggi": 2.4,
+       "ruang": "J3-L2",
+       "sumber": "denah-2023"
+      }
+     ]
+    },
+    {
+     "id": "J3-sekat-km",
+     "a": [
+      50.35,
+      0
+     ],
+     "b": [
+      50.35,
+      9.4
+     ],
+     "tebal": 0.15,
+     "bukaan": [],
+     "sumber": "denah-2023"
+    },
+    {
+     "id": "J3-sekat-km-dalam",
+     "a": [
+      50.35,
+      4.7
+     ],
+     "b": [
+      54.15,
+      4.7
+     ],
+     "tebal": 0.15,
+     "sumber": "denah-2023",
+     "bukaan": [
+      {
+       "jenis": "pintu",
+       "t": 1.0,
+       "lebar": 0.8,
+       "tinggi": 2.1,
+       "ruang": "J3-KM2",
+       "sumber": "denah-2023"
+      }
+     ]
+    }
+   ],
+   "selasar": {
+    "poligon": [
+     [
+      3.05,
+      9.4
+     ],
+     [
+      29.05,
+      9.4
+     ],
+     [
+      29.05,
+      3.85
+     ],
+     [
+      32.2,
+      3.85
+     ],
+     [
+      32.2,
+      9.4
+     ],
+     [
+      54.15,
+      9.4
+     ],
+     [
+      54.15,
+      11.2
+     ],
+     [
+      3.05,
+      11.2
+     ]
+    ],
+    "tambahan": [
+     {
+      "poligon": [
+       [
+        0,
+        9.4
+       ],
+       [
+        3.05,
+        9.4
+       ],
+       [
+        3.05,
+        11.2
+       ],
+       [
+        0,
+        11.2
+       ]
+      ],
+      "catatan": "Selasar menerus ke ujung luar tangga timur (denah)."
+     }
+    ]
+   },
+   "pagar": [
+    {
+     "a": [
+      0.1,
+      11.1,
+      -0.05
+     ],
+     "b": [
+      54.05,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "tulisan": {
+      "teks": "J",
+      "t": 30.525,
+      "tinggi": 0.5,
+      "sisi": 1
+     }
+    },
+    {
+     "a": [
+      0.1,
+      9.4,
+      -0.05
+     ],
+     "b": [
+      0.1,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026"
+    },
+    {
+     "a": [
+      54.05,
+      9.5,
+      -0.05
+     ],
+     "b": [
+      54.05,
+      11.1,
+      -0.05
+     ],
+     "jenis": "tembok-celah",
+     "tinggi": 0.9,
+     "sumber": "footage-2026",
+     "catatan": "Ujung barat selasar: penghubung I-J (lt 1) dibuat di Paket 5."
+    },
+    {
+     "a": [
+      32.050000000000004,
+      3.85,
+      -0.05
+     ],
+     "b": [
+      30.625,
+      3.85,
+      -0.05
+     ],
+     "jenis": "besi",
+     "tinggi": 1.0,
+     "sumber": "perkiraan"
+    },
+    {
+     "a": [
+      2.95,
+      9.4,
+      -0.05
+     ],
+     "b": [
+      1.5250000000000001,
+      9.4,
+      -0.05
+     ],
+     "jenis": "besi",
+     "tinggi": 1.0,
+     "sumber": "perkiraan"
+    }
+   ]
+  }
+ ],
+ "tangga": [
+  {
+   "id": "T-tengah-1",
+   "dariLantai": 1,
+   "keLantai": 2,
+   "x0": 32.1,
+   "x1": 29.15,
+   "zDepan": 3.85,
+   "zBelakang": 0.1,
+   "jumlahAnakTangga": 20,
+   "lebarInjakan": 0.25,
+   "bentuk": "U dengan bordes",
+   "pembatas": "pagar-besi",
+   "sisiLuar": "dinding",
+   "catatan": "Tangga U di bagian belakang lorong tengah: lajur 1 di sisi Lab 2 naik ke belakang, bordes menempel dinding belakang, lajur 2 di sisi Lab 1 kembali ke depan (denah).",
+   "sumber": "denah-2023"
+  },
+  {
+   "id": "T-tengah-2",
+   "dariLantai": 2,
+   "keLantai": 3,
+   "x0": 32.1,
+   "x1": 29.15,
+   "zDepan": 3.85,
+   "zBelakang": 0.1,
+   "jumlahAnakTangga": 20,
+   "lebarInjakan": 0.25,
+   "bentuk": "U dengan bordes",
+   "pembatas": "pagar-besi",
+   "sisiLuar": "dinding",
+   "catatan": "Tangga U di bagian belakang lorong tengah: lajur 1 di sisi Lab 2 naik ke belakang, bordes menempel dinding belakang, lajur 2 di sisi Lab 1 kembali ke depan (denah).",
+   "sumber": "denah-2023"
+  },
+  {
+   "id": "T-luar-1",
+   "dariLantai": 1,
+   "keLantai": 2,
+   "x0": 2.95,
+   "x1": 0.1,
+   "zDepan": 9.4,
+   "zBelakang": 4.75,
+   "jumlahAnakTangga": 20,
+   "lebarInjakan": 0.28,
+   "bentuk": "U dengan bordes",
+   "pembatas": "pagar-besi",
+   "sisiLuar": "tembok",
+   "belakang": "tembok",
+   "catatan": "Tangga U luar di ujung timur (denah: 3,05 x 4,7 m dari garis dinding depan, lajur naik menempel dinding gedung); bordes tengah ditutup tembok di sisi belakang (terbuka ke halaman).",
+   "sumber": "denah-2023"
+  },
+  {
+   "id": "T-luar-2",
+   "dariLantai": 2,
+   "keLantai": 3,
+   "x0": 2.95,
+   "x1": 0.1,
+   "zDepan": 9.4,
+   "zBelakang": 4.75,
+   "jumlahAnakTangga": 20,
+   "lebarInjakan": 0.28,
+   "bentuk": "U dengan bordes",
+   "pembatas": "pagar-besi",
+   "sisiLuar": "tembok",
+   "belakang": "tembok",
+   "catatan": "Tangga U luar di ujung timur (denah: 3,05 x 4,7 m dari garis dinding depan, lajur naik menempel dinding gedung); bordes tengah ditutup tembok di sisi belakang (terbuka ke halaman).",
+   "sumber": "denah-2023"
+  }
+ ],
+ "tritisan": [
+  {
+   "a": [
+    0.1,
+    11.2
+   ],
+   "b": [
+    54.15,
+    11.2
+   ],
+   "sisi": 1,
+   "elevasi": 2.2,
+   "lantai": 2,
+   "lebar": 1.5,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Tritisan genteng abu di bawah tembok selasar lt 2 (footage tampak depan)."
+  },
+  {
+   "a": [
+    0.1,
+    11.2
+   ],
+   "b": [
+    54.15,
+    11.2
+   ],
+   "sisi": 1,
+   "elevasi": 6.2,
+   "lantai": 3,
+   "lebar": 1.3,
+   "turun": 0.5,
+   "jarak": 0.12,
+   "sumber": "footage-2026",
+   "catatan": "Tritisan genteng abu di bawah tembok selasar lt 3."
+  }
+ ],
+ "atap": [
+  {
+   "jenis": "perisai",
+   "asal": [
+    0,
+    0
+   ],
+   "sudut": 0,
+   "tepiBawah": 10.35,
+   "tonjolan": 0.9,
+   "kemiringan": 30,
+   "batas": [
+    0,
+    0,
+    54.15,
+    11.2
+   ],
+   "sumber": "google-earth-2026",
+   "catatan": "Atap perisai genteng abu 56 m (Google Earth) termasuk tangga luar."
+  }
+ ],
+ "mulaiJalan": {
+  "posisi": [
+   30.625,
+   10.3
+  ],
+  "arah": 0
+ }
+}

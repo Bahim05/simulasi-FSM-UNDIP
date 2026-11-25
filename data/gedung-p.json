@@ -1,0 +1,182 @@
+{
+ "schema": "fsm-gedung@1",
+ "id": "P",
+ "nama": "Pendopo Gedung J",
+ "kategori": "Pendopo",
+ "deskripsi": "Balai terbuka 16 x 16 m (atap) di timur Gedung J: atap perisai genteng merah, kolom putih, tiang besi marun di tepi, lantai keramik ditinggikan dengan anak tangga dan bak tanaman di kakinya.",
+ "sumberData": {
+  "google-earth-2026": "Ukuran pengguna di Google Earth (25 Nov 2026): atap 16 x 16 m, 5,7 m dari atap J.",
+  "footage-2026": "FIX FOOTAGE pendopo samping Gedung J (25 Nov 2026).",
+  "perkiraan": "Perkiraan: tinggi lantai dan atap, susunan kolom."
+ },
+ "koordinat": "Meter. x ke timur, z ke selatan dari pojok barat laut lantai; y kawasan (lantai -2,05, perkiraan).",
+ "ukuran": {
+  "panjang": 14.0,
+  "lebar": 14.0,
+  "tinggiLantai": 2.9
+ },
+ "tampilan": {
+  "dinding": "#efeee9",
+  "dindingDalam": "#f3f2ee",
+  "kolom": "#f0efea",
+  "lantai": "#ebe5d8",
+  "selasar": "#ebe5d8",
+  "atap": "#8b4636",
+  "kusen": "#2f3538",
+  "pintu": "#6e3524",
+  "pagar": "#c6cacd"
+ },
+ "fondasi": {
+  "dasar": -2.45,
+  "warna": "#a3a49f",
+  "catatan": "Alas lantai yang ditinggikan ±0,3 m di atas halaman."
+ },
+ "kolom": {
+  "ukuran": 0.3,
+  "dasar": -2.45,
+  "puncak": 0.85,
+  "titik": [
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    13.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    4.0,
+    13.0
+   ],
+   [
+    7.0,
+    1.0
+   ],
+   [
+    7.0,
+    13.0
+   ],
+   [
+    10.0,
+    1.0
+   ],
+   [
+    10.0,
+    13.0
+   ],
+   [
+    13.0,
+    1.0
+   ],
+   [
+    13.0,
+    13.0
+   ],
+   [
+    1.0,
+    4.0
+   ],
+   [
+    1.0,
+    7.0
+   ],
+   [
+    1.0,
+    10.0
+   ],
+   [
+    13.0,
+    4.0
+   ],
+   [
+    13.0,
+    7.0
+   ],
+   [
+    13.0,
+    10.0
+   ],
+   [
+    5.5,
+    5.5
+   ],
+   [
+    8.5,
+    5.5
+   ],
+   [
+    5.5,
+    8.5
+   ],
+   [
+    8.5,
+    8.5
+   ]
+  ]
+ },
+ "lantai": [
+  {
+   "no": 1,
+   "elevasi": -2.05,
+   "elevasiSelasar": -2.05,
+   "tinggiPlafon": 2.9,
+   "ruang": [],
+   "dinding": [],
+   "pagar": [],
+   "selasar": {
+    "poligon": [
+     [
+      0,
+      0
+     ],
+     [
+      14.0,
+      0
+     ],
+     [
+      14.0,
+      14.0
+     ],
+     [
+      0,
+      14.0
+     ]
+    ],
+    "catatan": "Lantai keramik terbuka seluruhnya."
+   }
+  }
+ ],
+ "tangga": [],
+ "atap": [
+  {
+   "jenis": "perisai",
+   "asal": [
+    0,
+    0
+   ],
+   "sudut": 0,
+   "tepiBawah": 0.85,
+   "tonjolan": 1.0,
+   "kemiringan": 30,
+   "batas": [
+    0,
+    0,
+    14.0,
+    14.0
+   ],
+   "sumber": "google-earth-2026",
+   "catatan": "Atap perisai genteng merah 16 x 16 m."
+  }
+ ],
+ "mulaiJalan": {
+  "posisi": [
+   7.0,
+   7.0
+  ],
+  "arah": 0
+ }
+}

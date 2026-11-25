@@ -98,7 +98,14 @@
   {
    "id": "J",
    "nama": "Gedung J",
-   "status": "belum"
+   "status": "dibuat",
+   "file": "data/gedung-j.json",
+   "posisi": [
+    145.4,
+    143.9
+   ],
+   "rotasi": 180,
+   "catatan": "Paket 4 (25 Nov 2026). Atap 56 m (Google Earth = denah 54,15 + tonjolan), tepi timur segaris atap C, tepi utara atap 93 m dari tepi belakang atap C (pengguna). Selasar menghadap utara ke taman dan parkiran dosen (footage). Lantai 1 -1,8 (perkiraan)."
   },
   {
    "id": "K",
@@ -121,6 +128,18 @@
    "id": "M",
    "nama": "Masjid",
    "status": "belum"
+  },
+  {
+   "id": "P",
+   "nama": "Pendopo Gedung J",
+   "status": "dibuat",
+   "file": "data/gedung-p.json",
+   "posisi": [
+    153.0,
+    132.8
+   ],
+   "rotasi": 0,
+   "catatan": "Paket 4 (25 Nov 2026). Atap 16 x 16 m, 5,7 m di timur atap J (Google Earth pengguna), sejajar sisi utara J (screenshot)."
   }
  ],
  "penghubung": [
@@ -23052,6 +23071,1652 @@
    "benda": [],
    "sumber": "perkiraan",
    "catatan": "Jalan dan parkir di utara K (depan pintu utama lobi), jalan di timur K, halaman rumput di timur penghubung C-K, dan lereng rumput naik ke tanah dasar. Tinggi perkiraan (tidak ada footage), dibuat miring supaya tidak ada tembok batu kali tinggi."
+  },
+  {
+   "id": "sekitar-J",
+   "nama": "Parkiran dosen, taman depan Gedung J, dan halaman pendopo",
+   "tapak": [
+    [
+     77.2,
+     85.5
+    ],
+    [
+     148.2,
+     85.5
+    ],
+    [
+     148.2,
+     100.0
+    ],
+    [
+     172.0,
+     100.0
+    ],
+    [
+     172.0,
+     152.0
+    ],
+    [
+     86.0,
+     152.0
+    ],
+    [
+     86.0,
+     123.5
+    ],
+    [
+     77.2,
+     123.5
+    ]
+   ],
+   "dasar": -3.2,
+   "bidang": [
+    {
+     "nama": "Tepi utara parkiran dosen",
+     "poligon": [
+      [
+       77.2,
+       85.5
+      ],
+      [
+       148.2,
+       85.5
+      ],
+      [
+       148.2,
+       85.8
+      ],
+      [
+       77.2,
+       85.8
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "foto-udara-2026",
+     "atas": -0.2,
+     "catatan": "Tembok batu kali di tepi parkiran (street view pengguna): parkiran makin rendah ke timur."
+    },
+    {
+     "nama": "Tepi barat parkiran dosen",
+     "poligon": [
+      [
+       77.2,
+       85.5
+      ],
+      [
+       77.5,
+       85.5
+      ],
+      [
+       77.5,
+       123.5
+      ],
+      [
+       77.2,
+       123.5
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "atas": -0.2
+    },
+    {
+     "nama": "Tepi selatan parkiran (barat)",
+     "poligon": [
+      [
+       77.2,
+       123.2
+      ],
+      [
+       86.0,
+       123.2
+      ],
+      [
+       86.0,
+       123.5
+      ],
+      [
+       77.2,
+       123.5
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "atas": -0.2
+    },
+    {
+     "nama": "Tepi timur parkiran (utara)",
+     "poligon": [
+      [
+       147.9,
+       85.5
+      ],
+      [
+       148.2,
+       85.5
+      ],
+      [
+       148.2,
+       100.0
+      ],
+      [
+       147.9,
+       100.0
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "atas": -0.2
+    },
+    {
+     "nama": "Tepi utara jalan keluar",
+     "poligon": [
+      [
+       148.2,
+       100.0
+      ],
+      [
+       172.0,
+       100.0
+      ],
+      [
+       172.0,
+       100.3
+      ],
+      [
+       148.2,
+       100.3
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "atas": -0.2,
+     "catatan": "Tepi model (sisi luarnya belum dimodelkan)."
+    },
+    {
+     "nama": "Tepi timur jalan keluar dan halaman pendopo",
+     "poligon": [
+      [
+       171.7,
+       100.0
+      ],
+      [
+       172.0,
+       100.0
+      ],
+      [
+       172.0,
+       152.0
+      ],
+      [
+       171.7,
+       152.0
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "atas": -0.2,
+     "catatan": "Tepi model (sisi luarnya belum dimodelkan)."
+    },
+    {
+     "nama": "Tembok batas kampus di belakang J",
+     "poligon": [
+      [
+       86.0,
+       151.7
+      ],
+      [
+       172.0,
+       151.7
+      ],
+      [
+       172.0,
+       152.0
+      ],
+      [
+       86.0,
+       152.0
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "atas": -0.2,
+     "catatan": "Garis putih di selatan J pada screenshot (pagar batas kampus); juga tepi model."
+    },
+    {
+     "nama": "Tepi barat zona J",
+     "poligon": [
+      [
+       86.0,
+       123.5
+      ],
+      [
+       86.3,
+       123.5
+      ],
+      [
+       86.3,
+       152.0
+      ],
+      [
+       86.0,
+       152.0
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "atas": -0.2,
+     "catatan": "Arah Gedung I (lebih tinggi; footage penghubung I-J). Paket 5."
+    },
+    {
+     "nama": "Bedeng parkiran 1",
+     "poligon": [
+      [
+       81.5,
+       92.0
+      ],
+      [
+       84.0,
+       92.0
+      ],
+      [
+       84.0,
+       121.0
+      ],
+      [
+       81.5,
+       121.0
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "miring": [
+      -0.012,
+      -0.012,
+      1.876
+     ],
+     "catatan": "Bedeng tanah berkerb beton dengan deretan pohon (screenshot dan street view pengguna); pohon tidak dibuat."
+    },
+    {
+     "nama": "Bedeng parkiran 2",
+     "poligon": [
+      [
+       96.8,
+       92.0
+      ],
+      [
+       99.3,
+       92.0
+      ],
+      [
+       99.3,
+       121.0
+      ],
+      [
+       96.8,
+       121.0
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "miring": [
+      -0.012,
+      -0.012,
+      1.876
+     ],
+     "catatan": "Bedeng tanah berkerb beton dengan deretan pohon (screenshot dan street view pengguna); pohon tidak dibuat."
+    },
+    {
+     "nama": "Bedeng parkiran 3",
+     "poligon": [
+      [
+       113.5,
+       90.0
+      ],
+      [
+       116.0,
+       90.0
+      ],
+      [
+       116.0,
+       113.5
+      ],
+      [
+       113.5,
+       113.5
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "miring": [
+      -0.012,
+      -0.012,
+      1.876
+     ],
+     "catatan": "Bedeng tanah berkerb beton dengan deretan pohon (screenshot dan street view pengguna); pohon tidak dibuat."
+    },
+    {
+     "nama": "Taman pohon timur parkiran",
+     "poligon": [
+      [
+       121.0,
+       92.0
+      ],
+      [
+       146.8,
+       92.0
+      ],
+      [
+       146.8,
+       121.5
+      ],
+      [
+       121.0,
+       121.5
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "miring": [
+      -0.012,
+      -0.012,
+      1.876
+     ],
+     "catatan": "Bedeng tanah berkerb beton dengan deretan pohon (screenshot dan street view pengguna); pohon tidak dibuat."
+    },
+    {
+     "nama": "Parkiran dosen",
+     "poligon": [
+      [
+       77.2,
+       85.5
+      ],
+      [
+       148.2,
+       85.5
+      ],
+      [
+       148.2,
+       123.5
+      ],
+      [
+       77.2,
+       123.5
+      ]
+     ],
+     "bahan": "paving-abu",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "miring": [
+      -0.012,
+      -0.012,
+      1.656
+     ],
+     "catatan": "Paving blok abu, menurun ke timur (ke jalan keluar) dan sedikit ke selatan (kata pengguna; besar kemiringan perkiraan)."
+    },
+    {
+     "nama": "Jalan keluar parkiran",
+     "poligon": [
+      [
+       148.2,
+       100.0
+      ],
+      [
+       171.7,
+       100.0
+      ],
+      [
+       171.7,
+       123.5
+      ],
+      [
+       148.2,
+       123.5
+      ]
+     ],
+     "bahan": "paving-abu",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "miring": [
+      -0.012,
+      -0.012,
+      1.656
+     ],
+     "catatan": "Jalan paving di timur parkiran ke pos satpam dan gerbang (pos belum dibuat)."
+    },
+    {
+     "nama": "Jalan turun ke halaman pendopo",
+     "poligon": [
+      [
+       146.35,
+       123.5
+      ],
+      [
+       171.7,
+       123.5
+      ],
+      [
+       171.7,
+       127.5
+      ],
+      [
+       146.35,
+       127.5
+      ]
+     ],
+     "bahan": "paving-abu",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "miring": [
+      -0.012,
+      -0.151,
+      18.822
+     ]
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       86.3,
+       123.5
+      ],
+      [
+       93.125,
+       123.5
+      ],
+      [
+       93.125,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.334778,
+      41.51906
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       86.3,
+       123.5
+      ],
+      [
+       93.125,
+       128.0
+      ],
+      [
+       86.3,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.352978,
+      42.73116
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       93.125,
+       123.5
+      ],
+      [
+       99.95,
+       123.5
+      ],
+      [
+       99.95,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.316578,
+      39.27136
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       93.125,
+       123.5
+      ],
+      [
+       99.95,
+       128.0
+      ],
+      [
+       93.125,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.334778,
+      40.40156
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       99.95,
+       123.5
+      ],
+      [
+       106.775,
+       123.5
+      ],
+      [
+       106.775,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.298378,
+      37.02366
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       99.95,
+       123.5
+      ],
+      [
+       106.775,
+       128.0
+      ],
+      [
+       99.95,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.316578,
+      38.07196
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       106.775,
+       123.5
+      ],
+      [
+       113.6,
+       123.5
+      ],
+      [
+       113.6,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.280178,
+      34.77596
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       106.775,
+       123.5
+      ],
+      [
+       113.6,
+       128.0
+      ],
+      [
+       106.775,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.298378,
+      35.74236
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       116.0,
+       123.5
+      ],
+      [
+       123.588,
+       123.5
+      ],
+      [
+       123.588,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.253544,
+      31.48674
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       116.0,
+       123.5
+      ],
+      [
+       123.588,
+       128.0
+      ],
+      [
+       116.0,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.273778,
+      32.59356
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       123.588,
+       123.5
+      ],
+      [
+       131.175,
+       123.5
+      ],
+      [
+       131.175,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.233311,
+      28.98792
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       123.588,
+       123.5
+      ],
+      [
+       131.175,
+       128.0
+      ],
+      [
+       123.588,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.253544,
+      30.00369
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       131.175,
+       123.5
+      ],
+      [
+       138.762,
+       123.5
+      ],
+      [
+       138.762,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.213078,
+      26.48911
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       131.175,
+       123.5
+      ],
+      [
+       138.762,
+       128.0
+      ],
+      [
+       131.175,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.233311,
+      27.41382
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       138.762,
+       123.5
+      ],
+      [
+       146.35,
+       123.5
+      ],
+      [
+       146.35,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      -0.012,
+      -0.192844,
+      23.99029
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Lereng rumput depan Gedung J",
+     "poligon": [
+      [
+       138.762,
+       123.5
+      ],
+      [
+       146.35,
+       128.0
+      ],
+      [
+       138.762,
+       128.0
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "rumput",
+     "sumber": "footage-2026",
+     "miring": [
+      0.0,
+      -0.213078,
+      24.82396
+     ],
+     "catatan": "Dari koridor lt 1 J tampak lereng rumput naik ke parkiran (footage)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       123.5
+      ],
+      [
+       116.0,
+       123.5
+      ],
+      [
+       116.0,
+       124.143
+      ],
+      [
+       113.6,
+       124.143
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -1.382,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       124.143
+      ],
+      [
+       116.0,
+       124.143
+      ],
+      [
+       116.0,
+       124.786
+      ],
+      [
+       113.6,
+       124.786
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -1.56,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       124.786
+      ],
+      [
+       116.0,
+       124.786
+      ],
+      [
+       116.0,
+       125.429
+      ],
+      [
+       113.6,
+       125.429
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -1.738,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       125.429
+      ],
+      [
+       116.0,
+       125.429
+      ],
+      [
+       116.0,
+       126.071
+      ],
+      [
+       113.6,
+       126.071
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -1.916,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       126.071
+      ],
+      [
+       116.0,
+       126.071
+      ],
+      [
+       116.0,
+       126.714
+      ],
+      [
+       113.6,
+       126.714
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.094,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       126.714
+      ],
+      [
+       116.0,
+       126.714
+      ],
+      [
+       116.0,
+       127.357
+      ],
+      [
+       113.6,
+       127.357
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.272,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke taman depan Gedung J",
+     "poligon": [
+      [
+       113.6,
+       127.357
+      ],
+      [
+       116.0,
+       127.357
+      ],
+      [
+       116.0,
+       128.0
+      ],
+      [
+       113.6,
+       128.0
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.45,
+     "catatan": "Jalan bata merah dari parkiran ke pintu masuk J (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga masuk Gedung J",
+     "poligon": [
+      [
+       113.3,
+       131.8
+      ],
+      [
+       116.25,
+       131.8
+      ],
+      [
+       116.25,
+       132.25
+      ],
+      [
+       113.3,
+       132.25
+      ]
+     ],
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.25
+    },
+    {
+     "nama": "Anak tangga masuk Gedung J",
+     "poligon": [
+      [
+       113.3,
+       132.25
+      ],
+      [
+       116.25,
+       132.25
+      ],
+      [
+       116.25,
+       132.7
+      ],
+      [
+       113.3,
+       132.7
+      ]
+     ],
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.05
+    },
+    {
+     "nama": "Jalan bata merah ke pintu masuk J",
+     "poligon": [
+      [
+       113.6,
+       128.0
+      ],
+      [
+       116.0,
+       128.0
+      ],
+      [
+       116.0,
+       131.8
+      ],
+      [
+       113.6,
+       131.8
+      ]
+     ],
+     "bahan": "bata-merah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.43
+    },
+    {
+     "nama": "Taman depan Gedung J",
+     "poligon": [
+      [
+       86.3,
+       128.0
+      ],
+      [
+       146.35,
+       128.0
+      ],
+      [
+       146.35,
+       132.7
+      ],
+      [
+       86.3,
+       132.7
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "atas": -2.45,
+     "catatan": "Taman rumput dengan semak, pergola besi hitam, dan payung di depan J (footage; pergola, payung, dan tanaman belum dibuat)."
+    },
+    {
+     "nama": "Halaman belakang Gedung J",
+     "poligon": [
+      [
+       86.3,
+       132.7
+      ],
+      [
+       91.25,
+       132.7
+      ],
+      [
+       91.25,
+       151.7
+      ],
+      [
+       86.3,
+       151.7
+      ]
+     ],
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "atas": -2.45
+    },
+    {
+     "nama": "Halaman belakang Gedung J",
+     "poligon": [
+      [
+       91.25,
+       143.9
+      ],
+      [
+       146.35,
+       143.9
+      ],
+      [
+       146.35,
+       151.7
+      ],
+      [
+       91.25,
+       151.7
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "atas": -2.45
+    },
+    {
+     "nama": "Halaman timur Gedung J dan pendopo",
+     "poligon": [
+      [
+       146.35,
+       127.5
+      ],
+      [
+       171.7,
+       127.5
+      ],
+      [
+       171.7,
+       151.7
+      ],
+      [
+       146.35,
+       151.7
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.35,
+     "catatan": "Halaman pelat beton di antara J dan pendopo (footage pendopo samping J); parkir motor di sisi utara pendopo (footage; kendaraan tidak dibuat)."
+    },
+    {
+     "nama": "Halaman timur Gedung J dan pendopo",
+     "poligon": [
+      [
+       142.35,
+       132.7
+      ],
+      [
+       146.35,
+       132.7
+      ],
+      [
+       146.35,
+       143.9
+      ],
+      [
+       142.35,
+       143.9
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "perkiraan",
+     "atas": -2.35
+    },
+    {
+     "nama": "Anak tangga sisi timur tangga luar J",
+     "poligon": [
+      [
+       145.4,
+       132.7
+      ],
+      [
+       145.75,
+       132.7
+      ],
+      [
+       145.75,
+       134.5
+      ],
+      [
+       145.4,
+       134.5
+      ]
+     ],
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.02,
+     "catatan": "Dari selasar ujung timur J turun tiga anak tangga ke halaman pendopo (footage pendopo samping J)."
+    },
+    {
+     "nama": "Anak tangga sisi timur tangga luar J",
+     "poligon": [
+      [
+       145.75,
+       132.7
+      ],
+      [
+       146.1,
+       132.7
+      ],
+      [
+       146.1,
+       134.5
+      ],
+      [
+       145.75,
+       134.5
+      ]
+     ],
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.18,
+     "catatan": "Dari selasar ujung timur J turun tiga anak tangga ke halaman pendopo (footage pendopo samping J)."
+    },
+    {
+     "nama": "Anak tangga sisi timur tangga luar J",
+     "poligon": [
+      [
+       145.34,
+       132.7
+      ],
+      [
+       145.4,
+       132.7
+      ],
+      [
+       145.4,
+       134.5
+      ],
+      [
+       145.34,
+       134.5
+      ]
+     ],
+     "bahan": "batu-hitam",
+     "muka": "batu-hitam",
+     "sumber": "footage-2026",
+     "atas": -1.844
+    },
+    {
+     "nama": "Anak tangga sisi timur tangga luar J",
+     "poligon": [
+      [
+       145.69,
+       132.7
+      ],
+      [
+       145.75,
+       132.7
+      ],
+      [
+       145.75,
+       134.5
+      ],
+      [
+       145.69,
+       134.5
+      ]
+     ],
+     "bahan": "batu-hitam",
+     "muka": "batu-hitam",
+     "sumber": "footage-2026",
+     "atas": -2.0140000000000002
+    },
+    {
+     "nama": "Anak tangga sisi timur tangga luar J",
+     "poligon": [
+      [
+       146.04,
+       132.7
+      ],
+      [
+       146.1,
+       132.7
+      ],
+      [
+       146.1,
+       134.5
+      ],
+      [
+       146.04,
+       134.5
+      ]
+     ],
+     "bahan": "batu-hitam",
+     "muka": "batu-hitam",
+     "sumber": "footage-2026",
+     "atas": -2.1740000000000004
+    },
+    {
+     "nama": "Anak tangga pendopo",
+     "poligon": [
+      [
+       152.55,
+       138.3
+      ],
+      [
+       153.0,
+       138.3
+      ],
+      [
+       153.0,
+       141.3
+      ],
+      [
+       152.55,
+       141.3
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.2
+    },
+    {
+     "nama": "Anak tangga pendopo",
+     "poligon": [
+      [
+       158.5,
+       132.35
+      ],
+      [
+       161.5,
+       132.35
+      ],
+      [
+       161.5,
+       132.8
+      ],
+      [
+       158.5,
+       132.8
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.2
+    },
+    {
+     "nama": "Bak tanaman pendopo",
+     "poligon": [
+      [
+       153.3,
+       132.15
+      ],
+      [
+       158.2,
+       132.15
+      ],
+      [
+       158.2,
+       132.75
+      ],
+      [
+       153.3,
+       132.75
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.1,
+     "catatan": "Bak tanaman beton di kaki lantai pendopo."
+    },
+    {
+     "nama": "Bak tanaman pendopo",
+     "poligon": [
+      [
+       161.8,
+       132.15
+      ],
+      [
+       166.7,
+       132.15
+      ],
+      [
+       166.7,
+       132.75
+      ],
+      [
+       161.8,
+       132.75
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.1,
+     "catatan": "Bak tanaman beton di kaki lantai pendopo."
+    },
+    {
+     "nama": "Bak tanaman pendopo",
+     "poligon": [
+      [
+       152.35,
+       133.1
+      ],
+      [
+       152.95,
+       133.1
+      ],
+      [
+       152.95,
+       138.0
+      ],
+      [
+       152.35,
+       138.0
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.1,
+     "catatan": "Bak tanaman beton di kaki lantai pendopo."
+    },
+    {
+     "nama": "Bak tanaman pendopo",
+     "poligon": [
+      [
+       152.35,
+       141.6
+      ],
+      [
+       152.95,
+       141.6
+      ],
+      [
+       152.95,
+       146.5
+      ],
+      [
+       152.35,
+       146.5
+      ]
+     ],
+     "bahan": "tanah",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "atas": -2.1,
+     "catatan": "Bak tanaman beton di kaki lantai pendopo."
+    }
+   ],
+   "benda": [
+    {
+     "jenis": "atap-miring",
+     "x": 0,
+     "z": 0,
+     "y": 0,
+     "tiang": [
+      [
+       153.15,
+       132.95,
+       -2.05,
+       0.83
+      ],
+      [
+       153.15,
+       146.65,
+       -2.05,
+       0.83
+      ],
+      [
+       166.85,
+       132.95,
+       -2.05,
+       0.83
+      ],
+      [
+       156.57,
+       132.95,
+       -2.05,
+       0.83
+      ],
+      [
+       156.57,
+       146.65,
+       -2.05,
+       0.83
+      ],
+      [
+       153.15,
+       136.37,
+       -2.05,
+       0.83
+      ],
+      [
+       166.85,
+       136.37,
+       -2.05,
+       0.83
+      ],
+      [
+       160.0,
+       132.95,
+       -2.05,
+       0.83
+      ],
+      [
+       160.0,
+       146.65,
+       -2.05,
+       0.83
+      ],
+      [
+       153.15,
+       139.8,
+       -2.05,
+       0.83
+      ],
+      [
+       166.85,
+       139.8,
+       -2.05,
+       0.83
+      ],
+      [
+       163.43,
+       132.95,
+       -2.05,
+       0.83
+      ],
+      [
+       163.43,
+       146.65,
+       -2.05,
+       0.83
+      ],
+      [
+       153.15,
+       143.23,
+       -2.05,
+       0.83
+      ],
+      [
+       166.85,
+       143.23,
+       -2.05,
+       0.83
+      ],
+      [
+       166.85,
+       146.65,
+       -2.05,
+       0.83
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Tiang besi marun tipis di tepi lantai pendopo menopang tepi atap (footage)."
+    }
+   ],
+   "sumber": "foto-udara-2026",
+   "catatan": "Paket 4 (25 Nov 2026). Batas parkiran dari garis biru pengguna; bedeng dari screenshot; parkiran menurun ke jalan keluar di timur (kata pengguna). Semua tinggi perkiraan. Foto street view 2018 hanya dipakai untuk bentuk paving dan bedeng."
   }
  ],
  "lubangTanah": [
@@ -23120,6 +24785,42 @@
     [
      174.0,
      39.4
+    ]
+   ]
+  },
+  {
+   "luar": [
+    [
+     86.0,
+     152.0
+    ],
+    [
+     172.0,
+     152.0
+    ],
+    [
+     172.0,
+     100.0
+    ],
+    [
+     148.2,
+     100.0
+    ],
+    [
+     148.2,
+     85.5
+    ],
+    [
+     77.2,
+     85.5
+    ],
+    [
+     77.2,
+     123.5
+    ],
+    [
+     86.0,
+     123.5
     ]
    ]
   }
