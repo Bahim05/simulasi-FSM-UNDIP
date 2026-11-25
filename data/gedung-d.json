@@ -316,7 +316,10 @@
        "lebar": 0.6,
        "tinggi": 0.5,
        "sisi": 1,
-       "sumber": "footage-2026"
+       "teks": " ",
+       "warna": "#7d6b55",
+       "sumber": "footage-2026",
+       "catatan": "Bingkai foto (isi tidak terbaca di video); teks kosong supaya tidak tertulis INFORMATIKA."
       },
       {
        "jenis": "poster",
@@ -325,7 +328,10 @@
        "lebar": 0.6,
        "tinggi": 0.5,
        "sisi": 1,
-       "sumber": "footage-2026"
+       "teks": " ",
+       "warna": "#7d6b55",
+       "sumber": "footage-2026",
+       "catatan": "Bingkai foto (isi tidak terbaca di video); teks kosong supaya tidak tertulis INFORMATIKA."
       },
       {
        "jenis": "poster",
@@ -334,7 +340,10 @@
        "lebar": 0.6,
        "tinggi": 0.5,
        "sisi": 1,
-       "sumber": "footage-2026"
+       "teks": " ",
+       "warna": "#7d6b55",
+       "sumber": "footage-2026",
+       "catatan": "Bingkai foto (isi tidak terbaca di video); teks kosong supaya tidak tertulis INFORMATIKA."
       }
      ],
      "sumber": "denah-2023",

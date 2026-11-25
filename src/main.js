@@ -17,7 +17,9 @@ const V3 = THREE.Vector3;
 async function loadJSON(path) {
   const emb = window.__FSM_DATA__ && window.__FSM_DATA__[path];
   if (emb) return structuredClone(emb);
-  const r = await fetch(path);
+  // no-cache: browser tetap boleh menyimpan file, tapi selalu menanyakan versi terbaru ke server (GitHub Pages menyimpan cache ±10 menit,
+  // sehingga sesudah push data gedung lama bisa tercampur dengan kampus.json baru)
+  const r = await fetch(path, { cache: 'no-cache' });
   if (!r.ok) throw new Error(`Gagal memuat ${path} (HTTP ${r.status})`);
   return r.json();
 }

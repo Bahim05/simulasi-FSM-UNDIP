@@ -12079,25 +12079,25 @@
        119.35,
        41.3,
        -1.0,
-       10.116
+       6.75
       ],
       [
        116.48,
        41.3,
        -1.0,
-       10.116
+       6.75
       ],
       [
        119.35,
        44.8,
        -1.0,
-       10.69
+       6.75
       ],
       [
        116.48,
        44.8,
        -1.0,
-       10.69
+       6.75
       ]
      ]
     },
@@ -12194,6 +12194,7 @@
     "dinding": "#ecebe6",
     "pagar": "#b9c1cb"
    },
+   "warnaBaja": "#2f3234",
    "anakTangga": [
     {
      "lantai": 1,
@@ -12722,6 +12723,29 @@
       ]
      ],
      "elevasi": 4.2,
+     "tebal": 1.45
+    },
+    {
+     "lantai": 2,
+     "poligon": [
+      [
+       117.85,
+       40.9
+      ],
+      [
+       116.53,
+       40.9
+      ],
+      [
+       116.53,
+       41.2
+      ],
+      [
+       117.85,
+       41.2
+      ]
+     ],
+     "elevasi": 3.15,
      "tebal": 0.4
     },
     {
@@ -12729,29 +12753,6 @@
      "poligon": [
       [
        117.85,
-       40.9
-      ],
-      [
-       116.53,
-       40.9
-      ],
-      [
-       116.53,
-       41.2
-      ],
-      [
-       117.85,
-       41.2
-      ]
-     ],
-     "elevasi": 3.15,
-     "tebal": 0.356
-    },
-    {
-     "lantai": 2,
-     "poligon": [
-      [
-       117.85,
        41.2
       ],
       [
@@ -12768,7 +12769,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.307
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12791,7 +12792,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.257
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12814,7 +12815,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.208
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12837,7 +12838,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.159
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12860,7 +12861,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.11
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12883,7 +12884,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.06
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12906,7 +12907,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": 0.011
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12929,7 +12930,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.038
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12952,7 +12953,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.087
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12975,7 +12976,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.136
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -12998,7 +12999,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.186
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -13021,7 +13022,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.235
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -13044,7 +13045,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.284
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -13067,7 +13068,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.333
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -13090,7 +13091,7 @@
       ]
      ],
      "elevasi": 3.15,
-     "tebal": -0.382
+     "tebal": 0.4
     },
     {
      "lantai": 2,
@@ -13113,7 +13114,7 @@
       ]
      ],
      "elevasi": 3.45,
-     "tebal": -0.132
+     "tebal": 0.7
     },
     {
      "lantai": 2,
@@ -13136,7 +13137,7 @@
       ]
      ],
      "elevasi": 3.6,
-     "tebal": -0.031
+     "tebal": 0.85
     },
     {
      "lantai": 2,
@@ -13159,7 +13160,7 @@
       ]
      ],
      "elevasi": 3.75,
-     "tebal": 0.07
+     "tebal": 1.0
     },
     {
      "lantai": 2,
@@ -13182,7 +13183,7 @@
       ]
      ],
      "elevasi": 3.9,
-     "tebal": 0.171
+     "tebal": 1.15
     },
     {
      "lantai": 2,
@@ -13205,7 +13206,7 @@
       ]
      ],
      "elevasi": 4.05,
-     "tebal": 0.271
+     "tebal": 1.3
     },
     {
      "lantai": 3,
@@ -13228,6 +13229,29 @@
       ]
      ],
      "elevasi": 8.2,
+     "tebal": 1.45
+    },
+    {
+     "lantai": 3,
+     "poligon": [
+      [
+       117.85,
+       40.9
+      ],
+      [
+       116.53,
+       40.9
+      ],
+      [
+       116.53,
+       41.2
+      ],
+      [
+       117.85,
+       41.2
+      ]
+     ],
+     "elevasi": 7.15,
      "tebal": 0.4
     },
     {
@@ -13235,29 +13259,6 @@
      "poligon": [
       [
        117.85,
-       40.9
-      ],
-      [
-       116.53,
-       40.9
-      ],
-      [
-       116.53,
-       41.2
-      ],
-      [
-       117.85,
-       41.2
-      ]
-     ],
-     "elevasi": 7.15,
-     "tebal": 0.356
-    },
-    {
-     "lantai": 3,
-     "poligon": [
-      [
-       117.85,
        41.2
       ],
       [
@@ -13274,7 +13275,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.307
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13297,7 +13298,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.257
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13320,7 +13321,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.208
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13343,7 +13344,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.159
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13366,7 +13367,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.11
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13389,7 +13390,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.06
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13412,7 +13413,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": 0.011
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13435,7 +13436,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.038
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13458,7 +13459,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.087
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13481,7 +13482,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.136
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13504,7 +13505,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.186
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13527,7 +13528,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.235
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13550,7 +13551,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.284
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13573,7 +13574,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.333
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13596,7 +13597,7 @@
       ]
      ],
      "elevasi": 7.15,
-     "tebal": -0.382
+     "tebal": 0.4
     },
     {
      "lantai": 3,
@@ -13619,7 +13620,7 @@
       ]
      ],
      "elevasi": 7.45,
-     "tebal": -0.132
+     "tebal": 0.7
     },
     {
      "lantai": 3,
@@ -13642,7 +13643,7 @@
       ]
      ],
      "elevasi": 7.6,
-     "tebal": -0.031
+     "tebal": 0.85
     },
     {
      "lantai": 3,
@@ -13665,7 +13666,7 @@
       ]
      ],
      "elevasi": 7.75,
-     "tebal": 0.07
+     "tebal": 1.0
     },
     {
      "lantai": 3,
@@ -13688,7 +13689,7 @@
       ]
      ],
      "elevasi": 7.9,
-     "tebal": 0.171
+     "tebal": 1.15
     },
     {
      "lantai": 3,
@@ -13711,7 +13712,7 @@
       ]
      ],
      "elevasi": 8.05,
-     "tebal": 0.271
+     "tebal": 1.3
     }
    ],
    "landai": [
@@ -13733,22 +13734,6 @@
     {
      "lantai": 2,
      "a": [
-      117.19,
-      40.9
-     ],
-     "b": [
-      117.19,
-      47.3
-     ],
-     "lebar": 1.32,
-     "dari": 2.85,
-     "ke": 3.9,
-     "tebal": 0.1,
-     "dinding": false
-    },
-    {
-     "lantai": 2,
-     "a": [
       118.575,
       40.9
      ],
@@ -13759,24 +13744,7 @@
      "lebar": 1.43,
      "dari": 3.15,
      "ke": 4.2,
-     "dinding": false,
-     "tebal": 0.4
-    },
-    {
-     "lantai": 3,
-     "a": [
-      117.19,
-      40.9
-     ],
-     "b": [
-      117.19,
-      47.3
-     ],
-     "lebar": 1.32,
-     "dari": 6.85,
-     "ke": 7.9,
-     "tebal": 0.1,
-     "dinding": false
+     "dasar": 2.75
     },
     {
      "lantai": 3,
@@ -13791,8 +13759,7 @@
      "lebar": 1.43,
      "dari": 7.15,
      "ke": 8.2,
-     "dinding": false,
-     "tebal": 0.4
+     "dasar": 6.75
     }
    ],
    "pagar": [
@@ -14086,23 +14053,77 @@
      ]
     }
    ],
+   "tiang": [
+    {
+     "lantai": 3,
+     "titik": [
+      [
+       119.35,
+       38.05,
+       8.05,
+       10.48
+      ],
+      [
+       116.48,
+       38.05,
+       8.05,
+       10.48
+      ],
+      [
+       119.35,
+       41.3,
+       8.116,
+       10.48
+      ],
+      [
+       116.48,
+       41.3,
+       8.05,
+       10.48
+      ],
+      [
+       119.35,
+       44.8,
+       8.69,
+       10.48
+      ],
+      [
+       116.48,
+       44.8,
+       8.05,
+       10.48
+      ],
+      [
+       119.35,
+       48.15,
+       9.1,
+       10.48
+      ],
+      [
+       116.48,
+       48.15,
+       9.1,
+       10.48
+      ]
+     ],
+     "tinggi": 2.4
+    }
+   ],
    "atapPelana": [
     {
      "lantai": 3,
      "a": [
       117.915,
-      37.0
+      37.9
      ],
      "b": [
       117.915,
-      49.2
+      48.3
      ],
-     "lebar": 4.3,
-     "tepiBawah": 9.95,
-     "puncak": 10.8,
-     "naik": 1.05,
-     "bahan": "genteng",
-     "mulai": 0.01
+     "lebar": 3.9,
+     "tepiBawah": 10.5,
+     "puncak": 11.0,
+     "bahan": "seng"
     },
     {
      "lantai": 1,
@@ -14112,50 +14133,13 @@
      ],
      "b": [
       117.915,
-      40.95
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": 1,
-     "tepiBawah": 2.25,
-     "puncak": 2.7,
-     "naik": 0.0,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 1,
-     "a": [
-      117.915,
-      40.85
-     ],
-     "b": [
-      117.915,
-      47.35
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": 1,
-     "tepiBawah": 2.25,
-     "puncak": 2.7,
-     "naik": 1.05,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 1,
-     "a": [
-      117.915,
-      47.25
-     ],
-     "b": [
-      117.915,
       48.3
      ],
      "lebar": 5.4,
      "mulai": 1.5,
      "sisiSaja": 1,
-     "tepiBawah": 3.3,
-     "puncak": 3.75,
-     "naik": 0.0,
+     "tepiBawah": 2.25,
+     "puncak": 2.7,
      "bahan": "genteng"
     },
     {
@@ -14166,50 +14150,13 @@
      ],
      "b": [
       117.915,
-      45.55
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": -1,
-     "tepiBawah": 2.25,
-     "puncak": 2.7,
-     "naik": 0.0,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 1,
-     "a": [
-      117.915,
-      45.45
-     ],
-     "b": [
-      117.915,
-      47.35
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": -1,
-     "tepiBawah": 2.25,
-     "puncak": 2.7,
-     "naik": 1.05,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 1,
-     "a": [
-      117.915,
-      47.25
-     ],
-     "b": [
-      117.915,
       48.3
      ],
      "lebar": 5.4,
      "mulai": 1.5,
      "sisiSaja": -1,
-     "tepiBawah": 3.3,
-     "puncak": 3.75,
-     "naik": 0.0,
+     "tepiBawah": 2.25,
+     "puncak": 2.7,
      "bahan": "genteng"
     },
     {
@@ -14220,50 +14167,13 @@
      ],
      "b": [
       117.915,
-      40.95
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": 1,
-     "tepiBawah": 6.25,
-     "puncak": 6.7,
-     "naik": 0.0,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 2,
-     "a": [
-      117.915,
-      40.85
-     ],
-     "b": [
-      117.915,
-      47.35
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": 1,
-     "tepiBawah": 6.25,
-     "puncak": 6.7,
-     "naik": 1.05,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 2,
-     "a": [
-      117.915,
-      47.25
-     ],
-     "b": [
-      117.915,
       48.3
      ],
      "lebar": 5.4,
      "mulai": 1.5,
      "sisiSaja": 1,
-     "tepiBawah": 7.3,
-     "puncak": 7.75,
-     "naik": 0.0,
+     "tepiBawah": 6.25,
+     "puncak": 6.7,
      "bahan": "genteng"
     },
     {
@@ -14274,56 +14184,19 @@
      ],
      "b": [
       117.915,
-      45.55
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": -1,
-     "tepiBawah": 6.25,
-     "puncak": 6.7,
-     "naik": 0.0,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 2,
-     "a": [
-      117.915,
-      45.45
-     ],
-     "b": [
-      117.915,
-      47.35
-     ],
-     "lebar": 5.4,
-     "mulai": 1.5,
-     "sisiSaja": -1,
-     "tepiBawah": 6.25,
-     "puncak": 6.7,
-     "naik": 1.05,
-     "bahan": "genteng"
-    },
-    {
-     "lantai": 2,
-     "a": [
-      117.915,
-      47.25
-     ],
-     "b": [
-      117.915,
       48.3
      ],
      "lebar": 5.4,
      "mulai": 1.5,
      "sisiSaja": -1,
-     "tepiBawah": 7.3,
-     "puncak": 7.75,
-     "naik": 0.0,
+     "tepiBawah": 6.25,
+     "puncak": 6.7,
      "bahan": "genteng"
     }
    ],
    "atap": null,
    "sumber": "footage-2026",
-   "catatan": "FIX FOOTAGE (penghubung C-D dari C lt 1 dan C lt 2, tampak dari taman D; 25 Nov 2026). Lurus dari lorong tembus C (x 116,53-119,3) ke ujung timur selasar D, 10,4 m, tiga lantai. Tiap lantai naik 1,05 m dari C ke D: lajur barat anak tangga (lt 1 6, lt 2-3 7) di dekat D, lajur timur ramp mulai 3 m dari C, railing stainless di antaranya, bordes 1 m di depan selasar D. Lt 1 terbuka berrailing di bagian miring; lt 2-3 tembok putih berpegangan. Atap sayap genteng merah di lt 1-2, atap merah di atas lt 3 (panjang atap 10,9 m, Google Earth). Lt 3 belum ada footage: disamakan dengan lt 2."
+   "catatan": "FIX FOOTAGE (penghubung C-D dari C lt 1 dan C lt 2, tampak dari taman D; 25 Nov 2026). Lurus dari lorong tembus C (x 116,53-119,3) ke ujung timur selasar D, 10,4 m, tiga lantai. Tiap lantai naik 1,05 m dari C ke D: lajur barat anak tangga (lt 1 6, lt 2-3 7) di dekat D, lajur timur ramp mulai 3 m dari C, railing stainless di antaranya, bordes 1 m di depan selasar D. Lt 1 terbuka berrailing di bagian miring; lt 2-3 tembok putih berpegangan, bawah pelat rata. Atap sayap genteng merah di kedua sisi lt 1-2, lurus dan datar sepanjang jembatan; lt 3 atap seng bertiang baja hitam (foto pengguna). Lt 3 belum ada footage jalan: disamakan dengan lt 2."
   }
  ],
  "lansekap": [
