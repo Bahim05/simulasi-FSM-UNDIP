@@ -817,21 +817,26 @@ function buildParapet(p0, p1, P, h = 1.0, jenis = 'tembok-roster', spec = {}) {
     sw(0, len, 0, hw + 0.2, 0.16, P.collider);
     return;
   }
-  P.col.push(wallBox(p0.x, p0.z, p1.x, p1.z, y - 0.5, y - 0.15, 0.25));   // balok tepi pelat di bawah tembok
   if (jenis === 'tembok-handrail') {
-    const hw = Math.min(h, 0.9);
-    seg(-0.05, len + 0.05, y, y + hw - 0.05, th);
-    seg(-0.07, len + 0.07, y + hw - 0.05, y + hw, th + 0.04);             // tutup atas tembok
-    const hr = y + hw + 0.17;                                               // pipa pegangan
-    P.rail.push(beam(new V3(p0.x, hr, p0.z), new V3(p1.x, hr, p1.z), 0.045, 0.045));
+    // tembok putih berpipa pegangan; ikut miring kalau a dan b beda tinggi (ruas ramp/tangga jembatan). `spec.bawahA/bawahB` (tinggi
+    // mutlak di a dan b) menurunkan muka tembok sampai bawah pelat, supaya tampak luar jembatan rata (tidak terlihat anak tangga berundak)
+    const hw = Math.min(h, 0.9), dy = p1.y - p0.y, yAt = t => p0.y + dy * t / len;
+    const hasB = spec.bawahA != null, bot = t => (hasB ? spec.bawahA + ((spec.bawahB ?? spec.bawahA) - spec.bawahA) * t / len : yAt(t));
+    const sw = (t0, t1, f0, f1, d, arr = P.wall) => { const [x0, z0] = at(t0), [x1, z1] = at(t1); slopedWall(arr, x0, z0, x1, z1, f0(t0), f0(t1), f1(t0), f1(t1), d); };
+    if (!hasB) sw(-0.05, len + 0.05, t => yAt(t) - 0.5, t => yAt(t) - 0.15, 0.25, P.col);   // balok tepi pelat di bawah tembok
+    sw(-0.05, len + 0.05, bot, t => yAt(t) + hw - 0.05, th);
+    sw(-0.07, len + 0.07, t => yAt(t) + hw - 0.05, t => yAt(t) + hw, th + 0.04);             // tutup atas tembok
+    const hr = t => yAt(t) + hw + 0.17;                                                        // pipa pegangan
+    P.rail.push(beam(new V3(p0.x, hr(0), p0.z), new V3(p1.x, hr(len), p1.z), 0.045, 0.045));
     const n = Math.max(1, Math.round(len / 1.5));
     for (let i = 0; i <= n; i++) {
-      const [x, z] = at((len * i) / n);
-      P.rail.push(boxXZ(x - 0.018, z - 0.018, x + 0.018, z + 0.018, y + hw, hr));
+      const t = (len * i) / n, [x, z] = at(t);
+      P.rail.push(boxXZ(x - 0.018, z - 0.018, x + 0.018, z + 0.018, yAt(t) + hw, hr(t)));
     }
-    P.collider.push(wallBox(p0.x, p0.z, p1.x, p1.z, y, hr + 0.05, 0.12));
+    sw(0, len, t => Math.min(yAt(t), bot(t)), t => hr(t) + 0.05, 0.12, P.collider);
     return;
   }
+  P.col.push(wallBox(p0.x, p0.z, p1.x, p1.z, y - 0.5, y - 0.15, 0.25));   // balok tepi pelat di bawah tembok
   // tulisan besar di muka kiri (normal kiri a->b), mis. "INFORMATIKA"
   if (spec.tulisan) {
     const T = spec.tulisan, side = T.sisi ?? 1;
@@ -1223,13 +1228,15 @@ function buildRoof(a, mat) {
 // Penghubung antar gedung (koordinat kawasan): pelat tiap lantai, kolom, tembok pembatas,
 // atap tritisan di kedua sisi, dan atap datar bila ada.
 // Penutup tegak di bawah ramp: prisma dari garis ramp sampai y0 (tanah/lantai), mengikuti kemiringan.
-function slopedWallGeo(a, b, w, y0) {
+function slopedWallGeo(a, b, w, y0, y1 = y0) {
   const u = new V3(b.x - a.x, 0, b.z - a.z).normalize(), n = new V3(-u.z, 0, u.x).multiplyScalar(w / 2);
   const c = [a.clone().add(n), b.clone().add(n), b.clone().sub(n), a.clone().sub(n)];   // sudut atas
   const pos = [];
   const quad = (p, q, r, t) => pos.push(p.x, p.y, p.z, q.x, q.y, q.z, r.x, r.y, r.z, p.x, p.y, p.z, r.x, r.y, r.z, t.x, t.y, t.z);
-  const lo = p => new V3(p.x, y0, p.z), top = p => new V3(p.x, p.y - 0.16, p.z);
-  for (let i = 0; i < 4; i++) { const p = c[i], q = c[(i + 1) % 4]; quad(lo(p), lo(q), top(q), top(p)); quad(top(p), top(q), lo(q), lo(p)); }
+  // dasar boleh miring: y0 di sisi a, y1 di sisi b (bawah jembatan yang naik di ruas tangga); tutup bawah supaya tidak bolong dilihat dari bawah
+  const lo = (p, i) => new V3(p.x, i === 0 || i === 3 ? y0 : y1, p.z), top = p => new V3(p.x, p.y - 0.16, p.z);
+  for (let i = 0; i < 4; i++) { const j = (i + 1) % 4, p = c[i], q = c[j]; quad(lo(p, i), lo(q, j), top(q), top(p)); quad(top(p), top(q), lo(q, j), lo(p, i)); }
+  quad(lo(c[0], 0), lo(c[1], 1), lo(c[2], 2), lo(c[3], 3)); quad(lo(c[3], 3), lo(c[2], 2), lo(c[1], 1), lo(c[0], 0));
   const g = new THREE.BufferGeometry();
   g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
   g.computeVertexNormals();
@@ -1355,7 +1362,7 @@ export function buildPenghubung(spec, T) {
       g.add(m);
       out.walkables.push(m);
       // dinding bawah ramp sampai tanah (supaya tidak melayang); `dinding: false` untuk ramp jembatan di lantai atas
-      if (rp.dinding !== false) P.alas.push(slopedWallGeo(a, b, rp.lebar, rp.dasar ?? lf.elevasi - 0.25));
+      if (rp.dinding !== false) P.alas.push(slopedWallGeo(a, b, rp.lebar, rp.dasar ?? lf.elevasi - 0.25, rp.dasarB ?? rp.dasar ?? lf.elevasi - 0.25));
     }
     for (const st of (spec.anakTangga || []).filter(st => st.lantai === lf.no)) {
       const m = new THREE.Mesh(slabGeo(st.poligon, st.elevasi, st.tebal ?? (st.elevasi - lf.elevasi + 0.05)), mat.slab);
@@ -1385,7 +1392,7 @@ export function buildPenghubung(spec, T) {
           P.logam.push(boxXZ(x - 0.04, z - 0.04, x + 0.04, z + 0.04, yb0 + (yb1 - yb0) * t, yt0 + (yt1 - yt0) * t));
         }
         slopedWall(P.collider, a.x, a.z, b.x, b.z, Math.min(yb0, yb1) - d0, Math.min(yb0, yb1) - d0, Math.max(yt0, yt1), Math.max(yt0, yt1), 0.12);
-      } else if (jn.startsWith('tembok')) buildParapet(a, b, P, p.tinggi ?? 1.0, jn);
+      } else if (jn.startsWith('tembok')) buildParapet(a, b, P, p.tinggi ?? 1.0, jn, p);
       else if (jn === 'pegangan-dinding') buildHandrail(a, b, P, p.tinggi ?? 0.9);
       else buildRail(a, b, P, p.tinggi ?? 0.95);
     }

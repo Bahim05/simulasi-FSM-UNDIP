@@ -449,7 +449,11 @@ async function init() {
       if (where?.entry && where.entry !== sel) { sel = where.entry; ui.bind(); }
       state.floor = where?.floor ?? sel.data.lantai.reduce((best, f) => (Math.abs(f.elevasi - walker.pos.y) < Math.abs(elevOf(best) - walker.pos.y) ? f.no : best), 1);
       state.mode = 'lantai';
-      camera.rotation.set(0, 0, 0);
+      // titik pandang orbit diletakkan di depan mata pejalan, supaya animasi keluar mulai dari arah pandang yang sama. Dulu titik
+      // pandang lama (sebelum jalan kaki) yang dipakai, jadi kamera langsung menoleh tajam di frame pertama (terasa terbanting).
+      const dir = new V3();
+      camera.getWorldDirection(dir);
+      controls.target.copy(camera.position).addScaledVector(dir, 8);
       if (state.panelBeforeWalk) ui.togglePanel(true);
       if (reapply) { apply(); flyTo(...pose(state.view)); }
     },
