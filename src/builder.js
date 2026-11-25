@@ -1327,7 +1327,8 @@ export function buildPenghubung(spec, T) {
     seng: new THREE.MeshStandardMaterial({ color: '#b9bec1', roughness: 0.45, metalness: 0.4, side: THREE.DoubleSide }),
     plafon: new THREE.MeshStandardMaterial({ color: '#f1f0eb', roughness: 0.9, side: THREE.DoubleSide }),
     bangku: new THREE.MeshStandardMaterial({ color: '#6f7478', roughness: 0.4, metalness: 0.5 }),
-    logam: new THREE.MeshStandardMaterial({ color: '#4d5256', roughness: 0.5, metalness: 0.4 }),
+    logam: new THREE.MeshStandardMaterial({ color: spec.warnaRangka || '#4d5256', roughness: 0.5, metalness: 0.4 }),
+    kaca: new THREE.MeshStandardMaterial({ color: '#6f9cc2', roughness: 0.08, metalness: 0.3, transparent: true, opacity: 0.38, side: THREE.DoubleSide, depthWrite: false }),
     collider: new THREE.MeshBasicMaterial({ visible: false }),
   };
   const root = new THREE.Group();
@@ -1339,7 +1340,7 @@ export function buildPenghubung(spec, T) {
     const g = new THREE.Group();
     g.userData.no = lf.no;
     root.add(g);
-    const P = { wall: [], col: [], rail: [], collider: [], tritTop: [], tritBawah: [], kayu: [], alas: [], baja: [], seng: [], genteng: [], plafon: [], bangku: [], logam: [] };
+    const P = { wall: [], col: [], rail: [], collider: [], tritTop: [], tritBawah: [], kayu: [], alas: [], baja: [], seng: [], genteng: [], plafon: [], bangku: [], logam: [], kaca: [] };
     const poly = lf.poligon || spec.poligon;                         // tiap lantai boleh punya bentuk sendiri
     const slab = new THREE.Mesh(slabGeo(poly, lf.elevasi, lf.tebal ?? (lf.no === 1 ? 0.3 : 0.15)), mat.slab);
     slab.castShadow = slab.receiveShadow = true;
@@ -1371,6 +1372,19 @@ export function buildPenghubung(spec, T) {
         const h = p.tinggi ?? 1.0;
         slopedWall(P.wall, a.x, a.z, b.x, b.z, a.y - 0.3, b.y - 0.3, a.y + h, b.y + h, 0.15);
         P.rail.push(beam(new V3(a.x, a.y + h + 0.04, a.z), new V3(b.x, b.y + h + 0.04, b.z), 0.05, 0.05));
+      } else if (jn === 'kaca') {
+        // dinding kaca berangka (lorong penghubung C-K, footage): kaca dari a.y + dasar sampai a.y + dasar + tinggi, atau sampai `atas`
+        // (tinggi mutlak, atas rata) kalau ada. Rangka aluminium di tepi bawah, tepi atas, dan tegak tiap ±1,3 m. Menahan pejalan.
+        const d0 = p.dasar ?? 0.95, len = Math.hypot(b.x - a.x, b.z - a.z);
+        const yb0 = a.y + d0, yb1 = b.y + d0, yt0 = p.atas ?? a.y + d0 + (p.tinggi ?? 2.0), yt1 = p.atas ?? b.y + d0 + (p.tinggi ?? 2.0);
+        slopedWall(P.kaca, a.x, a.z, b.x, b.z, yb0, yb1, yt0, yt1, 0.03);
+        P.logam.push(beam(new V3(a.x, yb0, a.z), new V3(b.x, yb1, b.z), 0.08, 0.08), beam(new V3(a.x, yt0, a.z), new V3(b.x, yt1, b.z), 0.08, 0.08));
+        const n = Math.max(1, Math.round(len / 1.3));
+        for (let k = 0; k <= n; k++) {
+          const t = k / n, x = a.x + (b.x - a.x) * t, z = a.z + (b.z - a.z) * t;
+          P.logam.push(boxXZ(x - 0.04, z - 0.04, x + 0.04, z + 0.04, yb0 + (yb1 - yb0) * t, yt0 + (yt1 - yt0) * t));
+        }
+        slopedWall(P.collider, a.x, a.z, b.x, b.z, Math.min(yb0, yb1) - d0, Math.min(yb0, yb1) - d0, Math.max(yt0, yt1), Math.max(yt0, yt1), 0.12);
       } else if (jn.startsWith('tembok')) buildParapet(a, b, P, p.tinggi ?? 1.0, jn);
       else if (jn === 'pegangan-dinding') buildHandrail(a, b, P, p.tinggi ?? 0.9);
       else buildRail(a, b, P, p.tinggi ?? 0.95);
@@ -1420,9 +1434,9 @@ export function buildPenghubung(spec, T) {
     }
     for (const [list, m, solid] of [[P.wall, mat.wall, true], [P.col, mat.col, true], [P.rail, mat.rail], [P.tritTop, mat.roof],
       [P.tritBawah, mat.tritBawah], [P.kayu, mat.kayu], [P.alas, mat.alas, true], [P.baja, mat.baja], [P.seng, mat.seng],
-      [P.genteng, mat.roof], [P.plafon, mat.plafon], [P.bangku, mat.bangku], [P.logam, mat.logam]]) {
+      [P.genteng, mat.roof], [P.plafon, mat.plafon], [P.bangku, mat.bangku], [P.logam, mat.logam], [P.kaca, mat.kaca]]) {
       const mesh = merged(list, m);
-      if (mesh) { g.add(mesh); if (solid) out.solids.push(mesh); }
+      if (mesh) { if (m === mat.kaca) { mesh.castShadow = false; mesh.renderOrder = 2; } g.add(mesh); if (solid) out.solids.push(mesh); }
     }
     const col = merged(P.collider, mat.collider, { cast: false, receive: false });
     if (col) { col.visible = false; col.userData.collider = true; g.add(col); out.solids.push(col); }
@@ -1484,6 +1498,17 @@ function lansekapTexture(key) {
       blotch(['#6b6b6b', '#d9d6cc'], 50, 4, 14, 0.12);
       break;
     }
+    case 'paving-abu': {                                // paving block abu-abu tua susun tulang ikan (kantin, footage)
+      size = 1;
+      g.fillStyle = '#3d3f40'; g.fillRect(0, 0, N, N);
+      const u = N / 10, cols = ['#6a6c6b', '#626463', '#717372', '#5c5e5d', '#686a66'];
+      for (let r = 0; r < 10; r++) for (let k = 0; k < 10; k++) {
+        g.fillStyle = cols[Math.floor(rnd() * cols.length)];
+        if ((r + k) % 2) g.fillRect(k * u + 2, r * u + 2, u - 4, u * 2 - 4); else g.fillRect(k * u + 2, r * u + 2, u * 2 - 4, u - 4);
+      }
+      blotch(['#2f3132', '#8a8c88', '#4f5a44'], 90, 8, 34, 0.16);
+      break;
+    }
     case 'paving-merah': {                              // paving bata merah 20 x 10 cm, susun bergeser
       size = 1;
       g.fillStyle = '#5e2f29'; g.fillRect(0, 0, N, N);
@@ -1496,6 +1521,23 @@ function lansekapTexture(key) {
       blotch(['#4a2420', '#b98a78', '#6d5a52'], 80, 8, 30, 0.14);      // aus dan kusam
       break;
     }
+    case 'grass-block': {                                // paving grass block beton berlubang, rumput di lubang (video penghubung kantin-K)
+      size = 0.8; g.fillStyle = '#9a968c'; g.fillRect(0, 0, N, N);
+      const u = N / 4;
+      for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) {
+        g.fillStyle = (i + j) % 3 ? '#3f4a2c' : '#2f3324';
+        g.fillRect(i * u + u * 0.22, j * u + u * 0.22, u * 0.56, u * 0.56);
+      }
+      blotch(['#7d7a70', '#56603c'], 70, 4, 18, 0.2);
+      break;
+    }
+    case 'keramik-putih': {                              // keramik putih 40 cm, nat abu (panggung kantin B, footage)
+      size = 1.6; g.fillStyle = '#b9b7b1'; g.fillRect(0, 0, N, N);
+      const u = N / 4;
+      for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { g.fillStyle = ['#e9e7e2', '#e4e2dc', '#eeece7'][(i * 3 + j) % 3]; g.fillRect(i * u + 2, j * u + 2, u - 4, u - 4); }
+      break;
+    }
+    case 'putih': size = 1; g.fillStyle = '#ecebe6'; g.fillRect(0, 0, N, N); blotch(['#d8d6cf'], 30, 6, 20, 0.2); break;
     case 'tanah': size = 1.5; g.fillStyle = '#6e5440'; g.fillRect(0, 0, N, N); blotch(['#5a4433', '#82664f', '#4f6a3a', '#5d7a42'], 160, 4, 26, 0.35); break;
     case 'batu-hitam': {                                  // batu kali bulat hitam (alas kolom koridor)
       size = 0.5; g.fillStyle = '#3a3b3d'; g.fillRect(0, 0, N, N);
@@ -1604,11 +1646,13 @@ export function buildLansekap(spec) {
     g.setIndex([...Array(pos.length / 3).keys()]);       // berindeks seperti quadFace supaya bisa digabung
     g.computeVertexNormals();
     put(kTop, g);
-    // sisi: hint = arah keluar dari titik tengah poligon
-    const cx = pts.reduce((s2, p) => s2 + p[0], 0) / pts.length, cz = pts.reduce((s2, p) => s2 + p[1], 0) / pts.length;
+    // sisi: arah keluar dari urutan titik (luas bertanda), bukan dari titik tengah, supaya benar juga untuk poligon cekung
+    let ar2 = 0;
+    pts.forEach((p, k) => { const q = pts[(k + 1) % pts.length]; ar2 += p[0] * q[1] - q[0] * p[1]; });
+    const sg = ar2 > 0 ? 1 : -1;
     pts.forEach((p, k) => {
       const q = pts[(k + 1) % pts.length];
-      const hint = new V3((p[0] + q[0]) / 2 - cx, 0, (p[1] + q[1]) / 2 - cz);
+      const hint = new V3(sg * (q[1] - p[1]), 0, -sg * (q[0] - p[0]));
       put(kSide, quadFace([new V3(p[0], bot, p[1]), new V3(q[0], bot, q[1]), new V3(q[0], top, q[1]), new V3(p[0], top, p[1])], hint));
     });
   }
@@ -1682,7 +1726,8 @@ export function buildLansekap(spec) {
   }
   // benda: perabot dan bangunan kecil di koordinat kawasan (tidak terikat jalur), mis. di lahan terbuka depan Gedung A.
   // { jenis, x, z, y (tinggi alas), arah (derajat, sumbu panjang dari +x ke +z) , ... }
-  Object.assign(pots, { pink: [], pinkTua: [], abu: [], atapDatar: [], kawat: [], alasPendopo: [], kayuMuda: [] });
+  Object.assign(pots, { pink: [], pinkTua: [], abu: [], atapDatar: [], kawat: [], alasPendopo: [], kayuMuda: [], merahBesi: [], merahMeja: [], krem: [], seng: [], atapMerah: [],
+    kaca: [], kuning: [], oranye: [], payung: [], posterMerah: [], posterKuning: [], posterBiru: [], galon: [], plastik: [] });
   const keras = [], pijak = [];                                    // penghalang jalan kaki, dan permukaan yang bisa dipijak
   for (const b of spec.benda || []) {
     const ang = -THREE.MathUtils.degToRad(b.arah || 0), y0 = b.y ?? 1.05;
@@ -1731,6 +1776,177 @@ export function buildLansekap(spec) {
       put2(pots.alasPendopo, box(L - 1.2, 0.45, 0.12), -ks * 0.35, ha + 0.64, -Wd / 2 + 0.4, true);
       bs(0.5, Wd - 1.6, ks * (L / 2 - 0.75), 0.25);
       put2(pots.alasPendopo, box(0.12, 0.45, Wd - 1.6), ks * (L / 2 - 0.55), ha + 0.64, 0.25, true);
+    } else if (b.jenis === 'los-kantin') {
+      // los kantin (footage): rangka besi merah, atap seng datar sedikit miring, deretan meja dan bangku merah berdudukan keramik krem.
+      // panjang sepanjang sumbu x lokal; `baris` = jumlah baris meja melintang; meja disusun tiap ±1,9 m sepanjang los.
+      const L = b.panjang ?? 12, Wd = b.lebar ?? 5, Hc = b.tinggi ?? 2.8, jk = b.jarakKolom ?? 3.0, miring = b.miring ?? 0.25;
+      const nx = Math.max(1, Math.round(L / jk));
+      for (let i = 0; i <= nx; i++) for (const sz of [-1, 1]) {
+        const x = -L / 2 + i * L / nx, hz = Hc + (sz > 0 ? 0 : miring);
+        put2(pots.merahBesi, box(0.1, hz, 0.1), x, hz / 2, sz * (Wd / 2 - 0.1), true);
+      }
+      for (const sz of [-1, 1]) put2(pots.merahBesi, box(L, 0.12, 0.08), 0, Hc + (sz > 0 ? 0 : miring) - 0.06, sz * (Wd / 2 - 0.1));
+      const roof = box(L + 0.4, 0.04, Wd + 0.5);
+      roof.rotateX(Math.atan2(miring, Wd));
+      put2(pots.seng, roof, 0, Hc + miring / 2 + 0.03, 0);
+      for (let i = 0; i <= nx; i++) put2(pots.merahBesi, box(0.06, 0.08, Wd), -L / 2 + i * L / nx, Hc + miring / 2 - 0.03, 0);
+      const rows = b.baris ?? 2, nt = Math.max(1, Math.floor((L - 0.6) / 1.9));
+      for (let r = 0; r < rows; r++) {
+        const z = -Wd / 2 + (r + 0.5) * Wd / rows;
+        for (let j = 0; j < nt; j++) {
+          const x = -L / 2 + 0.3 + (j + 0.5) * (L - 0.6) / nt;
+          put2(pots.merahMeja, box(0.7, 0.72, 1.5), x, 0.36, z, true);                  // meja merah, bujur melintang
+          put2(pots.krem, box(0.74, 0.03, 1.54), x, 0.735, z);
+          for (const dx of [-0.65, 0.65]) { put2(pots.merahMeja, box(0.3, 0.42, 1.5), x + dx, 0.21, z); put2(pots.krem, box(0.32, 0.03, 1.52), x + dx, 0.435, z); }
+        }
+      }
+    } else if (b.jenis === 'meja-kantin') {
+      // meja kantin (foto 2026): badan meja dan bangku masif merah bata, permukaan keramik krem. Sumbu panjang = sumbu x lokal.
+      // panjang 3,0 (meja panjang, 8 orang) atau 1,5 (meja setengah, 4 orang); bangku di kedua sisi panjang.
+      const L = b.panjang ?? 3.0, bz = b.jarakBangku ?? 0.58;
+      put2(pots.merahMeja, box(L - 0.1, 0.7, 0.5), 0, 0.35, 0, true);
+      put2(pots.krem, box(L, 0.04, 0.74), 0, 0.72, 0);
+      for (const sg of (b.bangku ?? [-1, 1])) {
+        put2(pots.merahMeja, box(L - 0.1, 0.41, 0.24), 0, 0.205, sg * bz, true);
+        put2(pots.krem, box(L, 0.03, 0.28), 0, 0.425, sg * bz);
+      }
+    } else if (b.jenis === 'atap-miring') {
+      // atap seng miring di atas rangka besi merah (kantin, foto 2026). Semua koordinat kawasan mutlak:
+      // atap: 4 titik [x, y, z] (bidang atas), tiang: [x, z, yBawah, yAtas], balok: [x1, y1, z1, x2, y2, z2], panel: 4 titik (seng terang).
+      const slab = (q, t) => {
+        let ar = 0; q.forEach((v, k) => { const w = q[(k + 1) % 4]; ar += v[0] * w[2] - w[0] * v[2]; });
+        if (ar < 0) q = [...q].reverse();       // urutan titik dibuat berlawanan jarum jam (dilihat dari atas) supaya muka atas menghadap ke atas
+        const T = q.map(([x, y, z]) => [x, y, z]), B = q.map(([x, y, z]) => [x, y - t, z]);
+        const pos = [], uv = [];
+        const tri = (a, c, d) => { for (const v of [a, c, d]) { pos.push(...v); uv.push(v[0], v[2]); } };
+        tri(T[0], T[2], T[1]); tri(T[0], T[3], T[2]); tri(B[0], B[1], B[2]); tri(B[0], B[2], B[3]);
+        for (let k = 0; k < 4; k++) { const k2 = (k + 1) % 4; tri(T[k], T[k2], B[k2]); tri(T[k], B[k2], B[k]); }
+        const g = new THREE.BufferGeometry();
+        g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+        g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+        g.computeVertexNormals();
+        return g;
+      };
+      if (b.atap) pots.atapMerah.push(slab(b.atap, b.tebal ?? 0.05));
+      // sisi bawah seng berlapis galvalum abu terang (foto kantin dari bawah)
+      if (b.atap && b.bawah !== false) pots.seng.push(slab(b.atap.map(([x, y, z]) => [x, y - (b.tebal ?? 0.05) - 0.006, z]), 0.004));
+      if (b.atap && b.rusuk) {
+        // rusuk seng gelombang: batang tipis searah kemiringan (dari tepi tinggi atap[0]-atap[3] ke tepi rendah atap[1]-atap[2])
+        const [A0, A1, A2, A3] = b.atap.map(v => new V3(...v)), n = Math.max(2, Math.round(A0.distanceTo(A3) / b.rusuk));
+        for (let k = 0; k <= n; k++) {
+          const t = k / n, hi = A0.clone().lerp(A3, t), lo = A1.clone().lerp(A2, t);
+          pots.atapMerah.push(beam(hi.setY(hi.y + 0.012), lo.setY(lo.y + 0.012), 0.045, 0.028));
+        }
+      }
+      for (const q of b.panel || []) pots.krem.push(slab(q.map(([x, y, z]) => [x, y + 0.012, z]), 0.01));
+      for (const [x, z, y0t, y1t] of b.tiang || []) {
+        const g = new THREE.CylinderGeometry(0.05, 0.05, y1t - y0t, 10);
+        g.translate(x, (y0t + y1t) / 2, z);
+        pots.merahBesi.push(g); keras.push(g.clone());
+      }
+      for (const [x1, y1, z1, x2, y2, z2] of b.balok || []) pots.merahBesi.push(beam(new V3(x1, y1, z1), new V3(x2, y2, z2), 0.08, 0.12));
+    } else if (b.jenis === 'deret-kios') {
+      // deretan kios kantin B (foto dan video kantin 2026): badan tembok putih, pintu gulung abu bergaris, papan nama merah menerus
+      // di atas pintu, atap datar. Sumbu x lokal = arah deret, muka kios menghadap +z lokal. kaca: petak berjendela kaca penuh poster.
+      const L = b.panjang ?? 9.6, D = b.dalam ?? 2.5, Hk = b.tinggi ?? 2.85, n = b.n ?? 4, zf = D / 2, w = L / n, hp = 2.3;
+      put2(pots.putih, box(L, Hk, D - 0.12), 0, Hk / 2, -0.06, true);
+      put2(pots.posterMerah, box(L + 0.06, Hk - hp - 0.05, 0.1), 0, (Hk + hp) / 2 + 0.02, zf - 0.03);
+      put2(pots.atapDatar, box(L + 0.3, 0.08, D + 0.35), 0, Hk + 0.04, 0.1);
+      for (let k = 0; k <= n; k++) put2(pots.putih, box(0.22, hp, 0.1), -L / 2 + k * w, hp / 2, zf - 0.05);
+      for (let k = 0; k < n; k++) {
+        const cx = -L / 2 + (k + 0.5) * w, ww = w - 0.24;
+        if (b.kaca) {
+          put2(pots.kaca, box(ww, hp - 0.35, 0.03), cx, 0.35 + (hp - 0.35) / 2, zf - 0.08);
+          put2(pots.putih, box(ww, 0.35, 0.05), cx, 0.175, zf - 0.07);
+          const cols = [pots.posterMerah, pots.posterKuning, pots.posterBiru, pots.krem];
+          for (let q = 0; q < 6; q++) put2(cols[(q + k) % 4], box(0.42, 0.58, 0.01), cx - ww / 2 + 0.3 + (q % 3) * (ww - 0.6) / 2, q < 3 ? 1.75 : 1.05, zf - 0.06);
+        } else {
+          put2(pots.seng, box(ww, hp - 0.05, 0.03), cx, (hp - 0.05) / 2, zf - 0.08);
+          for (let y = 0.15; y < hp - 0.1; y += 0.14) put2(pots.abu, box(ww, 0.015, 0.012), cx, y, zf - 0.06);
+          put2(pots.abu, box(ww + 0.02, 0.12, 0.08), cx, hp - 0.04, zf - 0.07);                   // kotak gulungan
+        }
+      }
+    } else if (b.jenis === 'kulkas') {
+      // kulkas minuman berpintu kaca (video kantin): badan merah, pintu kaca terang di muka (+z lokal), papan putih di atas
+      put2(pots.merahBesi, box(0.68, 1.9, 0.64), 0, 0.95, 0, true);
+      put2(pots.plastik, box(0.54, 1.4, 0.02), 0, 0.92, 0.33);
+      for (const y of [0.45, 0.8, 1.15, 1.5]) put2(pots.posterKuning, box(0.5, 0.06, 0.02), 0, y, 0.335);
+      put2(pots.putih, box(0.68, 0.2, 0.03), 0, 1.76, 0.335);
+    } else if (b.jenis === 'wastafel') {
+      // wastafel ganda (foto kantin B): papan merah bata setinggi bahu menempel tembok, dua bak putih, kran logam
+      const L = b.panjang ?? 1.3;
+      put2(pots.merahMeja, box(L, 1.35, 0.12), 0, 0.675, -0.22, true);
+      for (const sx of [-L / 4, L / 4]) {
+        put2(pots.putih, box(0.48, 0.15, 0.4), sx, 0.8, 0.0);
+        put2(pots.logam, box(0.05, 0.72, 0.05), sx, 0.36, -0.08);
+        put2(pots.logam, box(0.03, 0.03, 0.22), sx, 1.02, -0.06);
+      }
+    } else if (b.jenis === 'kandang') {
+      // kandang kawat berangka (foto kantin): galon (rangka hitam, atap seng datar) atau botol plastik (atap limas oranye)
+      const w = b.lebar ?? 1.4, d = b.dalam ?? 1.0, h = b.tinggi ?? 1.8, rk = pots[b.rangka || 'kawat'];
+      for (const sx of [-1, 1]) for (const sz of [-1, 1]) put2(rk, box(0.05, h, 0.05), sx * (w / 2 - 0.025), h / 2, sz * (d / 2 - 0.025));
+      for (const y of [0.05, h / 2, h - 0.03]) {
+        for (const sz of [-1, 1]) put2(rk, box(w, 0.04, 0.04), 0, y, sz * (d / 2 - 0.025));
+        for (const sx of [-1, 1]) put2(rk, box(0.04, 0.04, d), sx * (w / 2 - 0.025), y, 0);
+      }
+      for (let x = -w / 2 + 0.12; x < w / 2 - 0.05; x += 0.12) for (const sz of [-1, 1]) put2(rk, box(0.012, h, 0.012), x, h / 2, sz * (d / 2 - 0.02));
+      for (let z = -d / 2 + 0.12; z < d / 2 - 0.05; z += 0.12) for (const sx of [-1, 1]) put2(rk, box(0.012, h, 0.012), sx * (w / 2 - 0.02), h / 2, z);
+      if (b.isi === 'galon') {
+        for (let i = 0; i < Math.floor(w / 0.32); i++) for (const lv of [0, 1]) {
+          const g = new THREE.CylinderGeometry(0.13, 0.13, 0.48, 10); put2(pots.galon, g, -w / 2 + 0.2 + i * 0.32, 0.3 + lv * 0.52, 0);
+        }
+      } else if (b.isi === 'botol') put2(pots.plastik, box(w - 0.12, h * 0.55, d - 0.12), 0, h * 0.3, 0);
+      if (b.atap === 'limas') {
+        const cone = new THREE.ConeGeometry(Math.max(w, d) * 0.8, 0.45, 4, 1); cone.rotateY(Math.PI / 4); cone.scale(w / Math.max(w, d), 1, d / Math.max(w, d));
+        put2(pots.oranye, cone, 0, h + 0.22, 0);
+      } else put2(pots.seng, box(w + 0.25, 0.05, d + 0.25), 0, h + 0.03, 0);
+      keras.push(new THREE.BoxGeometry(w, h, d).translate(0, h / 2, 0).rotateY(ang).translate(b.x, y0, b.z));
+    } else if (b.jenis === 'hidran') {
+      // lemari hidran merah dengan tulisan putih (video kantin)
+      put2(pots.merahBesi, box(0.75, 1.2, 0.35), 0, 0.6, 0, true);
+      put2(pots.putih, box(0.5, 0.1, 0.01), 0, 0.92, 0.18);
+      put2(pots.abu, box(0.6, 0.02, 0.01), 0, 0.6, 0.18);
+    } else if (b.jenis === 'tong-sampah') {
+      // tong sampah plastik abu bertutup kuning (video kantin)
+      put2(pots.abu, box(0.55, 0.85, 0.6), 0, 0.425, 0, true);
+      put2(pots.kuning, box(0.58, 0.06, 0.64), 0, 0.88, 0);
+    } else if (b.jenis === 'payung-limas') {
+      // payung kantin C (foto): tiang tengah, kanopi persegi berbentuk limas coklat bata, rusuk logam
+      const S = b.lebar ?? 2.4, Hc = b.tinggi ?? 2.25, hr = b.tinggiAtap ?? 0.75;
+      put2(pots.logam, new THREE.CylinderGeometry(0.035, 0.035, Hc + hr, 8), 0, (Hc + hr) / 2, 0, true);
+      const cone = new THREE.ConeGeometry(S / Math.SQRT2, hr, 4, 1, true); cone.rotateY(Math.PI / 4);
+      const m = put2(pots.payung, cone, 0, Hc + hr / 2, 0);
+      const back = m.clone(); back.setIndex([...back.index.array].reverse()); pots.payung.push(back);   // sisi bawah kanopi
+      for (const [sx, sz] of [[1, 1], [1, -1], [-1, 1], [-1, -1]]) put2(pots.logam, beam(new V3(0, Hc + hr - 0.02, 0), new V3(sx * S / 2, Hc, sz * S / 2), 0.025, 0.025), 0, 0, 0);
+    } else if (b.jenis === 'pendopo-putih') {
+      // pendopo kecil di depan C (foto): tiang besi putih, ring balok putih, atap limas genteng metal merah,
+      // satu meja keramik putih berkaki beton abu dan dua bangku besi putih
+      const S = b.lebar ?? 3.4, Hc = b.tinggi ?? 2.4, hr = b.tinggiAtap ?? 0.9, e = S / 2 - 0.06;
+      for (const sx of [-1, 1]) for (const sz of [-1, 1]) put2(pots.putih, box(0.08, Hc, 0.08), sx * e, Hc / 2, sz * e, true);
+      for (const s1 of [-1, 1]) { put2(pots.putih, box(S, 0.1, 0.08), 0, Hc - 0.05, s1 * e); put2(pots.putih, box(0.08, 0.1, S), s1 * e, Hc - 0.05, 0); }
+      for (const t of [-S / 4, 0, S / 4]) put2(pots.putih, box(0.04, 0.05, S), t, Hc - 0.02, 0);
+      const cone = new THREE.ConeGeometry((S + 0.7) / Math.SQRT2, hr, 4, 1, true); cone.rotateY(Math.PI / 4);
+      const rf = put2(pots.atapMerah, cone, 0, Hc + hr / 2, 0);
+      const rb = rf.clone(); rb.setIndex([...rb.index.array].reverse()); pots.atapMerah.push(rb);      // sisi bawah atap terlihat dari dalam
+      put2(pots.putih, box(1.6, 0.05, 0.8), 0, 0.74, 0, true);
+      put2(pots.abu, box(0.3, 0.7, 0.3), 0, 0.35, 0);
+      for (const dz of [-0.75, 0.75]) {
+        put2(pots.putih, box(1.5, 0.04, 0.32), 0, 0.45, dz, true);
+        for (const dx of [-0.68, 0.68]) put2(pots.putih, box(0.04, 0.44, 0.3), dx, 0.22, dz);
+      }
+    } else if (b.jenis === 'gazebo-merah') {
+      // gazebo kantin (foto): tiang besi putih, atap limas seng merah, meja dan bangku besi putih
+      const S = b.lebar ?? 6, Hc = b.tinggi ?? 2.6, hr = b.tinggiAtap ?? 1.0;
+      for (const sx of [-1, 0, 1]) for (const sz of [-1, 0, 1]) if (sx || sz) put2(pots.putih, box(0.1, Hc, 0.1), sx * (S / 2 - 0.2), Hc / 2, sz * (S / 2 - 0.2), true);
+      put2(pots.putih, box(0.12, Hc + hr * 0.6, 0.12), 0, (Hc + hr * 0.6) / 2, 0, true);
+      const cone = new THREE.ConeGeometry((S + 0.8) / Math.SQRT2, hr, 4, 1);
+      cone.rotateY(Math.PI / 4);
+      put2(pots.atapMerah, cone, 0, Hc + hr / 2, 0);
+      for (const [x, z] of [[-1.4, -1.4], [1.4, -1.4], [-1.4, 1.4], [1.4, 1.4]]) {
+        put2(pots.putih, box(1.4, 0.05, 0.8), x, 0.74, z, true);
+        put2(pots.putih, box(0.06, 0.72, 0.06), x, 0.36, z);
+        for (const dz of [-0.65, 0.65]) put2(pots.putih, box(1.4, 0.05, 0.3), x, 0.44, z + dz);
+      }
     } else if (b.jenis === 'tugu') {
       // tugu persegi merah muda yang tinggi di atas alas berundak
       const h = b.tinggi ?? 11, w = b.lebar ?? 0.75;
@@ -1794,7 +2010,8 @@ export function buildLansekap(spec) {
   }
   const pm = { pot: '#d48a7c', potGelap: '#44494d', tanaman: '#5f8f45', tanamanKuning: '#c39a35', logam: '#5d6266', kayu: '#7a5434', putih: '#f1f1ee',
                pink: '#dba8a4', pinkTua: '#c98e8a', abu: '#7f8489', atapDatar: '#454b52', kawat: '#3e4144',
-               alasPendopo: '#a8918e', kayuMuda: '#b9864f' };
+               alasPendopo: '#a8918e', kayuMuda: '#b9864f', merahBesi: '#9b2b25', merahMeja: '#8a2a24', krem: '#e8e0cf', seng: '#c3c6c7', atapMerah: '#a8443a',
+               kaca: '#9fb6bf', kuning: '#d9b836', oranye: '#c9672e', payung: '#7a4434', posterMerah: '#c4392f', posterKuning: '#e2b545', posterBiru: '#3d76b0', galon: '#3a6fa8', plastik: '#b9d3df' };
   for (const [k, list] of Object.entries(pots)) {
     const m = merged(list, new THREE.MeshStandardMaterial({ color: pm[k], roughness: 0.75, flatShading: k.startsWith('tanaman') }));
     if (m) root.add(m);

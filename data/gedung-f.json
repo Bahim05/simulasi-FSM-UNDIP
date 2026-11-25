@@ -3,23 +3,23 @@
  "id": "F",
  "nama": "Gedung F",
  "kategori": "Ruang dosen dan laboratorium",
- "deskripsi": "Gedung tiga lantai di timur Gedung A dan utara Gedung B, paling rendah di antara ketiganya (lantai 1 0,8 m di bawah A), berbentuk siku: sayap ruang dosen sejajar A dan B di barat, lalu sayap R. Seminar / Lab belok 30 derajat menuju tenggara; selasar di sisi dalam menghadap halaman ke Gedung B. Sayap barat berisi ruang dosen di tiap lantai; sayap tenggara berisi R. Seminar / R. Sidang (lt 1), Lab Komputasi (lt 2), dan R. Baca (lt 3). Tangga, toilet, dan pintu belakang ke parkir di pertemuan dua sayap; tangga luar di ujung barat. Penghubung ke Gedung B di tiap lantai dan jalur beratap ke Gedung A.",
+ "deskripsi": "Gedung tiga lantai di timur Gedung A dan utara Gedung B, paling rendah di antara ketiganya (lantai 1 0,8 m di bawah A), berbentuk siku: sayap ruang dosen sejajar A dan B di barat, lalu sayap R. Seminar / Lab belok 46 derajat menuju tenggara; selasar di sisi dalam menghadap halaman ke Gedung B. Sayap barat berisi ruang dosen di tiap lantai; sayap tenggara berisi R. Seminar / R. Sidang (lt 1), Lab Komputasi (lt 2), dan R. Baca (lt 3). Tangga, toilet, dan pintu belakang ke parkir di pertemuan dua sayap; tangga luar di ujung barat. Penghubung ke Gedung B di tiap lantai dan jalur beratap ke Gedung A.",
  "sumberData": {
-  "denah-gedung-f": "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai apa adanya, gedung diputar -30 derajat.",
+  "denah-gedung-f": "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai untuk isi ruang; sudut belok (46, denah 30) dan panjang sayap mengikuti ukuran Google Earth pengguna, gedung diputar -46 derajat.",
   "foto-udara-2026": "Foto udara pengguna (22 Nov 2026): letak di utara B dan timur A, atap genteng kemerahan, sayap yang serong menuju tenggara.",
   "ingatan-pengguna": "Pengguna (22 Nov 2026): tangga luar ada di ujung kiri (barat) sayap ruang dosen.",
   "foto-2026": "Foto pengguna 23 Nov 2026 (dari arah Gedung B): ujung barat dengan tangga luar terbuka bertembok pembatas, atap utama bergevel berkisi, atap tingkat bawah membungkus ujung barat, tritisan genteng di tepi selasar tiap lantai, tembok pembatas putih bercelah, kolom abu kebiruan.",
   "footage-2026": "FIX FOOTAGE pengguna (24 Nov 2026): lobby lt 1 dekat tangga dalam, tangga lt 1-2 dan lt 2-3, koridor lt 1-3, KM dan gudang lt 2-3, penghubung F-B (tinggi F terhadap B). Dipakai untuk tinggi lantai, susunan pertemuan dua sayap, papan nama, dan perabot selasar.",
   "perkiraan": "Perkiraan: ukuran toilet dan ruang kecil di pertemuan, jendela, letak pintu kecil di sayap."
  },
- "koordinat": "Meter, sama dengan denah: (0,0) = sudut luar pertemuan dinding belakang dua sayap, x sepanjang sayap lurus denah (R. Seminar), z dari dinding belakang ke arah selasar. Di kampus.json gedung diputar -30 derajat, jadi sayap R. Dosen mengarah ke barat dan sayap R. Seminar ke tenggara. y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A).",
+ "koordinat": "Meter, sama dengan denah: (0,0) = sudut luar pertemuan dinding belakang dua sayap, x sepanjang sayap lurus denah (R. Seminar), z dari dinding belakang ke arah selasar. Di kampus.json gedung diputar -46 derajat, jadi sayap R. Dosen mengarah ke barat dan sayap R. Seminar ke tenggara. y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A).",
  "ukuran": {
-  "panjangSayapLurus": 30.28,
-  "dindingBelakangSayapMiring": 25.6,
-  "dindingDepanSayapMiring": 28.8,
+  "panjangSayapLurus": 25.0,
+  "dindingBelakangSayapMiring": 37.5,
+  "dindingDepanSayapMiring": 38.330051174986195,
   "kedalamanRuang": 10.0,
   "lebarSelasar": 2.8,
-  "sudutSayap": 30,
+  "sudutSayap": 46,
   "tinggiLantai": 4.0,
   "tebalPelat": 0.15
  },
@@ -35,18 +35,18 @@
   "pagar": "#b9c1cb"
  },
  "fondasi": {
-  "dasar": -1.4,
+  "dasar": -2.5,
   "warna": "#4a4f55",
   "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar (footage)."
  },
  "kolom": {
   "ukuran": 0.4,
-  "dasar": -1.0,
-  "puncak": 11.2,
+  "dasar": -1.4,
+  "puncak": 10.8,
   "titik": [
    [
-    0.05,
-    0.187
+    0.072,
+    0.169
    ],
    [
     3.84,
@@ -65,23 +65,19 @@
     0.1
    ],
    [
-    17.3,
+    16.48,
     0.1
    ],
    [
-    20.55,
+    19.07,
     0.1
    ],
    [
-    23.8,
+    21.66,
     0.1
    ],
    [
-    27.05,
-    0.1
-   ],
-   [
-    30.18,
+    24.9,
     0.1
    ],
    [
@@ -89,112 +85,132 @@
     9.9
    ],
    [
-    17.3,
+    16.48,
     9.9
    ],
    [
-    20.55,
+    19.07,
     9.9
    ],
    [
-    23.8,
+    21.66,
     9.9
    ],
    [
-    27.05,
+    24.9,
     9.9
    ],
    [
-    30.18,
-    9.9
-   ],
-   [
-    30.18,
+    24.9,
     3.6
    ],
    [
-    30.18,
+    24.9,
     6.75
    ],
    [
-    -2.721,
-    1.687
+    -2.151,
+    2.371
    ],
    [
-    -5.493,
-    3.287
+    -4.374,
+    4.673
    ],
    [
-    -8.264,
-    4.887
+    -6.597,
+    6.975
    ],
    [
-    -11.035,
-    6.487
+    -8.82,
+    9.277
    ],
    [
-    -13.806,
-    8.087
+    -11.043,
+    11.579
    ],
    [
-    -16.578,
-    9.687
+    -13.266,
+    13.881
    ],
    [
-    -19.349,
-    11.287
+    -15.488,
+    16.183
    ],
    [
-    -22.034,
-    12.837
+    -17.711,
+    18.485
    ],
    [
-    7.627,
-    6.942
+    -19.934,
+    20.786
    ],
    [
-    4.95,
-    8.574
+    -22.157,
+    23.088
    ],
    [
-    2.179,
-    10.174
+    -25.908,
+    26.973
    ],
    [
-    -0.593,
-    11.774
+    7.614,
+    6.226
    ],
    [
-    -3.364,
-    13.374
+    6.01,
+    8.028
    ],
    [
-    -6.135,
-    14.974
+    3.787,
+    10.33
    ],
    [
-    -8.906,
-    16.574
+    1.564,
+    12.632
    ],
    [
-    -11.678,
-    18.174
+    -0.659,
+    14.934
    ],
    [
-    -14.449,
-    19.774
+    -2.882,
+    17.236
    ],
    [
-    -17.134,
-    21.324
+    -5.105,
+    19.537
    ],
    [
-    -20.419,
-    15.634
+    -7.327,
+    21.839
    ],
    [
-    -18.749,
-    18.526
+    -9.55,
+    24.141
+   ],
+   [
+    -11.773,
+    26.443
+   ],
+   [
+    -13.996,
+    28.745
+   ],
+   [
+    -16.219,
+    31.047
+   ],
+   [
+    -18.859,
+    33.78
+   ],
+   [
+    -23.585,
+    29.217
+   ],
+   [
+    -21.182,
+    31.537
    ],
    [
     10.78,
@@ -205,68 +221,76 @@
    {
     "titik": [
      [
-      14.3,
+      14.09,
       12.55
      ],
      [
-      17.5,
+      16.64,
       12.55
      ],
      [
-      20.6,
+      19.11,
       12.55
      ],
      [
-      23.8,
+      21.66,
       12.55
      ],
      [
-      27.0,
+      24.75,
       12.55
      ],
      [
-      30.03,
-      12.55
+      9.604,
+      8.121
      ],
      [
-      9.046,
-      9.269
+      7.916,
+      9.869
      ],
      [
-      6.275,
-      10.869
+      5.693,
+      12.171
      ],
      [
-      3.504,
-      12.469
+      3.47,
+      14.473
      ],
      [
-      0.732,
-      14.069
+      1.248,
+      16.775
      ],
      [
-      -2.039,
-      15.669
+      -0.975,
+      19.076
      ],
      [
-      -4.81,
-      17.269
+      -3.198,
+      21.378
      ],
      [
-      -7.581,
-      18.869
+      -5.421,
+      23.68
      ],
      [
-      -10.353,
-      20.469
+      -7.644,
+      25.982
      ],
      [
-      -13.124,
-      22.069
+      -9.867,
+      28.284
      ],
      [
-      -15.895,
-      23.669
+      -12.09,
+      30.586
+     ],
+     [
+      -14.313,
+      32.888
+     ],
+     [
+      -17.022,
+      35.693
      ]
     ],
     "lantai": [
@@ -277,75 +301,83 @@
    {
     "titik": [
      [
-      14.3,
+      14.09,
       12.55
      ],
      [
-      17.5,
+      16.64,
       12.55
      ],
      [
-      20.6,
+      19.11,
       12.55
      ],
      [
-      23.8,
+      21.66,
       12.55
      ],
      [
-      27.0,
+      24.75,
       12.55
      ],
      [
-      30.03,
-      12.55
+      9.604,
+      8.121
      ],
      [
-      9.046,
-      9.269
+      7.916,
+      9.869
      ],
      [
-      6.275,
-      10.869
+      5.693,
+      12.171
      ],
      [
-      3.504,
-      12.469
+      3.47,
+      14.473
      ],
      [
-      0.732,
-      14.069
+      1.248,
+      16.775
      ],
      [
-      -2.039,
-      15.669
+      -0.975,
+      19.076
      ],
      [
-      -4.81,
-      17.269
+      -3.198,
+      21.378
      ],
      [
-      -7.581,
-      18.869
+      -5.421,
+      23.68
      ],
      [
-      -10.353,
-      20.469
+      -7.644,
+      25.982
      ],
      [
-      -13.124,
-      22.069
+      -9.867,
+      28.284
      ],
      [
-      -15.895,
-      23.669
+      -12.09,
+      30.586
+     ],
+     [
+      -14.313,
+      32.888
+     ],
+     [
+      -17.022,
+      35.693
      ]
     ],
     "lantai": [
      3,
      3
     ],
-    "puncak": 10.5,
+    "puncak": 10.1,
     "catatan": "Di bawah atap sandar selasar lt 3."
    }
   ]
@@ -353,8 +385,8 @@
  "lantai": [
   {
    "no": 1,
-   "elevasi": -0.8,
-   "elevasiSelasar": -0.85,
+   "elevasi": -1.2,
+   "elevasiSelasar": -1.25,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/F1.jpg",
@@ -382,15 +414,15 @@
       ],
       [
        4.6,
-       8.891
+       9.632
       ],
       [
-       -17.17,
-       21.46
+       -18.856,
+       33.922
       ],
       [
-       -22.17,
-       12.8
+       -26.05,
+       26.975
       ]
      ],
      "sumber": "denah-gedung-f",
@@ -414,12 +446,12 @@
        5.55
       ],
       [
-       7.771,
-       7.06
+       7.77,
+       6.349
       ],
       [
        4.6,
-       8.891
+       9.632
       ]
      ],
      "sumber": "footage-2026",
@@ -534,11 +566,11 @@
        0
       ],
       [
-       16.78,
+       16.07,
        0
       ],
       [
-       16.78,
+       16.07,
        10.0
       ],
       [
@@ -554,19 +586,19 @@
      "fungsi": "rapat",
      "poligon": [
       [
-       16.78,
+       16.07,
        0
       ],
       [
-       30.28,
+       25.0,
        0
       ],
       [
-       30.28,
+       25.0,
        10.0
       ],
       [
-       16.78,
+       16.07,
        10.0
       ]
      ],
@@ -582,7 +614,7 @@
      ],
      "b": [
       4.6,
-      8.891
+      9.632
      ],
      "tebal": 0.15,
      "bukaan": [],
@@ -633,11 +665,11 @@
     {
      "id": "F1-KRJ-SEM",
      "a": [
-      16.78,
+      16.07,
       0
      ],
      "b": [
-      16.78,
+      16.07,
       10.0
      ],
      "tebal": 0.15,
@@ -728,8 +760,8 @@
        "jenis": "pintu",
        "t": 0.55,
        "lebar": 0.85,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "warnaDaun": "#2b2f33",
        "sumber": "footage-2026",
        "catatan": "Pintu belakang berteralis besi ke parkir motor dan kanopi (footage lobby lt 1)."
@@ -752,7 +784,7 @@
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.945,
+       "t": 1.956,
        "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -799,8 +831,8 @@
        "jenis": "pintu",
        "t": 0.65,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F1-KMD",
        "papanNama": true,
@@ -826,8 +858,8 @@
        "jenis": "pintu",
        "t": 0.5,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F1-KMP",
        "papanNama": true,
@@ -837,8 +869,8 @@
        "jenis": "pintu",
        "t": 1.6,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F1-KMW",
        "papanNama": true,
@@ -855,8 +887,8 @@
       5.55
      ],
      "b": [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      "tebal": 0.2,
      "bukaan": [
@@ -864,8 +896,8 @@
        "jenis": "pintu",
        "t": 0.8,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F1-RKM",
        "papanNama": true,
@@ -878,12 +910,12 @@
     {
      "id": "F1-luarw-5",
      "a": [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      "b": [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      "tebal": 0.2,
      "bukaan": [
@@ -891,8 +923,8 @@
        "jenis": "pintu",
        "t": 5.0,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F1-DSN"
       },
@@ -900,8 +932,8 @@
        "jenis": "pintu",
        "t": 11.2,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F1-DSN",
        "papanNama": true,
@@ -909,51 +941,88 @@
       },
       {
        "jenis": "pintu",
-       "t": 26.8,
+       "t": 20.0,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
+       "sumber": "denah-gedung-f",
+       "ruang": "F1-DSN"
+      },
+      {
+       "jenis": "pintu",
+       "t": 36.33,
+       "lebar": 1.0,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F1-DSN"
       },
       {
        "jenis": "jendela",
-       "t": 1.633,
-       "lebar": 1.834,
+       "t": 1.225,
+       "lebar": 1.11,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
+       "t": 3.54,
+       "lebar": 0.92,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 14.4,
+       "t": 7.23,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 17.6,
+       "t": 9.84,
+       "lebar": 0.72,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 13.631,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
+       "t": 16.83,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 24.0,
+       "t": 23.23,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 26.43,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 29.63,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 32.83,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -977,19 +1046,19 @@
     {
      "id": "F1-luarw-6",
      "a": [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      "b": [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ],
      "tebal": 0.2,
      "bukaan": [
       {
        "jenis": "jendela",
        "t": 1.715,
-       "lebar": 1.931,
+       "lebar": 1.929,
        "ambang": 0.9,
        "tinggi": 1.7
       },
@@ -1014,8 +1083,8 @@
     {
      "id": "F1-luarw-7",
      "a": [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ],
      "b": [
       0.0,
@@ -1025,57 +1094,78 @@
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.65,
-       "lebar": 1.8,
+       "t": 2.8,
+       "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 4.8,
+       "t": 7.1,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
+       "t": 10.3,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 11.2,
+       "t": 13.5,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 14.4,
+       "t": 16.7,
+       "lebar": 1.899,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 19.9,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 17.6,
+       "t": 23.1,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
+       "t": 26.3,
+       "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 23.975,
-       "lebar": 1.85,
+       "t": 29.5,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 32.7,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 35.864,
+       "lebar": 1.828,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -1090,43 +1180,36 @@
       0.0
      ],
      "b": [
-      30.28,
+      25.0,
       0.0
      ],
      "tebal": 0.2,
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.8,
-       "lebar": 2.2,
+       "t": 1.445,
+       "lebar": 1.59,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 5.645,
-       "lebar": 1.95,
+       "t": 4.495,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.895,
-       "lebar": 1.95,
+       "t": 7.085,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 12.145,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 15.335,
-       "lebar": 1.83,
+       "t": 10.0,
+       "lebar": 1.94,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -1137,11 +1220,11 @@
     {
      "id": "F1-luare-1",
      "a": [
-      30.28,
+      25.0,
       0.0
      ],
      "b": [
-      30.28,
+      25.0,
       10.0
      ],
      "tebal": 0.2,
@@ -1174,7 +1257,7 @@
     {
      "id": "F1-luare-2",
      "a": [
-      30.28,
+      25.0,
       10.0
      ],
      "b": [
@@ -1187,8 +1270,8 @@
        "jenis": "pintu-ganda",
        "t": 1.98,
        "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
+       "tinggi": 3.0,
+       "boven": 0.6,
        "sumber": "denah-gedung-f",
        "ruang": "F1-SEM",
        "papanNama": true,
@@ -1196,19 +1279,19 @@
       },
       {
        "jenis": "pintu-ganda",
-       "t": 9.0,
+       "t": 4.43,
        "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
+       "tinggi": 3.0,
+       "boven": 0.6,
        "sumber": "denah-gedung-f",
        "ruang": "F1-SEM"
       },
       {
        "jenis": "pintu",
-       "t": 16.38,
+       "t": 11.1,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F1-KRJ",
        "papanNama": true,
@@ -1216,22 +1299,8 @@
       },
       {
        "jenis": "jendela",
-       "t": 4.855,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 11.355,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.74,
-       "lebar": 1.38,
+       "t": 7.225,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -1258,12 +1327,12 @@
    "selasar": {
     "poligon": [
      [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      [
       8.28,
@@ -1306,11 +1375,11 @@
       10.0
      ],
      [
-      30.28,
+      25.0,
       10.0
      ],
      [
-      30.28,
+      25.0,
       12.8
      ],
      [
@@ -1318,20 +1387,20 @@
       12.8
      ],
      [
-      9.171,
-      9.485
+      9.784,
+      8.295
      ],
      [
-      -18.195,
-      25.285
+      -18.787,
+      37.881
      ],
      [
-      -19.095,
-      23.726
+      -20.082,
+      36.631
      ],
      [
-      -16.67,
-      22.326
+      -18.137,
+      34.616
      ]
     ]
    },
@@ -1340,7 +1409,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      16.2,
+      15.6,
       10.35
      ],
      "ukuran": [
@@ -1356,7 +1425,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      22.6,
+      20.7,
       10.35
      ],
      "ukuran": [
@@ -1372,7 +1441,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      27.5,
+      23.7,
       10.35
      ],
      "ukuran": [
@@ -1389,8 +1458,8 @@
   },
   {
    "no": 2,
-   "elevasi": 3.2,
-   "elevasiSelasar": 3.15,
+   "elevasi": 2.8,
+   "elevasiSelasar": 2.75,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/F2.jpg",
@@ -1418,15 +1487,15 @@
       ],
       [
        4.6,
-       8.891
+       9.632
       ],
       [
-       -17.17,
-       21.46
+       -18.856,
+       33.922
       ],
       [
-       -22.17,
-       12.8
+       -26.05,
+       26.975
       ]
      ],
      "sumber": "denah-gedung-f",
@@ -1450,12 +1519,12 @@
        5.55
       ],
       [
-       7.771,
-       7.06
+       7.77,
+       6.349
       ],
       [
        4.6,
-       8.891
+       9.632
       ]
      ],
      "sumber": "footage-2026",
@@ -1570,11 +1639,11 @@
        0
       ],
       [
-       17.48,
+       16.62,
        0
       ],
       [
-       17.48,
+       16.62,
        10.0
       ],
       [
@@ -1590,19 +1659,19 @@
      "fungsi": "lab",
      "poligon": [
       [
-       17.48,
+       16.62,
        0
       ],
       [
-       30.28,
+       25.0,
        0
       ],
       [
-       30.28,
+       25.0,
        10.0
       ],
       [
-       17.48,
+       16.62,
        10.0
       ]
      ],
@@ -1618,7 +1687,7 @@
      ],
      "b": [
       4.6,
-      8.891
+      9.632
      ],
      "tebal": 0.15,
      "bukaan": [],
@@ -1669,11 +1738,11 @@
     {
      "id": "F2-TRP-LAB",
      "a": [
-      17.48,
+      16.62,
       0
      ],
      "b": [
-      17.48,
+      16.62,
       10.0
      ],
      "tebal": 0.15,
@@ -1747,7 +1816,7 @@
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.945,
+       "t": 1.956,
        "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -1794,8 +1863,8 @@
        "jenis": "pintu",
        "t": 1.95,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F2-KMD",
        "papanNama": true,
@@ -1805,8 +1874,8 @@
        "jenis": "pintu",
        "t": 0.65,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F2-GD",
        "papanNama": true,
@@ -1832,8 +1901,8 @@
        "jenis": "pintu",
        "t": 0.5,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F2-KMP",
        "papanNama": true,
@@ -1843,8 +1912,8 @@
        "jenis": "pintu",
        "t": 1.6,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F2-KMW",
        "papanNama": true,
@@ -1861,8 +1930,8 @@
       5.55
      ],
      "b": [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      "tebal": 0.2,
      "bukaan": [
@@ -1870,8 +1939,8 @@
        "jenis": "pintu",
        "t": 0.8,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F2-RKM",
        "papanNama": true,
@@ -1884,12 +1953,12 @@
     {
      "id": "F2-luarw-5",
      "a": [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      "b": [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      "tebal": 0.2,
      "bukaan": [
@@ -1897,8 +1966,8 @@
        "jenis": "pintu",
        "t": 5.0,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F2-DSN"
       },
@@ -1906,8 +1975,8 @@
        "jenis": "pintu",
        "t": 11.2,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F2-DSN",
        "papanNama": true,
@@ -1915,51 +1984,88 @@
       },
       {
        "jenis": "pintu",
-       "t": 26.8,
+       "t": 20.0,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
+       "sumber": "denah-gedung-f",
+       "ruang": "F2-DSN"
+      },
+      {
+       "jenis": "pintu",
+       "t": 36.33,
+       "lebar": 1.0,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F2-DSN"
       },
       {
        "jenis": "jendela",
-       "t": 1.633,
-       "lebar": 1.834,
+       "t": 1.225,
+       "lebar": 1.11,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
+       "t": 3.54,
+       "lebar": 0.92,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 14.4,
+       "t": 7.23,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 17.6,
+       "t": 9.84,
+       "lebar": 0.72,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 13.631,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
+       "t": 16.83,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 24.0,
+       "t": 23.23,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 26.43,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 29.63,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 32.83,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -1970,7 +2076,7 @@
      "tempelan": [
       {
        "jenis": "plakat",
-       "t": 14.4,
+       "t": 16.83,
        "lebar": 2.4,
        "tinggi": 1.7,
        "ambang": 0.8,
@@ -1984,19 +2090,19 @@
     {
      "id": "F2-luarw-6",
      "a": [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      "b": [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ],
      "tebal": 0.2,
      "bukaan": [
       {
        "jenis": "jendela",
        "t": 1.715,
-       "lebar": 1.931,
+       "lebar": 1.929,
        "ambang": 0.9,
        "tinggi": 1.7
       },
@@ -2021,8 +2127,8 @@
     {
      "id": "F2-luarw-7",
      "a": [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ],
      "b": [
       0.0,
@@ -2032,57 +2138,78 @@
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.65,
-       "lebar": 1.8,
+       "t": 2.8,
+       "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 4.8,
+       "t": 7.1,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
+       "t": 10.3,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 11.2,
+       "t": 13.5,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 14.4,
+       "t": 16.7,
+       "lebar": 1.899,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 19.9,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 17.6,
+       "t": 23.1,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
+       "t": 26.3,
+       "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 23.975,
-       "lebar": 1.85,
+       "t": 29.5,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 32.7,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 35.864,
+       "lebar": 1.828,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -2097,43 +2224,36 @@
       0.0
      ],
      "b": [
-      30.28,
+      25.0,
       0.0
      ],
      "tebal": 0.2,
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 2.01,
-       "lebar": 2.2,
+       "t": 1.6,
+       "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 5.685,
-       "lebar": 1.87,
+       "t": 4.515,
+       "lebar": 1.25,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.895,
-       "lebar": 1.95,
+       "t": 7.085,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 12.145,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 15.335,
-       "lebar": 1.83,
+       "t": 10.0,
+       "lebar": 1.94,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -2144,11 +2264,11 @@
     {
      "id": "F2-luare-1",
      "a": [
-      30.28,
+      25.0,
       0.0
      ],
      "b": [
-      30.28,
+      25.0,
       10.0
      ],
      "tebal": 0.2,
@@ -2181,7 +2301,7 @@
     {
      "id": "F2-luare-2",
      "a": [
-      30.28,
+      25.0,
       10.0
      ],
      "b": [
@@ -2192,10 +2312,10 @@
      "bukaan": [
       {
        "jenis": "pintu-ganda",
-       "t": 11.8,
+       "t": 7.38,
        "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
+       "tinggi": 3.0,
+       "boven": 0.6,
        "sumber": "denah-gedung-f",
        "ruang": "F2-LAB",
        "papanNama": true,
@@ -2203,19 +2323,19 @@
       },
       {
        "jenis": "pintu-ganda",
-       "t": 5.8,
+       "t": 1.38,
        "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
+       "tinggi": 3.0,
+       "boven": 0.6,
        "sumber": "denah-gedung-f",
        "ruang": "F2-LAB"
       },
       {
        "jenis": "pintu",
-       "t": 16.38,
+       "t": 11.1,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F2-TRP",
        "papanNama": true,
@@ -2223,29 +2343,15 @@
       },
       {
        "jenis": "jendela",
-       "t": 1.665,
-       "lebar": 1.83,
+       "t": 4.635,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 4.24,
-       "lebar": 0.72,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 8.105,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.53,
-       "lebar": 1.8,
+       "t": 9.66,
+       "lebar": 0.98,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -2272,12 +2378,12 @@
    "selasar": {
     "poligon": [
      [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      [
       8.28,
@@ -2304,11 +2410,11 @@
       10.0
      ],
      [
-      30.28,
+      25.0,
       10.0
      ],
      [
-      30.28,
+      25.0,
       12.8
      ],
      [
@@ -2316,32 +2422,32 @@
       12.8
      ],
      [
-      9.171,
-      9.485
+      9.784,
+      8.295
      ],
      [
-      -18.195,
-      25.285
+      -18.787,
+      37.881
      ],
      [
-      -19.095,
-      23.726
+      -20.082,
+      36.631
      ],
      [
-      -16.67,
-      22.326
+      -18.137,
+      34.616
      ]
     ]
    },
    "pagar": [
     {
      "a": [
-      30.18,
+      24.9,
       10.1,
       -0.05
      ],
      "b": [
-      30.18,
+      24.9,
       12.700000000000001,
       -0.05
      ],
@@ -2352,7 +2458,7 @@
     },
     {
      "a": [
-      30.18,
+      24.9,
       12.700000000000001,
       -0.05
      ],
@@ -2373,8 +2479,8 @@
       -0.05
      ],
      "b": [
-      9.121,
-      9.399,
+      9.712,
+      8.225,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -2384,13 +2490,13 @@
     },
     {
      "a": [
-      9.121,
-      9.399,
+      9.712,
+      8.225,
       -0.05
      ],
      "b": [
-      -1.895,
-      15.759,
+      -0.812,
+      19.123,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -2400,13 +2506,13 @@
     },
     {
      "a": [
-      -4.804,
-      17.439,
+      -3.146,
+      21.54,
       -0.05
      ],
      "b": [
-      -18.159,
-      25.149,
+      -18.79,
+      37.74,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -2416,13 +2522,13 @@
     },
     {
      "a": [
-      -18.159,
-      25.149,
+      -18.79,
+      37.74,
       -0.05
      ],
      "b": [
-      -19.009,
-      23.676,
+      -20.013,
+      36.559,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -2435,7 +2541,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      16.25,
+      15.64,
       10.35
      ],
      "ukuran": [
@@ -2451,47 +2557,15 @@
     {
      "jenis": "kotak",
      "posisi": [
-      21.5,
+      19.82,
       10.35
-     ],
-     "ukuran": [
-      3.6,
-      0.55,
-      0.75
-     ],
-     "arah": 0,
-     "warna": "#5a3b28",
-     "sumber": "footage-2026",
-     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
-    },
-    {
-     "jenis": "kotak",
-     "posisi": [
-      27.6,
-      10.35
-     ],
-     "ukuran": [
-      3.6,
-      0.55,
-      0.75
-     ],
-     "arah": 0,
-     "warna": "#5a3b28",
-     "sumber": "footage-2026",
-     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
-    },
-    {
-     "jenis": "kotak",
-     "posisi": [
-      0.931,
-      11.413
      ],
      "ukuran": [
       3.0,
       0.55,
       0.75
      ],
-     "arah": 30,
+     "arah": 0,
      "warna": "#5a3b28",
      "sumber": "footage-2026",
      "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
@@ -2499,15 +2573,63 @@
     {
      "jenis": "kotak",
      "posisi": [
-      -9.98,
-      17.713
+      23.0,
+      10.35
+     ],
+     "ukuran": [
+      2.6,
+      0.55,
+      0.75
+     ],
+     "arah": 0,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      4.041,
+      10.714
+     ],
+     "ukuran": [
+      3.0,
+      0.55,
+      0.75
+     ],
+     "arah": 46,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      -7.837,
+      23.015
      ],
      "ukuran": [
       5.0,
       0.55,
       0.75
      ],
-     "arah": 30,
+     "arah": 46,
+     "warna": "#5a3b28",
+     "sumber": "footage-2026",
+     "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
+    },
+    {
+     "jenis": "kotak",
+     "posisi": [
+      -12.7,
+      28.051
+     ],
+     "ukuran": [
+      5.0,
+      0.55,
+      0.75
+     ],
+     "arah": 46,
      "warna": "#5a3b28",
      "sumber": "footage-2026",
      "catatan": "Meja belajar menempel dinding, bersekat (footage selasar lt 2)."
@@ -2516,8 +2638,8 @@
   },
   {
    "no": 3,
-   "elevasi": 7.2,
-   "elevasiSelasar": 7.15,
+   "elevasi": 6.8,
+   "elevasiSelasar": 6.75,
    "tinggiPlafon": 4.0,
    "denah": {
     "gambar": "assets/denah/F3.jpg",
@@ -2545,23 +2667,23 @@
       ],
       [
        4.6,
-       8.891
+       9.632
       ],
       [
-       -14.399,
-       19.86
+       -16.633,
+       31.62
       ],
       [
-       -15.999,
-       17.089
+       -18.935,
+       29.397
       ],
       [
-       -18.77,
-       18.689
+       -21.158,
+       31.699
       ],
       [
-       -22.17,
-       12.8
+       -26.05,
+       26.975
       ]
      ],
      "sumber": "denah-gedung-f",
@@ -2585,12 +2707,12 @@
        5.55
       ],
       [
-       7.771,
-       7.06
+       7.77,
+       6.349
       ],
       [
        4.6,
-       8.891
+       9.632
       ]
      ],
      "sumber": "footage-2026",
@@ -2705,11 +2827,11 @@
        0
       ],
       [
-       16.78,
+       16.07,
        0
       ],
       [
-       16.78,
+       16.07,
        10.0
       ],
       [
@@ -2725,19 +2847,19 @@
      "fungsi": "perpustakaan",
      "poligon": [
       [
-       16.78,
+       16.07,
        0
       ],
       [
-       30.28,
+       25.0,
        0
       ],
       [
-       30.28,
+       25.0,
        10.0
       ],
       [
-       16.78,
+       16.07,
        10.0
       ]
      ],
@@ -2749,20 +2871,20 @@
      "fungsi": "kantor",
      "poligon": [
       [
-       -15.999,
-       17.089
+       -18.935,
+       29.397
       ],
       [
-       -14.399,
-       19.86
+       -16.633,
+       31.62
       ],
       [
-       -17.17,
-       21.46
+       -18.856,
+       33.922
       ],
       [
-       -18.77,
-       18.689
+       -21.158,
+       31.699
       ]
      ],
      "sumber": "denah-gedung-f"
@@ -2777,7 +2899,7 @@
      ],
      "b": [
       4.6,
-      8.891
+      9.632
      ],
      "tebal": 0.15,
      "bukaan": [],
@@ -2828,11 +2950,11 @@
     {
      "id": "F3-TKN-BACA",
      "a": [
-      16.78,
+      16.07,
       0
      ],
      "b": [
-      16.78,
+      16.07,
       10.0
      ],
      "tebal": 0.15,
@@ -2870,12 +2992,12 @@
     {
      "id": "F3-him-sisi",
      "a": [
-      -14.399,
-      19.86
+      -16.633,
+      31.62
      ],
      "b": [
-      -15.999,
-      17.089
+      -18.935,
+      29.397
      ],
      "tebal": 0.15,
      "bukaan": [],
@@ -2884,12 +3006,12 @@
     {
      "id": "F3-him-belakang",
      "a": [
-      -15.999,
-      17.089
+      -18.935,
+      29.397
      ],
      "b": [
-      -18.77,
-      18.689
+      -21.158,
+      31.699
      ],
      "tebal": 0.15,
      "bukaan": [],
@@ -2913,11 +3035,11 @@
     {
      "id": "F3-sekat-rkm2",
      "a": [
-      27.28,
+      22.0,
       10.0
      ],
      "b": [
-      27.28,
+      22.0,
       11.7
      ],
      "tebal": 0.12,
@@ -2979,7 +3101,7 @@
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.945,
+       "t": 1.956,
        "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -3026,8 +3148,8 @@
        "jenis": "pintu",
        "t": 1.95,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F3-KMD",
        "papanNama": true,
@@ -3037,8 +3159,8 @@
        "jenis": "pintu",
        "t": 0.65,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F3-GD",
        "papanNama": true,
@@ -3067,8 +3189,8 @@
        "jenis": "pintu",
        "t": 0.5,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F3-KMP",
        "papanNama": true,
@@ -3078,8 +3200,8 @@
        "jenis": "pintu",
        "t": 1.6,
        "lebar": 0.8,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F3-KMW",
        "papanNama": true,
@@ -3096,8 +3218,8 @@
       5.55
      ],
      "b": [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      "tebal": 0.2,
      "bukaan": [
@@ -3105,8 +3227,8 @@
        "jenis": "pintu",
        "t": 0.8,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "footage-2026",
        "ruang": "F3-RKM"
       }
@@ -3117,12 +3239,12 @@
     {
      "id": "F3-luarw-5",
      "a": [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      "b": [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      "tebal": 0.2,
      "bukaan": [
@@ -3130,8 +3252,8 @@
        "jenis": "pintu",
        "t": 5.0,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F3-DSN"
       },
@@ -3139,8 +3261,8 @@
        "jenis": "pintu",
        "t": 11.2,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F3-DSN",
        "papanNama": true,
@@ -3150,17 +3272,26 @@
        "jenis": "pintu",
        "t": 20.0,
        "lebar": 1.0,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F3-DSN"
       },
       {
        "jenis": "pintu",
-       "t": 27.2,
+       "t": 32.33,
+       "lebar": 1.0,
+       "tinggi": 2.75,
+       "boven": 0.55,
+       "sumber": "denah-gedung-f",
+       "ruang": "F3-DSN"
+      },
+      {
+       "jenis": "pintu",
+       "t": 36.73,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F3-HMS",
        "papanNama": true,
@@ -3168,42 +3299,63 @@
       },
       {
        "jenis": "jendela",
-       "t": 1.633,
-       "lebar": 1.834,
+       "t": 1.225,
+       "lebar": 1.11,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
+       "t": 3.54,
+       "lebar": 0.92,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 14.4,
+       "t": 7.23,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 17.6,
+       "t": 9.84,
+       "lebar": 0.72,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 13.631,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 21.375,
-       "lebar": 0.75,
+       "t": 16.83,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 24.0,
+       "t": 23.23,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 26.43,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 29.63,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
@@ -3214,7 +3366,7 @@
      "tempelan": [
       {
        "jenis": "plakat",
-       "t": 14.4,
+       "t": 16.83,
        "lebar": 2.0,
        "tinggi": 1.5,
        "ambang": 0.9,
@@ -3228,19 +3380,19 @@
     {
      "id": "F3-luarw-6",
      "a": [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      "b": [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ],
      "tebal": 0.2,
      "bukaan": [
       {
        "jenis": "jendela",
        "t": 1.7,
-       "lebar": 1.9,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
@@ -3265,8 +3417,8 @@
     {
      "id": "F3-luarw-7",
      "a": [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ],
      "b": [
       0.0,
@@ -3276,57 +3428,78 @@
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.65,
-       "lebar": 1.8,
+       "t": 2.8,
+       "lebar": 2.2,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 4.8,
+       "t": 7.1,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.0,
-       "lebar": 1.901,
+       "t": 10.3,
+       "lebar": 1.899,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 11.2,
+       "t": 13.5,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 14.4,
+       "t": 16.7,
+       "lebar": 1.899,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 19.9,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 17.6,
+       "t": 23.1,
        "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 20.8,
-       "lebar": 1.901,
+       "t": 26.3,
+       "lebar": 1.9,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 23.975,
-       "lebar": 1.85,
+       "t": 29.5,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 32.7,
+       "lebar": 1.9,
+       "ambang": 0.9,
+       "tinggi": 1.7
+      },
+      {
+       "jenis": "jendela",
+       "t": 35.864,
+       "lebar": 1.828,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -3341,43 +3514,36 @@
       0.0
      ],
      "b": [
-      30.28,
+      25.0,
       0.0
      ],
      "tebal": 0.2,
      "bukaan": [
       {
        "jenis": "jendela",
-       "t": 1.8,
-       "lebar": 2.2,
+       "t": 1.445,
+       "lebar": 1.59,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 5.645,
-       "lebar": 1.95,
+       "t": 4.495,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 8.895,
-       "lebar": 1.95,
+       "t": 7.085,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       },
       {
        "jenis": "jendela",
-       "t": 12.145,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 15.335,
-       "lebar": 1.83,
+       "t": 10.0,
+       "lebar": 1.94,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -3388,11 +3554,11 @@
     {
      "id": "F3-luare-1",
      "a": [
-      30.28,
+      25.0,
       0.0
      ],
      "b": [
-      30.28,
+      25.0,
       10.0
      ],
      "tebal": 0.2,
@@ -3425,7 +3591,7 @@
     {
      "id": "F3-luare-2",
      "a": [
-      30.28,
+      25.0,
       10.0
      ],
      "b": [
@@ -3438,8 +3604,8 @@
        "jenis": "pintu-ganda",
        "t": 1.98,
        "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
+       "tinggi": 3.0,
+       "boven": 0.6,
        "sumber": "denah-gedung-f",
        "ruang": "F3-BACA",
        "papanNama": true,
@@ -3447,19 +3613,19 @@
       },
       {
        "jenis": "pintu-ganda",
-       "t": 9.0,
+       "t": 4.43,
        "lebar": 1.4,
-       "tinggi": 2.4,
-       "boven": 0.5,
+       "tinggi": 3.0,
+       "boven": 0.6,
        "sumber": "denah-gedung-f",
        "ruang": "F3-BACA"
       },
       {
        "jenis": "pintu",
-       "t": 16.38,
+       "t": 11.1,
        "lebar": 0.9,
-       "tinggi": 2.2,
-       "boven": 0.5,
+       "tinggi": 2.75,
+       "boven": 0.55,
        "sumber": "denah-gedung-f",
        "ruang": "F3-TKN",
        "papanNama": true,
@@ -3467,22 +3633,8 @@
       },
       {
        "jenis": "jendela",
-       "t": 4.855,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 11.355,
-       "lebar": 1.95,
-       "ambang": 0.9,
-       "tinggi": 1.7
-      },
-      {
-       "jenis": "jendela",
-       "t": 14.74,
-       "lebar": 1.38,
+       "t": 7.225,
+       "lebar": 1.29,
        "ambang": 0.9,
        "tinggi": 1.7
       }
@@ -3509,12 +3661,12 @@
    "selasar": {
     "poligon": [
      [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      [
-      7.771,
-      7.06
+      7.77,
+      6.349
      ],
      [
       8.28,
@@ -3541,11 +3693,11 @@
       10.0
      ],
      [
-      30.28,
+      25.0,
       10.0
      ],
      [
-      30.28,
+      25.0,
       12.8
      ],
      [
@@ -3553,32 +3705,32 @@
       12.8
      ],
      [
-      9.171,
-      9.485
+      9.784,
+      8.295
      ],
      [
-      -18.195,
-      25.285
+      -18.787,
+      37.881
      ],
      [
-      -19.095,
-      23.726
+      -20.082,
+      36.631
      ],
      [
-      -16.67,
-      22.326
+      -18.137,
+      34.616
      ]
     ]
    },
    "pagar": [
     {
      "a": [
-      30.18,
+      24.9,
       10.1,
       -0.05
      ],
      "b": [
-      30.18,
+      24.9,
       12.700000000000001,
       -0.05
      ],
@@ -3589,7 +3741,7 @@
     },
     {
      "a": [
-      30.18,
+      24.9,
       12.700000000000001,
       -0.05
      ],
@@ -3610,8 +3762,8 @@
       -0.05
      ],
      "b": [
-      9.121,
-      9.399,
+      9.712,
+      8.225,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -3621,13 +3773,13 @@
     },
     {
      "a": [
-      9.121,
-      9.399,
+      9.712,
+      8.225,
       -0.05
      ],
      "b": [
-      -1.895,
-      15.759,
+      -0.812,
+      19.123,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -3637,13 +3789,13 @@
     },
     {
      "a": [
-      -4.804,
-      17.439,
+      -3.146,
+      21.54,
       -0.05
      ],
      "b": [
-      -18.159,
-      25.149,
+      -18.79,
+      37.74,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -3653,13 +3805,13 @@
     },
     {
      "a": [
-      -18.159,
-      25.149,
+      -18.79,
+      37.74,
       -0.05
      ],
      "b": [
-      -19.009,
-      23.676,
+      -20.013,
+      36.559,
       -0.05
      ],
      "jenis": "tembok-celah",
@@ -3684,13 +3836,13 @@
     },
     {
      "a": [
-      -16.782,
-      22.333,
+      -18.242,
+      34.654,
       -0.05
      ],
      "b": [
-      -18.003,
-      23.038,
+      -19.222,
+      35.668,
       -0.05
      ],
      "jenis": "besi",
@@ -3702,7 +3854,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      16.2,
+      15.6,
       10.35
      ],
      "ukuran": [
@@ -3718,7 +3870,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      24.3,
+      22.05,
       10.35
      ],
      "ukuran": [
@@ -3734,7 +3886,7 @@
     {
      "jenis": "kotak",
      "posisi": [
-      28.88,
+      23.6,
       11.3
      ],
      "ukuran": [
@@ -3793,11 +3945,11 @@
    "id": "TL1",
    "dariLantai": 1,
    "keLantai": 2,
-   "x0": -25.700000000000003,
-   "x1": -28.400000000000002,
+   "x0": -37.6,
+   "x1": -40.3,
    "zDepan": 11.0,
    "zBelakang": 6.0,
-   "putar": 30,
+   "putar": 46,
    "jumlahAnakTangga": 24,
    "lebarInjakan": 0.28,
    "bentuk": "U dengan bordes",
@@ -3806,17 +3958,17 @@
    "pembatas": "tembok",
    "gaya": "krem",
    "sumber": "denah-gedung-f",
-   "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar 30 derajat."
+   "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar sebesar sudut belok."
   },
   {
    "id": "TL2",
    "dariLantai": 2,
    "keLantai": 3,
-   "x0": -25.700000000000003,
-   "x1": -28.400000000000002,
+   "x0": -37.6,
+   "x1": -40.3,
    "zDepan": 11.0,
    "zBelakang": 6.0,
-   "putar": 30,
+   "putar": 46,
    "jumlahAnakTangga": 24,
    "lebarInjakan": 0.28,
    "bentuk": "U dengan bordes",
@@ -3825,7 +3977,7 @@
    "pembatas": "tembok",
    "gaya": "krem",
    "sumber": "denah-gedung-f",
-   "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar 30 derajat."
+   "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar sebesar sudut belok."
   }
  ],
  "tritisan": [
@@ -3835,11 +3987,11 @@
     10.0
    ],
    "b": [
-    30.48,
+    25.2,
     10.0
    ],
    "sisi": 1,
-   "elevasi": 11.2,
+   "elevasi": 10.8,
    "lantai": 3,
    "lebar": 3.7,
    "turun": 0.8,
@@ -3849,15 +4001,15 @@
   },
   {
    "a": [
-    7.771,
-    7.06
+    7.77,
+    6.349
    ],
    "b": [
-    -17.17,
-    21.46
+    -18.856,
+    33.922
    ],
    "sisi": -1,
-   "elevasi": 11.2,
+   "elevasi": 10.8,
    "lantai": 3,
    "lebar": 3.7,
    "turun": 0.8,
@@ -3868,15 +4020,15 @@
   },
   {
    "a": [
-    -17.17,
-    21.46
+    -18.856,
+    33.922
    ],
    "b": [
-    -22.17,
-    12.8
+    -26.05,
+    26.975
    ],
    "sisi": -1,
-   "elevasi": 11.2,
+   "elevasi": 10.8,
    "lantai": 3,
    "lebar": 3.7,
    "turun": 0.8,
@@ -3887,22 +4039,22 @@
   },
   {
    "a": [
-    -22.17,
-    12.8
+    -26.05,
+    26.975
    ],
    "b": [
     0.0,
     0.0
    ],
    "sisi": -1,
-   "elevasi": 11.2,
+   "elevasi": 10.8,
    "lantai": 3,
    "lebar": 1.5,
    "turun": 0.32432432432432434,
    "jarak": 0.1,
    "sumber": "foto-2026",
    "catatan": "Atap tingkat bawah sisi belakang (perkiraan).",
-   "sudutB": 30
+   "sudutB": 46
   },
   {
    "a": [
@@ -3910,31 +4062,31 @@
     0.0
    ],
    "b": [
-    30.28,
+    25.0,
     0
    ],
    "sisi": -1,
-   "elevasi": 11.2,
+   "elevasi": 10.8,
    "lantai": 3,
    "lebar": 1.5,
    "turun": 0.32432432432432434,
    "jarak": 0.1,
    "sumber": "foto-2026",
    "catatan": "Atap tingkat bawah sisi belakang (perkiraan).",
-   "sudutA": 30,
+   "sudutA": 46,
    "sudutB": 90
   },
   {
    "a": [
-    30.28,
+    25.0,
     0
    ],
    "b": [
-    30.28,
+    25.0,
     10.0
    ],
    "sisi": -1,
-   "elevasi": 11.2,
+   "elevasi": 10.8,
    "lantai": 3,
    "lebar": 1.5,
    "turun": 0.32432432432432434,
@@ -3945,7 +4097,7 @@
   },
   {
    "sisi": 1,
-   "elevasi": 3.2,
+   "elevasi": 2.8,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3953,17 +4105,17 @@
    "sumber": "foto-2026",
    "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
    "a": [
-    -15.77,
-    23.885
+    -16.842,
+    35.867
    ],
    "b": [
-    -4.858,
-    17.585
+    -3.157,
+    21.696
    ]
   },
   {
    "sisi": 1,
-   "elevasi": 3.2,
+   "elevasi": 2.8,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3971,18 +4123,18 @@
    "sumber": "foto-2026",
    "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
    "a": [
-    -1.741,
-    15.785
+    -0.657,
+    19.106
    ],
    "b": [
-    9.171,
-    9.485
+    9.784,
+    8.295
    ],
-   "sudutB": -68.896
+   "sudutB": -98.192
   },
   {
    "sisi": 1,
-   "elevasi": 3.2,
+   "elevasi": 2.8,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -3990,19 +4142,19 @@
    "sumber": "foto-2026",
    "catatan": "Tritisan di bawah tembok pembatas selasar lt 2 (foto 23 Nov 2026).",
    "a": [
-    9.171,
-    9.485
+    9.784,
+    8.295
    ],
    "b": [
     13.28,
     12.8
    ],
-   "sudutA": -68.896,
-   "sudutB": 38.896
+   "sudutA": -98.192,
+   "sudutB": 52.192
   },
   {
    "sisi": 1,
-   "elevasi": 3.2,
+   "elevasi": 2.8,
    "lantai": 2,
    "lebar": 1.6,
    "turun": 0.65,
@@ -4014,14 +4166,34 @@
     12.8
    ],
    "b": [
-    30.48,
+    25.0,
     12.8
    ],
-   "sudutA": 38.896
+   "sudutA": 52.192,
+   "sudutB": 90
   },
   {
    "sisi": 1,
-   "elevasi": 7.2,
+   "elevasi": 2.8,
+   "lantai": 2,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan muka ujung tenggara lt 2, membungkus dari tepi selasar (foto pengguna 25 Nov 2026).",
+   "a": [
+    25.0,
+    12.8
+   ],
+   "b": [
+    25.0,
+    0
+   ],
+   "sudutA": 90
+  },
+  {
+   "sisi": 1,
+   "elevasi": 6.8,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -4029,17 +4201,17 @@
    "sumber": "foto-2026",
    "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
    "a": [
-    -15.77,
-    23.885
+    -16.842,
+    35.867
    ],
    "b": [
-    -4.858,
-    17.585
+    -3.157,
+    21.696
    ]
   },
   {
    "sisi": 1,
-   "elevasi": 7.2,
+   "elevasi": 6.8,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -4047,18 +4219,18 @@
    "sumber": "foto-2026",
    "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
    "a": [
-    -1.741,
-    15.785
+    -0.657,
+    19.106
    ],
    "b": [
-    9.171,
-    9.485
+    9.784,
+    8.295
    ],
-   "sudutB": -68.896
+   "sudutB": -98.192
   },
   {
    "sisi": 1,
-   "elevasi": 7.2,
+   "elevasi": 6.8,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -4066,19 +4238,19 @@
    "sumber": "foto-2026",
    "catatan": "Tritisan di bawah tembok pembatas selasar lt 3 (foto 23 Nov 2026).",
    "a": [
-    9.171,
-    9.485
+    9.784,
+    8.295
    ],
    "b": [
     13.28,
     12.8
    ],
-   "sudutA": -68.896,
-   "sudutB": 38.896
+   "sudutA": -98.192,
+   "sudutB": 52.192
   },
   {
    "sisi": 1,
-   "elevasi": 7.2,
+   "elevasi": 6.8,
    "lantai": 3,
    "lebar": 1.6,
    "turun": 0.65,
@@ -4090,10 +4262,30 @@
     12.8
    ],
    "b": [
-    30.48,
+    25.0,
     12.8
    ],
-   "sudutA": 38.896
+   "sudutA": 52.192,
+   "sudutB": 90
+  },
+  {
+   "sisi": 1,
+   "elevasi": 6.8,
+   "lantai": 3,
+   "lebar": 1.6,
+   "turun": 0.65,
+   "jarak": 0.02,
+   "sumber": "foto-2026",
+   "catatan": "Tritisan muka ujung tenggara lt 3, membungkus dari tepi selasar (foto pengguna 25 Nov 2026).",
+   "a": [
+    25.0,
+    12.8
+   ],
+   "b": [
+    25.0,
+    0
+   ],
+   "sudutA": 90
   }
  ],
  "atap": [
@@ -4107,10 +4299,10 @@
    "batas": [
     -6.0,
     0,
-    30.28,
+    25.0,
     10.0
    ],
-   "tepiBawah": 11.35,
+   "tepiBawah": 10.950000000000001,
    "tonjolan": 0.9,
    "kemiringan": 30,
    "potong": [
@@ -4120,7 +4312,7 @@
       0
      ],
      "b": [
-      2.68,
+      4.245,
       10.0
      ],
      "simpan": [
@@ -4137,24 +4329,24 @@
       0.0
      ],
      [
-      30.28,
+      25.0,
       0
      ],
      [
-      30.28,
+      25.0,
       10.0
      ],
      [
-      2.68,
+      4.245,
       10.0
      ],
      [
-      -17.17,
-      21.46
+      -18.856,
+      33.922
      ],
      [
-      -22.17,
-      12.8
+      -26.05,
+      26.975
      ]
     ]
    ],
@@ -4173,14 +4365,14 @@
     0,
     0
    ],
-   "sudut": -30,
+   "sudut": -46,
    "batas": [
-    -25.6,
+    -37.5,
     0,
     6.0,
     10.0
    ],
-   "tepiBawah": 11.35,
+   "tepiBawah": 10.950000000000001,
    "tonjolan": 0.9,
    "kemiringan": 30,
    "potong": [
@@ -4190,12 +4382,12 @@
       0
      ],
      "b": [
-      2.68,
+      4.245,
       10.0
      ],
      "simpan": [
-      -6.16,
-      9.33
+      -3.35,
+      10.667
      ]
     }
    ],

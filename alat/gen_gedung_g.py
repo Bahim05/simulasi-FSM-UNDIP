@@ -110,8 +110,8 @@ def columns(poly):
 
 # ---------- bukaan ----------
 def door(t, lebar=0.9, ruang=None, ganda=False, teks=None, kaca=False, src=D):
-    o = {"jenis": "pintu-ganda" if ganda else "pintu", "t": r2(t), "lebar": lebar, "tinggi": 2.4 if ganda else 2.2,
-         "boven": 0.5, "sumber": src}
+    o = {"jenis": "pintu-ganda" if ganda else "pintu", "t": r2(t), "lebar": lebar, "tinggi": 3.0 if ganda else 2.75,
+         "boven": 0.6 if ganda else 0.55, "sumber": src}
     if ruang:
         o["ruang"] = ruang
     if teks:

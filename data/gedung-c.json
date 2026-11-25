@@ -7,9 +7,9 @@
  "sumberData": {
   "denah-2023": "Denah Gedung FSM Undip (2023), skala 1:150, lembar C LT.1 sampai LT.3. Ukuran dipakai apa adanya.",
   "foto-udara-2026": "Foto udara berlabel dari pengguna (23 Nov 2026): C sejajar B di timurnya, sedikit lebih ke selatan, atap perisai abu-abu gelap seperti B.",
-  "perkiraan": "Perkiraan tanpa footage: tinggi lantai 1 (disamakan dengan B), jendela, ventilasi, injakan tangga, pembatas selasar."
+  "perkiraan": "Perkiraan tanpa footage: jendela, ventilasi, injakan tangga, pembatas selasar."
  },
- "koordinat": "Meter. x dari dinding ujung Bengkel/Workshop (x=0) ke dinding ujung R. Lab Mekanika (x=43), z dari dinding belakang (z=0) ke dinding depan (z=11,5) dan tepi selasar (z=14,33); y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A, lantai 1 C di y=1,2). Di kawasan gedung diputar 180 derajat.",
+ "koordinat": "Meter. x dari dinding ujung Bengkel/Workshop (x=0) ke dinding ujung R. Lab Mekanika (x=43), z dari dinding belakang (z=0) ke dinding depan (z=11,5) dan tepi selasar (z=14,33); y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A, lantai 1 C di y=-0,8, ±2,0 m di bawah B menurut footage penghubung B-C). Di kawasan gedung diputar 180 derajat.",
  "ukuran": {
   "panjang": 43.0,
   "kedalamanRuang": 11.5,
@@ -30,14 +30,14 @@
   "pagar": "#c6cacd"
  },
  "fondasi": {
-  "dasar": -0.22,
+  "dasar": -2.5,
   "warna": "#4a4f55",
-  "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar, seperti Gedung B (perkiraan)."
+  "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar; kantin dan taman di utaranya lebih rendah (perkiraan)."
  },
  "kolom": {
   "ukuran": 0.4,
-  "dasar": -0.2,
-  "puncak": 13.35,
+  "dasar": -2.5,
+  "puncak": 11.35,
   "titik": [
    [
     0.1,
@@ -132,10 +132,6 @@
     5.73
    ],
    [
-    0.25,
-    14.08
-   ],
-   [
     5.4,
     14.08
    ],
@@ -166,14 +162,30 @@
    [
     42.75,
     14.08
+   ],
+   [
+    -3.35,
+    0.25
+   ],
+   [
+    -3.35,
+    5.73
+   ],
+   [
+    -3.35,
+    11.5
+   ],
+   [
+    -3.35,
+    14.08
    ]
   ]
  },
  "lantai": [
   {
    "no": 1,
-   "elevasi": 1.2,
-   "elevasiSelasar": 1.15,
+   "elevasi": -0.8,
+   "elevasiSelasar": -0.85,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/C1.jpg",
@@ -834,6 +846,14 @@
    "selasar": {
     "poligon": [
      [
+      -3.6,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
       0,
       11.5
      ],
@@ -862,7 +882,7 @@
       14.33
      ],
      [
-      0,
+      -3.6,
       14.33
      ]
     ]
@@ -871,8 +891,8 @@
   },
   {
    "no": 2,
-   "elevasi": 5.2,
-   "elevasiSelasar": 5.15,
+   "elevasi": 3.2,
+   "elevasiSelasar": 3.15,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/C2.jpg",
@@ -1571,6 +1591,14 @@
    "selasar": {
     "poligon": [
      [
+      -3.6,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
       0,
       11.5
      ],
@@ -1615,7 +1643,7 @@
       14.33
      ],
      [
-      0,
+      -3.6,
       14.33
      ]
     ]
@@ -1623,7 +1651,22 @@
    "pagar": [
     {
      "a": [
-      0.1,
+      -3.5,
+      14.23,
+      -0.05
+     ],
+     "b": [
+      -1.05,
+      14.23,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "perkiraan"
+    },
+    {
+     "a": [
+      2.4499999999999997,
       14.23,
       -0.05
      ],
@@ -1638,13 +1681,28 @@
     },
     {
      "a": [
+      -3.5,
       0.1,
-      11.6,
       -0.05
      ],
      "b": [
-      0.1,
+      -3.5,
       14.23,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "perkiraan"
+    },
+    {
+     "a": [
+      -3.5,
+      0.1,
+      -0.05
+     ],
+     "b": [
+      -0.1,
+      0.1,
       -0.05
      ],
      "jenis": "tembok-handrail",
@@ -1714,8 +1772,8 @@
   },
   {
    "no": 3,
-   "elevasi": 9.2,
-   "elevasiSelasar": 9.15,
+   "elevasi": 7.2,
+   "elevasiSelasar": 7.15,
    "tinggiPlafon": 3.85,
    "denah": {
     "gambar": "assets/denah/C3.jpg",
@@ -2300,6 +2358,14 @@
    "selasar": {
     "poligon": [
      [
+      -3.6,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
       0,
       11.5
      ],
@@ -2344,7 +2410,7 @@
       14.33
      ],
      [
-      0,
+      -3.6,
       14.33
      ]
     ]
@@ -2352,7 +2418,22 @@
    "pagar": [
     {
      "a": [
-      0.1,
+      -3.5,
+      14.23,
+      -0.05
+     ],
+     "b": [
+      -1.05,
+      14.23,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "perkiraan"
+    },
+    {
+     "a": [
+      2.4499999999999997,
       14.23,
       -0.05
      ],
@@ -2367,13 +2448,28 @@
     },
     {
      "a": [
+      -3.5,
       0.1,
-      11.6,
       -0.05
      ],
      "b": [
-      0.1,
+      -3.5,
       14.23,
+      -0.05
+     ],
+     "jenis": "tembok-handrail",
+     "tinggi": 0.9,
+     "sumber": "perkiraan"
+    },
+    {
+     "a": [
+      -3.5,
+      0.1,
+      -0.05
+     ],
+     "b": [
+      -0.1,
+      0.1,
       -0.05
      ],
      "jenis": "tembok-handrail",
@@ -2496,15 +2592,15 @@
  "tritisan": [
   {
    "a": [
-    0,
+    -3.6,
     14.33
    ],
    "b": [
-    43.0,
+    -1.1,
     14.33
    ],
    "sisi": 1,
-   "elevasi": 5.2,
+   "elevasi": 3.2,
    "lantai": 2,
    "lebar": 1.3,
    "turun": 0.6,
@@ -2514,7 +2610,7 @@
   },
   {
    "a": [
-    0,
+    2.5,
     14.33
    ],
    "b": [
@@ -2522,7 +2618,43 @@
     14.33
    ],
    "sisi": 1,
-   "elevasi": 9.2,
+   "elevasi": 3.2,
+   "lantai": 2,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "perkiraan",
+   "catatan": "Atap genteng miring di depan selasar, seperti Gedung B."
+  },
+  {
+   "a": [
+    -3.6,
+    14.33
+   ],
+   "b": [
+    -1.1,
+    14.33
+   ],
+   "sisi": 1,
+   "elevasi": 7.2,
+   "lantai": 3,
+   "lebar": 1.3,
+   "turun": 0.6,
+   "jarak": 0.12,
+   "sumber": "perkiraan",
+   "catatan": "Atap genteng miring di depan selasar, seperti Gedung B."
+  },
+  {
+   "a": [
+    2.5,
+    14.33
+   ],
+   "b": [
+    43.0,
+    14.33
+   ],
+   "sisi": 1,
+   "elevasi": 7.2,
    "lantai": 3,
    "lebar": 1.3,
    "turun": 0.6,
@@ -2539,11 +2671,11 @@
     0
    ],
    "sudut": 0,
-   "tepiBawah": 13.35,
+   "tepiBawah": 11.35,
    "tonjolan": 0.9,
    "kemiringan": 30,
    "batas": [
-    0,
+    -3.6,
     0,
     43.0,
     14.33

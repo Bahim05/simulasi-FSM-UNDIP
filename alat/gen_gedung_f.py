@@ -22,14 +22,22 @@ D, UD, PR, FT = "denah-gedung-f", "foto-udara-2026", "perkiraan", "footage-2026"
 H, SLAB = 4.0, 0.15
 # FIX FOOTAGE 24 Nov 2026: F paling rendah (keterangan pengguna). Penghubung F-B di tiap lantai naik ±2 m ke B (dua kelompok
 # ±6 anak tangga + ramp), dan jalur beratap F-A naik ke selasar A, jadi lantai 1 F diambil 0,8 m di bawah lantai 1 A.
-ELEV = {1: -0.8, 2: 3.2, 3: 7.2}
+ELEV = {1: -1.2, 2: 2.8, 3: 6.8}   # 24 Nov malam: turun 0,4 (penghubung F-B 2 x 7 anak tangga, F ±3 anak tangga di atas kantin)
 TOP = ELEV[3] + H + SLAB
 EXT, INT = 0.2, 0.15
 KI, KS = 0.1, 0.25                  # muka luar kolom rata dinding; kolom tepi selasar 0,25 m di dalam tepi
 DR, SW = 10.0, 2.8                  # dalam ruang, lebar selasar
-LS = 30.28                          # panjang sayap lurus (denah: 828 + 200 + 300 + 350 + 1350)
-AB, AF = 25.6, 28.8                 # dinding belakang dan dinding depan sayap miring
-ANG = math.radians(30)
+# Revisi 24 Nov 2026 malam (ukuran pengguna di Google Earth, tepi atap ke tepi atap: sisi utara sayap barat 43 m, sisi luar sayap
+# tenggara 30,5 m, ujung barat ke ujung tenggara 67 m, ujung barat atap utama F ke ujung timur atap A 15 m; dicek silang dengan dua
+# foto udara): sudut belok 46 derajat (denah 30), sayap R. Dosen lebih panjang (dinding belakang 37,5 m, denah 25,6 m), sayap lurus
+# 28 m (denah 30,28). Denah 2023 tidak sesuai kenyataan untuk ukuran-ukuran ini; isi ruang tetap mengikuti denah dan footage.
+ANG_DEG = 46
+LS = 25.0                           # panjang sayap lurus. Denah 30,28; Google Earth pengguna 30,5 (kemungkinan termasuk atap kantin A yang menempel
+                                    # di ujung F). 24 Nov malam: 25, dari tumpukan model di peta Google (ujung atap F kelebihan ±3 m) dan footage taman C-F.
+L0 = 28.0                           # panjang sayap lurus versi sebelumnya; ukuran ruang di timur tangga diskalakan dari sini
+SX = lambda x: round(13.28 + (x - 13.28) * (LS - 13.28) / (L0 - 13.28), 2)   # skala posisi di sayap lurus (timur dinding tangga)
+AB = 37.5                           # dinding belakang sayap miring (denah 25,6; Google Earth: sisi utara atap sayap barat 43 m)
+ANG = math.radians(ANG_DEG)
 d = (-math.cos(ANG), math.sin(ANG))  # arah sayap miring (denah)
 n = (math.sin(ANG), math.cos(ANG))   # ke arah selasar sayap miring (denah)
 def r2(v): return round(v, 3)
@@ -40,7 +48,8 @@ J0 = (0.0, 0.0)
 def dist(a, b): return math.hypot(b[0] - a[0], b[1] - a[1])
 def add(p, dv, t): return (p[0] + dv[0] * t, p[1] + dv[1] * t)
 E0, E1 = WP(AB, 0), WP(AB, DR)
-A_FJ = AB - AF                       # a ujung dinding depan sayap miring di pertemuan (-3,2)
+A_FJ = (DR * math.sin(ANG) - 7.77) / math.cos(ANG)   # a ujung dinding depan sayap miring di pertemuan (x 7,77 di depan blok KM)
+AF = AB - A_FJ                       # dinding depan sayap miring
 FJ = WP(A_FJ, DR)
 X_KM0, X_KM1, Z_KM = 8.28, 10.28, 5.55   # blok KM/WC denah (828, 200); X_KM1 hanya dipakai untuk penempatan kolom
 X_TG1 = 13.28                        # dinding barat R. Kerja = sisi timur ruang tangga (denah: 300)
@@ -51,7 +60,7 @@ Z_P, Z_W = 3.0, 4.4                  # sekat Toilet Pria | Toilet Wanita | ruang
 X_DIS, Z_DIS = 9.58, 2.0             # Toilet Difabel di pojok belakang lorong, pintu menghadap depan
 X_SW = 10.88                         # dinding barat sumur tangga (sisi lorong belakang)
 X_GD1, Z_GD1 = 12.08, 2.5            # gudang lt 1 di bawah lajur 2 tangga (pintu aluminium menghadap lobi)
-X_R = {1: 16.78, 2: 17.48, 3: 16.78}  # sekat dua ruang sayap lurus (lt 1: 350, lt 2: 420, lt 3: 350)
+X_R = {1: SX(16.78), 2: SX(17.48), 3: SX(16.78)}  # sekat dua ruang sayap lurus (lt 1: 350, lt 2: 420, lt 3: 350)
 # tangga pertemuan (footage): lajur 1 menempel dinding R. Kerja naik dari lobi ke belakang, bordes menempel dinding belakang
 # (jendela berteralis di atasnya), lajur 2 berbalik ke depan; tembok setengah badan di antara lajur, tiang hias di anak tangga pertama
 TJ = {"x0": 13.18, "x1": 10.98, "zDepan": 4.6, "zBelakang": 0.1}
@@ -99,8 +108,8 @@ def inset(poly, p):
 
 # ---------- bukaan ----------
 def door(t, lebar=0.9, ruang=None, ganda=False, teks=None, kaca=False, src=D):
-    o = {"jenis": "pintu-ganda" if ganda else "pintu", "t": r2(t), "lebar": lebar, "tinggi": 2.4 if ganda else 2.2,
-         "boven": 0.5, "sumber": src}
+    o = {"jenis": "pintu-ganda" if ganda else "pintu", "t": r2(t), "lebar": lebar, "tinggi": 3.0 if ganda else 2.75,
+         "boven": 0.6 if ganda else 0.55, "sumber": src}
     if ruang:
         o["ruang"] = ruang
     if teks:
@@ -186,11 +195,12 @@ def room(kode, nama, fungsi, poly, src=D, **kw):
 
 
 # ---------- kolom (koordinat denah) ----------
-X_BACK = [0, 3.84, 7.07, 10.78, 13.28, 17.3, 20.55, 23.8, 27.05, LS]       # dinding belakang sayap lurus (denah; 10,28 digeser ke sisi pintu belakang)
-X_FRONT = [13.28, 17.3, 20.55, 23.8, 27.05, LS]
-X_SEL = [14.3, 17.5, 20.6, 23.8, 27.0]
-A_BACK = [3.2 * k for k in range(9)]                                         # sayap miring, tiap 3,2 m
-A_FRONT = [A_FJ + 3.2 * k for k in range(10)]
+X_BACK = [0, 3.84, 7.07, 10.78, 13.28, SX(17.3), SX(20.55), SX(23.8), LS]       # dinding belakang sayap lurus (denah; 10,28 digeser ke sisi pintu belakang)
+X_FRONT = [13.28, SX(17.3), SX(20.55), SX(23.8), LS]
+X_SEL = [SX(14.3), SX(17.5), SX(20.6), SX(23.8)]
+A_BACK = [3.2 * k for k in range(int(AB / 3.2))] + [AB]                       # sayap miring, tiap 3,2 m
+# kolom depan sayap miring tiap 3,2 m, segaris dengan dinding penghubung F-B (a 14,4 dan 17,6)
+A_FRONT = [A_FJ] + [14.4 + 3.2 * k for k in range(-4, 8) if A_FJ + 1.0 < 14.4 + 3.2 * k < AB - 1.0] + [AB]
 
 def columns():
     pts = [(x, 0) for x in X_BACK] + [(x, DR) for x in X_FRONT] + [(LS, 3.6), (LS, 6.75)]
@@ -224,10 +234,10 @@ ROOMS = {
     3: [("TKN", "R. Teknisi Laboratorium Komputasi", "kantor"), ("BACA", "R. Baca", "perpustakaan")],
 }
 DOSEN = {1: "R. Dosen 1", 2: "R. Dosen 2", 3: "R. Dosen 3"}
-HIM = [WP(22.4, 6.8), WP(22.4, DR), WP(AB, DR), WP(AB, 6.8)]
+HIM = [WP(AB - 3.2, 6.8), WP(AB - 3.2, DR), WP(AB, DR), WP(AB, 6.8)]
 # ruang kecil di samping lobi (pintu kayu menghadap lobi): papan nama lt 1 dan lt 2 terbaca di footage, lt 3 belum
 RKM = {1: ("R. Kegiatan Mahasiswa Departemen Matematika", "R. Kegiatan Mhs"), 2: ("F205", "F205"), 3: ("Ruang dekat tangga", None)}
-BR = (9.6, 12.8)          # rentang a (sayap R. Dosen) mulut penghubung F-B, di antara dua kolom tepi selasar (kawasan x 81,0-84,2)
+BR = (14.4, 17.6)         # rentang a (sayap R. Dosen) mulut penghubung F-B, di antara dua kolom tepi selasar (kawasan x 81,0-84,2; posisi F 98,6)
 
 def bench(x, z, w=1.8, arah=0):
     return {"jenis": "kotak", "posisi": [r2(x), r2(z)], "ukuran": [w, 0.5, 0.45], "arah": arah, "warna": "#8d9296", "sumber": FT,
@@ -289,7 +299,7 @@ def lantai(no):
         jb.append({"jenis": "jendela", "t": r2((TJ["x0"] + TJ["x1"]) / 2 - xw), "lebar": 2.0, "ambang": 2.95, "tinggi": 0.85, "sumber": FT,
                    "catatan": "Jendela memanjang berteralis besi di atas bordes, menghadap kanopi di belakang (footage tangga)."})
     if no == 1:
-        jb.append({"jenis": "pintu", "t": 0.55, "lebar": 0.85, "tinggi": 2.2, "boven": 0.5, "warnaDaun": "#2b2f33", "sumber": FT,
+        jb.append({"jenis": "pintu", "t": 0.55, "lebar": 0.85, "tinggi": 2.75, "boven": 0.55, "warnaDaun": "#2b2f33", "sumber": FT,
                    "catatan": "Pintu belakang berteralis besi ke parkir motor dan kanopi (footage lobby lt 1)."})
     walls.append(W(f"{p}-belakang-pertemuan", (xw, 0), (X_TG1, 0), jb, luar=True, sumber=FT))
     # selasar: sekat Ruang Kerja Mahasiswa 2 di ujung tenggara lt 3, dinding Departemen Statistika di depan tangga lt 3
@@ -302,10 +312,10 @@ def lantai(no):
                        tempelan=[{"jenis": "dinding-departemen", "t": 1.0, "lebar": 1.95, "tinggi": 2.7, "ambang": 0.15, "sisi": -1,
                                   "teks": "DEPARTEMEN|STATISTIKA|FAKULTAS SAINS DAN MATEMATIKA|UNIVERSITAS DIPONEGORO"}],
                        catatan="Dinding nama Departemen Statistika (bingkai kayu merah, panel marmer) tepat di depan anak tangga teratas (footage)."))
-    dos_doors = [5.0, 11.2, 26.8] if no < 3 else [5.0, 11.2, 20.0]
+    dos_doors = [5.0, 11.2, 20.0, r2(AF - 2.0)] if no < 3 else [5.0, 11.2, 20.0, r2(AF - 6.0)]
     fd = [door(t, 1.0, f"{p}-DSN", teks=DOSEN[no] if t == 11.2 else None) for t in dos_doors]
     if no == 3:
-        fd.append(door(27.2, 0.9, f"{p}-HMS", teks="Himpunan Statistika"))
+        fd.append(door(r2(AF - 1.6), 0.9, f"{p}-HMS", teks="Himpunan Statistika"))
     ext_doors = {
         key(FJ, E1): fd,
         key((LS, DR), (X_TG1, DR)): [door(LS - xr - 1.0 if no == 2 else 1.98, 1.4, f"{p}-{k2}", ganda=True, teks=n2.split(" / ")[0]),
@@ -355,12 +365,12 @@ def lantai(no):
     # perabot selasar (footage): kursi tunggu besi, meja belajar bersekat di lt 2, meja di balik sekat ujung tenggara lt 3
     zs = DR + 0.35
     if no == 1:
-        perabot = [bench(16.2, zs), bench(22.6, zs), bench(27.5, zs)]
+        perabot = [bench(SX(16.2), zs), bench(SX(22.6), zs), bench(LS - 1.3, zs)]
     elif no == 2:
-        perabot = [counter(16.25, zs, 2.4), counter(21.5, zs, 3.6), counter(27.6, zs, 3.6)]
-        perabot += [counter(*WP(4.9, DR + 0.35), 3.0, arah=30), counter(*WP(17.5, DR + 0.35), 5.0, arah=30)]
+        perabot = [counter(SX(16.25), zs, 2.4), counter(SX(21.5), zs, 3.0), counter(LS - 2.0, zs, 2.6)]
+        perabot += [counter(*WP(4.9, DR + 0.35), 3.0, arah=ANG_DEG), counter(*WP(22.0, DR + 0.35), 5.0, arah=ANG_DEG), counter(*WP(29.0, DR + 0.35), 5.0, arah=ANG_DEG)]
     else:
-        perabot = [bench(16.2, zs), bench(24.3, zs), counter(LS - 1.4, DR + 1.3, 2.0, arah=90)]
+        perabot = [bench(SX(16.2), zs), bench(SX(24.3), zs), counter(LS - 1.4, DR + 1.3, 2.0, arah=90)]
     perabot = [dict(q, posisi=[r2(q["posisi"][0]), r2(q["posisi"][1])]) for q in perabot]
     return {
         "no": no, "elevasi": ELEV[no], "elevasiSelasar": r2(ELEV[no] - 0.05), "tinggiPlafon": H if no == 3 else H - SLAB,
@@ -372,7 +382,8 @@ def lantai(no):
 DB = [-27.0, -3.0, 32.0, 28.0]
 
 FLOORS = [lantai(no) for no in (1, 2, 3)]
-C_REAL = [pt(q) for q in [J0, (LS, 0), (LS, DR), (2.68, DR), E1, E0]]   # plafon lt 3 di bawah atap sayap lurus (denah)
+XB = DR * math.tan(ANG / 2)          # garis bagi sudut pertemuan: dari (0,0) ke (XB, DR)
+C_REAL = [pt(q) for q in [J0, (LS, 0), (LS, DR), (XB, DR), E1, E0]]   # plafon lt 3 di bawah atap sayap lurus (denah)
 
 def trit(a, b, sisi, no, lebar=3.7, sudutA=None, sudutB=None, catatan=None):
     """Atap tingkat bawah di ketinggian plafon lt 3 (di bawah atap utama, menutup selasar lt 3 dan tangga ujung barat)."""
@@ -400,7 +411,11 @@ def trit_lantai(no):
     return [{**base, "a": pt(P[0]), "b": pt(cut[0])},
             {**base, "a": pt(cut[1]), "b": pt(P[1]), "sudutB": r2(-s1)},
             {**base, "a": pt(P[1]), "b": pt(P[2]), "sudutA": r2(-s1), "sudutB": r2(s2)},
-            {**base, "a": pt(P[2]), "b": pt(P[3]), "sudutA": r2(s2)}]
+            {**base, "a": pt(P[2]), "b": pt((LS, e)), "sudutA": r2(s2), "sudutB": 90},
+            # 25 Nov 2026 (foto pengguna dari atas): tritisan genteng membungkus muka ujung tenggara sampai pojok belakang;
+            # atap seng merah kantin A menempel di bawahnya
+            {**base, "a": pt((LS, e)), "b": pt((LS, 0)), "sudutA": 90,
+             "catatan": f"Tritisan muka ujung tenggara lt {no}, membungkus dari tepi selasar (foto pengguna 25 Nov 2026)."}]
 
 data = {
     "schema": "fsm-gedung@1",
@@ -408,12 +423,12 @@ data = {
     "nama": "Gedung F",
     "kategori": "Ruang dosen dan laboratorium",
     "deskripsi": "Gedung tiga lantai di timur Gedung A dan utara Gedung B, paling rendah di antara ketiganya (lantai 1 0,8 m di bawah A), berbentuk siku: sayap ruang dosen sejajar A dan B di barat, "
-                 "lalu sayap R. Seminar / Lab belok 30 derajat menuju tenggara; selasar di sisi dalam menghadap halaman ke Gedung B. "
+                 "lalu sayap R. Seminar / Lab belok 46 derajat menuju tenggara; selasar di sisi dalam menghadap halaman ke Gedung B. "
                  "Sayap barat berisi ruang dosen di tiap lantai; sayap tenggara berisi R. Seminar / R. Sidang (lt 1), Lab Komputasi (lt 2), "
                  "dan R. Baca (lt 3). Tangga, toilet, dan pintu belakang ke parkir di pertemuan dua sayap; tangga luar di ujung barat. "
                  "Penghubung ke Gedung B di tiap lantai dan jalur beratap ke Gedung A.",
     "sumberData": {
-        D: "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai apa adanya, gedung diputar -30 derajat.",
+        D: "Denah Gedung F LT.1 sampai LT.3, skala 1:150 (folder Denah Gedung FSM/Terklasifikasi/Gedung F). Dipakai untuk isi ruang; sudut belok (46, denah 30) dan panjang sayap mengikuti ukuran Google Earth pengguna, gedung diputar -46 derajat.",
         UD: "Foto udara pengguna (22 Nov 2026): letak di utara B dan timur A, atap genteng kemerahan, sayap yang serong menuju tenggara.",
         "ingatan-pengguna": "Pengguna (22 Nov 2026): tangga luar ada di ujung kiri (barat) sayap ruang dosen.",
         "foto-2026": "Foto pengguna 23 Nov 2026 (dari arah Gedung B): ujung barat dengan tangga luar terbuka bertembok pembatas, atap utama bergevel berkisi, atap tingkat bawah membungkus ujung barat, tritisan genteng di tepi selasar tiap lantai, tembok pembatas putih bercelah, kolom abu kebiruan.",
@@ -422,14 +437,14 @@ data = {
         PR: "Perkiraan: ukuran toilet dan ruang kecil di pertemuan, jendela, letak pintu kecil di sayap.",
     },
     "koordinat": "Meter, sama dengan denah: (0,0) = sudut luar pertemuan dinding belakang dua sayap, x sepanjang sayap lurus denah (R. Seminar), "
-                 "z dari dinding belakang ke arah selasar. Di kampus.json gedung diputar -30 derajat, jadi sayap R. Dosen mengarah ke barat "
+                 "z dari dinding belakang ke arah selasar. Di kampus.json gedung diputar -46 derajat, jadi sayap R. Dosen mengarah ke barat "
                  "dan sayap R. Seminar ke tenggara. y ke atas dalam sistem kawasan (0 = lantai 1 Gedung A).",
     "ukuran": {"panjangSayapLurus": LS, "dindingBelakangSayapMiring": AB, "dindingDepanSayapMiring": AF, "kedalamanRuang": DR, "lebarSelasar": SW,
-               "sudutSayap": 30, "tinggiLantai": H, "tebalPelat": SLAB},
+               "sudutSayap": ANG_DEG, "tinggiLantai": H, "tebalPelat": SLAB},
     "tampilan": {"dinding": "#e6e5df", "dindingDalam": "#ecebe6", "kolom": "#a9b3c0", "lantai": "#e6e1d7",
                  "selasar": "#cdccc6", "atap": "#84473a", "kusen": "#3b464d", "pintu": "#7a3f2c", "pagar": "#b9c1cb"},
     # kolom tepi selasar di lantai 3 berhenti di bawah atap sandar (atap utama tidak menutup selasar)
-    "fondasi": {"dasar": ELEV[1] - 0.6, "warna": "#4a4f55", "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar (footage)."},
+    "fondasi": {"dasar": ELEV[1] - 1.3, "warna": "#4a4f55", "catatan": "Alas abu-abu gelap di bawah lantai 1 dan selasar (footage)."},
     "kolom": {"ukuran": 0.4, "dasar": ELEV[1] - 0.2, "puncak": TOP - 0.15, "titik": COLS,
               "tambahan": [{"titik": COLS_SEL, "lantai": [1, 2]},
                            {"titik": COLS_SEL, "lantai": [3, 3], "puncak": ELEV[3] + 3.3, "catatan": "Di bawah atap sandar selasar lt 3."}]},
@@ -444,27 +459,27 @@ data = {
         for f in (1, 2)] + [
         # bingkai sayap R. Dosen: sumbu x lokal = arah dari ujung sayap ke pertemuan (titik WP(a, b) = (-a, b)), lalu diputar +30 derajat
         {"id": f"TL{f}", "dariLantai": f, "keLantai": f + 1, "x0": -TE["x0"], "x1": -TE["x1"], "zDepan": TE["zDepan"], "zBelakang": TE["zBelakang"],
-         "putar": 30, "jumlahAnakTangga": 24, "lebarInjakan": 0.28, "bentuk": "U dengan bordes", "belakang": "tembok", "sisiLuar": "tembok", "pembatas": "tembok", "gaya": "krem",
-         "sumber": D, "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar 30 derajat."}
+         "putar": ANG_DEG, "jumlahAnakTangga": 24, "lebarInjakan": 0.28, "bentuk": "U dengan bordes", "belakang": "tembok", "sisiLuar": "tembok", "pembatas": "tembok", "gaya": "krem",
+         "sumber": D, "catatan": "Tangga luar di ujung sayap R. Dosen (denah: lebar 2,8 m), lajur sejajar dinding ujung. Disusun di bingkai sayap lalu diputar sebesar sudut belok."}
         for f in (1, 2)],
     # atap tingkat bawah: selasar kedua sayap (lebar 3,7), ujung barat di atas tangga luar (3,7), sisi belakang dan ujung tenggara
     # lebih sempit (1,5; tidak terlihat di foto, perkiraan). Tritisan lantai 2 dan 3 di tepi luar selasar.
     "tritisan": [trit((9.2, DR), (LS + 0.2, DR), 1, 3),
                  trit(FJ, E1, -1, 3, sudutB=90),
                  trit(E1, E0, -1, 3, sudutA=90, catatan="Atap tingkat bawah membungkus ujung barat, menaungi tangga luar (foto 23 Nov 2026)."),
-                 trit(E0, J0, -1, 3, lebar=1.5, sudutB=30, catatan="Atap tingkat bawah sisi belakang (perkiraan)."),
-                 trit(J0, (LS, 0), -1, 3, lebar=1.5, sudutA=30, sudutB=90, catatan="Atap tingkat bawah sisi belakang (perkiraan)."),
+                 trit(E0, J0, -1, 3, lebar=1.5, sudutB=ANG_DEG, catatan="Atap tingkat bawah sisi belakang (perkiraan)."),
+                 trit(J0, (LS, 0), -1, 3, lebar=1.5, sudutA=ANG_DEG, sudutB=90, catatan="Atap tingkat bawah sisi belakang (perkiraan)."),
                  trit((LS, 0), (LS, DR), -1, 3, lebar=1.5, sudutA=90, catatan="Atap tingkat bawah ujung tenggara (perkiraan).")]
                 + trit_lantai(2) + trit_lantai(3),
     # Atap utama: dua atap perisai (sayap lurus dan sayap miring denah) dipotong di garis bagi sudut pertemuan, seperti Gedung E.
     "atap": [
         {"jenis": "perisai", "asal": [0, 0], "sudut": 0, "batas": [-6.0, 0, LS, DR], "tepiBawah": TOP, "tonjolan": 0.9, "kemiringan": 30,
-         "potong": [{"a": [0, 0], "b": [2.68, DR], "simpan": [10, 5], "jurai": True}], "plafonPoligon": [C_REAL],
+         "potong": [{"a": [0, 0], "b": [r2(XB), DR], "simpan": [10, 5], "jurai": True}], "plafonPoligon": [C_REAL],
          "gablet": {"ujung": [1], "lebar": 2.6},
          "sumber": UD, "catatan": "Sayap R. Seminar / Lab (lurus di denah, serong ke tenggara di kampus)"},
         # sumbu x lokal ke arah pertemuan (sudut -30), jadi sayap R. Dosen ada di x lokal negatif
-        {"jenis": "perisai", "asal": [0, 0], "sudut": -30, "batas": [-AB, 0, 6.0, DR], "tepiBawah": TOP, "tonjolan": 0.9, "kemiringan": 30,
-         "potong": [{"a": [0, 0], "b": [2.68, DR], "simpan": [-6.16, 9.33]}], "plafonPoligon": [],
+        {"jenis": "perisai", "asal": [0, 0], "sudut": -ANG_DEG, "batas": [-AB, 0, 6.0, DR], "tepiBawah": TOP, "tonjolan": 0.9, "kemiringan": 30,
+         "potong": [{"a": [0, 0], "b": [r2(XB), DR], "simpan": pt(WP(10, 5))}], "plafonPoligon": [],
          "gablet": {"ujung": [0], "lebar": 2.6},
          "sumber": UD, "catatan": "Sayap R. Dosen (miring di denah, sejajar A dan B di kampus)"},
     ],
