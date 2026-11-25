@@ -1322,7 +1322,7 @@ export function buildPenghubung(spec, T) {
     tritBawah: new THREE.MeshStandardMaterial({ color: '#ece9e1', roughness: 0.9 }),
     kayu: new THREE.MeshStandardMaterial({ color: '#4b3b2d', roughness: 0.8 }),
     ramp: new THREE.MeshStandardMaterial({ color: '#d9cdb5', roughness: 0.9 }),                      // ramp berbutir krem
-    alas: new THREE.MeshStandardMaterial({ map: lansekapTexture(spec.alasKolom?.bahan || 'granit'), roughness: 0.6 }),
+    alas: new THREE.MeshStandardMaterial({ map: lansekapTexture(spec.alasBahan || spec.alasKolom?.bahan || 'granit'), roughness: 0.6 }),
     baja: new THREE.MeshStandardMaterial({ color: spec.warnaBaja || '#8a3d2c', roughness: 0.5, metalness: 0.3 }),   // rangka kanopi (merah bata kalau tidak ditentukan)
     seng: new THREE.MeshStandardMaterial({ color: '#b9bec1', roughness: 0.45, metalness: 0.4, side: THREE.DoubleSide }),
     plafon: new THREE.MeshStandardMaterial({ color: '#f1f0eb', roughness: 0.9, side: THREE.DoubleSide }),
@@ -1630,7 +1630,9 @@ export function buildLansekap(spec) {
   // Dipakai untuk lahan paving dan bedeng tanaman yang tidak sejajar jalur (mis. di samping koridor miring).
   const bidang = spec.bidang || [];
   for (const bd of bidang) {
-    const pts = bd.poligon, top = bd.atas, kTop = bd.bahan, kSide = bd.muka || 'beton', bot = bd.dasar ?? base;
+    const pts = bd.poligon, kTop = bd.bahan, kSide = bd.muka || 'beton', bot = bd.dasar ?? base;
+    // `miring: [a, b, c]` = permukaan bidang miring y = a*x + b*z + c (tanah miring); tanpa itu datar di `atas`
+    const yAt = bd.miring ? (x, z) => bd.miring[0] * x + bd.miring[1] * z + bd.miring[2] : () => bd.atas;
     const tri = THREE.ShapeUtils.triangulateShape(pts.map(([x, z]) => new THREE.Vector2(x, z)), []);
     const pos = [], uv = [];
     for (const t3 of tri) {
@@ -1638,7 +1640,7 @@ export function buildLansekap(spec) {
       const [p0, p1, p2] = [pts[i0], pts[i1], pts[i2]];
       // urutan titik dibuat menghadap ke atas
       if ((p1[0] - p0[0]) * (p2[1] - p0[1]) - (p1[1] - p0[1]) * (p2[0] - p0[0]) > 0) [i1, i2] = [i2, i1];
-      for (const k of [i0, i1, i2]) { pos.push(pts[k][0], top, pts[k][1]); uv.push(pts[k][0], -pts[k][1]); }
+      for (const k of [i0, i1, i2]) { pos.push(pts[k][0], yAt(pts[k][0], pts[k][1]), pts[k][1]); uv.push(pts[k][0], -pts[k][1]); }
     }
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
@@ -1653,7 +1655,7 @@ export function buildLansekap(spec) {
     pts.forEach((p, k) => {
       const q = pts[(k + 1) % pts.length];
       const hint = new V3(sg * (q[1] - p[1]), 0, -sg * (q[0] - p[0]));
-      put(kSide, quadFace([new V3(p[0], bot, p[1]), new V3(q[0], bot, q[1]), new V3(q[0], top, q[1]), new V3(p[0], top, p[1])], hint));
+      put(kSide, quadFace([new V3(p[0], bot, p[1]), new V3(q[0], bot, q[1]), new V3(q[0], yAt(q[0], q[1]), q[1]), new V3(p[0], yAt(p[0], p[1]), p[1])], hint));
     });
   }
 

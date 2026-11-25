@@ -160,7 +160,8 @@ def floor(no, rooms, doors):
         pagar += [{"a": [-SU + 0.1, ZS - 0.1, dy], "b": [JF[0] - 0.05, ZS - 0.1, dy], **tembok},
                   {"a": [JF[1] + 0.05, ZS - 0.1, dy], "b": [JB[0] - 0.05, ZS - 0.1, dy], **tembok},
                   {"a": [JB[1] + 0.05, ZS - 0.1, dy], "b": [L + SU - 0.1, ZS - 0.1, dy], **tembok},
-                  {"a": [-SU + 0.1, 0.1, dy], "b": [-SU + 0.1, ZS - 0.1, dy], **tembok},
+                  # selasar ujung timur: celah di pojok timur laut untuk penghubung B-C (kawasan z 23,5-26,4; footage 2026)
+                  {"a": [-SU + 0.1, 0.1, dy], "b": [-SU + 0.1, round(37.0 - 26.4 - 0.05, 2), dy], **tembok},
                   {"a": [L + SU - 0.1, 0.1, dy], "b": [L + SU - 0.1, ZS - 0.1, dy], **tembok},
                   {"a": [-SU + 0.1, 0.1, dy], "b": [-0.1, 0.1, dy], **tembok},
                   {"a": [L + 0.1, 0.1, dy], "b": [L + SU - 0.1, 0.1, dy], **tembok}]

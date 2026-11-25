@@ -137,7 +137,11 @@ async function init() {
   // bidang datar berlubang: lubang = tapak lansekap, supaya selokan dan undakan tidak tertutup tanah/paving
   const holedGeo = (x0, z0, x1, z1, y) => {
     const sh = new THREE.Shape([[x0, -z0], [x1, -z0], [x1, -z1], [x0, -z1]].map(([x, y]) => new THREE.Vector2(x, y)));
-    for (const sc of scapes) if (sc.footprint) sh.holes.push(new THREE.Path(sc.footprint.map(([x, z]) => new THREE.Vector2(x, -z))));
+    // lubang tapak lansekap yang bersinggungan/bertumpuk harus digabung dulu (earcut salah kalau lubangnya bertumpuk): kampus.lubangTanah
+    // berisi gabungan tapak yang sudah dihitung alat penyusun; lansekap tanpa `tapak` (jalur) tetap memakai tapak masing-masing
+    const lubang = kampus.lubangTanah ? [...kampus.lubangTanah.map(h => h.luar), ...scapes.filter(sc => sc.footprint && !sc.spec.tapak).map(sc => sc.footprint)]
+                                      : scapes.filter(sc => sc.footprint).map(sc => sc.footprint);
+    for (const fp of lubang) sh.holes.push(new THREE.Path(fp.map(([x, z]) => new THREE.Vector2(x, -z))));
     const g = new THREE.ShapeGeometry(sh);
     g.rotateX(-Math.PI / 2);
     g.translate(0, y, 0);
@@ -146,7 +150,9 @@ async function init() {
   const ground = new THREE.Mesh(holedGeo(-400, -400, 400, 400, -0.22), new THREE.MeshStandardMaterial({ color: '#e4e5df', roughness: 1 }));
   ground.receiveShadow = true;
   scene.add(ground);
-  const paving = new THREE.Mesh(holedGeo(all.x0 - 5, all.z0 - 5, all.x1 + 5, all.z1 + 5, -0.205), new THREE.MeshStandardMaterial({ color: '#d7d8d1', roughness: 1 }));
+  // bidang paving harus memuat semua lubang tapak (lubang yang keluar dari tepi bidang membuat triangulasi salah dan menutup lubang)
+  const pv = boxOf([[all.x0 - 5, all.z0 - 5], [all.x1 + 5, all.z1 + 5], ...(kampus.lubangTanah || []).flatMap(h => h.luar).map(([x, z]) => [x, z])]);
+  const paving = new THREE.Mesh(holedGeo(pv.x0 - 1, pv.z0 - 1, pv.x1 + 1, pv.z1 + 1, -0.205), new THREE.MeshStandardMaterial({ color: '#d7d8d1', roughness: 1 }));
   paving.receiveShadow = true;
   scene.add(paving);
 
