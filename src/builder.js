@@ -270,9 +270,14 @@ function tempelTexture(o) {
         // sedikit bayangan supaya huruf terlihat timbul seperti huruf 3D di footage
         const ax = o.rata === 'kiri' ? W * 0.05 : W / 2;
         g.textAlign = o.rata === 'kiri' ? 'left' : 'center'; g.textBaseline = 'middle';
-        g.font = `800 ${Math.round(H * (o.besarHuruf ?? 0.62))}px Inter, Arial, sans-serif`;
-        g.fillStyle = 'rgba(0,0,0,0.55)'; g.fillText(o.teks, ax + 3, H / 2 + 4, W * 0.9);
-        g.fillStyle = '#f4f4f1'; g.fillText(o.teks, ax, H / 2, W * 0.9);
+        // beberapa baris dipisah '|' (mis. papan "DEPARTEMEN|BIOLOGI"), tinggi huruf dibagi rata ke tiap baris
+        const baris = o.teks.split('|'), hb = H / baris.length;
+        g.font = `800 ${Math.round(hb * (o.besarHuruf ?? 0.62))}px Inter, Arial, sans-serif`;
+        baris.forEach((t, i) => {
+          const yy = hb * (i + 0.5);
+          g.fillStyle = 'rgba(0,0,0,0.55)'; g.fillText(t, ax + 3, yy + 4, W * 0.9);
+          g.fillStyle = '#f4f4f1'; g.fillText(t, ax, yy, W * 0.9);
+        });
       }
       break;
     }
@@ -1819,6 +1824,12 @@ export function buildLansekap(spec) {
         put2(pots.merahMeja, box(L - 0.1, 0.41, 0.24), 0, 0.205, sg * bz, true);
         put2(pots.krem, box(L, 0.03, 0.28), 0, 0.425, sg * bz);
       }
+    } else if (b.jenis === 'bangku-taman') {
+      // bangku taman kayu berkaki besi di koordinat kawasan (taman sudut Gedung I; bentuk umum, tidak ada footage jelas)
+      const len = b.panjang ?? 1.8;
+      put2(pots.kayu, box(len, 0.05, 0.42), 0, 0.45, 0, true);
+      put2(pots.kayu, box(len, 0.3, 0.04), 0, 0.72, -0.22);
+      for (const sx of [-len / 2 + 0.1, len / 2 - 0.1]) put2(pots.logam, box(0.05, 0.45, 0.42), sx, 0.225, 0);
     } else if (b.jenis === 'atap-miring') {
       // atap seng miring di atas rangka besi merah (kantin, foto 2026). Semua koordinat kawasan mutlak:
       // atap: 4 titik [x, y, z] (bidang atas), tiang: [x, z, yBawah, yAtas], balok: [x1, y1, z1, x2, y2, z2], panel: 4 titik (seng terang).
@@ -1836,7 +1847,9 @@ export function buildLansekap(spec) {
         g.computeVertexNormals();
         return g;
       };
-      if (b.atap) pots.atapMerah.push(slab(b.atap, b.tebal ?? 0.05));
+      // warnaAtap 'abu': seng abu tua (kanopi penghubung I-J, footage); bawaan merah (kantin)
+      const atapPot = b.warnaAtap === 'abu' ? pots.atapDatar : pots.atapMerah;
+      if (b.atap) atapPot.push(slab(b.atap, b.tebal ?? 0.05));
       // sisi bawah seng berlapis galvalum abu terang (foto kantin dari bawah)
       if (b.atap && b.bawah !== false) pots.seng.push(slab(b.atap.map(([x, y, z]) => [x, y - (b.tebal ?? 0.05) - 0.006, z]), 0.004));
       if (b.atap && b.rusuk) {
@@ -1844,14 +1857,15 @@ export function buildLansekap(spec) {
         const [A0, A1, A2, A3] = b.atap.map(v => new V3(...v)), n = Math.max(2, Math.round(A0.distanceTo(A3) / b.rusuk));
         for (let k = 0; k <= n; k++) {
           const t = k / n, hi = A0.clone().lerp(A3, t), lo = A1.clone().lerp(A2, t);
-          pots.atapMerah.push(beam(hi.setY(hi.y + 0.012), lo.setY(lo.y + 0.012), 0.045, 0.028));
+          atapPot.push(beam(hi.setY(hi.y + 0.012), lo.setY(lo.y + 0.012), 0.045, 0.028));
         }
       }
       for (const q of b.panel || []) pots.krem.push(slab(q.map(([x, y, z]) => [x, y + 0.012, z]), 0.01));
       for (const [x, z, y0t, y1t] of b.tiang || []) {
-        const g = new THREE.CylinderGeometry(0.05, 0.05, y1t - y0t, 10);
+        // tiangPutih: tiang beton persegi putih selebar nilai itu (kanopi I-J); bawaan pipa besi merah bulat
+        const g = b.tiangPutih ? new THREE.BoxGeometry(b.tiangPutih, y1t - y0t, b.tiangPutih) : new THREE.CylinderGeometry(0.05, 0.05, y1t - y0t, 10);
         g.translate(x, (y0t + y1t) / 2, z);
-        pots.merahBesi.push(g); keras.push(g.clone());
+        (b.tiangPutih ? pots.putih : pots.merahBesi).push(g); keras.push(g.clone());
       }
       for (const [x1, y1, z1, x2, y2, z2] of b.balok || []) pots.merahBesi.push(beam(new V3(x1, y1, z1), new V3(x2, y2, z2), 0.08, 0.12));
     } else if (b.jenis === 'deret-kios') {

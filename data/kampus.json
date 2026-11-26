@@ -93,7 +93,14 @@
   {
    "id": "I",
    "nama": "Gedung I",
-   "status": "belum"
+   "status": "dibuat",
+   "file": "data/gedung-i.json",
+   "posisi": [
+    47.05,
+    118.45
+   ],
+   "rotasi": 0,
+   "catatan": "Paket 5 (25 Nov 2026). Departemen Biologi, bentuk L. Tepi depan atap segaris J, atap J ke atap I 10 m, sisi dalam L 21,5 dan 14,8 m (Google Earth pengguna, cocok dengan denah). Lantai 1 +0,3 (perkiraan dari anak tangga penghubung I-J)."
   },
   {
    "id": "J",
@@ -23073,6 +23080,1456 @@
    "catatan": "Jalan dan parkir di utara K (depan pintu utama lobi), jalan di timur K, halaman rumput di timur penghubung C-K, dan lereng rumput naik ke tanah dasar. Tinggi perkiraan (tidak ada footage), dibuat miring supaya tidak ada tembok batu kali tinggi."
   },
   {
+   "id": "sekitar-I",
+   "nama": "Taman sudut Gedung I, halaman, dan penghubung I-J",
+   "tapak": [
+    [
+     40.0,
+     106.0
+    ],
+    [
+     77.2,
+     106.0
+    ],
+    [
+     77.2,
+     123.5
+    ],
+    [
+     86.0,
+     123.5
+    ],
+    [
+     86.0,
+     130.5
+    ],
+    [
+     88.4,
+     130.5
+    ],
+    [
+     88.4,
+     136.8
+    ],
+    [
+     86.0,
+     136.8
+    ],
+    [
+     86.0,
+     152.0
+    ],
+    [
+     40.0,
+     152.0
+    ]
+   ],
+   "dasar": -3.2,
+   "bidang": [
+    {
+     "nama": "Anak tangga putih ke selasar Gedung I",
+     "poligon": [
+      [
+       82.45,
+       132.75
+      ],
+      [
+       82.75,
+       132.75
+      ],
+      [
+       82.75,
+       134.05
+      ],
+      [
+       82.45,
+       134.05
+      ]
+     ],
+     "atas": 0.1,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Tiga anak tangga keramik putih dari pelataran ke ujung timur selasar lt 1 I (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga putih ke selasar Gedung I",
+     "poligon": [
+      [
+       82.75,
+       132.75
+      ],
+      [
+       83.05,
+       132.75
+      ],
+      [
+       83.05,
+       134.05
+      ],
+      [
+       82.75,
+       134.05
+      ]
+     ],
+     "atas": -0.05,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Saluran berjeruji di pelataran Gedung I",
+     "poligon": [
+      [
+       83.2,
+       132.3
+      ],
+      [
+       83.45,
+       132.3
+      ],
+      [
+       83.45,
+       134.5
+      ],
+      [
+       83.2,
+       134.5
+      ]
+     ],
+     "atas": -0.19,
+     "bahan": "selokan",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Saluran air berpenutup jeruji besi melintang di depan anak tangga putih (footage)."
+    },
+    {
+     "nama": "Penghubung Gedung I dan J",
+     "poligon": [
+      [
+       84.3,
+       132.85
+      ],
+      [
+       84.9,
+       132.85
+      ],
+      [
+       84.9,
+       134.35
+      ],
+      [
+       84.3,
+       134.35
+      ]
+     ],
+     "atas": -0.367,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton pendek di atas undakan teratas (footage)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (atas)",
+     "poligon": [
+      [
+       84.9,
+       132.85
+      ],
+      [
+       85.18,
+       132.85
+      ],
+      [
+       85.18,
+       134.35
+      ],
+      [
+       84.9,
+       134.35
+      ]
+     ],
+     "atas": -0.533,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (atas)",
+     "poligon": [
+      [
+       85.18,
+       132.85
+      ],
+      [
+       85.46,
+       132.85
+      ],
+      [
+       85.46,
+       134.35
+      ],
+      [
+       85.18,
+       134.35
+      ]
+     ],
+     "atas": -0.7,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (atas)",
+     "poligon": [
+      [
+       85.46,
+       132.85
+      ],
+      [
+       86.34,
+       132.85
+      ],
+      [
+       86.34,
+       134.35
+      ],
+      [
+       85.46,
+       134.35
+      ]
+     ],
+     "atas": -0.867,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (tengah)",
+     "poligon": [
+      [
+       86.34,
+       132.85
+      ],
+      [
+       86.62,
+       132.85
+      ],
+      [
+       86.62,
+       134.35
+      ],
+      [
+       86.34,
+       134.35
+      ]
+     ],
+     "atas": -1.033,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (tengah)",
+     "poligon": [
+      [
+       86.62,
+       132.85
+      ],
+      [
+       86.9,
+       132.85
+      ],
+      [
+       86.9,
+       134.35
+      ],
+      [
+       86.62,
+       134.35
+      ]
+     ],
+     "atas": -1.2,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (tengah)",
+     "poligon": [
+      [
+       86.9,
+       132.85
+      ],
+      [
+       87.18,
+       132.85
+      ],
+      [
+       87.18,
+       134.35
+      ],
+      [
+       86.9,
+       134.35
+      ]
+     ],
+     "atas": -1.367,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (tengah)",
+     "poligon": [
+      [
+       87.18,
+       132.85
+      ],
+      [
+       88.06,
+       132.85
+      ],
+      [
+       88.06,
+       134.35
+      ],
+      [
+       87.18,
+       134.35
+      ]
+     ],
+     "atas": -1.533,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (bawah)",
+     "poligon": [
+      [
+       88.06,
+       132.85
+      ],
+      [
+       88.34,
+       132.85
+      ],
+      [
+       88.34,
+       134.35
+      ],
+      [
+       88.06,
+       134.35
+      ]
+     ],
+     "atas": -1.7,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (bawah)",
+     "poligon": [
+      [
+       88.34,
+       132.85
+      ],
+      [
+       88.62,
+       132.85
+      ],
+      [
+       88.62,
+       134.35
+      ],
+      [
+       88.34,
+       134.35
+      ]
+     ],
+     "atas": -1.867,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Anak tangga penghubung I-J (bawah)",
+     "poligon": [
+      [
+       88.62,
+       132.85
+      ],
+      [
+       88.9,
+       132.85
+      ],
+      [
+       88.9,
+       134.35
+      ],
+      [
+       88.62,
+       134.35
+      ]
+     ],
+     "atas": -2.033,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Anak tangga beton di antara tembok batu kali berundak (footage penghubung I-J)."
+    },
+    {
+     "nama": "Penghubung Gedung I dan J",
+     "poligon": [
+      [
+       88.9,
+       132.85
+      ],
+      [
+       90.95,
+       132.85
+      ],
+      [
+       90.95,
+       134.35
+      ],
+      [
+       88.9,
+       134.35
+      ]
+     ],
+     "atas": -2.2,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Jalan beton di kaki selasar J (footage: selasar J turun satu anak tangga)."
+    },
+    {
+     "nama": "Anak tangga dari selasar Gedung J",
+     "poligon": [
+      [
+       90.95,
+       132.85
+      ],
+      [
+       91.25,
+       132.85
+      ],
+      [
+       91.25,
+       134.35
+      ],
+      [
+       90.95,
+       134.35
+      ]
+     ],
+     "atas": -2.025,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Dari ujung barat selasar lt 1 J turun ke jalan beton (footage)."
+    },
+    {
+     "nama": "Pelataran ujung timur Gedung I",
+     "poligon": [
+      [
+       82.45,
+       130.5
+      ],
+      [
+       84.3,
+       130.5
+      ],
+      [
+       84.3,
+       136.8
+      ],
+      [
+       82.45,
+       136.8
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Pelataran beton dengan saluran berjeruji di depan ujung timur selasar I (footage penghubung I-J)."
+    },
+    {
+     "nama": "Undakan batu kali atas",
+     "poligon": [
+      [
+       85.46,
+       130.5
+      ],
+      [
+       86.9,
+       130.5
+      ],
+      [
+       86.9,
+       132.85
+      ],
+      [
+       85.46,
+       132.85
+      ]
+     ],
+     "atas": -0.867,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Tanah berundak bertembok batu kali di sisi anak tangga penghubung I-J (footage: dua tingkat di sisi selatan)."
+    },
+    {
+     "nama": "Undakan batu kali atas",
+     "poligon": [
+      [
+       85.46,
+       134.35
+      ],
+      [
+       86.9,
+       134.35
+      ],
+      [
+       86.9,
+       136.8
+      ],
+      [
+       85.46,
+       136.8
+      ]
+     ],
+     "atas": -0.867,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Tanah berundak bertembok batu kali di sisi anak tangga penghubung I-J (footage: dua tingkat di sisi selatan)."
+    },
+    {
+     "nama": "Undakan batu kali bawah",
+     "poligon": [
+      [
+       86.9,
+       130.5
+      ],
+      [
+       88.34,
+       130.5
+      ],
+      [
+       88.34,
+       132.85
+      ],
+      [
+       86.9,
+       132.85
+      ]
+     ],
+     "atas": -1.533,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Tanah berundak bertembok batu kali di sisi anak tangga penghubung I-J (footage: dua tingkat di sisi selatan)."
+    },
+    {
+     "nama": "Undakan batu kali bawah",
+     "poligon": [
+      [
+       86.9,
+       134.35
+      ],
+      [
+       88.34,
+       134.35
+      ],
+      [
+       88.34,
+       136.8
+      ],
+      [
+       86.9,
+       136.8
+      ]
+     ],
+     "atas": -1.533,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Tanah berundak bertembok batu kali di sisi anak tangga penghubung I-J (footage: dua tingkat di sisi selatan)."
+    },
+    {
+     "nama": "Pelataran ujung timur Gedung I",
+     "poligon": [
+      [
+       84.3,
+       130.5
+      ],
+      [
+       85.46,
+       130.5
+      ],
+      [
+       85.46,
+       132.85
+      ],
+      [
+       84.3,
+       132.85
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Pelataran ujung timur Gedung I",
+     "poligon": [
+      [
+       84.3,
+       134.35
+      ],
+      [
+       85.46,
+       134.35
+      ],
+      [
+       85.46,
+       136.8
+      ],
+      [
+       84.3,
+       136.8
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "tanah",
+     "muka": "batu-kali",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Alas tiang kanopi penghubung I-J",
+     "poligon": [
+      [
+       85.5,
+       132.3
+      ],
+      [
+       86.0,
+       132.3
+      ],
+      [
+       86.0,
+       132.8
+      ],
+      [
+       85.5,
+       132.8
+      ]
+     ],
+     "atas": 0.033,
+     "bahan": "putih",
+     "muka": "batu-kali",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Alas tiang kanopi penghubung I-J",
+     "poligon": [
+      [
+       85.5,
+       134.4
+      ],
+      [
+       86.0,
+       134.4
+      ],
+      [
+       86.0,
+       134.9
+      ],
+      [
+       85.5,
+       134.9
+      ]
+     ],
+     "atas": 0.033,
+     "bahan": "putih",
+     "muka": "batu-kali",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Alas tiang kanopi penghubung I-J",
+     "poligon": [
+      [
+       83.65,
+       132.3
+      ],
+      [
+       84.15,
+       132.3
+      ],
+      [
+       84.15,
+       132.8
+      ],
+      [
+       83.65,
+       132.8
+      ]
+     ],
+     "atas": 0.7,
+     "bahan": "putih",
+     "muka": "batu-kali",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Alas tiang kanopi penghubung I-J",
+     "poligon": [
+      [
+       83.65,
+       134.4
+      ],
+      [
+       84.15,
+       134.4
+      ],
+      [
+       84.15,
+       134.9
+      ],
+      [
+       83.65,
+       134.9
+      ]
+     ],
+     "atas": 0.7,
+     "bahan": "putih",
+     "muka": "batu-kali",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Anak tangga ke selasar Gedung I",
+     "poligon": [
+      [
+       70.65,
+       132.1
+      ],
+      [
+       72.45,
+       132.1
+      ],
+      [
+       72.45,
+       132.4
+      ],
+      [
+       70.65,
+       132.4
+      ]
+     ],
+     "atas": -0.05,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Tiga anak tangga putih dari taman ke selasar lt 1 (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ke selasar Gedung I",
+     "poligon": [
+      [
+       70.65,
+       132.4
+      ],
+      [
+       72.45,
+       132.4
+      ],
+      [
+       72.45,
+       132.7
+      ],
+      [
+       70.65,
+       132.7
+      ]
+     ],
+     "atas": 0.1,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Tiga anak tangga putih dari taman ke selasar lt 1 (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga ujung utara selasar Gedung I",
+     "poligon": [
+      [
+       56.35,
+       117.85
+      ],
+      [
+       57.65,
+       117.85
+      ],
+      [
+       57.65,
+       118.15
+      ],
+      [
+       56.35,
+       118.15
+      ]
+     ],
+     "atas": -0.05,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "perkiraan"
+    },
+    {
+     "nama": "Anak tangga ujung utara selasar Gedung I",
+     "poligon": [
+      [
+       56.35,
+       118.15
+      ],
+      [
+       57.65,
+       118.15
+      ],
+      [
+       57.65,
+       118.45
+      ],
+      [
+       56.35,
+       118.45
+      ]
+     ],
+     "atas": 0.1,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "perkiraan"
+    },
+    {
+     "nama": "Anak tangga pintu samping Gedung I",
+     "poligon": [
+      [
+       46.45,
+       134.15
+      ],
+      [
+       46.75,
+       134.15
+      ],
+      [
+       46.75,
+       136.35
+      ],
+      [
+       46.45,
+       136.35
+      ]
+     ],
+     "atas": -0.033,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "denah-2023"
+    },
+    {
+     "nama": "Anak tangga pintu samping Gedung I",
+     "poligon": [
+      [
+       46.75,
+       134.15
+      ],
+      [
+       47.05,
+       134.15
+      ],
+      [
+       47.05,
+       136.35
+      ],
+      [
+       46.75,
+       136.35
+      ]
+     ],
+     "atas": 0.133,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "denah-2023"
+    },
+    {
+     "nama": "Anak tangga pintu masuk Gedung I",
+     "poligon": [
+      [
+       59.31,
+       129.12
+      ],
+      [
+       61.59,
+       130.83
+      ],
+      [
+       61.77,
+       130.59
+      ],
+      [
+       59.49,
+       128.88
+      ]
+     ],
+     "atas": 0.1,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Pintu masuk utama di sudut dalam L (footage tampak depan)."
+    },
+    {
+     "nama": "Anak tangga pintu masuk Gedung I",
+     "poligon": [
+      [
+       59.49,
+       128.88
+      ],
+      [
+       61.77,
+       130.59
+      ],
+      [
+       61.95,
+       130.35
+      ],
+      [
+       59.67,
+       128.64
+      ]
+     ],
+     "atas": -0.05,
+     "bahan": "keramik-putih",
+     "muka": "beton",
+     "sumber": "footage-2026",
+     "catatan": "Pintu masuk utama di sudut dalam L (footage tampak depan)."
+    },
+    {
+     "nama": "Tiang papan nama Gedung I",
+     "poligon": [
+      [
+       59.768,
+       129.451
+      ],
+      [
+       59.944,
+       129.583
+      ],
+      [
+       60.076,
+       129.407
+      ],
+      [
+       59.9,
+       129.275
+      ]
+     ],
+     "atas": 3.33,
+     "bahan": "batu-hitam",
+     "muka": "batu-hitam",
+     "sumber": "footage-2026",
+     "catatan": "Tiang papan nama, abu gelap (footage)."
+    },
+    {
+     "nama": "Tiang papan nama Gedung I",
+     "poligon": [
+      [
+       60.968,
+       130.351
+      ],
+      [
+       61.144,
+       130.483
+      ],
+      [
+       61.276,
+       130.307
+      ],
+      [
+       61.1,
+       130.175
+      ]
+     ],
+     "atas": 3.33,
+     "bahan": "batu-hitam",
+     "muka": "batu-hitam",
+     "sumber": "footage-2026",
+     "catatan": "Tiang papan nama, abu gelap (footage)."
+    },
+    {
+     "nama": "Jalan taman Gedung I",
+     "poligon": [
+      [
+       72.35,
+       132.1
+      ],
+      [
+       72.35,
+       126.043
+      ],
+      [
+       74.979,
+       125.062
+      ],
+      [
+       82.45,
+       130.706
+      ],
+      [
+       82.45,
+       130.5
+      ],
+      [
+       84.3,
+       130.5
+      ],
+      [
+       84.378,
+       130.5
+      ],
+      [
+       84.422,
+       130.441
+      ],
+      [
+       75.422,
+       123.641
+      ],
+      [
+       75.0,
+       124.2
+      ],
+      [
+       74.72,
+       123.45
+      ],
+      [
+       60.53,
+       128.745
+      ],
+      [
+       60.81,
+       129.495
+      ],
+      [
+       61.57,
+       130.065
+      ],
+      [
+       70.75,
+       126.64
+      ],
+      [
+       70.75,
+       132.1
+      ]
+     ],
+     "atas": -0.17,
+     "bahan": "beton",
+     "muka": "beton",
+     "sumber": "footage-2026"
+    },
+    {
+     "nama": "Taman sudut Gedung I",
+     "poligon": [
+      [
+       70.65,
+       132.4
+      ],
+      [
+       70.65,
+       132.1
+      ],
+      [
+       70.75,
+       132.1
+      ],
+      [
+       70.75,
+       126.64
+      ],
+      [
+       61.57,
+       130.065
+      ],
+      [
+       61.95,
+       130.35
+      ],
+      [
+       61.77,
+       130.59
+      ],
+      [
+       61.59,
+       130.83
+      ],
+      [
+       59.31,
+       129.12
+      ],
+      [
+       59.49,
+       128.88
+      ],
+      [
+       59.67,
+       128.64
+      ],
+      [
+       60.81,
+       129.495
+      ],
+      [
+       60.53,
+       128.745
+      ],
+      [
+       74.72,
+       123.45
+      ],
+      [
+       75.0,
+       124.2
+      ],
+      [
+       75.422,
+       123.641
+      ],
+      [
+       84.422,
+       130.441
+      ],
+      [
+       84.378,
+       130.5
+      ],
+      [
+       85.46,
+       130.5
+      ],
+      [
+       86.0,
+       130.5
+      ],
+      [
+       86.0,
+       123.5
+      ],
+      [
+       77.2,
+       123.5
+      ],
+      [
+       77.2,
+       116.5
+      ],
+      [
+       57.65,
+       116.5
+      ],
+      [
+       57.65,
+       117.85
+      ],
+      [
+       57.65,
+       118.15
+      ],
+      [
+       57.65,
+       118.45
+      ],
+      [
+       57.65,
+       132.7
+      ],
+      [
+       70.65,
+       132.7
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "catatan": "Taman tempat duduk-duduk di sudut dalam L (garis merah pengguna; isi tidak ada di footage, pohon tidak dibuat)."
+    },
+    {
+     "nama": "Taman sudut Gedung I",
+     "poligon": [
+      [
+       74.979,
+       125.062
+      ],
+      [
+       72.35,
+       126.043
+      ],
+      [
+       72.35,
+       132.1
+      ],
+      [
+       72.45,
+       132.1
+      ],
+      [
+       72.45,
+       132.4
+      ],
+      [
+       72.45,
+       132.7
+      ],
+      [
+       82.45,
+       132.7
+      ],
+      [
+       82.45,
+       130.706
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "foto-udara-2026",
+     "catatan": "Taman tempat duduk-duduk di sudut dalam L (garis merah pengguna; isi tidak ada di footage, pohon tidak dibuat)."
+    },
+    {
+     "nama": "Halaman Gedung I",
+     "poligon": [
+      [
+       82.46,
+       136.79
+      ],
+      [
+       82.46,
+       130.696
+      ],
+      [
+       82.44,
+       130.696
+      ],
+      [
+       82.44,
+       132.69
+      ],
+      [
+       57.66,
+       132.69
+      ],
+      [
+       57.66,
+       118.44
+      ],
+      [
+       56.36,
+       118.44
+      ],
+      [
+       56.36,
+       117.86
+      ],
+      [
+       57.66,
+       117.86
+      ],
+      [
+       57.66,
+       116.49
+      ],
+      [
+       39.99,
+       116.49
+      ],
+      [
+       39.99,
+       152.01
+      ],
+      [
+       86.01,
+       152.01
+      ],
+      [
+       86.01,
+       136.79
+      ]
+     ],
+     "atas": -0.2,
+     "bahan": "rumput",
+     "muka": "beton",
+     "sumber": "perkiraan"
+    },
+    {
+     "nama": "Tanah tinggi utara Gedung I",
+     "poligon": [
+      [
+       40.0,
+       106.0
+      ],
+      [
+       77.2,
+       106.0
+      ],
+      [
+       77.2,
+       116.5
+      ],
+      [
+       40.0,
+       116.5
+      ]
+     ],
+     "atas": 1.0,
+     "bahan": "rumput",
+     "muka": "batu-kali",
+     "sumber": "footage-2026",
+     "catatan": "Dari ujung utara selasar sayap tampak tembok batu kali ±1,2 m dengan rumput dan pohon di atasnya (footage koridor lt 1)."
+    }
+   ],
+   "benda": [
+    {
+     "jenis": "atap-miring",
+     "x": 0,
+     "z": 0,
+     "y": 0,
+     "warnaAtap": "abu",
+     "tiangPutih": 0.22,
+     "rusuk": 0.5,
+     "tebal": 0.06,
+     "atap": [
+      [
+       82.44999999999999,
+       3.25,
+       132.2
+      ],
+      [
+       86.3,
+       3.1,
+       132.2
+      ],
+      [
+       86.3,
+       3.1,
+       135.0
+      ],
+      [
+       82.44999999999999,
+       3.25,
+       135.0
+      ]
+     ],
+     "tiang": [
+      [
+       85.75,
+       132.55,
+       0.033,
+       3.0500000000000003
+      ],
+      [
+       85.75,
+       134.65,
+       0.033,
+       3.0500000000000003
+      ],
+      [
+       83.9,
+       132.55,
+       0.7,
+       3.0500000000000003
+      ],
+      [
+       83.9,
+       134.65,
+       0.7,
+       3.0500000000000003
+      ]
+     ],
+     "balok": [
+      [
+       83.9,
+       3.0500000000000003,
+       132.55,
+       85.75,
+       3.0500000000000003,
+       132.55
+      ],
+      [
+       83.9,
+       3.0500000000000003,
+       134.65,
+       85.75,
+       3.0500000000000003,
+       134.65
+      ]
+     ],
+     "sumber": "footage-2026",
+     "catatan": "Kanopi seng abu di atas jalur I-J dekat Gedung I, bertiang putih (footage penghubung I-J)."
+    },
+    {
+     "jenis": "bangku-taman",
+     "x": 66.0,
+     "z": 127.6,
+     "y": -0.2,
+     "arah": 0,
+     "sumber": "perkiraan",
+     "catatan": "Bangku taman (pengguna: taman untuk duduk-duduk; bentuk dan letak perkiraan)."
+    },
+    {
+     "jenis": "bangku-taman",
+     "x": 69.0,
+     "z": 127.6,
+     "y": -0.2,
+     "arah": 0,
+     "sumber": "perkiraan",
+     "catatan": "Bangku taman (pengguna: taman untuk duduk-duduk; bentuk dan letak perkiraan)."
+    },
+    {
+     "jenis": "bangku-taman",
+     "x": 64.5,
+     "z": 123.5,
+     "y": -0.2,
+     "arah": 90,
+     "sumber": "perkiraan",
+     "catatan": "Bangku taman (pengguna: taman untuk duduk-duduk; bentuk dan letak perkiraan)."
+    },
+    {
+     "jenis": "bangku-taman",
+     "x": 64.5,
+     "z": 120.6,
+     "y": -0.2,
+     "arah": 90,
+     "sumber": "perkiraan",
+     "catatan": "Bangku taman (pengguna: taman untuk duduk-duduk; bentuk dan letak perkiraan)."
+    }
+   ],
+   "sumber": "foto-udara-2026",
+   "catatan": "Paket 5 (25 Nov 2026). Taman sudut dari garis merah pengguna; penghubung I-J (lt 1 saja) dari footage: jalan beton, anak tangga di antara undakan batu kali, kanopi seng bertiang putih, pelataran dan tiga anak tangga putih ke selasar I."
+  },
+  {
    "id": "sekitar-J",
    "nama": "Parkiran dosen, taman depan Gedung J, dan halaman pendopo",
    "tapak": [
@@ -23303,6 +24760,32 @@
       ],
       [
        86.3,
+       130.5
+      ],
+      [
+       86.0,
+       130.5
+      ]
+     ],
+     "bahan": "beton",
+     "muka": "batu-kali",
+     "sumber": "perkiraan",
+     "atas": -0.2,
+     "catatan": "Tembok batu kali di barat zona J (I lebih tinggi); dibuka untuk jalur I-J (Paket 5)."
+    },
+    {
+     "nama": "Tepi barat zona J",
+     "poligon": [
+      [
+       86.0,
+       136.8
+      ],
+      [
+       86.3,
+       136.8
+      ],
+      [
+       86.3,
        152.0
       ],
       [
@@ -23314,7 +24797,7 @@
      "muka": "batu-kali",
      "sumber": "perkiraan",
      "atas": -0.2,
-     "catatan": "Arah Gedung I (lebih tinggi; footage penghubung I-J). Paket 5."
+     "catatan": "Tembok batu kali di barat zona J (I lebih tinggi); dibuka untuk jalur I-J (Paket 5)."
     },
     {
      "nama": "Bedeng parkiran 1",
@@ -24723,10 +26206,6 @@
   {
    "luar": [
     [
-     174.0,
-     -38.0
-    ],
-    [
      94.0,
      -38.0
     ],
@@ -24785,13 +26264,17 @@
     [
      174.0,
      39.4
+    ],
+    [
+     174.0,
+     -38.0
     ]
    ]
   },
   {
    "luar": [
     [
-     86.0,
+     40.0,
      152.0
     ],
     [
@@ -24816,11 +26299,11 @@
     ],
     [
      77.2,
-     123.5
+     106.0
     ],
     [
-     86.0,
-     123.5
+     40.0,
+     106.0
     ]
    ]
   }

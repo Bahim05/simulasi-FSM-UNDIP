@@ -975,22 +975,6 @@
      "jenis": "tembok-celah",
      "tinggi": 0.9,
      "sumber": "footage-2026"
-    },
-    {
-     "a": [
-      54.05,
-      9.5,
-      -0.05
-     ],
-     "b": [
-      54.05,
-      11.1,
-      -0.05
-     ],
-     "jenis": "tembok-celah",
-     "tinggi": 0.9,
-     "sumber": "footage-2026",
-     "catatan": "Ujung barat selasar: penghubung I-J (lt 1) dibuat di Paket 5."
     }
    ]
   },
@@ -1737,7 +1721,7 @@
      "jenis": "tembok-celah",
      "tinggi": 0.9,
      "sumber": "footage-2026",
-     "catatan": "Ujung barat selasar: penghubung I-J (lt 1) dibuat di Paket 5."
+     "catatan": "Ujung barat selasar lt 2-3."
     }
    ]
   },
@@ -2484,7 +2468,7 @@
      "jenis": "tembok-celah",
      "tinggi": 0.9,
      "sumber": "footage-2026",
-     "catatan": "Ujung barat selasar: penghubung I-J (lt 1) dibuat di Paket 5."
+     "catatan": "Ujung barat selasar lt 2-3."
     },
     {
      "a": [
